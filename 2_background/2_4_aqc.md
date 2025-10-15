@@ -1,5 +1,5 @@
 <span data-section="1"></span>
-# Atmospheric quantum channels
+## Quantum channels in turbulent atmosphere
 
 <span data-section="2"></span>Quantum channels are linear maps that transform one quantum state to another and satisfy the completely positive and trace-preserving (CPTP) conditions.
 - in our work we consider the following channel:
@@ -26,31 +26,16 @@ The probability density of transmittance (PDT) is the primary defining character
 
 <span data-section="7"></span>Direct experimental reconstruction of PDT is possible either via homodyne detection of quantum states^[([Semenov and Vogel, 2009, p. 1](zotero://select/library/items/MI46DTVH)) ([pdf](zotero://open-pdf/library/items/KRTRJJFA?page=1&annotation=NSP9JIDT))]  or via classical intensity measurements at the receiver with a photodiode. However, experimental studies face significant challenges. They require expensive setups with two synchronized sites separated by large distances. Measurements must be carried out under uncontrolled atmospheric conditions, which complicates the study, and temporal fluctuations further hinder precise characterization. These difficulties highlight the importance of studying atmospheric quantum channels in controlled and well-characterized way.
 
-## Statistical moments and Correlation functions
+> - its time to bound together all previous sections
+>- pdt is eta over ensamble of turb realisations
 
-For statistical analysis of beam propagation through turbulence, we define second- and fourth-order intensity correlation functions:
+### Analytical models of PDT
 
-$$\Gamma_2(\mathbf{r};z) = \langle I(\mathbf{r};z) \rangle$$
+#### Truncated Log-normal distribution model
 
-$$\Gamma_4(\mathbf{r_1},\mathbf{r_2};z) = \langle I(\mathbf{r_1};z) I(\mathbf{r_2};z) \rangle$$
+#### Beam wandering model
 
-where $\langle \cdot \rangle$ denotes ensemble averaging over turbulence realizations.
+#### Total probability law model
 
-These correlation functions enable calculation of transmittance statistics:
-
-Average transmittance:
-$$\langle\eta\rangle = \int_\mathcal{A} d^2\boldsymbol{r} \, \Gamma_2(\boldsymbol{r}, z_\mathcal{A})$$
-
-Second moment of transmittance:
-$$\langle\eta^2\rangle = \int_\mathcal{A} d^2\boldsymbol{r}_1 \int_\mathcal{A} d^2\boldsymbol{r}_2 \, \Gamma_4(\boldsymbol{r}_1, \boldsymbol{r}_2, z_\mathcal{A})$$
-
-## Analytical models of PDT
-
-### Truncated Log-normal distribution model
-
-### Beam wandering model
-
-### Total probability law model
-
-### Elliptical beam model
+#### Elliptical beam model
 

@@ -1,9 +1,9 @@
-# Quantum properties of light
+## Quantum properties of light
 
-## Gaussian entanglement
+### Gaussian entanglement
 
-## Bell entanglement
+### Bell entanglement
 
-## Nonclassicality
+### Nonclassicality
 
 

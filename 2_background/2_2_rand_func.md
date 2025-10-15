@@ -1,4 +1,8 @@
-# Preliminaries on random functions theory
+## Preliminaries on random functions theory
+
+> - One support point for a dedicated section is to add a bit of math vibe to the thesis 
+> - Also, in the case of including of random processes paper - here is the place for background
+
 When studying light propagation through random media, it is essential to introduce the minimal framework of random functions. In our problem, randomness enters through spatial variations of the refractive index, which in turn induces randomness in most derived quantities like beam properties at the aperture plane or the transmittance values. By treating these quantities as random functions, we can systematically describe their statistical properties, characterize correlations, study ergodicity property markov property, etc.
 
 Let's consider a function $\xi$ of two parameters:
@@ -7,9 +11,9 @@ where $t \in T$ is the domain parameter (time, space, etc.) and $\omega \in \Ome
 The function $\xi$ is what we call a random function. This form allows us to adopt two complementary perspectives.
 If we fix the outcome $\omega$ -- i.e., select one specific universe, then we obtain a deterministic function $\xi^{(\omega)}(t)$.
 This is referred to as a sample path or realization of the random function. 
-Examples of two sample paths as functions of $t$ are shown in ~fig:samplePaths~.
+Examples of two sample paths as functions of $t$ are shown in @fig:sample_paths.
 
-![fig:samplePaths](file:///home/klen/Desktop/physics/phd/thesis/images/draft/random_process.svg "Sample path of some random function")
+![\label{fig:sample_paths}Sample path of some random function](file:///home/klen/syncthing/desktop/physics/phd/thesis/images/draft/random_process.svg)
 
 If we fix the domain parameter $t$ -- i.e., look at all possible universes at a single time, then we obtain a random variable $\xi_t$.
 In this view, the random function can be seen as a family of random variables $\{\xi_t\}_{t\in T}$ indexed by $t \in T$.
@@ -28,17 +32,17 @@ Other convenient way to specify a random function is using some analytic formula
 
 We will call random processes time-indexed random functions, and random fields random functions indexed by multidimensional (2D or 3D) spatial variables.
 
-## Stationary random functions
+### Stationary random functions
 The common class of random functions in physics is stationary random functions. 
-A random function is stationary if all of its final-dimensional distribution functions ~eq:randProcDef~ are invariant under the parameter shifts
+A random function is stationary if all of its final-dimensional distribution functions @eq:randProcDef are invariant under the parameter shifts
 $$
-F_{t_1 + \tau, \dots, t_n+\tau}(x_1, \dots, x_n) = F_{t_1, \dots, t_n}(x_1, \dots, x_n)\,, \quad \forall t_i\,, \ i \in [1\dots n]\,, \ \forall n \\
+F_{t_1 + \tau, \dots, t_n+\tau}(x_1, \dots, x_n) = F_{t_1, \dots, t_n}(x_1, \dots, x_n)\,, \quad \forall t_i\,, \ i \in [1\dots n]\,, \ \forall n
 $$
 This simplifies the process, such as all functions $F_t(x) \ \forall t \in T$ are identical, so we need only one $F_{t_0}(x)$; and instead of considering  $F_{t_1, t_2}(x_1, x_2) \ \forall t_1,t_2$ we need only the family of joint distributions indexed by the time difference $\tau=t_2-t_1$, and so on.
 
 We can characterize random functions with moments. 
 The first moment $\mu(t)=\mathbb E\, \xi_t = \int_{-\infty}^\infty x dF_t(x)$ is the mean value. 
-For the stationary random function it is constant $\mu=\mu(t)$, so it's often useful to redefine our random process with a new random process $\xi_t - \mu$, as we did with the refractive index random field ~eq:deltan~. The second moment is the correlation function, which gives more precise characteristic of the random function: 
+For the stationary random function it is constant $\mu=\mu(t)$, so it's often useful to redefine our random process with a new random process $\xi_t - \mu$, as we did with the refractive index random field @eq:deltan. The second moment is the correlation function, which gives more precise characteristic of the random function: 
 $$B(t_1, t_2) = \mathbb E\, \xi_{t_1}\overline{\xi_{t_2}} = \int_{-\infty}^\infty\int_{-\infty}^\infty x_1 x_2 dF_{t_1,t_2}(x_1,x_2)$$
 For the stationary random function it only depends on the time difference $\mathbb E\, \xi_{t}\overline{\xi_{t+\tau}} = B(\tau)$.
 
@@ -56,7 +60,7 @@ In one of the next subsection we will explicitly present several models for refr
 >- to complete the triade of eq through spectrum 
 >- img
 
-## Spectral representation
+### Spectral representation
 As in the case of regular functions, it can be very useful to represent random functions in the form of Fourier transform. It was shown, that any stationary random function can be arbitrarily closely represented on some interval $-T < t < T$ as a linear combination of finite number independent harmonic oscillators of the form $\xi_k e^{i\lambda_k t}$, where $\xi_k$ are some complex random variables with mean zero values and $\lambda_k$ are some real constants. 
 
 In the limit we get the spectral representation theorem (Cramér–Karhunen), which states that any stationary process $\xi(t)$ can be represented in the form of the Fourier-Stieltjes integral: 
