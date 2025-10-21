@@ -8,7 +8,7 @@ When studying light propagation through random media, it is essential to introdu
 Let's consider a function $\xi$ of two parameters:
 $$\xi: T \times \Omega \to \xi(t, \omega)$$
 where $t \in T$ is the domain parameter (time, space, etc.) and $\omega \in \Omega$ is an outcome, which can be usefully interpreted as a specific realization of a universe from the set of all possible parallel worlds.
-The function $\xi$ is what we call a random function. This form allows us to adopt two complementary perspectives.
+~~The function $\xi$ is what we call a random function~~. This form allows us to adopt two complementary perspectives.
 If we fix the outcome $\omega$ -- i.e., select one specific universe, then we obtain a deterministic function $\xi^{(\omega)}(t)$.
 This is referred to as a sample path or realization of the random function. 
 Examples of two sample paths as functions of $t$ are shown in @fig:sample_paths.
@@ -29,6 +29,8 @@ F_{t_1,\dots,t_n}(x_1,\dots,x_n) &= \mathbb{P}[\xi_{t_1} < x_1,\dots \xi_{t_n} <
 \end{aligned}
 $$
 Other convenient way to specify a random function is using some analytic formula containing parameters which are random variables.
+
+>". In the absence of such a family of probability distributions, it is customary to describe the random field in terms of its lowerorder statistical moments." ([Andrews and Phillips, 2005, p. 45](zotero://select/library/items/IJGQ3J8A)) ([pdf](zotero://open-pdf/library/items/VGHZA9HX?page=69&annotation=537H37EL))
 
 We will call random processes time-indexed random functions, and random fields random functions indexed by multidimensional (2D or 3D) spatial variables.
 

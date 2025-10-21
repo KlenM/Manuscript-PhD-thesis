@@ -11,6 +11,9 @@ Stationarity implies that the statistical properties of the flow do not change o
 Homogeneity means that no particular location in the space is special. Isotropy requires that no direction is privileged. 
 This assumption forms a workable starting point for studying the statistical properties of turbulence.
 
+>"By making one further assumption of incompressible turbulence, that is, g. v = 0 (Batchelor [2.4]), we can write D, in terms of Dr,," ([“Laser Beam Propagation in the Atmosphere”, 1978, p. 23](zotero://select/library/items/6VHCHVKG)) ([pdf](zotero://open-pdf/library/items/4WBAA526?page=23&annotation=VDDGJIX8))
+>"Clifford [-2.52] also showed that the depolarization effects of the atmosphere are negligible even when the wavelength 2 is greater than the inner scale Io" ([“Laser Beam Propagation in the Atmosphere”, 1978, p. 39](zotero://select/library/items/6VHCHVKG)) ([pdf](zotero://open-pdf/library/items/4WBAA526?page=39&annotation=BFRJZMRA))
+
 Let's consider the structure function of the velocity field -- ensemble average over turbulent atmosphere realizations of the square of longitudinal velocity difference at two points in space. 
 $$%\label{eq:kolmStructFunc}
 D_v(r) = \left<|v(x) - v(x+r)|^2\right> \equiv  v_r^2$$
@@ -33,7 +36,7 @@ In the 1940s Kolmogorov assumed that energy enters the turbulent system at large
 This is so called energy cascade model of turbulence.
 In this case the energy flux from a scale to another by unit mass defined as the kinetic energy divided by deformation time must be a constant:
 $$\varepsilon \sim \frac{v_r^2}{T_I}=\frac{v_r^3}{r}=\mathrm{const}$$
-This means that the structure function @eq:kolmStructFunc must me proportional to
+The dimensional analysis implies that the structure function @eq:kolmStructFunc must be proportional to
 $$D_v(r)\sim\left(\varepsilon\, r\right)^{2/3}\equiv C_v^2 r^{2/3}\,,\quad l_0\ll r\ll L_0$$
 where $C_v^2$ is the velocity structure constant (units of $\mathrm m^{4/3}\mathrm s^{-2}$). 
 
@@ -54,7 +57,7 @@ Near ground level, $C_n^2$ ranges from around $10^{-17}$ m$^{-2/3}$ (weak turbul
 The Kolmogorov power-law spectrum model, because of its simple expression, is mostly used in analytical calculations. 
 However the $-11/3$ power introduce some challenges when used under integrals over $\kappa$.
 Other problem with this model arises when we take look at the low spectrum region. 
-We can see that this model yields infinite value of power density as $L_0 \to \infty$ which is sometimes uses to simplify calculation.  
+We can see that this model yields infinite value of power density as $L_0 \to \infty$ which is sometimes used to simplify calculation.  
 Such unphysical condition can be fixed by  introducing models that behaves the same in the internal region but smoothly fall-off in the energy and viscosity ranges.
 One of such models is modified von Karman model which introduce decay of power spectral density at the $l_0$ and $L_0$ values
 $$\Phi_n(\kappa) = 0.033 C_n^2 \frac{\exp(-\kappa^2/\kappa_m^2)}{(\kappa^2 + \kappa_0^2)^{11/6}}$$
@@ -67,6 +70,8 @@ These studies validated the $-5/3$ power-law dependence of the energy spectrum i
 However, they also revealed additional fine structures, such as a small bump in the high-frequency (viscous) range of the spectrum. 
 But overall, while the refined models introduced deeper physical insights, they largely supported the fundamental scaling laws established by Kolmogorov and the modified von Karman spectrum.
 
+>- "the amount of supporting experimental evidence is amazing ( M y r u p [2.9] and K a i m a l et al. [2.10])," ([“Laser Beam Propagation in the Atmosphere”, 1978, p. 24](zotero://select/library/items/6VHCHVKG)) ([pdf](zotero://open-pdf/library/items/4WBAA526?page=24&annotation=UBIAQ3SV))
+
 >When choosing MVK in [[2_5_ps]] say why not Andrews spectrum: 
 >This question can be one of the further problems to study, after maturity of the current level of study of atmospheric quantum channels.
 
@@ -77,18 +82,6 @@ It depicts the energy flow through scales starting from large scales of energy i
 
 >Sources: [pdf](https://oa.upm.es/88590/1/5480314.pdf) eddy concept try. Here v to n [source](https://subarutelescope.org/staff/guyon/15teaching.web/05AstrOptics2016.web/wdir.web/AstrOpt2016_11atmosphericturbulence.pdf)
 >- [ ] we need some words about what is gaussian turbulence - why we use complex normal distr for phase screens generation
-
-### Statistical properties of a light beam in turbulence
-Combining the Kolmogorov model of turbulence with the paraxial equation of light beam propagation, it is useful to define some quantities of interest. 
-For statistical analysis of beam propagation through turbulence, we define second- and fourth-order intensity correlation functions:
-$$\Gamma_2(\mathbf{r};z) = \langle I(\mathbf{r};z) \rangle$$
-$$\Gamma_4(\mathbf{r_1},\mathbf{r_2};z) = \langle I(\mathbf{r_1};z) I(\mathbf{r_2};z) \rangle$$
-where $\langle \cdot \rangle$ denotes ensemble averaging over turbulence realizations.
-These correlation functions enable calculation of transmittance statistics:
-Average transmittance:
-$$\langle\eta\rangle = \int_\mathcal{A} d^2\boldsymbol{r} \, \Gamma_2(\boldsymbol{r}, z_\mathcal{A})$$
-Second moment of transmittance:
-$$\langle\eta^2\rangle = \int_\mathcal{A} d^2\boldsymbol{r}_1 \int_\mathcal{A} d^2\boldsymbol{r}_2 \, \Gamma_4(\boldsymbol{r}_1, \boldsymbol{r}_2, z_\mathcal{A})$$
 
 ### Frozen turbulence hypothesis
 The Kolmogorov model, along with its modifications like the Von Karman spectrum, provides a strong theoretical basis for understanding the ensemble averaged statistics of turbulence. 
