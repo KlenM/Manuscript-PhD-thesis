@@ -80,6 +80,9 @@ But overall, while the refined models introduced deeper physical insights, they 
 The @fig:psd_scales summarizes the model of atmospheric turbulence. 
 It depicts the energy flow through scales starting from large scales of energy injection, going through inertial range where the turbulent motion is predominant process and to the region of energy dissipation by viscosity.
 
+>[!danger] Add 
+>- [ ] Add paragraph that turb atm can be assumed as Gaussian process. We rely on this in PS section.
+
 >Sources: [pdf](https://oa.upm.es/88590/1/5480314.pdf) eddy concept try. Here v to n [source](https://subarutelescope.org/staff/guyon/15teaching.web/05AstrOptics2016.web/wdir.web/AstrOpt2016_11atmosphericturbulence.pdf)
 >- [ ] we need some words about what is gaussian turbulence - why we use complex normal distr for phase screens generation
 

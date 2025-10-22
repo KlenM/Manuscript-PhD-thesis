@@ -77,6 +77,7 @@ $$
 $$
 where $\lambda_1 \neq \lambda_2$, and $\Phi(\lambda)$ power spectral density function of the process (given it's absolutely continuous). 
 
+> Moreover, if the process is Gaussian, then the random variables Zk are Gaussian and stochastically independent. This result generalizes the Karhunen–Loève transform.
 The spectral representation theorem provides a framework for numerical generation of random functions, which forms the basis of the phase screen generation method which we will describe in one of the next sections.
 
 >[Fourier-Stieltjes integral] ([pdf](zotero://open-pdf/library/items/AUHJNVFF?page=49&annotation=QFIE8QQV)) ([Yaglom, 2004, p. 49](zotero://select/library/items/NVY3HWQW))
