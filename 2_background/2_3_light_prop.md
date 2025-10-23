@@ -8,7 +8,7 @@ To obtain the transmittance value of the optical communication channel, we must 
 
 The boundary condition at the transmitter plane $z=z_0$ takes the form of a Gaussian beam:
 $$%\label{eq:gaussbeam}
-u(\mathbf{r};0)=\sqrt{\frac{2}{\pi W_0^2}}\exp\left[-\frac{\mathbf{r}^2}{W_0^2}-\frac{ik}{2F_0}\mathbf{r}^2\right]$$
+\boxed{u(\mathbf{r};0)=\sqrt{\frac{2}{\pi W_0^2}}\exp\left[-\frac{\mathbf{r}^2}{W_0^2}-\frac{ik}{2F_0}\mathbf{r}^2\right]}$$
 where $W_0$ is the beam waist radius and $F_0$ is the radius of curvature of the wavefront. For collimated beams, $F_0 \to \infty$, while for focused beams, $F_0$ takes finite values.
 
 ### Paraxial wave equation in stochastic media
@@ -18,6 +18,7 @@ To describe the propagation of gaussian beams through turbulent atmosphere we be
 >- "smoothly varying stochastic refractive index" ([Andrews and Phillips, 2005, p. 137](zotero://select/library/items/IJGQ3J8A)) ([pdf](zotero://open-pdf/library/items/VGHZA9HX?page=161&annotation=XM7K93SD))
 >- "set of fundamental assumptions on the propagating wave" ([Andrews and Phillips, 2005, p. 137](zotero://select/library/items/IJGQ3J8A)) ([pdf](zotero://open-pdf/library/items/VGHZA9HX?page=161&annotation=E4LAXLAC))
 >- "J. W. Strohbehn, ed., Laser Beam Propagation in the Atmosphere (Springer, New York, 1978)" ([Andrews and Phillips, 2005, p. 177](zotero://select/library/items/IJGQ3J8A)) ([pdf](zotero://open-pdf/library/items/VGHZA9HX?page=201&annotation=WV4N9T75))
+>- [ ] n is real
 
 The electromagnetic field propagation in atmosphere is described with the scalar wave equation. Separating temporal and spatial variables yields the Helmholtz equation:
 $$\nabla^{2}E+k^{2}n^{2}E=0$$
@@ -28,7 +29,7 @@ We express the complex amplitude as $E(x,y,z)=u(x,y,z) e^{ikz}$.
 Under paraxial approximation the assumption that the $z$ derivative of the amplitude function u is a slowly varying function of z reads as $\left| \frac{\partial ^{2}u}{\partial z^{2}} \right| \ll \left| k \frac{\partial u}{\partial z} \right|$ is valid. 
 
 This leads to the paraxial scalar wave equation in a medium with spatially varying refractive index:
-$$2ik\frac{\partial u(\mathbf{r};z)}{\partial z}+\Delta_\mathbf{r} u(\mathbf{r};z)+2k^2\delta n(\mathbf{r},z) u(\mathbf{r};z)=0$$
+$$\boxed{2ik\frac{\partial u(\mathbf{r};z)}{\partial z}+\Delta_\mathbf{r} u(\mathbf{r};z)+2k^2\delta n(\mathbf{r},z) u(\mathbf{r};z)=0}$$
 where $\delta n(\mathbf{r},z) = n(\mathbf{r},z) - 1$ represents the refractive index perturbation.
 
 >- [ ] The paraxial equation uses $\Delta r\Delta_\mathbf{r} \delta r$​ notation but should clarify this represents the transverse Laplacian
@@ -41,7 +42,7 @@ where $\delta n(\mathbf{r},z) = n(\mathbf{r},z) - 1$ represents the refractive i
 To quantify the optical power collected by the receiver, we calculate the transmittance at the aperture plane $z=z_\mathrm{ap}$:
 
 $$%\label{eq:eta}
-\eta = \int_{S_\mathrm{ap}} d^2\boldsymbol{r} |u(\boldsymbol{r}, z_\mathrm{ap})|^2$$
+\boxed{\eta = \int_{S_\mathrm{ap}} d^2\boldsymbol{r} |u(\boldsymbol{r}, z_\mathrm{ap})|^2}$$
 
 where $S_\mathrm{ap}$ defines the circular region of integration over aperture pupil of radius $R_\mathrm{ap}$ and $d^2\boldsymbol{r}=dxdy$. 
 
