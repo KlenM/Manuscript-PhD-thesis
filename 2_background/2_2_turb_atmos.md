@@ -73,6 +73,8 @@ But overall, while the refined models introduced deeper physical insights, they 
 >- "the amount of supporting experimental evidence is amazing ( M y r u p [2.9] and K a i m a l et al. [2.10])," ([“Laser Beam Propagation in the Atmosphere”, 1978, p. 24](zotero://select/library/items/6VHCHVKG)) ([pdf](zotero://open-pdf/library/items/4WBAA526?page=24&annotation=UBIAQ3SV))
 
 >When choosing MVK in [[2_5_ps]] say why not Andrews spectrum: 
+>"While these advanced spectral models reflect the intimate details of atmospheric turbulence, the author believes that the details of the turbulence spectrum behavior at the highfrequency (inner scale) cutoff and low-frequency (outer scale) domain are irrelevant for the majority of the optical propagation problems. This is evident in the substantial uncertainty in the definitions of the inner and outer scales found in the literature, and in the somewhat loose relations between these scales and the spectral parameters κm and κ0 f"
+> by Charnotski 10.1364/JOSAA.30.002455
 >This question can be one of the further problems to study, after maturity of the current level of study of atmospheric quantum channels.
 
 ![\label{fig:psd_scales}The model of turbulent atmosphere and its power spectral density for Kolmogorov model blue and Modified von Karmal model green](file:///home/klen/syncthing/desktop/physics/phd/thesis/src/generated/psd_scales.svg)
