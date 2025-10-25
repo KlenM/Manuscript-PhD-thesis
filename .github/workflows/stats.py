@@ -37,6 +37,22 @@ def count_symbols(file):
     return len(mdcontent)
 
 
+def count_workdays(start_date, end_date):
+    """
+    Count the number of workdays (Mon–Fri) between two dates, inclusive.
+    """
+    if isinstance(start_date, str):
+        start_date = dt.datetime.strptime(start_date, "%Y-%m-%d").date()
+    if isinstance(end_date, str):
+        end_date = dt.datetime.strptime(end_date, "%Y-%m-%d").date()
+
+    if start_date > end_date:
+        start_date, end_date = end_date, start_date
+
+    delta_days = (end_date - start_date).days + 1
+    return sum((start_date + dt.timedelta(days=i)).weekday() < 5 for i in range(delta_days))
+
+
 symbols = {file: count_symbols(file) for file in Path(args['path']).rglob("*.md")}
 total_symbols = sum(count for file, count in symbols.items() if file.name not in EXCLUDE_FILES)
 
