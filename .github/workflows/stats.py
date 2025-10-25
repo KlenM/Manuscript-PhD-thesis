@@ -1,0 +1,66 @@
+from pathlib import Path
+import datetime as dt
+import re
+
+PRINT_PAPER = 40_000
+SYMBOLS_PER_A4 = PRINT_PAPER / 24
+REQUIRED_PRINT_PAPERS = 6
+REQUIRED_A4 = REQUIRED_PRINT_PAPERS * 24
+
+EXCLUDE_FILES = ["0_0_abstract.md"]
+EXCLUDE_TEX = [
+'frac', 'sqrt', 'left', 'right', 'big', 'Big', 'bigg', 'Bigg',
+'text', 'mathrm', 'mathbf', 'mathit', 'mathcal', 'mathbb', 'boldsymbol',
+'displaystyle', 'scriptstyle', 'scriptscriptstyle', 'limits', 'nolimits',
+'operatorname', 'overline', 'underline', 'widehat', 'widetilde',
+'quad', 'qquad', 'hspace', 'vspace',
+'phantom', 'vphantom', 'hphantom',
+'sum', 'int', 'prod', 'nabla', 'partial', 'delta', '{', '}', '\\', '^', '_', 
+'infty', 'lambda', 
+'overline', 'underline', 'label', '$$', '$', 'begin', 'aligned', 'left', 'right', 'langle', 'rangle', 
+'span data-section=', 
+]
+EXCLUDE_RE = [r'>.*?\n']
+
+args = {"path": "./"}
+
+def count_symbols(file):
+    with open(file, "r") as f:
+        mdcontent = f.read()
+
+    for exclude_parts in EXCLUDE_TEX:
+        mdcontent = mdcontent.replace(exclude_parts, '')
+
+    for exclude_re in EXCLUDE_RE:
+        mdcontent = re.sub(exclude_re, '', mdcontent)
+    # print(mdcontent)
+    return len(mdcontent)
+
+
+symbols = {file: count_symbols(file) for file in Path(args['path']).rglob("*.md")}
+total_symbols = sum(count for file, count in symbols.items() if file.name not in EXCLUDE_FILES)
+
+print(f"""Total {total_symbols} symbols
+{total_symbols / SYMBOLS_PER_A4:.1f} / {REQUIRED_A4} pages ({total_symbols / SYMBOLS_PER_A4 / REQUIRED_A4 * 100:.0f}%)
+""")
+
+section_count = {}
+SECTIONS = {'0': ('Annot', 2 * 0.13), 
+            '1': ('Intro', 0.13), 
+            '2': ('Backg', round(REQUIRED_PRINT_PAPERS * .2, 1)),
+            '3': ('NumSim', 0.5), 
+            '4': ('PDT m.', 2), 
+            '5': ('TimeC', 2), 
+           }
+
+for file, count in symbols.items():
+    for sec_num, v in SECTIONS.items():
+        if file.name.startswith(sec_num):
+            section_count[sec_num] = section_count.get(sec_num, 0) + count
+
+for sec_num in sorted(section_count.keys()):
+    count = section_count[sec_num]
+    print(f"{SECTIONS[sec_num][0]}:\t {count / SYMBOLS_PER_A4:.1f} / {SECTIONS[sec_num][1] * 24:.1f} ({count / SYMBOLS_PER_A4 / SECTIONS[sec_num][1] / 24 * 100:.1f}%)")
+
+print(f"""
+At least {(REQUIRED_A4 - total_symbols / SYMBOLS_PER_A4) / count_workdays(dt.datetime.now().date(), "2026-01-14"):.1f} pages/day""")
