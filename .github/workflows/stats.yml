@@ -24,8 +24,8 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Run word count
-        run: python .github/workflows/stats.py
+      - name: Run stats.py
+        run: python .github/workflows/stats.py > stats.txt
 
       - name: Prepare result commit
         run: |
@@ -35,11 +35,9 @@ jobs:
           git fetch origin results || true
           git checkout results || git checkout --orphan results
 
-          cp ../word_count.txt ./word_count.txt 2>/dev/null || cp word_count.txt .
-
           mkdir -p history
-          cp word_count.txt "history/$(date -u +'%Y-%m-%dT%H-%M-%SZ').txt"
+          cp stats.txt "history/$(date -u +'%Y-%m-%dT%H-%M-%SZ').txt"
 
-          git add word_count.txt history/
-          git commit -m "Update word count ($(date -u +'%Y-%m-%d %H:%M:%S'))" || echo "No changes"
+          git add stats.txt history/
+          git commit -m "Update stats ($(date -u +'%Y-%m-%d %H:%M:%S'))" || echo "No changes"
           git push origin results
