@@ -1,0 +1,45 @@
+name: Stats
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+permissions:
+  contents: write 
+  
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Run word count
+        run: python .github/workflows/stats.py
+
+      - name: Prepare result commit
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+
+          git fetch origin results || true
+          git checkout results || git checkout --orphan results
+
+          cp ../word_count.txt ./word_count.txt 2>/dev/null || cp word_count.txt .
+
+          mkdir -p history
+          cp word_count.txt "history/$(date -u +'%Y-%m-%dT%H-%M-%SZ').txt"
+
+          git add word_count.txt history/
+          git commit -m "Update word count ($(date -u +'%Y-%m-%d %H:%M:%S'))" || echo "No changes"
+          git push origin results
