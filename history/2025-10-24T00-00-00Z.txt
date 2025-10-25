@@ -1,0 +1,11 @@
+Total 31988 symbols
+19.2 / 144 pages (13%)
+
+Annot:	 0.6 / 6.2 (9.5%)
+Intro:	 0.0 / 3.1 (0.7%)
+Backg:	 18.8 / 28.8 (65.4%)
+NumSim:	 0.0 / 12.0 (0.3%)
+PDT m.:	 0.1 / 48.0 (0.2%)
+TimeC:	 0.1 / 48.0 (0.2%)
+
+At least 2.1 pages/day
