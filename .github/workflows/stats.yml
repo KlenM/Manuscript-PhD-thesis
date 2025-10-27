@@ -24,17 +24,19 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Run stats.py
-        run: python .github/workflows/stats.py > stats.txt
-
-      - name: Prepare result commit
+      - name: Prepare branch
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
 
           git fetch origin stats || true
           git checkout stats || git checkout --orphan stats && git reset
+        
+      - name: Run stats.py
+        run: python .github/workflows/stats.py > stats.txt
 
+      - name: Result commit
+        run: |
           mkdir -p history
           cp stats.txt "history/$(date -u +'%Y-%m-%dT%H-%M-%SZ').txt"
 
