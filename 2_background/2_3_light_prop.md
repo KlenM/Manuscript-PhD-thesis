@@ -56,7 +56,7 @@ This integral represents a convolution with the propagation kernel, based on the
 In the spatial frequency domain, this convolution becomes multiplication with the transfer function $H(f_{x},f_{y},z)=e^{ikz}e^{-i\pi\lambda z(f_{x}^{2}+f_{y}^{2})}$, known as the angular spectrum method. This formulation enables efficient numerical implementation using Fast Fourier Transform algorithms.
 
 ### Statistical properties of a light beam in turbulence
-In the absence of refractive index fluctuations, a Gaussian beam [@eq:gaussbeam] propagating in free space keeps its deterministic Gaussian profile at the aperture plane, as it represents the exact solution of the paraxial wave equation. 
+In the absence of refractive index fluctuations, a Gaussian beam ^[eq:gaussbeam] propagating in free space keeps its deterministic Gaussian profile at the aperture plane, as it represents the exact solution of the paraxial wave equation. 
 When the beam travels through a turbulent atmosphere, random changes in the refractive index make the optical field at the aperture plane a stochastic quantity.
 To efficiently compress the vast amount of information required to describe the optical field distorted by turbulence, it is convenient to characterize the random fluctuations of the complex amplitude in terms of its second- and fourth-order correlation functions
 $$\Gamma_2(\mathbf{r};z) = \left< |u(\mathbf{r};z_\mathrm{ap})|^2 \right>$$
@@ -64,21 +64,23 @@ $$\Gamma_4(\mathbf{r}_1,\mathbf{r}_2;z_\mathrm{ap}) = \left< |u(\mathbf{r}_1;z_\
 where $\langle \cdot \rangle$ denotes ensemble averaging over turbulence realizations.
 
 These correlation functions enable the calculation of several statistical quantities that are essential for parametrizing analytical models of atmospheric channels.
-Average transmittance of the atmospheric channel according to [@eq:eta] equals to
+Average transmittance of the atmospheric channel according to ^[eq:eta] equals to
 $$\langle\eta\rangle  = 
 \left<\int_{S_\mathrm{ap}} d^2\boldsymbol{r} |u(\boldsymbol{r}, z_\mathrm{ap})|^2\right>=
 \int_{S_\mathrm{ap}} d^2\boldsymbol{r} \, \Gamma_2(\boldsymbol{r}, z_{\mathrm{ap}})$$
 and can be seen as the primary characteristic of channel effectiveness.
 Second moment of the transmittance
-$$\langle\eta^2\rangle = 
-\left<\int_{S_\mathrm{ap}} d^2\boldsymbol{r}_1 |u(\boldsymbol{r}_1, z_\mathrm{ap})|^2\int_{S_\mathrm{ap}} d^2\boldsymbol{r}_2 |u(\boldsymbol{r}_2, z_\mathrm{ap})|^2\right>=
-\int_{S_\mathrm{ap}}\int_{S_\mathrm{ap}}  d^2\boldsymbol{r}_1  d^2\boldsymbol{r}_2 \, \Gamma_4(\boldsymbol{r}_1, \boldsymbol{r}_2, z_\mathrm{ap})$$
+$$\begin{split}
+\langle\eta^2\rangle = 
+\left<\int_{S_\mathrm{ap}} d^2\boldsymbol{r}_1 |u(\boldsymbol{r}_1, z_\mathrm{ap})|^2\int_{S_\mathrm{ap}} d^2\boldsymbol{r}_2 |u(\boldsymbol{r}_2, z_\mathrm{ap})|^2\right> = \\ =
+\int_{S_\mathrm{ap}}\int_{S_\mathrm{ap}}  d^2\boldsymbol{r}_1  d^2\boldsymbol{r}_2 \, \Gamma_4(\boldsymbol{r}_1, \boldsymbol{r}_2, z_\mathrm{ap})
+\end{split}$$
 requires the fourth order correlation function and characterizes the variability of the atmospheric channel transmittance.
 
 Let's consider statistical properties of the beam-spot at the aperture plane.
 The simplest property is the beam's center of gravity, which defined for a single realization of turbulent atmosphere as
 $$x_0 = \int_{\mathbb{R}^2} d^2\boldsymbol{r} \, x\, |u(\boldsymbol{r}, z_\mathrm{ap})|^2$$
-While it is obvious that under the assumption of isotropic turbulence [@sec:turb_cascade] average value of the beam centroid $\left<x_0\right>=0$, it remains an open question whether its distribution is Gaussian. 
+While it is obvious that under the assumption of isotropic turbulence ^[sec:turb_cascade] average value of the beam centroid $\left<x_0\right>=0$, it remains an open question whether its distribution is Gaussian. 
 In particular, for strong turbulence the distribution can deviate, for example by exhibiting heavy tails.
 The second moment is referred to as the long-term beam-spot radius. It defined as
 $$W_\mathrm{LT}^2 = 4\int_{\mathbb{R}^2} d^2\boldsymbol{r} \, x^2\, \Gamma_2(\boldsymbol{r}, z_{\mathrm{ap}})$$

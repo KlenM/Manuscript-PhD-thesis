@@ -11,14 +11,14 @@ where $t \in T$ is the domain parameter (time, space, etc.) and $\omega \in \Ome
 ~~The function $\xi$ is what we call a random function~~. This form allows us to adopt two complementary perspectives.
 If we fix the outcome $\omega$ -- i.e., select one specific universe, then we obtain a deterministic function $\xi^{(\omega)}(t)$.
 This is referred to as a sample path or realization of the random function.
-Examples of two sample paths as functions of $t$ are shown in @fig:sample_paths.
+Examples of two sample paths as functions of $t$ are shown in ^[fig:sample_paths].
 
 ![\label{fig:sample_paths}Sample path of some random function](file:///home/klen/syncthing/desktop/physics/phd/thesis/images/draft/random_process.svg)
 
 If we fix the domain parameter $t$ -- i.e., look at all possible universes at a single time, then we obtain a random variable $\xi_t$.
 In this view, the random function can be seen as a family of random variables $\{\xi_t\}_{t\in T}$ indexed by $t \in T$.
 
-We can define some random function by specifying all distribution functions of the form [@yaglom2004]:
+We can define some random function by specifying all distribution functions of the form ^[@yaglom2004]:
 $$
 \begin{split}
 %\label{eq:randProcDef}
@@ -36,7 +36,7 @@ We will call random processes time-indexed random functions, and random fields r
 
 ### Stationary random functions
 The common class of random functions in physics is stationary random functions.
-A random function is stationary if all of its final-dimensional distribution functions @eq:randProcDef are invariant under the parameter shifts
+A random function is stationary if all of its final-dimensional distribution functions ^[eq:randProcDef] are invariant under the parameter shifts
 $$
 F_{t_1 + \tau, \dots, t_n+\tau}(x_1, \dots, x_n) = F_{t_1, \dots, t_n}(x_1, \dots, x_n)\,, \quad \forall t_i\,, \ i \in [1\dots n]\,, \ \forall n
 $$
@@ -44,7 +44,7 @@ This simplifies the process, such as all functions $F_t(x) \ \forall t \in T$ ar
 
 We can characterize random functions with moments.
 The first moment $\mu(t)=\mathbb E\, \xi_t = \int_{-\infty}^\infty x dF_t(x)$ is the mean value.
-For the stationary random function it is constant $\mu=\mu(t)$, so it's often useful to redefine our random process with a new random process $\xi_t - \mu$, as we did with the refractive index random field @eq:deltan. The second moment is the correlation function, which gives more precise characteristic of the random function:
+For the stationary random function it is constant $\mu=\mu(t)$, so it's often useful to redefine our random process with a new random process $\xi_t - \mu$, as we did with the refractive index random field ^[eq:deltan]. The second moment is the correlation function, which gives more precise characteristic of the random function:
 $$B(t_1, t_2) = \mathbb E\, \xi_{t_1}\overline{\xi_{t_2}} = \int_{-\infty}^\infty\int_{-\infty}^\infty x_1 x_2 dF_{t_1,t_2}(x_1,x_2)$$
 For the stationary random function it only depends on the time difference $\mathbb E\, \xi_{t}\overline{\xi_{t+\tau}} = B(\tau)$.
 
