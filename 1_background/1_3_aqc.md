@@ -29,6 +29,8 @@ The probability density of transmittance (PDT) is the primary defining character
 > - its time to bound together all previous sections
 >- pdt is eta over ensamble of turb realisations
 >- many authors (sources) studying qunatum protocols in AQC use only average transmitance, which can be too rough approximation.
+>- PDT
+>    - Most models focus on single-parameter descriptions (e.g., average loss), often ignoring higher-order correlations (examples? :) )
 
 ### Analytical models of PDT
 
