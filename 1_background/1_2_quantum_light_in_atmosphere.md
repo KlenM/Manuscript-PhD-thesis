@@ -56,6 +56,7 @@ The quantity of interest in this regime is the probability density function of p
 
 In 1970, it was proposed to modulate the photocounting statistics with the previously discussed lognormal distribution of the mean photon count^[@diament1970]. 
 While this approach can be useful in certain specific cases^[@milonni2004], the infinite tail of the lognormal distribution implies unphysical photon amplification, making it unsuitable as a general model and requiring further study to establish a description of atmospheric turbulence effects on quantum states.
+It is worth noting that in 2003 a similar problem was addressed in the context of radio-signal propagation with limited available power^[@hallbjomer2003], where the Ricean distribution was effectively attenuated at values approaching the maximum power.
 
 > entanglement, nonclass, etc in turbulence. 
 > adaptive optics, post selection
