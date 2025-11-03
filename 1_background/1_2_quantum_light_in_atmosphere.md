@@ -39,7 +39,7 @@ Of particular interest is the probability density function  of the irradiance.
 It provides a statistical description of the intensity fluctuations, or scintillations. 
 In weak fluctuation regimes, assuming a Gaussian refractive-index field and using the Born approximation with first-order perturbation theory, the irradiance is described by the modified Rician distribution. 
 However, experimental studies by Parry and Pusey^[@parry1979] showed that the theoretical moments predicted by this model were systematically lower than measured values, even under weak turbulence conditions.
-Within the first-order Rytov approximation, the irradiance fluctuations are well described by the lognormal distribution. 
+Within the first-order Rytov approximation, the irradiance fluctuations are well described by the lognormal distribution^[*Add description of lonormal*]. 
 This model generally agrees well with observations for short propagation paths or weak turbulence but fails to capture the statistics of irradiance under strong turbulence, indicating the need for more sophisticated models in such regimes.
 
 While the irradiance fluctuations are well described by the lognormal distribution in weak turbulence, experiments show that under very strong turbulence, the distribution tends toward a negative exponential. 
@@ -49,14 +49,13 @@ The lognormal–Rician distribution models the irradiance as Rician, modulated b
 The gamma–gamma distribution^[@al-habash2001] generalizes the K-distribution, with parameters that can be related to atmospheric conditions through models for large-scale and small-scale scintillations, and it offers a closed-form expression for the cumulative distribution function.
 Despite their empirical success in describing irradiance fluctuations in strong turbulence, these models remain phenomenological rather than being derived from first principles.
 
-### Probability density function  of photocounting
+### Probability density function of photocounting
+In the studies discussed above, the optical intensity is typically high, resulting in a continuous photocurrent. 
+However, when the intensity is on the order of individual photons and the detection time interval is short, the detector registers random discrete pulses. 
+The quantity of interest in this regime is the probability density function of photocounting.
 
+In 1970, it was proposed to modulate the photocounting statistics with the previously discussed lognormal distribution of the mean photon count^[@diament1970]. 
+While this approach can be useful in certain specific cases^[@milonni2004], the infinite tail of the lognormal distribution implies unphysical photon amplification, making it unsuitable as a general model and requiring further study to establish a description of atmospheric turbulence effects on quantum states.
 
-- photon counting
-    - diament1970, milonni2004
-        - energy (photon number) conservation problem
-            - 10.1364/JOSAA.18.002789 
-- Quantum case
-    -  degradation of entanglement, nonclass, etc under turbulence. 
-
-adaptive optics, post selection
+> entanglement, nonclass, etc in turbulence. 
+> adaptive optics, post selection
