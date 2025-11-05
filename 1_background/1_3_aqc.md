@@ -76,3 +76,5 @@ It also remains an open question under which conditions each model should be app
 > #### Total probability law model
 >  $\mathcal{P}(\eta; \left<\eta\right>, \left<\eta^2\right>, W^2_\text{ST}, \sigma_\text{BW}^2)$ 
 > 
+
+> - [ ] Where is the single-photon propagation introduced for the transmittance value?
