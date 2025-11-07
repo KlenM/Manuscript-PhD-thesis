@@ -67,6 +67,7 @@ It also remains an open question under which conditions each model should be app
 
 > #### Truncated Log-normal distribution model
 > $\mathcal{P}(\eta; \left<\eta\right>, \left<\eta^2\right>)$
+> origin, assumptions, key formula, and expected regime of validity.
 > 
 > #### Beam wandering model
 > $\mathcal{P}(\eta; W^2_\text{ST}, \sigma_\text{BW}^2)$
