@@ -14,7 +14,7 @@
 ## Beta distribution model
 - before we conduct validation, we..
 
-## Results: Models Validation
+## Results and discussion
 ### Weak channel
 - Rytov parameter $\sigma_\mathrm{R}^2=0.2$ 
 - Overview
@@ -40,50 +40,54 @@
 
 
 ![\label{fig:ks_weak_inf}Weak zap](images/validation/weak_inf_ks_values.svg)
-- bw and ellipt "the worst agreement" despite physical based nature
+- Despite the physically motivated nature of the beam wandering and elliptical beam models they show the worst agreement with the numerical PDT.
     - elliptic beam minima, of fig 2
-- truncated lognormal has descend coinsidence for small apertures, but getting worse for larger apertures, when the sign of skewness (assymentry) of numerical pdt  .. while lognormal pdt has positive for all aperture parameters
-- total probability models almost the same as their counterparts for this channel
-- The beta model shows best agreement. It has minima at around $\langle\eta\rangle=0.5$ , where the numerical pdt has symmetrical shape.
-- the example of modesl for aperture = x which coresponds to the minima of elliptical beam model is shown in the fig 2.
+- The truncated lognormal model reproduces the numerical PDT fairly well for small apertures, but its accuracy degrades for larger apertures. 
+- The reason is the change of skewness in the numerical PDT—from positive to negative—as the aperture increases, while the truncated lognormal distribution remains positively skewed for any parameters.
+- The total probability models show performance nearly identical to their base distributions. 
+    - ?since beam wander effects are weak?.
+- The beta distribution provides the best overall agreement, with its KS statistic reaching a minimum around $\langle\eta\rangle=0.5$, where the numerical PDT is nearly symmetric.
 
 ![\label{fig:pdt_weak_inf}Weak inf](images/validation/weak_inf_pdt_0_03.svg)
 
-- We see that this minimum correponds to the case when the mode of the elliptical beam model distribution mathes the numerical PDT.
-    - not the case for other apertures
+- At the aperture corresponding to the elliptical beam model’s KS minimum, the mode of the distribution coincides with the mode of the numerical PDT, which can be seen in the fig X. 
+    - At other aperture sizes this model has biased mode and transmittance modes.
 - the BW assumes fixed shape of the beam, so the transmittance can't be bigger then the trasmittance of the coaxial circular beam of coresponding width.
-- for weak turbulence we generally have small variance of transmittance, so the PDT looks similar to gaussian shape especially if 0 << avg eta << 1
+    - this is reflected in the distinct shape of the beam wandering model, which can't catch the right tail of the numerical distribution.
+- Overall, for weak turbulence the transmittance fluctuations are small, and the PDT tends to a quasi-Gaussian shape whenever $0 \ll \langle\eta\rangle \ll 1$.
 
 #### Focused beam
 
 
 ![\label{fig:ks_weak_zap}Weak zap](images/validation/weak_zap_ks_values.svg)
 
-- in general poorer .. than collimated 
-    - We want to emphisise that this shoudn't be confused and considered that focused beam is worse.
-    - Focused beam is typically characterized by smaller beam spot size at the aperture plane, which results in better average transmittance for the same aperture radius those in general in better efficiency of protocols.
-    - The figure shows poorer performance of analytical models compared to numerical simulation results.
-- for focused beam the total probability models shows best performance.
-- However for $R_\text{ap} \gtrsim W_\text{LT}$  the models don't work.
-    - In this domain the beta model still produce best performance.
+For the focused beam, all analytical models show poorer agreement with numerical PDTs than in the collimated case. 
+This should not be misinterpreted as a degradation of channel performance. 
+A focused beam typically produces a smaller spot at the aperture plane and thus achieves a higher average transmittance for the same aperture radius, improving overall link efficiency. 
+The lower KS scores here simply indicate that existing analytical PDT models fail to capture the more complex field statistics in this focusing regime.
+
+Among all models, the total probability models demonstrate the best performance, especially for small to moderate aperture sizes.
+
+- However, when the aperture radius $R_\text{ap} \gtrsim W_\text{LT}$  the total probility models can't be defined.
+    - In this domain the beta model produce best performance.
 
 ![\label{fig:pdt_weak_zap}Weak zap](images/validation/weak_zap_pdt_0_015.svg)
 
-- mismatch skewness of lognormal; also the visible that truncated tail of lognormal distribution is big, having unphysical finite probability at $\eta=1$
+- The truncated lognormal model shows mismatched skewness and a physically unrealistic finite probability density at $\eta \to 1$ due to truncation.
 - elliptic beam model have biased mean transmittance 
-- beta model despite being parameterized with first two moments of transmittance, shows underestimate of absolute values of skewness and kurtosis in this range.
-- But the beta model combined with the beam wandering model -- total probability model -- shows perfect match with the numerical PDT.  
+- The beta model, while based on matching the first two moments, underestimates higher-order moments (skewness and kurtosis).
+    - When combined with the beam wandering statistics in the total probability model, however, the resulting PDT matches the numerical distribution almost perfectly in both shape and position.
 ### Moderate channel
 
 - "is 1.6 km. Such a channel has been implemented in Erlangen, Germany"
-#### moderate_inf
-- beta model is better for small apertures
-- However, for small apertures beta total probability model performs even worse than than simple beta model.
-- As can be seen on fig X, beta model perfectly match the shape
-    - But lognormal, despite being defined with first two moments of trasmittance, have biased variance -- the model is much narrower than numerical PDT.
-    - This can explained by the fact, that parameters of the truncated lognormal model actually defines the first two moment of the full lognormal pdf and after truncation the moments are different.
-- The figure X demonstrates PDT when aperture ~ W_LT - total probability is superior.
-    - We also can see that at this point the beam wander model mode match the numeriical PDT mode, which results in minima of KS statistic of this mode'l.
+#### Collimated Beam
+- For small apertures, the beta model provides the best fit to the numerical PDT.
+    - However, for small apertures beta total probability model performs even worse than than simple beta model.
+- As shown in Fig. X, the beta model reproduces the overall shape and width of the numerical PDT accurately.
+    - In contrast, the truncated lognormal model—although defined via the first two moments—produces a narrower distribution and underestimates the variance.
+    - This bias originates from the fact that truncation changes the actual moments of the distribution; the fitted parameters correspond to the full (untruncated) lognormal rather than the truncated one.
+- At apertures $R_\text{ap}\approx W_\text{LT}$, the total probability models outperform all others. 
+    - Here, also, the modes of the beam wandering  and elliptical beam models coincide with the mode of the numerical PDT, resulting in the KS minima for these models.
 
 ![\label{fig:pdt_moderate_inf}Moderate inf](images/validation/moderate_inf_ks_values.svg)
 
@@ -91,32 +95,39 @@
 
 ![\label{fig:ks_moderate_inf}Moderate inf](images/validation/moderate_inf_pdt_0_05.svg)
 
-#### moderate_zap
+#### Focused Beam
 
 ![\label{fig:pdt_moderate_zap}Moderate zap](images/validation/moderate_zap_ks_values.svg)
 
-- like in weak channel, general performance is worse than moderate_inf
-- generally beta mode is better
-- total prob models 'shines' at <~1 until they work
+- As in the weak channel, the focused beam results in generally worse agreement between analytical and numerical models than the collimated beam.
+- The beta model again performs best, outperformed a bit by the total probability models when the aperture is around $R_\text{ap}\approx W_\text{LT}$.
 - When the modes of beam wandering and elliptic beam modes match numerical PDT at ~1 they shows best performance. 
-- in the fig X we can see the reason of generally wors performance
+- in the fig X we can see the reason of generally worse performance
 
 ![\label{fig:ks_moderate_zap}Moderate zap](images/validation/moderate_zap_pdt_0_012.svg)
 
-- The numerical PDT has highly non-gaussian shape with almost constant probability density on some interval. 
-- And any models can not capture this feature.
+- The numerical PDT in this regime develops a highly non-Gaussian plateau, with nearly constant probability density over a finite interval of η.
+- This feature cannot be reproduced by any of the studied parametric models, all of which assume unimodal, smoothly decaying distributions.
 
 ### Strong channel
 
 ![\label{fig:pdt_moderate_inf}Moderate inf](images/validation/strong_inf_ks_values.svg)
 
-- interestingly  33 rytov channel ~~ moderate zap of sigma_rytov2 = 5 channel.
-- only at very small apertures ~0.1 R_ap the lognormal model performs better, what can be seen of fig X
+- Interestingly, the behavior of the 33 Rytov channel resembles that of the moderate focused channel with sigma_rytov2 = 5.
+- The only difference is that for very small apertures $R_\text{ap} \lesssim 0.1W_\text{LT}$ the truncated lognormal model shows slightly better performance (see Fig. X).
 
 ![\label{fig:ks_strong_inf}Strong inf](images/validation/strong_inf_pdt_0_1.svg)
 
-- For the trasmittance moment in this region changes its shape to the $(1-\eta)^{\beta-1}$ - like shape when the shape of the numerical PDT still resembles the lognormal shape.
-
+- In this range, the beta model changes its shape to the $(1-\eta)^{\beta-1}$ - like shape when the shape of the numerical PDT still resembles the lognormal shape.
+### Conclusion
+- moments bias; skewness (3d moment models?); curtosis for moderate-strong when aperture is 0.5; totprob for focused (why??); beta good; 
+- due to the bounded nature of the transmittance $\eta \in [0,1]$ the PDT inherently have highly positive skewnes when the aperture is small and highly negative skewness when the aperture is large compared to the average beam size.
+    - The strictly positive skew of lognormal distribution limits their region of applicability to sma
+    - However, any of the existing before analytical models be able to change the sign of the skewness 
+- the KS statistics of models behaves similalrly independent on the turbulence strength in general, but highly depends on the aperture radius.
+    - highlight the importance of aperture dependence for atmos quant channel
+- Physically based models (beam wandering and elliptical beam) being defined in term of beam shape statistics, results in biased trasmittance moments.
+    - 
 ## Statistics of beam shape parameters
 - gaussianity of x0
 
