@@ -138,31 +138,20 @@ In particular, the lognormal model always yields positively skewed distributions
 The elliptical beam model generally yields negative skewness, with only a minor positive skew for small apertures, which remains insufficient to reproduce the numerical PDT.
 Among the considered models, the total probability models and the Beta model most successfully reproduce the skewness of the numerical PDT.
 
-- overall (indicate this is overall of entire section, not last paragraph)
-    - the empirical beta model generally shows best KS statistics performance due to its' naturally bounded on $[0,1]$ support, and skewness behavior at edges. 
-    - lognorm - shows descent performance, but worse than beta model. Only for small apertures and strong turbulence when the the numerical PDT is wide and higly skewed so the estimated beta parameters reflects the unphysical L-shaped form of PDT, the lognormal model outperforms. 
-    - while total probability model combines the positive skewed lognormal and negative skewed beam wandering model, for small apertures it performance is of order of based lognormal model. However, when the aperture becames of order of the average beam spot width  $R_\text{ap} \lesssim W_\text{LT}$,  it capable to capture the high kurtosis of the numerical PDT, allows it to outperform all other models in some narrow region.
-    - the physical grounded beam wandering model and elliptical beam model strongly suffer from from biased first transmittance moment estimation (average transmittance and variance). This is the reason why it performs well when the parameters are fitted using the method of least squares^[@expfit], but bad when the beam shape parameters are estimated with the numerical simulation.
-- conclusion
+Overall, across the entire parameter space examined, the analytical PDT models exhibit distinct strengths and weaknesses, which can be summarized as follows.
+The empirical Beta model generally exhibits the best performance according to the KS-statistics, thanks to its naturally bounded support $\eta\in [0,1]$ and its ability to reproduce the skewness near the boundary points.
 
-3d observation about tot prob:
-> near 1 PDT is more heavy tailor (than beta and other (ellipt?)
+The lognormal model shows decent performance, but it is generally inferior to the Beta model. 
+An exception occurs for small apertures under strong turbulence, when the numerical PDT is broad and highly skewed. 
+In this regime, the Beta model’s estimated parameters may reflect in an unphysical L-shaped form with high probability of $\eta=0$, and the lognormal model can outperform the Beta model.
 
-overall:
-> - generally beta, totprob for big aperture, bw and elliptic if moment matched, 
+The total probability model, which combines the positively skewed lognormal and negatively skewed beam wandering models, performs similarly to the base lognormal model for small apertures. 
+However, when the aperture size becomes comparable to the average beam spot width ($R_\text{ap} \lesssim W_\text{LT}$), the model captures the high kurtosis of the numerical PDT, allowing it to outperform other models in some narrow parameter range.
 
-To be able to capture the primary feature of the probability distribution of transmittance function, analytical models must have negative skewness when the aperture is much smaller than the average beam width and positive skewness when the aperture is of order or bigger than the average beam width.
-The truncated lognormal model always have positive skewness which 
-    - when ap ~ WLT the 
+The physically grounded beam wandering and elliptical beam models are strongly affected by bias in the first transmittance moments (mean and variance). 
+This is the reason why they perform well when their parameters are fitted using least-squares methods^[@expfit], but poorly when the beam shape parameters are estimated directly from numerical simulations.
+However, when the peaks of the analytical and numerical PDTs are aligned, these models can outperform all others.
 
-- moments bias; skewness (3d moment models?); curtosis for moderate-strong when aperture is 0.5; totprob for focused (why??); beta good; 
-- due to the bounded nature of the transmittance $\eta \in [0,1]$ the PDT inherently have highly positive skewnes when the aperture is small and highly negative skewness when the aperture is large compared to the average beam size.
-    - The strictly positive skew of lognormal distribution limits their region of applicability to sma
-    - However, any of the existing before analytical models be able to change the sign of the skewness 
-- the KS statistics of models behaves similalrly independent on the turbulence strength in general, but highly depends on the aperture radius.
-    - highlight the importance of aperture dependence for atmos quant channel
-- 
-    - 
 ## Statistics of beam shape parameters
 - gaussianity of x0
 
