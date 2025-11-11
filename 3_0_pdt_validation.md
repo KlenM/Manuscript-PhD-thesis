@@ -128,17 +128,22 @@ In some cases, these models reproduce the overall shape of the numerical PDT qui
 The best agreement in terms of the KS-statistic is obtained when the peaks of the analytical and numerical PDTs coincide, as illustrated in ^[fig:ks_moderate_inf].
 Thus, because of the inability to fully account for all orders of the beam shape decomposition, it is more appropriate to parameterize analytical models in terms of transmittance moments rather than beam shape statistics.
 
-- The second observation is the primary role of aperture in choosing of the PDT models.
-- observation:
-    - From the KS-statistics figures we can see that the relative position of models are very similar among different types of channel turbulence.
-    - While with the changing of the aperture radius the KS-statistic varies a lot.
-- reasoning:
-    - the increasing of turbulence increases the width of the PDT (variance), which is "handled" by all the analytical models quite well.
-    - from the other side, the changing of the aperture change the skewness of the numerical PDT. And many models fail to catch this feature.
-- The truncated lognormal model always have positive skewness
-- Beam wandering - always negative.
-- Elliptic beam model - generally negative skewed. In some cases of small apertures can show slightly positive skew, but not enough compared to numerical PDT skew.
-- Both total probabilities models and Beta model have good. 
+The second important observation concerns the dominant role of the aperture size in determining the applicability of different PDT models.
+The KS-statistics results show that the models’ relative performance is similar across different turbulence strengths. 
+In contrast, variations in the aperture radius cause significant changes in the KS-statistic, indicating a strong dependence of model accuracy on the aperture parameter.
+
+Physically, increasing the turbulence strength primarily leads to a broader PDT (i.e., increased variance), which is captured reasonably well by all the analytical models.
+However, changing the aperture size mainly affects the skewness of the numerical PDT, and many analytical models fail to reproduce this asymmetry accurately.
+In particular, the lognormal model always yields positively skewed distributions, whereas the beam wandering model consistently produces negatively skewed ones.
+The elliptical beam model generally yields negative skewness, with only a minor positive skew for small apertures, which remains insufficient to reproduce the numerical PDT.
+Among the considered models, the total probability models and the Beta model most successfully reproduce the skewness of the numerical PDT.
+
+- overall (indicate this is overall of entire section, not last paragraph)
+    - the empirical beta model generally shows best KS statistics performance due to its' naturally bounded on $[0,1]$ support, and skewness behavior at edges. 
+    - lognorm - shows descent performance, but worse than beta model. Only for small apertures and strong turbulence when the the numerical PDT is wide and higly skewed so the estimated beta parameters reflects the unphysical L-shaped form of PDT, the lognormal model outperforms. 
+    - while total probability model combines the positive skewed lognormal and negative skewed beam wandering model, for small apertures it performance is of order of based lognormal model. However, when the aperture becames of order of the average beam spot width  $R_\text{ap} \lesssim W_\text{LT}$,  it capable to capture the high kurtosis of the numerical PDT, allows it to outperform all other models in some narrow region.
+    - the physical grounded beam wandering model and elliptical beam model strongly suffer from from biased first transmittance moment estimation (average transmittance and variance). This is the reason why it performs well when the parameters are fitted using the method of least squares^[@expfit], but bad when the beam shape parameters are estimated with the numerical simulation.
+- conclusion
 
 3d observation about tot prob:
 > near 1 PDT is more heavy tailor (than beta and other (ellipt?)
