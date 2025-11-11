@@ -12,7 +12,29 @@
 - table of models (there are a lot so the reader need visual aid)
 
 ## Beta distribution model
-- before we conduct validation, we..
+Before performing the validation of existing analytical models, we introduce an additional empirical model of the probability distribution of transmittance based on the Beta distribution^[@beta].
+The PDT in this model is defined by the Beta probability density function:
+
+$$
+%\label{Eq:pdt_beta}
+\mathcal{P}(\eta; a, b) = \frac{1}{B(a, b)} \eta^{a-1} (1-\eta)^{b-1}.
+$$
+where $B(a,b)$ is the Beta function. 
+The internal parameters $a$ and $b$ are expressed through the first two moments of the transmittance, $\left<\eta\right>$ and $\left<\eta^2\right>$, as    
+
+$$
+\begin{split}
+a = a\left(\langle\eta\rangle,\langle\eta^2\rangle\right)&= \frac{\langle\eta\rangle - \langle\eta^2\rangle}{ \langle\eta^2\rangle- \langle\eta\rangle^2}\langle \eta \rangle, \\
+b =b\left(\langle\eta\rangle,\langle\eta^2\rangle\right)&=  \frac{\langle\eta\rangle - \langle\eta^2\rangle}{ \langle\eta^2\rangle- \langle\eta\rangle^2} \left( 1 - \langle\eta\rangle \right).
+\end{split}
+$$
+
+This model is particularly convenient for several reasons.
+First, it has a natural support on the physically meaningful interval $[0,1]$, which corresponds directly to the possible range of transmittance values.
+Second, it provides a simple analytical expression, whose parameters can be determined directly from the first two statistical moments of transmittance. 
+This makes the model straightforward to implement and interpret.
+Finally, the shape of the Beta distribution PDT generally resembles the numerically obtained transmittance distributions across a wide range of turbulence conditions. 
+Therefore, we expect it to exhibit good agreement with numerical simulations, as will be shown in the following sections.
 
 ## Results and discussion
 ### Weak channel
@@ -119,7 +141,9 @@ Among all models, the total probability models demonstrate the best performance,
 ![\label{fig:ks_strong_inf}Strong inf](images/validation/strong_inf_pdt_0_1.svg)
 
 - In this range, the beta model changes its shape to the $(1-\eta)^{\beta-1}$ - like shape when the shape of the numerical PDT still resembles the lognormal shape.
+
 ### Conclusion
+
 For both weak turbulence channels and the moderate-turbulence collimated beam channel, the numerically obtained probability density of transmittance (PDT) exhibits a bell-like, unimodal, and relatively narrow distribution, with noticeable asymmetry near the boundaries of its support, $\eta \in [0,1]$.
 For the moderate-turbulence focused beam and strong turbulence channels, a similar overall tendency is observed, though the distributions become broader and tend toward a flattened shape, indicating an increased spread of transmittance values caused by the more complex spatial structure of the beam.
 
