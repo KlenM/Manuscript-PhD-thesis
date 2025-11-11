@@ -120,13 +120,43 @@ Among all models, the total probability models demonstrate the best performance,
 
 - In this range, the beta model changes its shape to the $(1-\eta)^{\beta-1}$ - like shape when the shape of the numerical PDT still resembles the lognormal shape.
 ### Conclusion
+For both weak turbulence channels and the moderate-turbulence collimated beam channel, the numerically obtained probability density of transmittance (PDT) exhibits a bell-like, unimodal, and relatively narrow distribution, with noticeable asymmetry near the boundaries of its support, $\eta \in [0,1]$.
+For the moderate-turbulence focused beam and strong turbulence channels, a similar overall tendency is observed, though the distributions become broader and tend toward a flattened shape, indicating an increased spread of transmittance values caused by the more complex spatial structure of the beam.
+
+The first important observation is that the two physically motivated models—the beam wandering model and the elliptical beam model—being defined in terms of beam shape statistics, exhibit biased transmittance moments.
+In some cases, these models reproduce the overall shape of the numerical PDT quite well (see Fig. ^[fig:pdt_weak_zap]), although their peaks are shifted relative to the numerical result.
+The best agreement in terms of the KS-statistic is obtained when the peaks of the analytical and numerical PDTs coincide, as illustrated in ^[fig:ks_moderate_inf].
+Thus, because of the inability to fully account for all orders of the beam shape decomposition, it is more appropriate to parameterize analytical models in terms of transmittance moments rather than beam shape statistics.
+
+- The second observation is the primary role of aperture in choosing of the PDT models.
+- observation:
+    - From the KS-statistics figures we can see that the relative position of models are very similar among different types of channel turbulence.
+    - While with the changing of the aperture radius the KS-statistic varies a lot.
+- reasoning:
+    - the increasing of turbulence increases the width of the PDT (variance), which is "handled" by all the analytical models quite well.
+    - from the other side, the changing of the aperture change the skewness of the numerical PDT. And many models fail to catch this feature.
+- The truncated lognormal model always have positive skewness
+- Beam wandering - always negative.
+- Elliptic beam model - generally negative skewed. In some cases of small apertures can show slightly positive skew, but not enough compared to numerical PDT skew.
+- Both total probabilities models and Beta model have good. 
+
+3d observation about tot prob:
+> near 1 PDT is more heavy tailor (than beta and other (ellipt?)
+
+overall:
+> - generally beta, totprob for big aperture, bw and elliptic if moment matched, 
+
+To be able to capture the primary feature of the probability distribution of transmittance function, analytical models must have negative skewness when the aperture is much smaller than the average beam width and positive skewness when the aperture is of order or bigger than the average beam width.
+The truncated lognormal model always have positive skewness which 
+    - when ap ~ WLT the 
+
 - moments bias; skewness (3d moment models?); curtosis for moderate-strong when aperture is 0.5; totprob for focused (why??); beta good; 
 - due to the bounded nature of the transmittance $\eta \in [0,1]$ the PDT inherently have highly positive skewnes when the aperture is small and highly negative skewness when the aperture is large compared to the average beam size.
     - The strictly positive skew of lognormal distribution limits their region of applicability to sma
     - However, any of the existing before analytical models be able to change the sign of the skewness 
 - the KS statistics of models behaves similalrly independent on the turbulence strength in general, but highly depends on the aperture radius.
     - highlight the importance of aperture dependence for atmos quant channel
-- Physically based models (beam wandering and elliptical beam) being defined in term of beam shape statistics, results in biased trasmittance moments.
+- 
     - 
 ## Statistics of beam shape parameters
 - gaussianity of x0
