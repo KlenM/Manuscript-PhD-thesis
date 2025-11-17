@@ -176,14 +176,55 @@ The physically grounded beam wandering and elliptical beam models are strongly a
 This is the reason why they perform well when their parameters are fitted using least-squares methods^[@expfit], but poorly when the beam shape parameters are estimated directly from numerical simulations.
 However, when the peaks of the analytical and numerical PDTs are aligned, these models can outperform all others.
 
-## Statistics of beam shape parameters
-- gaussianity of x0
+# Statistical properties of the beam shape parameters
+The statistical behavior of optical beam-shape parameters after propagation through a turbulent atmosphere forms the core set of assumptions underlying physically motivated analytical models such as the beam-wandering model, the elliptical-beam model, and the total-probability framework.
+These assumptions include: the distribution of the beam-centroid position, the statistical independence between the beam-centroid position and the beam-spot shape, and the Gaussian statistics of the beam semiaxes.
+However, these assumptions are accepted without strong empirical support.
+This introduces a potential source of systematic inaccuracy.
+Therefore, it is essential to examine and validate these assumptions through numerical simulations.
 
-## Discussion
-- num sim is the origin to be able to compare modes
-- can models be extended or corrected? Speckles are important in bw models
-- discuss previous assumption
+## Distribution of the beam-centroid position
+Beam wandering is the most prominent effect of the light beam propagating through a turbulent atmosphere. 
+It arises primarily from large-scale turbulent eddies, which cause the entire beam spot to shift away from the propagation axis.
+This phenomenon is explicitly included in all three analytical models discussed above, where the beam-centroid displacement is assumed to follow a two-dimensional Gaussian distribution.
 
-## Conclusion
+Empirical evidence supporting this Gaussian assumption is limited (e.g., ^[@luo2025]), as the number of realizations is generally small. 
+Consequently, it does not allow confident estimation of higher-order moments, such as skewness or kurtosis, and it does not cover a wide range of turbulence strengths. 
+To address this, we perform a systematic numerical study across several turbulence strengths.
 
-> uncertainty treatment: statistical convergence, noise, numerical errors.
+- Given the isotropy of turbulence the distribution of the beam centroid is radial symmetric. 
+- Thus, we need to study only one dimension projection on the x-axis -- the beam-centroid coordinate $x_0$ defined as^[eq:x0].
+- To verify whether the distribution is gaussian, we will sample the value of $x_0$ for each realization of propagation and ?calculate/estimate/?? the skewness and excess kurtosis.
+- To organize the thesis properly we will study these statistics for the same three channels as in ^[sec:validation].
+
+- [ ] BW not depends of F
+
+### Weak turbulence channel
+- Firstly we consinder the channel of weak turbulence of length $L=0$ which is characterized be $\sigma_\mathrm{R}^2=0$. 
+- The complete list of the channel parameters is desribed in ^[tab:weak].
+- The distribution of beam-centroid coordinate for *collimated and focused cases*,  estimated using the kernel method , are showed in the ^[fig:x0_weak].
+- Comparing with the normal distribution pdf line we see high match. 
+- the skew and kurtosis of  are listed in the table ^[tab:x0_weak]
+- We can see very small values of skew and kurtosis meaning that for both channels the distribution of beam-centroid can be considered as 2D gaussian distribution.   
+
+| Weak channel            | Skew | Kurtosis |
+| :---------------------- | :--: | :------: |
+| Collimated $F=\infty$   |  0   |    0     |
+| Focused $F=z_\text{ap}$ |  0   |    0     |
+
+
+![\label{fig:x0_weak}Weak inf zap](images/beam_shape/bw_weak_inf_zap.svg)
+
+### Moderate turbulence channel
+
+![\label{fig:bw_moderate}Moderate inf zap](images/beam_shape/bw_moderate_inf_zap.svg)
+
+![\label{fig:bw_strong}Strong inf](images/beam_shape/bw_strong_inf.svg)
+
+## Correlation between beam-centroid and transmittance
+
+
+
+## Correlation between beam-centroid and beam width
+
+## Distribution of the beam semiaxis
