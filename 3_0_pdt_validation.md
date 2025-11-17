@@ -188,38 +188,76 @@ Beam wandering is the most prominent effect of the light beam propagating throug
 It arises primarily from large-scale turbulent eddies, which cause the entire beam spot to shift away from the propagation axis.
 This phenomenon is explicitly included in all three analytical models discussed above, where the beam-centroid displacement is assumed to follow a two-dimensional Gaussian distribution.
 
-Empirical evidence supporting this Gaussian assumption is limited (e.g., ^[@luo2025]), as the number of realizations is generally small. 
+Empirical evidence supporting this Gaussian assumption is limited, as the number of realizations is generally small (e.g., ^[@luo2025]). 
 Consequently, it does not allow confident estimation of higher-order moments, such as skewness or kurtosis, and it does not cover a wide range of turbulence strengths. 
 To address this, we perform a systematic numerical study across several turbulence strengths.
 
-- Given the isotropy of turbulence the distribution of the beam centroid is radial symmetric. 
-- Thus, we need to study only one dimension projection on the x-axis -- the beam-centroid coordinate $x_0$ defined as^[eq:x0].
-- To verify whether the distribution is gaussian, we will sample the value of $x_0$ for each realization of propagation and ?calculate/estimate/?? the skewness and excess kurtosis.
-- To organize the thesis properly we will study these statistics for the same three channels as in ^[sec:validation].
+Given the isotropy of turbulence, the distribution of the beam centroid is radially symmetric. 
+Consequently, it is sufficient to consider only a single-dimensional projection along the $x$-axis -- the beam-centroid coordinate $x_0$, defined as^[eq:x0].
+To verify whether the distribution is Gaussian, we generate $5\cdot10^{5}$ realizations of beam propagation, compute the corresponding values of $x_0$ according to ^[eq:x0], and estimate the higher-order moments -- the skewness and excess kurtosis^[@joanes1998].
+These higher-order moments provide a quantitative measure of deviations from the Gaussian assumption: skewness captures asymmetry in the distribution, while excess kurtosis reflects the presence of heavy tails or peakedness.
 
-- [ ] BW not depends of F
+To systematically evaluate the effect of turbulence strength, we perform this analysis across a range of atmospheric conditions, spanning weak to strong turbulence. 
+The same three types of propagation channels considered in ^[sec:validation] will be used to maintain consistency with previous analyses. 
+
+>The parameters of these channels are listed in ^[tab:channels].
+> - [ ] BW not depends of F
 
 ### Weak turbulence channel
-- Firstly we consinder the channel of weak turbulence of length $L=0$ which is characterized be $\sigma_\mathrm{R}^2=0$. 
-- The complete list of the channel parameters is desribed in ^[tab:weak].
-- The distribution of beam-centroid coordinate for *collimated and focused cases*,  estimated using the kernel method , are showed in the ^[fig:x0_weak].
-- Comparing with the normal distribution pdf line we see high match. 
-- the skew and kurtosis of  are listed in the table ^[tab:x0_weak]
-- We can see very small values of skew and kurtosis meaning that for both channels the distribution of beam-centroid can be considered as 2D gaussian distribution.   
 
-| Weak channel            | Skew | Kurtosis |
-| :---------------------- | :--: | :------: |
-| Collimated $F=\infty$   |  0   |    0     |
-| Focused $F=z_\text{ap}$ |  0   |    0     |
-
+We begin with the weak-turbulence channel of propagation length $L=1\text{km}$, characterized by a Rytov variance $\sigma_\mathrm{R}^2=0.2$. 
+The full set of channel parameters is listed in ^[tab:weak]. 
+For this channel, the distribution of the beam-centroid coordinate $x_0$ was estimated using a kernel density method for both the collimated and focused cases. 
+The resulting probability density functions are shown in ^[fig:x0_weak].
 
 ![\label{fig:x0_weak}Weak inf zap](images/beam_shape/bw_weak_inf_zap.svg)
 
+When compared with the Gaussian probability density function, both simulated curves exhibit an almost perfect match. 
+The numerical values of skewness and excess kurtosis, listed in ^[tab:x0_weak], confirm this observation.
+
+| Weak channel            | Skewness | Excess curtosis |
+| :---------------------- | :------: | :-------------: |
+| Collimated $F=\infty$   |  0.0058  |      0.014      |
+| Focused $F=z_\text{ap}$ | −0.0043  |     −0.0038     |
+
+The skewness and excess kurtosis are effectively zero. 
+These results indicate that, under weak turbulence, the beam-centroid displacement can be reliably modeled as a two-dimensional Gaussian random variable for both collimated and focused beams. 
+This directly supports the standard assumption used in analytical models for the weak-turbulence regime.
+
 ### Moderate turbulence channel
+We next consider a stronger turbulence condition with propagation length $L=1.6\text{km}$ and Rytov variance $\sigma^2_\text{R}=1.5$.
+The full set of channel parameters is given in ^[tab:moderate].
+The kernel-estimated probability density functions of the beam-centroid coordinate $x_0$ for both the collimated and focused beams are shown in ^[fig:x0_moderate].
 
 ![\label{fig:bw_moderate}Moderate inf zap](images/beam_shape/bw_moderate_inf_zap.svg)
 
+Both distributions remain very close to the Gaussian reference. 
+In the focused case, the peak appears slightly asymmetric by visual inspection, but the numerical skewness reported in ^[tab:x0_moderate] is essentially zero, indicating that this deviation can be considered as statistical noise.
+
+| Weak channel            | Skewness | Excess curtosis |
+| :---------------------- | :------: | :-------------: |
+| Collimated $F=\infty$   |  0.0172  |     −0.0046     |
+| Focused $F=z_\text{ap}$ |  −0.003  |     −0.0279     |
+
+In both cases, the skewness and excess kurtosis remain very small. 
+Thus, even at moderate turbulence strength, the beam-centroid position continues to be well described by a two-dimensional Gaussian random variable.
+
+### Strong turbulence channel
+Finally, we consider the strong-turbulence channel with propagation length $L=50\text{km}$ and Rytov variance $\sigma_\text{R}^2=33.3$. 
+The full set of channel parameters is given in ^[tab:strong].
+The kernel-estimated probability density function of the beam-centroid coordinate $x_0$ is shown in ^[fig:bw_strong].
+
 ![\label{fig:bw_strong}Strong inf](images/beam_shape/bw_strong_inf.svg)
+
+The distribution remains approximately Gaussian, but a noticeable deviation appears at the peak. 
+This is reflected in the negative excess kurtosis reported in^[tab:x0_strong]:
+
+| Weak channel          | Skewness | Excess curtosis |
+| :-------------------- | :------: | :-------------: |
+| Collimated $F=\infty$ |  0.0008  |     −0.1064     |
+The skewness is essentially zero, but the negative excess kurtosis indicates a slight platykurtic shape. 
+This confirms a mild departure from Gaussianity at very strong turbulence conditions.
+However, the deviation is still modest, so for most analytical purposes the Gaussian assumption remains sufficiently accurate even in this regime.
 
 ## Correlation between beam-centroid and transmittance
 
