@@ -313,7 +313,56 @@ This demonstrates that the mentioned above practice of extrapolating *statistica
 >- Its impact is also strongly modulated by the receiver aperture.
 >    - in this section, the importance of aperture isn't clear. It's for validation section
 
-## Correlation between beam-centroid and beam width
+## Beam-wandering and beam-shape correlations
+
+A fundamental assumption of the total-probability model is that beam wandering and beam-shape fluctuations are statistically independent.
+Validating this assumption is crucial for understanding the interplay between beam-centroid wandering and beam-shape distortions, as well as for evaluating the validity of analytical models that factorize these contributions.
+
+We address this question using two complementary approaches.
+The first approach is a natural extension of the analysis presented in the previous subsection, with one key modification.
+As before, for each of the $5\cdot10^5$ simulated realizations we calculate the centroid displacement $r_0$.
+However, instead of measuring the transmittance $\eta$, we shift the receiver aperture to the instantaneous centroid position and evaluate the resulting transmittance, denoted $\eta_{r_0}$.
+This procedure emulates an ideal adaptive-optics system that fully compensates for beam wandering.
+By analyzing the correlation between $r_0$ and $\eta_{r_0}$ with the Pearson correlation coefficient
+$$%\label{eq:r0etar0}
+S(r_0,\eta_{r_0})=\frac{\left\langle\Delta r_0 \Delta\eta_{r_0}\right\rangle}{\sqrt{\left\langle\Delta r_0^2\right\rangle\left\langle \Delta\eta_{r_0}^2\right\rangle}}$$
+we isolate the statistical relationship between centroid motion and the residual beam-shape fluctuations, independent of the displacement effect.
+The results are summarized in ^[@fig:r0eta0].
+
+![\label{fig:fig:r0eta0}corr](images/beam_shape/original_r_0_eta_tracked.pdf)
+
+For the majority of atmospheric channels and aperture radii, the correlations are very weak, indicating that beam centroid displacements and higher-order beam-shape fluctuations are largely independent.
+Slightly higher correlations are observed in the strong-turbulence channel for small aperture radii, where realizations with larger centroid displacements $r_0$ tend to produce smaller transmittance values compared to realizations with $r_0$ near the optical axis.
+
+In the second approach, we focus on the statistical relationship between the beam centroid displacement $r_0$ and the instantaneous beam width.
+Unlike the first approach, which evaluates correlations through the measured transmittance and therefore includes aperture effects, this method directly characterizes the intrinsic properties of the beam itself, independent of any receiver geometry.
+However, in this approach, small-scale random intensity fluctuations, such as speckles, are effectively excluded, so that the correlation reflects only the large-scale beam spreading.
+To properly account for the symmetry of the system, the beam width is defined along the direction of the centroid displacement vector $\mathbf{r}_0$, denoted $W_{r}$ (see example in ^[@fig:beamWr0]).
+
+![\label{fig:beamWr0}example](images/beam_shape/original_beam_profile.pdf)
+
+For this analysis, we use the same $5\cdot10^5$ simulated realizations of the atmospheric channels.
+For each realization, the beam centroid displacement is represented by the vector $\mathbf{r}_0 = (x_0, y_0)^T$.
+The coordinate system is subsequently rotated by the angle $\chi=\arctan\left({y_0/x_0}\right)$, yielding a new frame $(x_r, y_r)$ in which the $x_r$ axis is aligned with the direction of the beam-centroid displacement vector $\mathbf{r}_0$.
+In this rotated frame, the beam width $W_r$ along the $x_r$ axis is measured^[eq:ST2] for each realization.
+The Pearson correlation coefficient between the magnitude of the centroid displacement $r_0$ with the corresponding beam width $W_r$ along the $x_r$ axis is estimated as
+$$%\label{eq:r0etar0}
+S\left(r_0,W_r\right)=\frac{\left\langle\Delta r_0 \Delta W_r\right\rangle}{\sqrt{\left\langle\Delta r_0^2\right\rangle\left\langle \Delta W_r^2\right\rangle}}$$
+
+The resulting correlation values for all atmospheric channels are summarized in ^[@tab:r0Wr].
+
+| Channel  | $F_0=+\infty$ | $F_0=z_\text{ap}$ |
+| -------- | :-----------: | :---------------: |
+| Weak     |     0.016     |       0.039       |
+| Moderate |     0.08      |       0.15        |
+| Strong   |     0.32      |         -         |
+
+Overall, the correlations are small in the weak and moderate channels, indicating that beam wandering and large-scale spreading remain largely independent in these regimes.
+A noticeable increase appears only for the strong-turbulence channel, indicating that, on average, beams become wider when their centroids deviate further from the propagation axis.
+The strength of this effect grows with increasing turbulence.
+
+These results complement the conclusions of the first approach: when turbulence is weak or moderate, centroid motion can be treated as effectively independent of beam-shape variations.
+Only under strong turbulence a measurable dependence arises, but even then, its impact on the transmittance remains modest.
 
 ## Distribution of the beam semiaxis
 
