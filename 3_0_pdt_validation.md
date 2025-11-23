@@ -265,7 +265,7 @@ It appears together with large-scale beam-shape deformation and small-scale scin
 This subsection investigates how beam wandering alone contributes to the transmittance. 
 
 Identifying regimes where beam wandering is the main driver of transmittance variability clarifies when analytical models that include this effect are more applicable, and when more complex models are required. 
-Also, in practical free-space experiments, adaptive optics systems are often used to mitigate random centroid displacement ^[@tyson2015]. 
+In addition, in practical free-space experiments, adaptive-optics systems are often used to mitigate random centroid displacement ^[@tyson2015]. 
 When the correlation between wandering and transmittance is high, such techniques can offer substantial performance improvements, emphasizing the practical relevance of this analysis for adaptive-optics applications.
 
 To quantify the contribution of beam wandering, we compute the Pearson correlation coefficient between the centroid displacement $r_0$ and the transmittance $\eta$, defined as
@@ -278,36 +278,40 @@ The dependence of the correlation on the aperture radius is shown in ^[@fig:r0et
 
 ![\label{fig:fig:r0eta}Strong inf](images/beam_shape/original_r_0_eta.pdf)
 
-- The results for all channels generally show highly negative correlations between the quantities. 
-- When the aperture radius is much larger than the long-term beam radius $W_\text{LT}$, almost the entire beam cross-section enters the receiver. The transmittance remains close to unity even when the centroid moves. As a result, the correlation are small.
-- When the aperture is much smaller than $W_\text{LT}$, the central region of the beam is always clipped. Variations in the centroid position change the already-strong clipping only slightly. The correlation again are small.
-- When the aperture $R_\text{ap} \lesssim W_\text{LT}$ the receiver captures only the central portion of the beam, but the captured fraction changes significantly when the centroid moves. This regime shows the strongest sensitivity to wandering and therefore the largest correlation values with minimum around $R_\text{ap} \approx 0.5 \cdot W_\text{LT}$.
 
-- the next feature is significant difference between the channels with $F_0=z_\text{ap}$ and $F_0=+\infty$.
+Across all atmospheric channels, the correlation between centroid displacement and transmittance is negative, reflecting the obvious fact that larger beam wandering reduces received power.
+The magnitude of this correlation strongly depends on the ratio between the aperture radius and the long-term beam radius $R_\text{ap}/W_\text{LT}$.
 
-- It is commonly accepted that in weak turbulence the beam is mainly affected by wandering, while in stronger turbulence small-scale distortions and speckles dominate the beam shape.^[@what_to_cite?]
-- but in^[@vasylyev2012] it looks like it's implicitly assumed that If beam wandering dominates the beam,→ then beam wandering also dominates the PDT. (make this sounds smoother).
-- However, as seen in ^[@fig:r0eta], the correlation for weak turbulence channel with $F_0=+\infty$ is smaller than other channels
-- in general, the maximal correlation between centroid displacement and transmittance increases with turbulence strength. 
+For aperture radii much larger than $W_\text{LT}$, almost the full beam enters the receiver aperture regardless of its displacement. 
+The correlation in this case close to zero.
+For aperture radii much smaller than $W_\text{LT}$, the beam is strongly clipped even without wandering. 
+Variations in the centroid position change the already-strong clipping only slightly, so the correlation again becomes small.
+The strongest correlation appears in the intermediate regime when
+$R_\text{ap} \lesssim W_\text{LT}$.
+Here, the aperture captures the central part of the beam, and centroid motion produces large changes in overlap of the field intensity and the aperture.
+The minimum typically occurs around $R_\text{ap} \approx 0.5 W_\text{LT}$.
 
-lognormal??
+A clear trend also appears when comparing channels with initial curvature $F_0 = z_\text{ap}$ and $F_0 = +\infty$. 
+Channels with the geometrically focused beams show larger correlations.
+A plausible interpretation is that focused beams exhibit smaller spreading fluctuations, meaning that transmittance fluctuations come less from beam-size changes and more from centroid displacement. 
+With spreading variation suppressed, wandering has a comparatively stronger impact on the received power, which increases the correlation.
+This also explains why the total-probability model performs particularly well for the corresponding weak channel ^[@sec:weak_zap_valid] and for the moderate channel in the region $R_\text{ap} \lesssim W_\text{LT}$ ^[@sec:moderate_zap_valid].
 
-- This means that beam wandering continues to influence aperture-averaged transmittance even when small-scale distortions and speckle formation dominate the beam structure. 
-- Beam wandering therefore remains an important contributor to transmittance fluctuations under all turbulence conditions. 
-- Its impact is also strongly modulated by the receiver aperture.
+It is commonly accepted that in weak turbulence the beam is mainly affected by wandering, while in stronger turbulence small-scale distortions and speckles dominate the beam structure ^[@Atmos]. 
+Based on these observations, it is often assumed in the literature that models based on the beam-wandering effect should perform better in weak turbulence^[@vasylyev2012,vasylyev2016], whereas in strong turbulence the lognormal model is expected to be more appropriate^[@vasylyev2018], as it represents the limiting statistics of multiplicative small-scale distortions. 
+Moreover, fitting of such analytical models to experimental data sets for a weak-turbulence channel in Erlangen^[@vasylyev2016,usenko2012] and for a strong-turbulence channel on the Canary Islands^[@capraro2012] has been interpreted as supporting this picture, although this agreement appears to be accidental and results by the particular aperture size used in those experiments^[sec:see_validataion_disscus].
 
+>“This is justified for weak turbulence, when speckles play no essential role.” ([Vasylyev et al., 2016, p. 1](zotero://select/library/items/QEV8ZWED)) ([pdf](zotero://open-pdf/library/items/J49VGVHY?page=1&annotation=HLNYWFKI))
+>“Aperture transmission coefficient.– For weak absorption, beam-wandering losses are dominant.” ([Vasylyev et al., 2012, p. 2](zotero://select/library/items/MTFCYJ8H)) ([pdf](zotero://open-pdf/library/items/DHFQCSBE?page=2&annotation=PTZWZMYV))
+>“For some cases with long propagation lengths or strong turbulence, the effects of beam-spot distortions significantly dominate the resulting statistics, compared to the effects of beam wandering. In this case, the PDT can be approximated with reasonable accuracy by the truncated log-normal distribution” ([Vasylyev et al., 2018, p. 3](zotero://select/library/items/QRZKWNB4)) ([pdf](zotero://open-pdf/library/items/6VZUIQVQ?page=3&annotation=Z3TGZBAQ))
 
-- The maximal correlation increases with turbulence strength.
-    - "For weak turbulence the atmosphere mainly causes beam wandering."
-    - "This is justified for weak turbulence, when speckles play no essential role. For strong turbulence the beam shape is the result of many small spatially averaged distortions."
-    - This contradicts the generally assumed assumption that beam wandering effect dominates in weak turbulnce channels.
-- Channels with $F=z_{a}$ exhibit substantially higher correlations, 
-- This explains why total-probability model perform particularly well for the corresponding weak channel^[sec:weak_zap_valid]. and corresponding moderate channel in the region of $R_\text{ap} \lesssim W_\text{LT}$^[sec:moderate_zap_valid].
-- 
+However, as seen in ^[@fig:r0eta], the correlation between centroid displacement and transmittance for the weak-turbulence channel with $F_0=+\infty$ is lower than for all other channels. 
+In general, the maximal correlation between centroid displacement and transmittance increases with turbulence strength. 
+This demonstrates that the mentioned above practice of extrapolating *statistical observations about the beam shape* directly to the *statistics of the transmittance* is not justified.
 
-- It's also worth noting that the correlation represents the linear dependence.
-- Additional nonlinear dependence may become important...
-- Quick conclusions.
+> Unnecessary:
+>- Its impact is also strongly modulated by the receiver aperture.
+>    - in this section, the importance of aperture isn't clear. It's for validation section
 
 ## Correlation between beam-centroid and beam width
 
