@@ -364,7 +364,53 @@ The strength of this effect grows with increasing turbulence.
 These results complement the conclusions of the first approach: when turbulence is weak or moderate, centroid motion can be treated as effectively independent of beam-shape variations.
 Only under strong turbulence a measurable dependence arises, but even then, its impact on the transmittance remains modest.
 
-## Distribution of the beam semiaxis
+## Distribution of the beam semi-axes
+
+- in this section we get deeper that beam wandering and beam spreading and study the semiaxes of the ellipse, of the Gaussian approximation of the beam shape.
+- accountin randomnes of the beam shape semi-axes $W_{1,2}$ is the distinct feature of the elliptical beam model ^[sec:elbeam], in which it's assumed that the logarithms of the squared beam semi-axes $\Theta_{1,2} = \ln(W_{1,2}^2/W_0^2)$ follow a bivariate Gaussian distribution.
+- however it's not clear true and when it works.
+
+- to validate, we Generate $5\cdot10^5$ realization of channels described in ^[sec:valid].
+- For each realization:
+    - Compute the values of the spot-shape matrix $\mathbf{S} = \begin{pmatrix} S_{xx} & S_{xy} \\ S_{xy} & S_{yy} \end{pmatrix}$ according to ^[eq:elS].
+    - Compute its eigenvalues $W_{\pm}^2 = \frac{1}{2}\left( S_{xx}+S_{yy} \pm \sqrt{(S_{xx}-S_{yy})^2 + 4S_{xy}^2} \right)$.
+    - $W^2_{1,2}$ corresponds to the semi-axes along the first and second quadrant accordingly.
+        - If $S_{xy}>0$ then the bigger semi-axes lies along..., so $W^2_{1,2}=W^2_{\pm}$.
+        - If $S_{xy}<=0$ then the bigger semi-axes lies along..., so $W^2_{1,2}=W^2_{\mp}$.
+    - Compute the logarithmic variables $\Theta_{1,2} = \ln(W_{1,2}^2/W_0^2)$.
+- The scatter plot of obtained pair  $(\Theta_1,\Theta_2)$ is shown in ^[fig:theta1theta2].
+
+![\label{fig:theta1theta2}thetas](images/beam_shape/original_theta_1_theta_2_strong_inf.pdf)
+
+- to compare with the gaussian approxiamtion, we  compute the sample means, covariance matrix $\Sigma_{ij} = \langle \Delta\Theta_i \Delta\Theta_j \rangle$, and plot the covariance ellipse 
+$$
+\sum\limits_{i,j=1}^2\big(\Theta_i-\langle\Theta_i\rangle\big)\Sigma_{ij}^{-1}\big(\Theta_j-\langle\Theta_j\rangle\big)=4$$
+- We can see that the results deviates from the bivariate gaussian distribution.
+    - pronounced suppression along the diagonal ($\Theta_1 = \Theta_2$),
+    - slight mismatch between samples and covariance ellipse.
+        - however the ellipse is nearly circular, indicating small correlation between values.
+- To quntitatively describe the data, we rotate coordinates, so the data is symmetric around $\Theta_{(s)}=0$.
+$$
+\begin{split}
+\Theta_{(s)}&=(\Theta_1-\Theta_2)/\sqrt{2}\\
+\Theta_{(a)}&=(\Theta_1+\Theta_2)/\sqrt{2}
+\end{split}$$
+- Compute skewness and excess kurtosis of $\Theta_{(s)}$ and $\Theta_{(a)}$ for each turbulence regime (summarized in ^[tab:thetasthetaa]).
+
+| Channel  | Initial beam curvature $F_0$ |            Skewness |                | Excess kurtosis |                |
+| -------- | :--------------------------: | ------------------: | -------------: | --------------: | -------------: |
+|          |                              |      $\Theta_{(s)}$ | $\Theta_{(a)}$ |  $\Theta_{(s)}$ | $\Theta_{(a)}$ |
+| Weak     |        $z_\text{ap}$         | $-0.6\times10^{-3}$ |         $0.25$ |         $-0.85$ |         $0.23$ |
+|          |           $\infty$           |  $-10\times10^{-3}$ |         $-0.1$ |            $-1$ |       $-0.006$ |
+| Moderate |        $z_\text{ap}$         |  $9.8\times10^{-3}$ |         $0.25$ |         $-0.81$ |         $0.12$ |
+|          |           $\infty$           | $-3.7\times10^{-3}$ |         $0.15$ |         $-0.99$ |        $-0.11$ |
+| Strong   |           $\infty$           |   $-9\times10^{-3}$ |         $0.32$ |         $-0.77$ |         $0.25$ |
+- we see that the $\Theta_{(s)}$ distribution is highly symmetric, but strongly platykurtic because of that the suppression along $\Theta_{(s)}=0$ ($\Theta_1 = \Theta_2$).
+- for the $\Theta_{(a)}$ we see asymmetric distribution but also more Gaussian-like, because its kurtosis is closer to zero.
+- Overall, the numerical simulation of beam-shape semi-axes reveal that its disctribution can't be properly described by the bivariative Gaussian distribution. 
+    - As the logarithm of the eigenvalue of the random matrix $S$ - more study must be conducted.
+
+> - [ ] check  $\Theta_1+\Theta_2$ 1d distribution, relate to $S$...
 
 > Conclusion?
 >>The PDT depends on the interplay of:
