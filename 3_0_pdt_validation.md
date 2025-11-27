@@ -366,36 +366,52 @@ Only under strong turbulence a measurable dependence arises, but even then, its 
 
 ## Distribution of the beam semi-axes
 
-- in this section we get deeper that beam wandering and beam spreading and study the semiaxes of the ellipse, of the Gaussian approximation of the beam shape.
-- accountin randomnes of the beam shape semi-axes $W_{1,2}$ is the distinct feature of the elliptical beam model ^[sec:elbeam], in which it's assumed that the logarithms of the squared beam semi-axes $\Theta_{1,2} = \ln(W_{1,2}^2/W_0^2)$ follow a bivariate Gaussian distribution.
-- however it's not clear true and when it works.
+In this section we move beyond the analysis of beam wandering and beam spreading and examine the statistical behavior of the semi-axes of the elliptical Gaussian approximation of the beam shape.
+This effect is a central element of the elliptical beam model ^[@sec:elbeam], which explicitly includes the influence of random fluctuations of the semi-axes $W_{1,2}$.
+In this model the logarithms of the squared semi-axes are assumed to follow a bivariate Gaussian distribution.
+However, the validity of this assumption is not established.
 
-- to validate, we Generate $5\cdot10^5$ realization of channels described in ^[sec:valid].
-- For each realization:
-    - Compute the values of the spot-shape matrix $\mathbf{S} = \begin{pmatrix} S_{xx} & S_{xy} \\ S_{xy} & S_{yy} \end{pmatrix}$ according to ^[eq:elS].
-    - Compute its eigenvalues $W_{\pm}^2 = \frac{1}{2}\left( S_{xx}+S_{yy} \pm \sqrt{(S_{xx}-S_{yy})^2 + 4S_{xy}^2} \right)$.
-    - $W^2_{1,2}$ corresponds to the semi-axes along the first and second quadrant accordingly.
-        - If $S_{xy}>0$ then the bigger semi-axes lies along..., so $W^2_{1,2}=W^2_{\pm}$.
-        - If $S_{xy}<=0$ then the bigger semi-axes lies along..., so $W^2_{1,2}=W^2_{\mp}$.
-    - Compute the logarithmic variables $\Theta_{1,2} = \ln(W_{1,2}^2/W_0^2)$.
-- The scatter plot of obtained pair  $(\Theta_1,\Theta_2)$ is shown in ^[fig:theta1theta2].
+To test the validity of the Gaussian assumption, we generate $5\cdot10^{5}$ independent realizations of the beam propagations described in ^[@sec:valid].
+For every realization, we first compute the elements of the spot-shape matrix
+$$\mathbf{S} = \begin{pmatrix} S_{xx} & S_{xy} \\ S_{xy} & S_{yy} \end{pmatrix}$$
+using the definition given in ^[@eq:elS].
+This matrix describes the second-order moments of the beam intensity and determines both the orientation and the magnitudes of the semi-axes.
+We then compute the eigenvalues of $\mathbf{S}$ as
+$$W_{\pm}^2 = \frac{1}{2}\left( S_{xx}+S_{yy} \pm \sqrt{(S_{xx}-S_{yy})^2 + 4S_{xy}^2} \right)$$
+which give the squared semi-axes of the ellipse aligned with the principal axes.
 
-![\label{fig:theta1theta2}thetas](images/beam_shape/original_theta_1_theta_2_strong_inf.pdf)
+Next, we assign the ordered pair $W_{1}^{2}, W_{2}^{2}$ according to the orientation of the ellipse in the transverse plane.
+If $S_{xy}>0$, then the principal axis corresponding to $W_{+}^{2}$ has a positive slope, and we take $W_{1}^{2}=W_{+}^{2}$ and $W_{2}^{2}=W_{-}^{2}$.
+If $S_{xy}\le 0$, the orientation is reversed, and we set $W_{1}^{2}=W_{-}^{2}$ and $W_{2}^{2}=W_{+}^{2}$.
+Finally, for each realization we compute the logarithmic variables
+$$\Theta_{1,2} = \ln(W_{1,2}^2/W_0^2)$$
+which are the quantities assumed to follow the bivariate Gaussian distribution in the elliptical beam model.
 
-- to compare with the gaussian approxiamtion, we  compute the sample means, covariance matrix $\Sigma_{ij} = \langle \Delta\Theta_i \Delta\Theta_j \rangle$, and plot the covariance ellipse 
+The scatter plot of the obtained pairs $(\Theta_1,\Theta_2)$ is shown in ^[@fig:theta1theta2].
+
+[\label{fig:theta1theta2}thetas](images/beam_shape/original_theta_1_theta_2_strong_inf.pdf)
+
+To compare the empirical distribution with the bivariate Gaussian approximation, we compute the sample mean vector $\left<\Theta_i\right>$ and the sample covariance matrix $\Sigma_{ij} = \langle \Delta\Theta_i \Delta\Theta_j \rangle$ and plot the corresponding covariance ellipse, defined by
 $$
 \sum\limits_{i,j=1}^2\big(\Theta_i-\langle\Theta_i\rangle\big)\Sigma_{ij}^{-1}\big(\Theta_j-\langle\Theta_j\rangle\big)=4$$
-- We can see that the results deviates from the bivariate gaussian distribution.
-    - pronounced suppression along the diagonal ($\Theta_1 = \Theta_2$),
-    - slight mismatch between samples and covariance ellipse.
-        - however the ellipse is nearly circular, indicating small correlation between values.
-- To quntitatively describe the data, we rotate coordinates, so the data is symmetric around $\Theta_{(s)}=0$.
+which represents the two-sigma contour expected under the Gaussian assumption.
+
+Visual inspection of the scatter plot and the corresponding covariance ellipse shows clear deviations from the bivariate Gaussian model. 
+The dominant feature is a strong suppression of points along the diagonal $\Theta_{1}=\Theta_{2}$.
+Apart from this suppression along the diagonal, there is also a noticeable deviation between the overall shape of the data and the covariance ellipse. 
+At the same time, the covariance ellipse is nearly circular, indicating that the linear correlation between $\Theta_{1}$ and $\Theta_{2}$ is weak.
+
+To quantify these departures from Gaussianity, we rotate the coordinate system so that the transformed data becomes symmetric around $\Theta_{(s)}=0$.
+The transformed variables are defined as
 $$
 \begin{split}
 \Theta_{(s)}&=(\Theta_1-\Theta_2)/\sqrt{2}\\
 \Theta_{(a)}&=(\Theta_1+\Theta_2)/\sqrt{2}
 \end{split}$$
-- Compute skewness and excess kurtosis of $\Theta_{(s)}$ and $\Theta_{(a)}$ for each turbulence regime (summarized in ^[tab:thetasthetaa]).
+The variable $\Theta_{(s)}$ is proportional to the logarithm of the ratio of the squared semi-axes and thus captures their relative deformation.
+The variable $\Theta_{(a)}$ is proportional to the logarithm of the product $W_1^2 W_2^2$, and therefore characterizes the overall beam area expansion.
+For each turbulence regime, we compute the skewness and the excess kurtosis of both $\Theta_{(s)}$ and $\Theta_{(a)}$.
+These statistics quantify the degree of non-Gaussianity, with the results summarized in ^[@tab:thetasthetaa].
 
 | Channel  | Initial beam curvature $F_0$ |            Skewness |                | Excess kurtosis |                |
 | -------- | :--------------------------: | ------------------: | -------------: | --------------: | -------------: |
@@ -405,10 +421,13 @@ $$
 | Moderate |        $z_\text{ap}$         |  $9.8\times10^{-3}$ |         $0.25$ |         $-0.81$ |         $0.12$ |
 |          |           $\infty$           | $-3.7\times10^{-3}$ |         $0.15$ |         $-0.99$ |        $-0.11$ |
 | Strong   |           $\infty$           |   $-9\times10^{-3}$ |         $0.32$ |         $-0.77$ |         $0.25$ |
-- we see that the $\Theta_{(s)}$ distribution is highly symmetric, but strongly platykurtic because of that the suppression along $\Theta_{(s)}=0$ ($\Theta_1 = \Theta_2$).
-- for the $\Theta_{(a)}$ we see asymmetric distribution but also more Gaussian-like, because its kurtosis is closer to zero.
-- Overall, the numerical simulation of beam-shape semi-axes reveal that its disctribution can't be properly described by the bivariative Gaussian distribution. 
-    - As the logarithm of the eigenvalue of the random matrix $S$ - more study must be conducted.
+
+The distribution of $\Theta_{(s)}$ is highly symmetric, yet it is clearly platykurtic. 
+This behavior directly reflects the strong suppression of probability density at $\Theta_{(s)} = 0$ (equivalently, $\Theta_{1} = \Theta_{2}$), which is the dominant non-Gaussian feature of the data.
+In contrast, the distribution of $\Theta_{(a)}$ is notably asymmetric, but its excess kurtosis is closer to zero.
+
+Taken together, these observations show that the joint distribution of $\Theta_1$ and $\Theta_2$ cannot be adequately described by a bivariate Gaussian model, indicating that a deeper analysis of the statistical properties of $\mathbf{S}$ is necessary.
+Understanding the behavior of the $\mathbf{S}$ eigenvalues can be further advanced through methods and insights from random matrix theory.
 
 > - [ ] check  $\Theta_1+\Theta_2$ 1d distribution, relate to $S$...
 
