@@ -81,18 +81,23 @@ Accordingly, we will present the results mostly in terms of $s$.
 For interpretation, we assume a typical wind speed of $v=10\text{m/s}$ unless stated otherwise, which implies that a spatial shift of $1\text{ cm}$ corresponds to $1\text{ ms}$ of the time interval $\tau$. 
 For any other desired wind speed $v$, the corresponding time interval can be obtained directly from the relation $\tau=s/v$.
 
-- simulation parameters
-    - phase screen propagation with a moving wind layer
-    - for the details of the simulation method for time dependent transmittance see ^[sec:numsim_time]
-    - $z_\text{ap}=50\text{km}$, ($C_n^2=1\times10^{-16}~\textrm{m}^{-2/3}$, $C_n^2=2\times10^{-16}~\textrm{m}^{-2/3}$, and $C_n^2=3\times10^{-16}~\textrm{m}^{-2/3}$)  inner and outer turbulence scales $\ell_0=1~\textrm{mm}$ and $L_0=80~\textrm{m}$, respectively.  wavelength $\lambda=808~\textrm{nm}$. the Rytov parameter $\sigma_{\mathrm{R}}^2$ is $5.5$, $11$, $16.5$.
-    - $W_0=8~\textrm{cm}$, $F_0=50~\textrm{km}$
-    - numerical simulations: "spatial grid 2048 points along each axis. The spatial grid step is $1~\textrm{mm}$. The number of spectral rings is 1024. The inner and outer bounds of the spectrum are $K_\mathrm{min}=1/15 L_0$ and $K_\mathrm{max}=2/\ell_0$. The number of phase screens is 15, ^[@Schmidt_book,Martin1988].  number of samples is $5\times10^4$".
-    - wind-driven shift $s$, transverse wind velocity $v=10~\textrm{m/s}$, $\tau=s/v$
+We consider three atmospheric channels characterized by refractive index structure constants $C_n^2 = 1\times10^{-16}~\text{m}^{-2/3}$, $C_n^2 = 2\times10^{-16}~\text{m}^{-2/3}$, and $C_n^2 = 3\times10^{-16}~\text{m}^{-2/3}$. 
+For all channels the propagation distance is fixed at $z_{\text{ap}} = 50~\text{km}$. 
+These values correspond to Rytov parameters $\sigma_{\mathrm{R}}^2 = 5.5$, $\sigma_{\mathrm{R}}^2 = 11$, and $\sigma_{\mathrm{R}}^2 = 16.5$. 
+The inner and outer turbulence scales are set to $\ell_0 = 1~\text{mm}$ and $L_0 = 80~\text{m}$.
+The source is a Gaussian beam of wavelength $\lambda = 808~\text{nm}$ with initial beam width $W_0 = 8~\text{cm}$ and curvature radius $F_0 = 50~\text{km}$. 
 
-# Two-time PDT
+The numerical grid contains $2048$ points in both transverse directions with a grid step of $1~\text{mm}$. 
+The Sparse Spectrum phase screen method ^[sec:phasescreen] is used with $1024$ spectral rings. 
+The spectral bounds are defined $K_\mathrm{min}=1/15 L_0$ and $K_\mathrm{max}=2/\ell_0$.
+The propagation path is discretized into $15$ phase screens ^[@Schmidt_book; @Martin1988]. 
+For each of the three channels we generate $5\times10^4$ independent realizations for different values of time interval $\tau$ and aperture radius $R_\text{ap}$.
+
+## Results
+### Two-time PDT
 ![[twotimepdt.pdf]]
 
-## Spatial coherence radius
+### Spatial coherence radius
 >[!attention] wrong description !
 
 Figure ^[fig:weak] presents the Pearson correlation of the aperture-averaged transmittance $\eta_t$ as a function of the pulse separation time $\tau$ (equivalently, wind-driven shift $s=v\tau$) for two receiving apertures under weak turbulence.
@@ -131,6 +136,7 @@ As a result, $\rho_0(R_\text{ap})$ serves as a practical parameter for studying 
     - weak channel
     - strong
       ![[cond_pdt.pdf]]
+## Conclusion
 
 >- The role of coherence length at Rap = 0? 
 >    - [ ] Should we plot and compare with the Rayleigh length in coherencsByApert plot?
