@@ -96,7 +96,9 @@ For each of the three channels we generate $5\times10^4$ independent realization
 ## Results
 ### Two-time PDT
 The joint distribution of the transmittance at two different times offers a direct view of the statistical dependence between consecutive pulses separated by the time interval $\tau=s/v$.
-In ^[fig:2timpdt] the two dimensional kernel density estimates of the joint PDT are shown for short and long pulse separation times.
+In ^[fig:2timpdt] the two dimensional kernel density estimates of the joint PDT are shown for short and long pulse separation times for $R_\text{ap}=??$.
+>[!attention] Rap
+
 ![[twotimepdt.pdf]]
 
 For the smaller time interval $s=3~\text{cm}$ ($\tau=3~\text{ms}$) the distribution is sharply concentrated along the diagonal.
@@ -114,12 +116,12 @@ It directly reveals how the atmosphere preserves correlations between consecutiv
 ### Spatial coherence radius
 >[!attention] wrong description !
 
-Figure ^[fig:weak] presents the Pearson correlation of the aperture-averaged transmittance $\eta_t$ as a function of the pulse separation time $\tau$ (equivalently, wind-driven shift $s=v\tau$) for two receiving apertures under weak turbulence.
+Figure ^[fig:weak] presents the Pearson correlation between the aperture-averaged transmittances $\eta_0$ and $\eta_\tau$ as a function of the pulse separation time $\tau$ for two receiving apertures.
 ![[corr.pdf]]
 The correlation exhibits a strictly monotonic decrease as $s$ increases, reflecting the decorrelation caused by the transversal motion of refractive-index inhomogeneities.
 
 To quantify this behaviour by a single physically interpretable measure, we introduce the aperture-averaged spatial coherence radius $\rho_0$, defined as the value of the wind-driven shift $s$ for which the Pearson correlation falls to $e^{-1}$^[@andrws].
-This coherence radius captures the transverse displacement over which statistical correlations persist.
+This coherence radius captures the time interval $\tau$ (transverse wind-driven shift $s$) over which statistical correlations persist.
 In practical free-space quantum communication this parameter quantifies the minimal pulse rate $v/\rho_0$ above which successive quantum states experience non-negligible correlations.
 
 For weak turbulence and small receiving aperture $R_\text{ap}=2\text{ cm}$, the observed spatial coherence radius is $\rho_0=5\text{ cm}$. 
@@ -146,10 +148,28 @@ As a result, $\rho_0(R_\text{ap})$ serves as a practical parameter for studying 
 > - [ ] Add plots
 > - [ ] Check grammar.
 
-- conditional probability
-    - weak channel
-    - strong
-      ![[cond_pdt.pdf]]
+### Conditional PDT
+
+Adaptive selection works by first sending a strong classical pulse through the channel at $t=0$.
+If the measured transmittance of this pulse exceeds a threshold $\eta_\mathrm{min}$, the subsequent quantum pulse is transmitted at $t=\tau$.
+If the transmittance is below the threshold, the quantum pulse is discarded.
+By selectively transmitting only those quantum pulses that are likely to encounter high transmittance channel conditions, the protocol can enhance the preservation of nonclassical properties and increases the performance of quantum communication protocols.
+The conditional PDT provides the exact probability distribution of the transmittance of the second pulse under this selection procedure.
+
+^[fig:condpdt] shows the conditional PDT of the second pulse for different spatial shifts $s$ corresponding to various time intervals $\tau$ between pulses for $\eta_\text{min}=0.45$.
+
+![[cond_pdt.pdf]]
+>Conditional PDT is presented for a transmittance threshold of $\eta_\text{min} = 0.45$, a refractive-index structure constant $C_n^2 = 2 \times 10^{-16},\text{m}^{-2/3}$, an aperture radius $R_\text{ap} = 30,\text{cm}$, and varying values of the wind-driven shift $s$.
+
+For small shifts, up to $s \sim 1~\text{cm}$ ($\tau \sim 1~\text{ms}$), the conditional distribution closely resembles the ideal case with $s=0$, indicating that the transmittance of the first pulse reliably predicts the second pulse.
+As $s$ increases to several centimeters (several milliseconds), the probability of transmittance values below the threshold $\eta_\mathrm{min}$ becomes more significant.
+For tens of centimeters of wind-driven shifts $s$ (tens of milliseconds of $\tau$), the conditional PDT approaches the single-time PDT.
+
+These results demonstrate that adaptive selection is most effective for short time intervals, on the order of a few centimeters of wind-driven shift or several milliseconds of time separation between pulses for $v=10~\text{m/s}$.
+For longer intervals, the predictive power of the classical probe decreases, and the channel can be accurately described using only the single-time PDT.
+This analysis provides a quantitative framework for designing adaptive protocols and predicting their performance in realistic quantum communication systems.
+The application of these results for preserving nonclassical properties will be demonstrated in ^[sec:application].
+
 ## Conclusion
 
 >- The role of coherence length at Rap = 0? 
