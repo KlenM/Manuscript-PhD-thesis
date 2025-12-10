@@ -95,7 +95,21 @@ For each of the three channels we generate $5\times10^4$ independent realization
 
 ## Results
 ### Two-time PDT
+The joint distribution of the transmittance at two different times offers a direct view of the statistical dependence between consecutive pulses separated by the time interval $\tau=s/v$.
+In ^[fig:2timpdt] the two dimensional kernel density estimates of the joint PDT are shown for short and long pulse separation times.
 ![[twotimepdt.pdf]]
+
+For the smaller time interval $s=3~\text{cm}$ ($\tau=3~\text{ms}$) the distribution is sharply concentrated along the diagonal.
+The local refractive index pattern is only slightly changed over such a short interval, so the transmittance undergoes only minor variations.
+As a result the two pulses show a high level of temporal correlation, implying a strong potential for entanglement preservation and effective use of adaptive protocols.
+
+For the larger time interval $s=17~\text{cm}$ ($\tau=17~\text{ms}$), the distribution spreads significantly.
+This behavior indicates that the turbulent pattern has moved a much greater transverse distance, so the two pulses experience nearly independent transmittance values.
+The joint PDT approaches the product of the two single-time distributions $\mathcal{P}(\eta)$, indicating that the channel can be effectively described using only the single-time PDT.
+In this regime adaptive selection becomes less effective because the value of $\eta_0$ carries little information about $\eta_\tau$.
+
+The comparison of these two situations demonstrates that the two-time PDT is the central object for such channels.
+It directly reveals how the atmosphere preserves correlations between consecutive pulses.
 
 ### Spatial coherence radius
 >[!attention] wrong description !
