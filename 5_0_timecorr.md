@@ -168,6 +168,23 @@ The application of these results for preserving nonclassical properties will be 
 
 ## Conclusion
 
+The analysis of time correlations in atmospheric quantum channels demonstrates that the transmittance of consecutive optical pulses cannot generally be treated as independent.
+The concept of the two-time PDT $\mathcal{P}(\eta_0,\eta_\tau)$ provides a complete and tractable framework to quantify these correlations.
+
+Temporal correlations decay monotonically with the pulse separation, so the spatial coherence radius $\rho_0$ emerges as a central parameter for characterizing the persistence of temporal correlations between consecutive pulses. 
+Its value depends primarily on the receiver aperture and only weakly on turbulence strength within the considered range. 
+This implies that by selecting the aperture size appropriately, one can control the timescale over which successive quantum states remain statistically correlated, which is directly relevant for entanglement preservation in turbulent atmospheric channels. 
+For the channels studied, these correlations persist over several milliseconds, corresponding to wind-driven shifts of a few centimeters.
+
+The conditional PDT captures a complementary property relevant for adaptive selection protocols. 
+By selecting quantum pulses based on the measured transmittance of a preceding classical probe, one can enhance the likelihood of transmitting through high-transmittance channel realizations. 
+The conditional PDT provides a precise description of the second pulse probability distribution of transmittance under such selection protocols, directly influencing the preservation of nonclassical properties and the performance of other quantum communication protocols.
+
+Overall, the results show that two-time PDT and derived quantities like $\rho_0$ and conditional PDT are complementary tools. 
+The spatial coherence radius quantifies the timescale over which successive pulses remain statistically correlated and is essential for entanglement-based protocols, while conditional PDT captures the potential for adaptive selection protocols, for example to enhance the preservation of nonclassicality. 
+These findings provide a practical framework for designing and evaluating quantum communication systems. 
+In ^[sec:application], these results will be applied to study the preservation of continuous-variable and discrete-variable entanglement as a function of pulse separation, as well as the enhancement of nonclassicality through adaptive selection.
+
 >- The role of coherence length at Rap = 0? 
 >    - [ ] Should we plot and compare with the Rayleigh length in coherencsByApert plot?
 
