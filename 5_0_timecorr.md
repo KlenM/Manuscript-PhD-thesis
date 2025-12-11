@@ -100,6 +100,7 @@ In ^[fig:2timpdt] the two dimensional kernel density estimates of the joint PDT 
 >[!attention] Rap
 
 ![[twotimepdt.pdf]]
+> (the weakest one channel)
 
 For the smaller time interval $s=3~\text{cm}$ ($\tau=3~\text{ms}$) the distribution is sharply concentrated along the diagonal.
 The local refractive index pattern is only slightly changed over such a short interval, so the transmittance undergoes only minor variations.
@@ -118,35 +119,30 @@ It directly reveals how the atmosphere preserves correlations between consecutiv
 
 Figure ^[fig:weak] presents the Pearson correlation between the aperture-averaged transmittances $\eta_0$ and $\eta_\tau$ as a function of the pulse separation time $\tau$ for two receiving apertures.
 ![[corr.pdf]]
+>(the weakest one)
+
 The correlation exhibits a strictly monotonic decrease as $s$ increases, reflecting the decorrelation caused by the transversal motion of refractive-index inhomogeneities.
 
 To quantify this behaviour by a single physically interpretable measure, we introduce the aperture-averaged spatial coherence radius $\rho_0$, defined as the value of the wind-driven shift $s$ for which the Pearson correlation falls to $e^{-1}$^[@andrws].
 This coherence radius captures the time interval $\tau$ (transverse wind-driven shift $s$) over which statistical correlations persist.
 In practical free-space quantum communication this parameter quantifies the minimal pulse rate $v/\rho_0$ above which successive quantum states experience non-negligible correlations.
 
-For weak turbulence and small receiving aperture $R_\text{ap}=2\text{ cm}$, the observed spatial coherence radius is $\rho_0=5\text{ cm}$. 
-For the larger aperture $R_\text{ap}=8\text{ cm}$ the coherence radius increases to $\rho_0=12\text{ cm}$.  
+For channel with $C_n^2 = 1 \times 10^{-16},\text{m}^{-2/3}$ and small receiving aperture $R_\text{ap}=2\text{ cm}$, the observed spatial coherence radius is $\rho_0=6\text{ cm}$ which corresponds to $\tau=6~\text{ms}$. 
+For the same channel but large aperture $R_\text{ap}=20\text{ cm}$ the coherence radius increases to $\rho_0=13\text{ cm}$.  
 This can be explained by noting that a larger aperture captures a broader region of the wavefront, so the turbulence-induced intensity pattern must be shifted much farther by the wind before the transmittance changes noticeably.
-
-The same analysis performed for strong turbulence conditions ^[fig:strong] shows overall lower correlations, consistent with enhanced scintillation.
-[image here]
-The corresponding coherence radii decrease to $\rho_0=4\text{ cm}$ for $R_\text{ap}=2\text{ cm}$, and $\rho_0=10\text{ cm}$ for $R_\text{ap}=8\text{ cm}$.  
-However, this reduction is comparatively small when set against the much larger impact of aperture variation. 
-The weak sensitivity of $\rho_0$ to turbulence strength indicates that receiver geometry is the dominant parameter determining the temporal correlation structure of the measured transmittance.
 
 A more systematic view is provided in ^[fig:scr_ap], which shows $\rho_0$ as a function of aperture radius across all simulated turbulence regimes.
 
 ![[corr_length.pdf]]
 
-The lines for different Rytov parameters lie close to one another, confirming that $\rho_0$ is weakly depended on turbulence strength comparing to the impact of the size of receiving aperture.
+The figure indicates that the spatial coherence radius $\rho_0$ grows monotonically when the aperture radius $R_\text{ap}$ becomes larger. 
+This implies that a wider aperture allows the optical field to maintain its nonclassical features for a longer time. 
+For a fixed aperture radius the dependence on the Rytov variance $\sigma_R^2$ is weak within the analyzed interval from five to sixteen. 
+This observation suggests that the aperture plays the primary role in setting the coherence properties of such channels.
 
 In conclusion, the spatial coherence radius $\rho_0$ determines the temporal interval over which successive pulses remain statistically correlated, directly influencing the decay of quantum correlations in turbulent atmospheric channels. 
-The dependence of $\rho_0$ on turbulence strength is far weaker than might be expected, whereas its dependence on receiver aperture geometry is substantial. 
+The impact of turbulence strength on $\rho_0$ remains limited across the examined range, while the change produced by the receiver aperture size is noticeably larger.
 As a result, $\rho_0(R_\text{ap})$ serves as a practical parameter for studying entanglement propagation in turbulent atmosphere and provides guidance for selecting pulse repetition rates for which temporal correlations can be exploited (or can be safely neglected) in realistic atmospheric quantum channels.
-
-> - [ ] Check if this claim of weak independence actually true.
-> - [ ] Add plots
-> - [ ] Check grammar.
 
 ### Conditional PDT
 
