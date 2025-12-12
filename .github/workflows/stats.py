@@ -15,14 +15,14 @@ EXCLUDE_TEX = [
 'operatorname', 'overline', 'underline', 'widehat', 'widetilde',
 'quad', 'qquad', 'hspace', 'vspace',
 'phantom', 'vphantom', 'hphantom',
-'sum', 'int', 'prod', 'nabla', 'partial', 'delta', '{', '}', '\\', '^', '_', 
-'infty', 'lambda', 
-'overline', 'underline', 'label', '$$', '$', 'begin', 'aligned', 'left', 'right', 'langle', 'rangle', 
-'span data-section=', 
+'sum', 'int', 'prod', 'nabla', 'partial', 'delta', '{', '}', '\\', '^', '_',
+'infty', 'lambda',
+'overline', 'underline', 'label', '$$', '$', 'begin', 'aligned', 'left', 'right', 'langle', 'rangle',
+'span data-section=',
 ]
 EXCLUDE_RE = [r'>.*?\n']
 
-args = {"path": "./"}
+args = {"path": "./content/"}
 
 def count_symbols(file):
     with open(file, "r") as f:
@@ -61,12 +61,14 @@ print(f"""Total {total_symbols} symbols
 """)
 
 section_count = {}
-SECTIONS = {'0': ('Annot', 2 * 0.13), 
-            '1': ('Intro', 0.13), 
-            '2': ('Backg', round(REQUIRED_PRINT_PAPERS * .2, 1)),
-            '3': ('NumSim', 0.5), 
-            '4': ('PDT m.', 2), 
-            '5': ('TimeC', 2), 
+SECTIONS = {'0_0': ('Annot', 2 * 0.13),
+            '0_1': ('Intro', 0.13),
+            '1': ('Backg', round(REQUIRED_PRINT_PAPERS * .2, 1)),
+            '2': ('PDT m.', 0.9),
+            '3': ('BeamSh', 0.9),
+            '4': ('CircB', 0.5),
+            '5': ('TimeC', 0.9),
+            '6': ('Appl', 1.3),
            }
 
 for file, count in symbols.items():
