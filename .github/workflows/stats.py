@@ -4,7 +4,7 @@ import re
 
 PRINT_PAPER = 40_000
 SYMBOLS_PER_A4 = PRINT_PAPER / 24
-REQUIRED_PRINT_PAPERS = 6
+REQUIRED_PRINT_PAPERS = 4.5
 REQUIRED_A4 = REQUIRED_PRINT_PAPERS * 24
 
 EXCLUDE_FILES = ["0_0_abstract.md"]
@@ -64,11 +64,11 @@ section_count = {}
 SECTIONS = {'0_0': ('Annot', 2 * 0.13),
             '0_1': ('Intro', 0.13),
             '1': ('Backg', round(REQUIRED_PRINT_PAPERS * .2, 1)),
-            '2': ('PDT m.', 0.9),
-            '3': ('BeamSh', 0.9),
+            '2': ('PDT m.', 0.6),
+            '3': ('BeamSh', 0.8),
             '4': ('CircB', 0.5),
-            '5': ('TimeC', 0.9),
-            '6': ('Appl', 1.3),
+            '5': ('TimeC', 0.7),
+            '6': ('Appl', 0.8),
            }
 
 for file, count in symbols.items():
