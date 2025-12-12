@@ -1,9 +1,9 @@
-## Theory of turbulent atmosphere
+### Theory of turbulent atmosphere
 Turbulence is widely recognized as one of the most complex and challenging phenomena in nature.
 The complexity are rooted in the Navier-Stokes equations, which results in  the non-linear, multi-scale, and intrinsically chaotic behavior of the system, making precise prediction impossible over extended periods.
 Thus the atmospheric study mostly relies on statistical descriptions and the main object for sdescription is the wind velocity random field.
 
-### Energy cascade model of turbulence {#sec:turb_cascade}
+#### Energy cascade model of turbulence. {#sec:turb_cascade}
 There are various sources that creates turbulence like wind shear, thermal convection, buoyancy effects, obstacles, but the statistical properties of the resulting flow tend to show similar universal behavior.
 
 We assume that turbulent atmosphere is stationary, homogeneous, and isotropic.
@@ -88,7 +88,7 @@ It depicts the energy flow through scales starting from large scales of energy i
 >Sources: [pdf](https://oa.upm.es/88590/1/5480314.pdf) eddy concept try. Here v to n [source](https://subarutelescope.org/staff/guyon/15teaching.web/05AstrOptics2016.web/wdir.web/AstrOpt2016_11atmosphericturbulence.pdf)
 >- [ ] we need some words about what is gaussian turbulence - why we use complex normal distr for phase screens generation
 
-### Frozen turbulence hypothesis
+#### Frozen turbulence hypothesis.
 The Kolmogorov model, along with its modifications like the Von Karman spectrum, provides a strong theoretical basis for understanding the ensemble averaged statistics of turbulence.
 However, these models do not directly address the temporal statistics of the turbulent field.
 This lack of a temporal description is critical for several reasons.
@@ -115,4 +115,4 @@ Despite these limitations, the frozen turbulence approximation is widely used in
 
 >In general, this makes some limits on the observation times, however, for a small region of interest -- such as an optical aperture -- it can often be applied over sufficiently long timescales.
 
->## Turbulence strength $C_n^2$ parameter estimation
+>### Turbulence strength $C_n^2$ parameter estimation

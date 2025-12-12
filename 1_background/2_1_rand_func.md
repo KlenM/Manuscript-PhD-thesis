@@ -1,4 +1,4 @@
-## Preliminaries on random functions theory
+### Preliminaries on random functions theory
 
 > - One support point for a dedicated section is to add a bit of math vibe to the thesis
 > - Also, in the case of including of random processes paper - here is the place for background
@@ -34,7 +34,7 @@ Other convenient way to specify a random function is using some analytic formula
 
 We will call random processes time-indexed random functions, and random fields random functions indexed by multidimensional (2D or 3D) spatial variables.
 
-### Stationary random functions
+#### Stationary random functions.
 The common class of random functions in physics is stationary random functions.
 A random function is stationary if all of its final-dimensional distribution functions ^[eq:randProcDef] are invariant under the parameter shifts
 $$
@@ -62,7 +62,7 @@ In one of the next subsection we will explicitly present several models for refr
 >- to complete the triade of eq through spectrum
 >- img
 
-### Spectral representation
+#### Spectral representation.
 As in the case of regular functions, it can be very useful to represent random functions in the form of Fourier transform. It was shown, that any stationary random function can be arbitrarily closely represented on some interval $-T < t < T$ as a linear combination of finite number independent harmonic oscillators of the form $\xi_k e^{i\lambda_k t}$, where $\xi_k$ are some complex random variables with mean zero values and $\lambda_k$ are some real constants.
 
 In the limit we get the spectral representation theorem (Cramér–Karhunen), which states that any stationary process $\xi(t)$ can be represented in the form of the Fourier-Stieltjes integral:

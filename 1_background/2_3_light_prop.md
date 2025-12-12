@@ -1,8 +1,8 @@
-## Light beam propagation in inhomogeneous media
+### Light beam propagation in inhomogeneous media
 
 To obtain the transmittance value of the optical communication channel, we must solve the classical problem of light propagation through stochastic isotropic media. This section defines the fundamental equations governing beam intensity at the aperture plane.
 
-### Gaussian beam source
+#### Gaussian beam source.
 - in this work we consider only the gaussian beam mode at the trasmittance plane.
 - such modes are highly used because they approximate laser source output well.
 
@@ -11,7 +11,7 @@ $$%\label{eq:gaussbeam}
 \boxed{u(\mathbf{r};0)=\sqrt{\frac{2}{\pi W_0^2}}\exp\left[-\frac{\mathbf{r}^2}{W_0^2}-\frac{ik}{2F_0}\mathbf{r}^2\right]}$$
 where $W_0$ is the beam waist radius and $F_0$ is the radius of curvature of the wavefront. For collimated beams, $F_0 \to \infty$, while for focused beams, $F_0$ takes finite values.
 
-### Paraxial wave equation in stochastic media
+#### Paraxial wave equation in stochastic media.
 To describe the propagation of gaussian beams through turbulent atmosphere we begin from the general wave equation derived from Maxwell’s equations.
 
 >- scalar wave, polarization or only one of 6 components.
@@ -55,7 +55,7 @@ This integral represents a convolution with the propagation kernel, based on the
 
 In the spatial frequency domain, this convolution becomes multiplication with the transfer function $H(f_{x},f_{y},z)=e^{ikz}e^{-i\pi\lambda z(f_{x}^{2}+f_{y}^{2})}$, known as the angular spectrum method. This formulation enables efficient numerical implementation using Fast Fourier Transform algorithms.
 
-### Statistical properties of a light beam in turbulence
+#### Statistical properties of a light beam in turbulence.
 In the absence of refractive index fluctuations, a Gaussian beam ^[eq:gaussbeam] propagating in free space keeps its deterministic Gaussian profile at the aperture plane, as it represents the exact solution of the paraxial wave equation.
 When the beam travels through a turbulent atmosphere, random changes in the refractive index make the optical field at the aperture plane a stochastic quantity.
 To efficiently compress the vast amount of information required to describe the optical field distorted by turbulence, it is convenient to characterize the random fluctuations of the complex amplitude in terms of its second- and fourth-order correlation functions
