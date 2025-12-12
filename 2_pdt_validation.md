@@ -61,7 +61,7 @@ Therefore, we expect it to exhibit good agreement with numerical simulations, as
 #### Collimated beam.
 
 
-![\label{fig:ks_weak_inf}Weak zap](images/validation/weak_inf_ks_values.svg)
+![\label{fig:ks_weak_inf}Weak zap](validation/weak_inf_ks_values.svg)
 - Despite the physically motivated nature of the beam wandering and elliptical beam models they show the worst agreement with the numerical PDT.
     - elliptic beam minima, of fig 2
 - The truncated lognormal model reproduces the numerical PDT fairly well for small apertures, but its accuracy degrades for larger apertures.
@@ -70,7 +70,7 @@ Therefore, we expect it to exhibit good agreement with numerical simulations, as
     - ?since beam wander effects are weak?.
 - The beta distribution provides the best overall agreement, with its KS statistic reaching a minimum around $\langle\eta\rangle=0.5$, where the numerical PDT is nearly symmetric.
 
-![\label{fig:pdt_weak_inf}Weak inf](images/validation/weak_inf_pdt_0_03.svg)
+![\label{fig:pdt_weak_inf}Weak inf](validation/weak_inf_pdt_0_03.svg)
 
 - At the aperture corresponding to the elliptical beam model’s KS minimum, the mode of the distribution coincides with the mode of the numerical PDT, which can be seen in the fig X.
     - At other aperture sizes this model has biased mode and transmittance modes.
@@ -81,7 +81,7 @@ Therefore, we expect it to exhibit good agreement with numerical simulations, as
 #### Focused beam.
 
 
-![\label{fig:ks_weak_zap}Weak zap](images/validation/weak_zap_ks_values.svg)
+![\label{fig:ks_weak_zap}Weak zap](validation/weak_zap_ks_values.svg)
 
 For the focused beam, all analytical models show poorer agreement with numerical PDTs than in the collimated case.
 This should not be misinterpreted as a degradation of channel performance.
@@ -93,7 +93,7 @@ Among all models, the total probability models demonstrate the best performance,
 - However, when the aperture radius $R_\text{ap} \gtrsim W_\text{LT}$  the total probility models can't be defined.
     - In this domain the beta model produce best performance.
 
-![\label{fig:pdt_weak_zap}Weak zap](images/validation/weak_zap_pdt_0_015.svg)
+![\label{fig:pdt_weak_zap}Weak zap](validation/weak_zap_pdt_0_015.svg)
 
 - The truncated lognormal model shows mismatched skewness and a physically unrealistic finite probability density at $\eta \to 1$ due to truncation.
 - elliptic beam model have biased mean transmittance
@@ -111,34 +111,34 @@ Among all models, the total probability models demonstrate the best performance,
 - At apertures $R_\text{ap}\approx W_\text{LT}$, the total probability models outperform all others.
     - Here, also, the modes of the beam wandering  and elliptical beam models coincide with the mode of the numerical PDT, resulting in the KS minima for these models.
 
-![\label{fig:pdt_moderate_inf}Moderate inf](images/validation/moderate_inf_ks_values.svg)
+![\label{fig:pdt_moderate_inf}Moderate inf](validation/moderate_inf_ks_values.svg)
 
 
 
-![\label{fig:ks_moderate_inf}Moderate inf](images/validation/moderate_inf_pdt_0_05.svg)
+![\label{fig:ks_moderate_inf}Moderate inf](validation/moderate_inf_pdt_0_05.svg)
 
 #### Focused Beam.
 
-![\label{fig:pdt_moderate_zap}Moderate zap](images/validation/moderate_zap_ks_values.svg)
+![\label{fig:pdt_moderate_zap}Moderate zap](validation/moderate_zap_ks_values.svg)
 
 - As in the weak channel, the focused beam results in generally worse agreement between analytical and numerical models than the collimated beam.
 - The beta model again performs best, outperformed a bit by the total probability models when the aperture is around $R_\text{ap}\approx W_\text{LT}$.
 - When the modes of beam wandering and elliptic beam modes match numerical PDT at ~1 they shows best performance.
 - in the fig X we can see the reason of generally worse performance
 
-![\label{fig:ks_moderate_zap}Moderate zap](images/validation/moderate_zap_pdt_0_012.svg)
+![\label{fig:ks_moderate_zap}Moderate zap](validation/moderate_zap_pdt_0_012.svg)
 
 - The numerical PDT in this regime develops a highly non-Gaussian plateau, with nearly constant probability density over a finite interval of η.
 - This feature cannot be reproduced by any of the studied parametric models, all of which assume unimodal, smoothly decaying distributions.
 
 ### Strong channel
 
-![\label{fig:pdt_moderate_inf}Moderate inf](images/validation/strong_inf_ks_values.svg)
+![\label{fig:pdt_moderate_inf}Moderate inf](validation/strong_inf_ks_values.svg)
 
 - Interestingly, the behavior of the 33 Rytov channel resembles that of the moderate focused channel with sigma_rytov2 = 5.
 - The only difference is that for very small apertures $R_\text{ap} \lesssim 0.1W_\text{LT}$ the truncated lognormal model shows slightly better performance (see Fig. X).
 
-![\label{fig:ks_strong_inf}Strong inf](images/validation/strong_inf_pdt_0_1.svg)
+![\label{fig:ks_strong_inf}Strong inf](validation/strong_inf_pdt_0_1.svg)
 
 - In this range, the beta model changes its shape to the $(1-\eta)^{\beta-1}$ - like shape when the shape of the numerical PDT still resembles the lognormal shape.
 

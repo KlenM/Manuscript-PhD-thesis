@@ -32,7 +32,7 @@ The full set of channel parameters is listed in ^[tab:weak].
 For this channel, the distribution of the beam-centroid coordinate $x_0$ was estimated using a kernel density method for both the collimated and focused cases.
 The resulting probability density functions are shown in ^[fig:x0_weak].
 
-![\label{fig:x0_weak}Weak inf zap](images/beam_shape/bw_weak_inf_zap.svg)
+![\label{fig:x0_weak}Weak inf zap](beam_shape/bw_weak_inf_zap.svg)
 
 When compared with the Gaussian probability density function, both simulated curves exhibit an almost perfect match.
 The numerical values of skewness and excess kurtosis, listed in ^[tab:x0_weak], confirm this observation.
@@ -65,7 +65,7 @@ We next consider a stronger turbulence condition with propagation length $L=1.6\
 The full set of channel parameters is given in ^[tab:moderate].
 The kernel-estimated probability density functions of the beam-centroid coordinate $x_0$ for both the collimated and focused beams are shown in ^[fig:x0_moderate].
 
-![\label{fig:bw_moderate}Moderate inf zap](images/beam_shape/bw_moderate_inf_zap.svg)
+![\label{fig:bw_moderate}Moderate inf zap](beam_shape/bw_moderate_inf_zap.svg)
 
 Both distributions remain very close to the Gaussian reference.
 In the focused case, the peak appears slightly asymmetric by visual inspection, but the numerical skewness reported in ^[tab:x0_moderate] is essentially zero, indicating that this deviation can be considered as statistical noise.
@@ -97,7 +97,7 @@ Finally, we consider the strong-turbulence channel with propagation length $L=50
 The full set of channel parameters is given in ^[tab:strong].
 The kernel-estimated probability density function of the beam-centroid coordinate $x_0$ is shown in ^[fig:bw_strong].
 
-![\label{fig:bw_strong}Strong inf](images/beam_shape/bw_strong_inf.svg)
+![\label{fig:bw_strong}Strong inf](beam_shape/bw_strong_inf.svg)
 
 The distribution remains approximately Gaussian, but a noticeable deviation appears at the peak.
 This is reflected in the negative excess kurtosis reported in^[tab:x0_strong]:
@@ -141,7 +141,7 @@ S(r_0,\eta)=\frac{\left\langle\Delta r_0 \Delta\eta\right\rangle}{\sqrt{\left\la
 For every atmospheric channel listed in ^[@sec:validation] and for each aperture radius, we perform $5\cdot10^5$ independent beam-propagation simulations, compute $r_0 = \sqrt{x_0^2 + y_0^2}$, where $x_0$ is defined as^[eq:x0] and $y_0$ is defined in the same way, evaluate transmittance $\eta$ according to ^[eq:eta] and estimate $S(r_0,\eta)$ ^[eq:r0eta].
 The dependence of the correlation on the aperture radius is shown in ^[@fig:r0eta].
 
-![\label{fig:fig:r0eta}Strong inf](images/beam_shape/original_r_0_eta.pdf)
+![\label{fig:fig:r0eta}Strong inf](beam_shape/original_r_0_eta.pdf)
 
 
 Across all atmospheric channels, the correlation between centroid displacement and transmittance is negative, reflecting the obvious fact that larger beam wandering reduces received power.
@@ -194,7 +194,7 @@ S(r_0,\eta_{r_0})=\frac{\left\langle\Delta r_0 \Delta\eta_{r_0}\right\rangle}{\s
 we isolate the statistical relationship between centroid motion and the residual beam-shape fluctuations, independent of the displacement effect.
 The results are summarized in ^[@fig:r0eta0].
 
-![\label{fig:fig:r0eta0}corr](images/beam_shape/original_r_0_eta_tracked.pdf)
+![\label{fig:fig:r0eta0}corr](beam_shape/original_r_0_eta_tracked.pdf)
 
 For the majority of atmospheric channels and aperture radii, the correlations are very weak, indicating that beam centroid displacements and higher-order beam-shape fluctuations are largely independent.
 Slightly higher correlations are observed in the strong-turbulence channel for small aperture radii, where realizations with larger centroid displacements $r_0$ tend to produce smaller transmittance values compared to realizations with $r_0$ near the optical axis.
@@ -204,7 +204,7 @@ Unlike the first approach, which evaluates correlations through the measured tra
 However, in this approach, small-scale random intensity fluctuations, such as speckles, are effectively excluded, so that the correlation reflects only the large-scale beam spreading.
 To properly account for the symmetry of the system, the beam width is defined along the direction of the centroid displacement vector $\mathbf{r}_0$, denoted $W_{r}$ (see example in ^[@fig:beamWr0]).
 
-![\label{fig:beamWr0}example](images/beam_shape/original_beam_profile.pdf)
+![\label{fig:beamWr0}example](beam_shape/original_beam_profile.pdf)
 
 For this analysis, we use the same $5\cdot10^5$ simulated realizations of the atmospheric channels.
 For each realization, the beam centroid displacement is represented by the vector $\mathbf{r}_0 = (x_0, y_0)^T$.
@@ -269,7 +269,7 @@ which are the quantities assumed to follow the bivariate Gaussian distribution i
 
 The scatter plot of the obtained pairs $(\Theta_1,\Theta_2)$ is shown in ^[@fig:theta1theta2].
 
-[\label{fig:theta1theta2}thetas](images/beam_shape/original_theta_1_theta_2_strong_inf.pdf)
+[\label{fig:theta1theta2}thetas](beam_shape/original_theta_1_theta_2_strong_inf.pdf)
 
 To compare the empirical distribution with the bivariate Gaussian approximation, we compute the sample mean vector $\left<\Theta_i\right>$ and the sample covariance matrix $\Sigma_{ij} = \langle \Delta\Theta_i \Delta\Theta_j \rangle$ and plot the corresponding covariance ellipse, defined by
 $$
