@@ -1,0 +1,62 @@
+lines.linewidth: 2.0
+lines.solid_capstyle: round
+
+patch.linewidth: 0.5
+patch.facecolor: 0072B2
+patch.edgecolor: eeeeee
+patch.antialiased: True
+
+text.hinting_factor: 8
+text.antialiased: True
+text.color: .15
+
+axes.edgecolor: .8
+axes.grid: True
+axes.titlesize: 14
+axes.labelsize: 14
+axes.facecolor: white
+axes.linewidth: 1
+axes.axisbelow: True
+# axes.prop_cycle: cycler('color', ['348ABD', 'A60628', '7A68A6', '467821', 'D55E00', 'CC79A7', '56B4E9', '009E73', 'F0E442', '0072B2'])
+axes.prop_cycle: cycler('color', ['0072B2', '009E73', 'D55E00', 'CC79A7', 'F0E442', '56B4E9'])
+
+grid.color: .8
+grid.linestyle: --
+grid.linewidth: 0.5
+
+legend.fancybox: True
+legend.frameon: False
+legend.numpoints: 1
+legend.scatterpoints: 1
+legend.fontsize: 12
+
+xtick.direction: out
+ytick.direction: out
+xtick.color: .15
+ytick.color: .15
+xtick.major.size: 0
+ytick.major.size: 0
+xtick.minor.size: 0
+ytick.minor.size: 0
+xtick.labelsize: 12
+ytick.labelsize: 12
+
+figure.facecolor: white
+figure.dpi: 100
+savefig.dpi: 300
+image.cmap: Greys
+
+
+font.family: serif  # "serif", "sans-serif", "monospace", "cursive", "fantasy"
+font.serif: Nimbus Roman
+font.sans-serif: Arial, Liberation Sans, DejaVu Sans, Bitstream Vera Sans, sans-serif
+font.size: 14
+mathtext.fontset: cm
+
+savefig.transparent: False
+svg.fonttype : none
+
+#text.usetex: True
+#pgf.texsystem: lualatex
+#pgf.preamble: \usepackage{amsmath}\usepackage{amssymb}\usepackage{fontspec}\setmainfont{Latin Modern Roman}[version=lm]
+#pgf.rcfonts: False

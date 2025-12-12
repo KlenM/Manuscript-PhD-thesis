@@ -1,1 +1,5 @@
-attachments/
+__pycache__/
+__marimo__/
+.aux/
+main.pdf
+src/tex/converted/

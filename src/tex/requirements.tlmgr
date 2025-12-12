@@ -1,0 +1,16 @@
+extsizes
+biblatex
+soul
+cleveref
+titlesec
+tocloft
+enumitem
+caption
+svg
+xstring
+ifplatform
+transparent
+catchfile
+pgf
+biber
+hyphenat

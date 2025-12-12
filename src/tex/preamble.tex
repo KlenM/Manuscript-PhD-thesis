@@ -1,0 +1,142 @@
+\usepackage{extsizes} % for 14pt
+
+\usepackage[style=numeric,sorting=none,backend=biber,url=false]{biblatex}
+\addbibresource{MyLibrary.bib}
+
+\usepackage{fontspec}
+\setmainfont{Nimbus Roman}
+
+\usepackage{amssymb,amsfonts,amsmath}
+\usepackage{enumerate}
+\usepackage{indentfirst}
+\usepackage{float}
+\usepackage{soul} % strike text
+\usepackage{booktabs}
+\usepackage{array,longtable}
+
+\usepackage{geometry}
+% \geometry{left=3cm}
+% \geometry{right=1cm}
+% \geometry{top=2cm}
+% \geometry{bottom=2cm}
+\geometry{left=3cm}
+\geometry{right=1.5cm}
+\geometry{top=2.5cm}
+\geometry{bottom=2.5cm}
+\renewcommand{\baselinestretch}{1.4} % 1.5 interval
+\parindent 1.27cm % paragraph indent
+
+% Uncomment to stop hyphenation
+\usepackage[none]{hyphenat}
+\sloppy
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks, urlcolor={blue},
+    linkcolor={blue}, citecolor={blue}, filecolor={blue},
+    pdfauthor={Mykyta Klen},
+    pdftitle={Numerical simulation of Atmospheric Quatum Channels}
+}
+\usepackage[capitalize,nameinlink]{cleveref}
+
+\usepackage[compact,explicit]{titlesec}
+\titlespacing*{\section}{0pt}{2\baselineskip}{*0}
+\titlespacing*{\subsection}{0pt}{2\baselineskip}{\baselineskip}
+\titlespacing*{\subsubsection}{0pt}{\baselineskip}{*0}
+\titlespacing*{\paragraph}{12.5mm}{\baselineskip}{5mm}
+\titleformat{\section}{}{}{12.5mm}{\textbf\thesection\quad\textbf{#1}}
+\titleformat{\subsection}{}{}{12.5mm}{\textbf\thesubsection\quad\textbf{#1}}
+\titleformat{\subsubsection}{\normalsize}{}{12.5mm}{\textit\thesubsubsection\quad\textit{#1}}
+% \titleformat{\paragraph}{\normalsize}{}{12.5mm}{\quad\textbf{#1}}
+
+\usepackage{tocloft}
+\renewcommand{\contentsname}{Table of Contents}
+\renewcommand{\cfttoctitlefont}{\hspace{0.38\textwidth}}
+\renewcommand{\cftsecfont}{\hspace{0pt}}
+\setlength{\cftbeforesecskip}{5pt}
+\renewcommand\cftsecleader{\cftdotfill{\cftdotsep}}
+\renewcommand\cftsecpagefont{\mdseries}
+\setcounter{tocdepth}{3}
+
+\usepackage{enumitem}
+\setlist[enumerate,itemize]{leftmargin=0mm,itemindent=12.7mm}
+\makeatletter
+    \AddEnumerateCounter{\asbuk}{\@asbuk}{м)}
+\makeatother
+\setlist{nolistsep}
+\renewcommand{\labelitemi}{--}
+
+\usepackage{caption}
+\DeclareCaptionLabelSeparator{defffis}{ -- }
+\captionsetup[figure]{name=Figure,justification=centering, labelsep=defffis, format=plain}
+\captionsetup[table]{name=Table,justification=raggedright,  format=plain, labelsep=defffis, singlelinecheck=false, margin=1.27cm}
+
+% \newcommand{\anonsection}[1]{
+%     \phantomsection
+%     \paragraph{\centerline{{\textbf{#1}}}\vspace{1.5em}}
+%     \addcontentsline{toc}{section}{#1}
+% }
+
+% \newcommand{\addimghere}[4]{
+%     \begin{figure}[H]
+%         \centering
+%         % \includegraphics[width=#2\linewidth]{#1}
+%         \includegraphics[height=#2\baselineskip]{#1}
+%         \caption{#3} \label{#4}
+%     \end{figure}
+% }
+
+\usepackage{graphicx}
+\usepackage{svg}
+\usepackage{xstring}
+\graphicspath{{../../media}{../../media/figures}}
+\svgpath{{/home/klen/syncthing/desktop/physics/phd/thesis/images/},{/home/klen/syncthing/desktop/physics/phd/thesis/src/generated/}}
+\newcommand{\addimghere}[4]{%
+    \begin{figure}[H]
+        \centering
+        \IfEndWith{#1}{.svg}{%
+            \includesvg[inkscapelatex=false,width=#2\linewidth]{#1}%
+        }{%
+            \includegraphics[width=#2\linewidth]{#1}%
+        }%
+        \caption{#3}%
+    \end{figure}%
+}
+
+
+\setlength{\bibitemsep}{0pt} % equivalent to \setlength{\itemsep}{0pt}
+\setlength{\bibhang}{16.7mm} % equivalent to \itemindent
+\setlength{\labelwidth}{1.5em} % adjust label width if needed
+\setlength{\labelsep}{0.5em} % space between label and item text
+
+% Spacing around equations
+\makeatletter
+\g@addto@macro\equation{\setlength{\abovedisplayskip}{\baselineskip}\setlength{\belowdisplayskip}{\baselineskip}%
+                        \setlength{\abovedisplayshortskip}{\baselineskip}\setlength{\belowdisplayshortskip}{\baselineskip}}
+\makeatother
+
+\definecolor{green}{RGB}{34,139,34}
+\definecolor{red}{RGB}{178,34,34}
+
+\makeatletter
+\renewenvironment{thebibliography}[1]
+    {\section*{\refname}
+        \list{\@biblabel{\@arabic\c@enumiv}}
+           {\settowidth\labelwidth{\@biblabel{#1}}
+            \leftmargin\labelsep
+            \itemindent 16.7mm
+            \@openbib@code
+            \usecounter{enumiv}
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}
+        }
+        \setlength{\itemsep}{0pt}
+    }
+\makeatother
+
+% \makeatletter
+% \renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+%   {-3.25ex \@plus -1ex \@minus -.2ex}%
+%   {1.5ex \@plus .2ex}%
+%   {\normalfont\itshape}}
+% \makeatother
