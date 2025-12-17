@@ -34,41 +34,23 @@ In the photon number basis, the TMSV state can be written as
 $$
 \ket{\xi}=\cosh^{-1}\xi\sum_{n=0}^{\infty}(-\tanh \xi)^n\ket{n,n}
 $$
->Gaussian entanglement in the turbulent atmosphere has been analyzed in Ref. [57] in the context of fully correlated and anticorrelated transmittances.
 
-- intro
-    - entanglement, history ERP, relevance (superficially)
-        - The original EPR paradox posits that if you can simultaneously predict the value of two non-commuting observables of one particle by measuring the other particle, then the description of reality given by quantum mechanics is incomplete.
-    - cv ent
-        - Amplitude and phase natural degrees of freedom of light - CV entanglement
-            - continuous range of values. (quadrature amplitudes)
-            - is easy to measure?
-        - why continuous variable systems matter in quantum information
-            - computation, qkd, metrology
-    - TMSVS - most canonical
-        - kind of gaussian entangl?
-        - is EPR ^[@10.1088/0256-307X/21/10/003]
-        - In the TMSV state, the quantum noise is correlated between two distinct modes
-        - how to creation
-            - Non-degenerate Optical Parametric Oscillator (NOPO) or by mixing two single-mode squeezed states on a beam splitter.
-    - atmos. quantum channel setup, two time for two modes
-        - homodyne or what?
-    - cryteria
-        - Duan-Simon criterion) are only sufficient, not necessary (for nongauss??)
-        - Peres Horodecki criterion conceptually
-        - Reid/Duan-Simon Criterion or Logarithmic Negativity.??
-        - Present the Simon criterion for Gaussian states.
-        - Mention Duan inequality as an experimentally accessible witness.
-        - Clarify necessity versus sufficiency.
-- W by s
-- s threshold by rho (introduced in timecorr)
-- conclusion
-- further?
-    - squeezeing - is reduced below the vacuum noise limit, at the expense of increasing the noise in the conjugate quadrature to satisfy the Heisenberg Uncertainty Principle ($(\Delta X)^2 (\Delta P)^2 \geq \frac{1}{4}$).
----
+#### Simon certifier.
+Detecting entanglement in continuous variable systems requires criteria that can distinguish separable states from entangled states. 
+The fundamental conceptual basis for separability in bipartite quantum systems is given by the Peres Horodecki criterion^[@PH]. 
+This criterion states that any separable quantum state must remain a valid physical state after partial transposition with respect to one subsystem.
+In general infinite dimensional Hilbert spaces, this condition is necessary but not sufficient for separability.
+However Simon showed that for two mode Gaussian states such as the TMSV state the partial transposition criterion is both necessary and sufficient for separability ^[@simon2000] ^[@shchukin2005].
+This makes the Simon criterion a useful and complete tool for Gaussian entanglement detection for TMSV states.
 
-The two-mode squeezed vacuum state (TMSVS)
+- the qustion for the cases of fully correlated (equivalently $\tau\to0$) and anticorrelated transmittances ($\tau\to\infty$) are discussed in ^[@bohmann2016a]
+- here we study the intermidiate range of time interval between pulses.
+- the first mode of TMSV state is sent at time $t=0$, the second is stored in quantum memory and then sent at $t=\tau$.
+- the atmoshpherical channels are the same as in ^[sec:timecorr].
+- The Deterministic losses of 0.1 dB/km are additionally includeed into $\eta_0$ and $\eta_\tau$ as well as optical system losses.
+- If measurement involves homodyne detection,  local oscillator is sent in  same spatial but orthogonally polarized mode.
 
+- applying simon criteria to TMSV state in the considered scenaria, we get that the state at reciver is entangled iff 
 $$
 \begin{split}
 \mathcal{W}=&\sinh^2\xi\Big[-\left\langle\sqrt{\eta_0\eta_\tau}\right\rangle^2\cosh^2\xi+\left\langle\eta_0\right\rangle\left\langle\eta_\tau\right\rangle\sinh^2\xi\Big]\nonumber\\
@@ -76,6 +58,17 @@ $$
 &+\sinh^2\xi\left(\left\langle\eta_0\right\rangle+\left\langle\eta_\tau\right\rangle+\left\langle\eta_0\right\rangle\left\langle\eta_\tau\right\rangle\sinh^2\xi\right)\Big]
 \end{split}
 $$
+- is negative $\mathcal{W}<0$. 
+- The second term is always positive so it can't change the sign of $\mathcal{W}$ and can be omited.
+- Then the sign of $\mathcal W$ is invariant under global rescaling of the transmittances, which implies that entanglement preservation is independent on determenistic losses, including qunatum memory and optical system.
+
+- W by s
+- s threshold by rho (introduced in timecorr)
+- conclusion
+- further?
+    - squeezeing - is reduced below the vacuum noise limit, at the expense of increasing the noise in the conjugate quadrature to satisfy the Heisenberg Uncertainty Principle ($(\Delta X)^2 (\Delta P)^2 \geq \frac{1}{4}$).
+---
+
 
 ![[4_entanglement.png-1.png|200]]
 
