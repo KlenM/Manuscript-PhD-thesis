@@ -43,14 +43,21 @@ In general infinite dimensional Hilbert spaces, this condition is necessary but 
 However Simon showed that for two mode Gaussian states such as the TMSV state the partial transposition criterion is both necessary and sufficient for separability ^[@simon2000] ^[@shchukin2005].
 This makes the Simon criterion a useful and complete tool for Gaussian entanglement detection for TMSV states.
 
-- the qustion for the cases of fully correlated (equivalently $\tau\to0$) and anticorrelated transmittances ($\tau\to\infty$) are discussed in ^[@bohmann2016a]
-- here we study the intermidiate range of time interval between pulses.
-- the first mode of TMSV state is sent at time $t=0$, the second is stored in quantum memory and then sent at $t=\tau$.
-- the atmoshpherical channels are the same as in ^[sec:timecorr].
-- The Deterministic losses of 0.1 dB/km are additionally includeed into $\eta_0$ and $\eta_\tau$ as well as optical system losses.
-- If measurement involves homodyne detection,  local oscillator is sent in  same spatial but orthogonally polarized mode.
+The effect of atmospheric turbulence on continuous variable entanglement depends on temporal correlations of the channel transmittance. 
+The limiting cases of fully correlated transmittances, corresponding to time separation $\tau\to 0$, and fully anticorrelated transmittances, corresponding to large time separation $\tau\to\infty$, have been analyzed previously in ^[@bohmann2016a].
+We focus on the intermediate regime, where the time interval between subsequent pulses $\tau$ is finite.
 
-- applying simon criteria to TMSV state in the considered scenaria, we get that the state at reciver is entangled iff 
+We consider a two mode squeezed vacuum state as the entangled source. 
+The first mode is transmitted through the atmospheric channel at time $t=0$. 
+The second mode is stored in a quantum memory and transmitted at a later time $t=\tau$. 
+As a result, the two modes experience different but temporally correlated realizations of the atmospheric channel.
+
+For the simulations, we use the same atmospheric channels as defined in ^[sec:timecorr].
+Deterministic losses of $0.1\ \mathrm{dB/km}$ are additionally included in the effective transmittances $\eta_0$ and $\eta_\tau$ ^[@losses], together with losses of the optical system.
+When measurements are performed using homodyne detection, the local oscillator is transmitted in the same spatial mode as the signal with orthogonal polarization, ensuring a stable phase reference while experiencing the same atmospheric fluctuations.
+
+To analyze entanglement preservation in this scenario, we apply the Simon criterion to the two mode squeezed vacuum state after transmission through the atmospheric channels. 
+For the considered model, the Simon certifier $\mathcal W$ takes the form
 $$
 \begin{split}
 \mathcal{W}=&\sinh^2\xi\Big[-\left\langle\sqrt{\eta_0\eta_\tau}\right\rangle^2\cosh^2\xi+\left\langle\eta_0\right\rangle\left\langle\eta_\tau\right\rangle\sinh^2\xi\Big]\nonumber\\
@@ -58,11 +65,28 @@ $$
 &+\sinh^2\xi\left(\left\langle\eta_0\right\rangle+\left\langle\eta_\tau\right\rangle+\left\langle\eta_0\right\rangle\left\langle\eta_\tau\right\rangle\sinh^2\xi\right)\Big]
 \end{split}
 $$
-- is negative $\mathcal{W}<0$. 
-- The second term is always positive so it can't change the sign of $\mathcal{W}$ and can be omited.
-- Then the sign of $\mathcal W$ is invariant under global rescaling of the transmittances, which implies that entanglement preservation is independent on determenistic losses, including qunatum memory and optical system.
+According to the Simon criterion, the transmitted state is entangled if and only if $\mathcal W<0$.
 
-- W by s
+The expression for $\mathcal W$ factorizes into two multiplicative terms. 
+The second factor is strictly positive for all physically allowed values of the transmittances and the squeezing parameter. 
+As a result, it cannot influence the sign of $\mathcal W$ and can be omitted when determining the entanglement condition.
+Therefore, the sign of $\mathcal W$ is fully determined by the first factor. 
+Importantly, this factor is invariant under a global rescaling of the trasmittances $\eta_0$ and $\eta_\tau$. 
+This implies that entanglement preservation is independent of deterministic losses, including losses introduced by the quantum memory and the optical system.
+
+^[fig:cvent] shows the regions of entanglement preservation for a TMSV state transmitted through atmospheric channels. 
+The horizontal axis represents the wind-driven shift $s$, which corresponds to the time separation between pulses $\tau = s / v$, where $v$ is the transverse wind speed (see ^[sec:timecorr]).
+The vertical axis shows the squeezing parameter $\xi$ of the initial TMSV state.
+The shaded regions correspond to $\mathcal W<0$, where the Simon criterion certifies that the received state remains entangled.
+
+The figure reveals a counterintuitive feature: increasing the squeezing parameter $\xi$ reduces the maximum wind-driven shift for which entanglement is preserved. 
+As a result, stronger squeezing does not improve entanglement robustness in atmospheric channels. 
+
+For a squeezing parameter of $\xi = 2$ and a turbulence strength of $\sigma_R^2 = 11$, Gaussian entanglement remains for wind-driven shifts up to $s = 6.4\ \mathrm{cm}$, corresponding to a time separation of $\tau = 6.4\ \mathrm{ms}$ for a transverse wind speed of $v = 10\ \mathrm{m/s}$. 
+This demonstrates that entanglement between light pulses is highly robust, persisting beyond millisecond time intervals. 
+However, losses associated with the quantum memory can significantly reduce the absolute value of the Simon certifier.
+
+
 - s threshold by rho (introduced in timecorr)
 - conclusion
 - further?
