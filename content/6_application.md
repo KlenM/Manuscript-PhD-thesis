@@ -32,7 +32,7 @@ In the limit of infinite squeezing, the TMSV approaches the idealized EPR state 
 Two mode squeezed vacuum states can be generated using nondegenerate optical parametric oscillators or by interfering two single mode squeezed states on a balanced beam splitter. 
 In the photon number basis, the TMSV state can be written as
 $$
-\ket{\xi}=\cosh^{-1}\xi\sum_{n=0}^{\infty}(-\tanh \xi)^n\ket{n,n}
+\left|\xi\right>=\cosh^{-1}\xi\sum_{n=0}^{\infty}(-\tanh \xi)^n\left|n,n\right>
 $$
 
 #### Simon certifier.
@@ -104,5 +104,42 @@ These results provide a practical guideline for maintaining continuous variable 
  >squeezeing - is reduced below the vacuum noise limit, at the expense of increasing the noise in the conjugate quadrature to satisfy the Heisenberg Uncertainty Principle ($(\Delta X)^2 (\Delta P)^2 \geq \frac{1}{4}$).
 
 ## Discrete-variable entanglement between pulses
+
+In the previous section, entanglement was discussed in the continuous variable regime. 
+This description is natural for Gaussian states and homodyne based measurements. 
+However, many experimentally relevant sources and protocols operate in a finite-dimensional Hilbert space, where entanglement can be encoded in discrete degrees of freedom. 
+This motivates a separate treatment of discrete variable entanglement.
+
+We consider a maximally entangled two qubit system corresponding to a Bell state. 
+Each qubit is encoded in the polarization degree of freedom of a single photon occupying a well defined temporal mode. 
+The horizontal polarization $\mathrm{h}$ defines the logical zero state, while the vertical polarization $\mathrm{v}$ defines the logical one. 
+Using two temporal modes $t = 0$ and $t = \tau$, the system spans four optical modes, namely $\mathrm{h}0$, $\mathrm{v}0$, $\mathrm{h}\tau$, and $\mathrm{v}\tau$. 
+The corresponding Bell state is written as
+$$
+\begin{split}
+\ket{\mathcal{B}}&=\frac{1}{\sqrt{2}}\Big(\ket{\mathrm{h}}_0
+\ket{\mathrm{v}}_\tau-
+\ket{\mathrm{v}}_0\ket{\mathrm{h}}_\tau
+\Big)\\
+&=\frac{1}{\sqrt{2}}\Big(\ket{1}_\mathrm{h0}\ket{0}_\mathrm{v0}
+\ket{0}_\mathrm{h\tau}\ket{1}_\mathrm{v\tau}-\ket{0}_\mathrm{h0}\ket{1}_\mathrm{v0}
+\ket{1}_\mathrm{h\tau}\ket{0}_\mathrm{v\tau}\Big)
+\end{split}
+$$
+In optical implementations, entangled photon pairs are often generated through a nonlinear light matter interaction such as spontaneous parametric down conversion(PDC) ^[@pdcent]. 
+A PDC source does not emit a pure Bell state but instead produces a superposition of photon number states in the relevant polarization and temporal modes
+$$
+\ket{\mathrm{PDC}}=(\cosh\xi)^{-2}\sum\limits_{n=0}^{+\infty}
+\sqrt{n+1}\tanh^n\xi\left|\Phi_n\right\rangle
+$$
+with
+$$
+\left|\Phi_n\right\rangle=\frac{1}{\sqrt{n+1}}\sum\limits_{m=0}^{n}(-1)^m
+\left|n{-}m\right\rangle_\mathrm{h0}\left|m\right\rangle_\mathrm{v0}\left|m\right\rangle_\mathrm{h\tau}\left|n{-}m\right\rangle_\mathrm{v\tau}
+$$
+The parameter $\xi$ is determined by the pump power and the nonlinear coupling strength. 
+The term with $n = 1$ corresponds to a polarization Bell state occupying the two temporal modes, while higher order terms describe the simultaneous emission of multiple photon pairs.
+
+
 ## Adaptive real-time selection for nonclassical states
 ## Conclusion
