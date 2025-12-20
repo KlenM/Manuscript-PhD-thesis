@@ -101,8 +101,6 @@ Gaussian entanglement is robust against atmospheric turbulence, while stronger s
 Deterministic losses affect only the absolute value of the certifier. 
 These results provide a practical guideline for maintaining continuous variable entanglement in realistic free-space quantum channels.
 
- >squeezeing - is reduced below the vacuum noise limit, at the expense of increasing the noise in the conjugate quadrature to satisfy the Heisenberg Uncertainty Principle ($(\Delta X)^2 (\Delta P)^2 \geq \frac{1}{4}$).
-
 ## Discrete-variable entanglement between pulses
 
 In the previous section, entanglement was discussed in the continuous variable regime. 
@@ -117,29 +115,88 @@ Using two temporal modes $t = 0$ and $t = \tau$, the system spans four optical m
 The corresponding Bell state is written as
 $$
 \begin{split}
-\ket{\mathcal{B}}&=\frac{1}{\sqrt{2}}\Big(\ket{\mathrm{h}}_0
-\ket{\mathrm{v}}_\tau-
-\ket{\mathrm{v}}_0\ket{\mathrm{h}}_\tau
-\Big)\\
-&=\frac{1}{\sqrt{2}}\Big(\ket{1}_\mathrm{h0}\ket{0}_\mathrm{v0}
-\ket{0}_\mathrm{h\tau}\ket{1}_\mathrm{v\tau}-\ket{0}_\mathrm{h0}\ket{1}_\mathrm{v0}
-\ket{1}_\mathrm{h\tau}\ket{0}_\mathrm{v\tau}\Big)
+\left| \mathcal{B} \right\rangle &= \frac{1}{\sqrt{2}} \Big( \left| \mathrm{h} \right\rangle_0 \left| \mathrm{v} \right\rangle_\tau - \left| \mathrm{v} \right\rangle_0 \left| \mathrm{h} \right\rangle_\tau \Big) \\
+&= \frac{1}{\sqrt{2}} \Big( \left| 1 \right\rangle_{\mathrm{h0}} \left| 0 \right\rangle_{\mathrm{v0}} \left| 0 \right\rangle_{\mathrm{h\tau}} \left| 1 \right\rangle_{\mathrm{v\tau}} - \left| 0 \right\rangle_{\mathrm{h0}} \left| 1 \right\rangle_{\mathrm{v0}} \left| 1 \right\rangle_{\mathrm{h\tau}} \left| 0 \right\rangle_{\mathrm{v\tau}} \Big)
 \end{split}
 $$
-In optical implementations, entangled photon pairs are often generated through a nonlinear light matter interaction such as spontaneous parametric down conversion(PDC) ^[@pdcent]. 
+
+In optical implementations, entangled photon pairs are often generated through a nonlinear light matter interaction such as spontaneous parametric down conversion (PDC) ^[@pdcent]. 
 A PDC source does not emit a pure Bell state but instead produces a superposition of photon number states in the relevant polarization and temporal modes
-$$
-\ket{\mathrm{PDC}}=(\cosh\xi)^{-2}\sum\limits_{n=0}^{+\infty}
-\sqrt{n+1}\tanh^n\xi\left|\Phi_n\right\rangle
-$$
+$$\left| \mathrm{PDC} \right\rangle = (\cosh\xi)^{-2} \sum\limits_{n=0}^{+\infty} \sqrt{n+1} \tanh^n \xi \left| \Phi_n \right\rangle$$
 with
 $$
-\left|\Phi_n\right\rangle=\frac{1}{\sqrt{n+1}}\sum\limits_{m=0}^{n}(-1)^m
-\left|n{-}m\right\rangle_\mathrm{h0}\left|m\right\rangle_\mathrm{v0}\left|m\right\rangle_\mathrm{h\tau}\left|n{-}m\right\rangle_\mathrm{v\tau}
+\left| \Phi_n \right\rangle = \frac{1}{\sqrt{n+1}} \sum\limits_{m=0}^{n} (-1)^m \left| n-m \right\rangle_{\mathrm{h0}} \left| m \right\rangle_{\mathrm{v0}} \left| m \right\rangle_{\mathrm{h\tau}} \left| n-m \right\rangle_{\mathrm{v\tau}}
 $$
 The parameter $\xi$ is determined by the pump power and the nonlinear coupling strength. 
 The term with $n = 1$ corresponds to a polarization Bell state occupying the two temporal modes, while higher order terms describe the simultaneous emission of multiple photon pairs.
+In this section, we analyze the entanglement between optical pulses separated by a time interval $\tau$ for both the ideal Bell state and the PDC state.
 
+To quantify discrete-variable entanglement, we use the Bell parameter $\mathcal{B}$, defined in the Clauser-Horne-Shimony-Holt (CHSH) form^[@CHSH]. 
+It is constructed from correlations between measurements on two parts in different bases. 
+A value of $\mathcal{B} > 2$ signals a violation of local realism and confirms the presence of entanglement.
+
+Several studies have investigated the distribution of discrete variable entanglement through turbulent free space channels. 
+A theoretical framework describing the propagation of polarization entanglement through atmospheric turbulence was developed in ^[@SemenovVogel2010] for both Bell states and PDC states. 
+In that work, the entanglement degradation was described in terms of statistical moments of the transmittance.
+
+The role of temporal correlations in the atmospheric channel was further analyzed in ^[@gumb], where two limiting propagation scenarios were considered. 
+The case of copropagation corresponds to perfectly correlated transmittance fluctuations and is observed in the limit $\tau \to 0$. 
+The opposite limit of counterpropagation corresponds to statistically independent fluctuations and is obtained for $\tau \to \infty$. 
+These two regimes provide useful benchmarks but do not describe intermediate situations where correlations are only partial.
+
+Experimental feasibility of distributing polarization entanglement through strong turbulence channels was demonstrated in ^[@Fedrizzi2009]. 
+That experiment confirmed that polarization entanglement can survive high loss free space propagation. 
+However, the temporal separation between consecutive pulses was on the order of $50\mathrm{ns}$, which is much shorter than the atmospheric correlation time. 
+As a result, the corresponding transmittance fluctuations were almost perfectly correlated between the two pulses.
+
+In realistic free space quantum communication scenarios, the temporal separation between entangled pulses may become comparable to or larger than the atmospheric correlation time. 
+In this regime, transmittance fluctuations are neither fully correlated nor fully independent. 
+Consequently, the measured Bell parameter becomes a nontrivial function of the pulse separation time $\tau$.
+Determining this dependence is essential for understanding entanglement distribution under realistic channel conditions and for assessing the robustness of Bell inequality violations in random media.
+
+> For theta (...). Derivation for Bell (Sem, Gumb) and PDC
+
+For the numerical simulations, we employ the same atmospheric channel model as defined in Section ^[sec:timecorr]. 
+The first mode is transmitted through the atmospheric channel at time $t = 0$. The second mode is stored in a quantum memory and is transmitted at a later time $t = \tau$ ^[@qmem]. 
+
+In contrast to the continuous variable case, the discrete variable description requires an explicit account of all deterministic losses. 
+Losses directly affect the detection probabilities and therefore enter the evaluation of the Bell parameters. 
+As a result, each optical and detection component must be included in the channel model.
+
+The total deterministic loss amounts to $9.42\,\mathrm{dB}$ and consists of:
+- atmospheric attenuation of $0.1\,\mathrm{dB}/\mathrm{km}$ over a propagation distance of $50\,\mathrm{km}$, resulting in a loss of $5\,\mathrm{dB}$
+- a $50{:}50$ beam splitter, introducing a loss of $10 \log_{10}(1/2) = 3\,\mathrm{dB}$
+- detector efficiency of $0.85$, corresponding to a loss of $10 \log_{10}(0.85) = 0.71\,\mathrm{dB}$
+- quantum memory writing efficiency of $0.85$, corresponding to a loss of $10 \log_{10}(0.85) = 0.71\,\mathrm{dB}$
+
+In addition to these static contributions, the quantum memory readout exhibits a time dependent loss. 
+It is modeled as an effective attenuation of $3\,\mathrm{dB}/\mathrm{ms}$ of storage time, which directly depends on the pulse separation time $\tau$.
+Noise counts originating from detector dark counts and stray light are included in the simulation $\nu=3 \times 10^{-4}$.
+
+> More details about QMemory are possible 
+
+The dependence of the Bell parameter $\mathcal{B}$ on the temporal separation between pulses $\tau$ is shown in Figure ^[fig:bell] for both the ideal Bell state and the parametric down conversion state. 
+
+![[bell.png|200]]
+
+For the PDC state, the Bell parameter additionally depends on the source parameter $\xi$.
+In the simulations, we optimize over $\xi$ by choosing the value that maximizes $\mathcal{B}$ for each separation $\tau$.
+
+Because of time-dependent losses in the channel, the wind-driven shift $s$ cannot be treated as interchangeable with the pulses time separation $\tau$. 
+To account for this effect, we consider two wind speeds, $v = 10$ and $v = 5$. 
+To isolate the impact of time-dependent quantum memory losses from atmospheric effects, we also show results for an ideal quantum memory with perfect readout efficiency of $0\,\mathrm{dB}/\mathrm{ms}$.
+
+From the results, it is apparent that atmospheric turbulence alone allows discrete-variable entanglement to survive over pulse separations of tens of milliseconds. 
+Quantum correlations persisting over such long times indicate that using two or more time-separated quantum states makes it possible to increase the effective dimensionality of the Hilbert space ^[@80].
+However, the introduction of quantum memory losses strongly reduces the Bell parameter to a few milliseconds.
+
+These findings indicate that the feasibility of the protocol is currently limited by hardware efficiency. 
+They emphasize that developing high-performance quantum memories is important for practical implementation.
+
+> In this subsection, we have analyzed discrete-variable entanglement between temporally separated optical pulses. Both ideal Bell states and parametric down conversion states were considered. The analysis accounted for atmospheric turbulence, deterministic losses, quantum memory inefficiencies, and background noise.
 
 ## Adaptive real-time selection for nonclassical states
+
+ >squeezeing - is reduced below the vacuum noise limit, at the expense of increasing the noise in the conjugate quadrature to satisfy the Heisenberg Uncertainty Principle ($(\Delta X)^2 (\Delta P)^2 \geq \frac{1}{4}$).
+
 ## Conclusion
