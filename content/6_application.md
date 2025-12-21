@@ -193,10 +193,46 @@ However, the introduction of quantum memory losses strongly reduces the Bell par
 These findings indicate that the feasibility of the protocol is currently limited by hardware efficiency. 
 They emphasize that developing high-performance quantum memories is important for practical implementation.
 
+> - [ ] ensure links to Sem, Gum, 2009 exp
+
 > In this subsection, we have analyzed discrete-variable entanglement between temporally separated optical pulses. Both ideal Bell states and parametric down conversion states were considered. The analysis accounted for atmospheric turbulence, deterministic losses, quantum memory inefficiencies, and background noise.
 
-## Adaptive real-time selection for nonclassical states
+## Threshold-based selection for nonclassical states
 
- >squeezeing - is reduced below the vacuum noise limit, at the expense of increasing the noise in the conjugate quadrature to satisfy the Heisenberg Uncertainty Principle ($(\Delta X)^2 (\Delta P)^2 \geq \frac{1}{4}$).
+Nonclassicality is a broader concept than entanglement. 
+Entanglement refers to quantum correlations between subsystems, while nonclassicality can arise even in a single mode optical field. 
+It characterizes states that cannot be described within a classical theory of electromagnetic radiation. 
+
+Classical optical states admit a description in terms of solutions of Maxwell equations with stochastic amplitudes and phases. 
+Coherent states form a prominent subset of this class. 
+They minimize the Heisenberg uncertainty relation
+$$
+%\label{eq:heis}
+(\Delta X)^2 (\Delta P)^2 \geq \frac{1}{4}
+$$
+and therefore exhibit the smallest allowed quadrature noise. 
+Despite this property, coherent states remain classical since their fluctuations can be reproduced by classical stochastic models.
+
+A systematic characterization of nonclassicality is provided by the Glauber Sudarshan $P$ function^[eq:Pfunc]. 
+This function represents a quantum state as a statistical mixture of coherent states. 
+If the $P$ function is positive and regular, the state is considered classical. 
+The absence of such a representation is a necessary and sufficient criterion for nonclassicality. 
+Nonclassical states exhibit either negativity of the $P$ function or singularities that are stronger than those of a classical probability distribution. 
+These features indicate the failure of any classical stochastic description.
+
+The negativity of the $P$ function provides a clear qualitative criterion but it is not unique as a quantitative measure. 
+Several nonclassicality measures have been proposed that capture different operational aspects of this property ^[@ge2020]. Their relevance depends on the task under consideration.
+
+Historically, the first unambiguous experimental signature of nonclassical light was photon antibunching ^[sec:QO]. 
+This effect cannot be explained by classical intensity fluctuations and directly contradicts classical field theories. 
+Squeezed states represent another important class of nonclassical states. 
+In these states, the noise of one quadrature is reduced below the vacuum level, while the noise of the conjugate quadrature increases to satisfy the uncertainty relation^[eq:heis]. 
+Such noise reduction has no classical analog, since classical stochastic electromagnetic fields cannot suppress quadrature fluctuations below the vacuum limit.
+
+- in this section...
+
+- squeezed vacuum postselection for analyt models
+- amplitude squeezed adaptive selection Q, Qn, V.
+
 
 ## Conclusion
