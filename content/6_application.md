@@ -121,7 +121,8 @@ $$
 $$
 
 In optical implementations, entangled photon pairs are often generated through a nonlinear light matter interaction such as spontaneous parametric down conversion (PDC) ^[@pdcent]. 
-A PDC source does not emit a pure Bell state but instead produces a superposition of photon number states in the relevant polarization and temporal modes
+A PDC source produces a superposition of photon number states. 
+In the relevant polarization and temporal modes, this superposition can be written as
 $$\left| \mathrm{PDC} \right\rangle = (\cosh\xi)^{-2} \sum\limits_{n=0}^{+\infty} \sqrt{n+1} \tanh^n \xi \left| \Phi_n \right\rangle$$
 with
 $$
@@ -131,7 +132,7 @@ The parameter $\xi$ is determined by the pump power and the nonlinear coupling s
 The term with $n = 1$ corresponds to a polarization Bell state occupying the two temporal modes, while higher order terms describe the simultaneous emission of multiple photon pairs.
 In this section, we analyze the entanglement between optical pulses separated by a time interval $\tau$ for both the ideal Bell state and the PDC state.
 
-To quantify discrete-variable entanglement, we use the Bell parameter $\mathcal{B}$, defined in the Clauser-Horne-Shimony-Holt (CHSH) form^[@CHSH]. 
+To quantify discrete-variable entanglement, we use the Bell parameter $\mathcal{B}$, defined in the Clauser-Horne-Shimony-Holt form^[@CHSH]. 
 It is constructed from correlations between measurements on two parts in different bases. 
 A value of $\mathcal{B} > 2$ signals a violation of local realism and confirms the presence of entanglement.
 
@@ -223,16 +224,35 @@ These features indicate the failure of any classical stochastic description.
 The negativity of the $P$ function provides a clear qualitative criterion but it is not unique as a quantitative measure. 
 Several nonclassicality measures have been proposed that capture different operational aspects of this property ^[@ge2020]. Their relevance depends on the task under consideration.
 
+>Mandel param
+>Q param array
+>Bell like ineq
+
 Historically, the first unambiguous experimental signature of nonclassical light was photon antibunching ^[sec:QO]. 
 This effect cannot be explained by classical intensity fluctuations and directly contradicts classical field theories. 
 Squeezed states represent another important class of nonclassical states. 
 In these states, the noise of one quadrature is reduced below the vacuum level, while the noise of the conjugate quadrature increases to satisfy the uncertainty relation^[eq:heis]. 
 Such noise reduction has no classical analog, since classical stochastic electromagnetic fields cannot suppress quadrature fluctuations below the vacuum limit.
 
-- in this section...
+> Where and how to define squeezed states??
 
-- squeezed vacuum postselection for analyt models
-- amplitude squeezed adaptive selection Q, Qn, V.
+In this section, we study the propagation of squeezed states through an atmospheric channel.
+We consider the threshold selection of the transmittance as a method to improve the preservation of nonclassical properties in atmospheric channels. 
+This approach exploits fluctuations of the channel transmittance $\eta_t$ to conditionally enhance nonclassical features of the transmitted light.
+
+In the first subsection, we analyze the propagation of a squeezed vacuum state and study the dependence of the output squeezing on the transmittance threshold. 
+We consider the limiting case of the adaptive selection method discussed in ^[sec:timecoh], corresponding to a vanishing time interval between the classical probe pulse and the quantum pulse, $\tau \to 0$. 
+This scenario can be described using the one-time PDT function ^[eq:pdt], which allows comparison of the predictions of the analytical models discussed in ^[sec:validation] with the results of numerical simulations.
+
+In the second subsection, we extend the analysis to a more general and realistic scenario. 
+We consider amplitude squeezed coherent states and quantify nonclassicality using the Mandel parameter^[@mandel], the Binomial $Q$ parameter[^@vogel], and Bell-like inequality criteria^[@vadym]. 
+The Binomial $Q$ parameter generalizes the Mandel parameter to account for realistic detectors, such as arrays of on/off detectors, while Bell-like inequality criteria enable testing nonclassicality in situations where standard photocounting-based approaches fail.
+Nonclassicality is studied as a function of the time interval between the classical probe pulse and the quantum pulse, $\tau$, using the results of ^[sec:condProb].
+
+### Squeezed vacuum state with postselection
+
+
+### Amplitude squeezed coherent state with adaptive selection
 
 
 ## Conclusion
