@@ -251,8 +251,28 @@ Nonclassicality is studied as a function of the time interval between the classi
 
 ### Squeezed vacuum state with postselection
 
+- 
+- use the channel of moderate impact of turbulence with $F_0=z_\text{ap}$ defined in ^[tab:moderate].  
+- The squeezed vacuum state $\left|\xi\right>=\hat S(\xi)\left|0\right>$ is prepared at the transmittance side. Here $\hat S(\xi)$ is the sqeezing operator. 
+- The referent local oscillator is sent with the quantum state in the same spatial mode but in orthogonal polarisation.
+- The diminishing effect of depolarisation in atmosphere allow us to estimate channel transmittance $\eta$ and perform postselection. All event when $\eta<\eta_\text{thr}$ are discrarded. This is the same as adaptive selection^[sec:condpdt] with $\tau\to0$.
+- For the passed events the qudrature variance is estimated.
+- Given the relation
+- $$\left\langle\Delta \hat{x}^2 \right\rangle=\frac{1}{2}+\left\langle:\Delta \hat{x}^2: \right\rangle$$
+- where $1/2$ corresponds to the quadrature variance of the vacuum state and $\left\langle:\Delta \hat{x}^2: \right\rangle$ normal ordered quadrature variance, if ... . 
+
+
+$$\left\langle:\Delta\hat{x}^2:\right\rangle_\mathrm{out} = \left\langle\eta\right\rangle \left\langle:\Delta\hat{x}^2:\right\rangle_\mathrm{in} + \left\langle\Delta T^2\right\rangle \left\langle\hat{x}\right\rangle_\mathrm{in}^2$$
+![[nonclass_1_1.png]]
+![[nonclass_1_2.png]]
 
 ### Amplitude squeezed coherent state with adaptive selection
+$\left|\alpha_0,\xi\right>=\hat D(\alpha_0)\hat S(\xi)\left|0\right>$ 
 
+$$Q=\frac{\left\langle \Delta n^2\right\rangle}{\left\langle n\right\rangle}-1$$
+![[nonclass_2.png]]
+$$\Pi(n|\alpha)=\binom{N}{n}\left(1-e^{-|\alpha|^2/N}\right)^ne^{-(N-n)|\alpha|^2/N}$$
+$$Q_{N}=N\frac{\left\langle\Delta c^2\right\rangle}{\left\langle c\right\rangle(N-\left\langle c\right\rangle)}-1$$
+$$\sum_{n=0}^{N-1} \lambda(n) P(n) \leq \sup_{\alpha \in \mathbb{C}} \sum_{n=0}^{N-1} \lambda(n) \Pi(n|\alpha)$$
 
 ## Conclusion
