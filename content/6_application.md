@@ -251,20 +251,58 @@ Nonclassicality is studied as a function of the time interval between the classi
 
 ### Squeezed vacuum state with postselection
 
-- 
-- use the channel of moderate impact of turbulence with $F_0=z_\text{ap}$ defined in ^[tab:moderate].  
-- The squeezed vacuum state $\left|\xi\right>=\hat S(\xi)\left|0\right>$ is prepared at the transmittance side. Here $\hat S(\xi)$ is the sqeezing operator. 
-- The referent local oscillator is sent with the quantum state in the same spatial mode but in orthogonal polarisation.
-- The diminishing effect of depolarisation in atmosphere allow us to estimate channel transmittance $\eta$ and perform postselection. All event when $\eta<\eta_\text{thr}$ are discrarded. This is the same as adaptive selection^[sec:condpdt] with $\tau\to0$.
-- For the passed events the qudrature variance is estimated.
-- Given the relation
-- $$\left\langle\Delta \hat{x}^2 \right\rangle=\frac{1}{2}+\left\langle:\Delta \hat{x}^2: \right\rangle$$
-- where $1/2$ corresponds to the quadrature variance of the vacuum state and $\left\langle:\Delta \hat{x}^2: \right\rangle$ normal ordered quadrature variance, if ... . 
+The protocol is defined as follows. 
+A single mode squeezed vacuum state $|\xi\rangle = \hat S(\xi)|0\rangle$ is prepared at the transmitter. 
+Here $\hat S(\xi)$ denotes the squeezing operator. 
+The strong reference local oscillator is sent through the turbulent atmospheric channel in the same spatial mode as the quantum state but with orthogonal polarisation.
+This classical pulse allows reliable estimation of the channel transmittance $\eta$ due to negligible atmospheric depolarisation and thereby enables postselection, in which events with $\eta < \eta_{\mathrm{min}}$ are discarded.
+This procedure is equivalent to the adaptive selection in the limit $\tau \to 0$ as discussed in ^[sec:condpdt].
 
+For the selected events the normal ordered quadrature variance $\langle :\Delta \hat x^2: \rangle$ is estimated using balanced homodyne detection. 
+The measured quadrature variance satisfies
+$$\left\langle\Delta \hat{x}^2 \right\rangle=\frac{1}{2}+\left\langle:\Delta \hat{x}^2: \right\rangle$$
+where $1/2$ corresponds to the quadrature variance of the vacuum state. Negative values of $\langle :\Delta \hat x^2: \rangle$ therefore indicate quadrature squeezing and indicates nonclassicality of the transmitted state.
 
+Numerical simulations are performed for a channel of moderate strength of turbulence with $F_0 = z_{\mathrm{ap}}$ as specified in ^[tab:moderate].
+For a strong local oscillator the transformation of the normal ordered quadrature variance through a fluctuating loss channel is given by ^[@semenov2012]
 $$\left\langle:\Delta\hat{x}^2:\right\rangle_\mathrm{out} = \left\langle\eta\right\rangle \left\langle:\Delta\hat{x}^2:\right\rangle_\mathrm{in} + \left\langle\Delta T^2\right\rangle \left\langle\hat{x}\right\rangle_\mathrm{in}^2$$
+where $T = \sqrt{\eta}$. 
+For a squeezed vacuum state $\langle \hat x \rangle_{\mathrm{in}} = 0$, so the second term vanishes and only the first moment of $\eta$ contributes.
+
+In the limit of adaptive selection with $\tau \to 0$ the channel is described by a one-time PDT as discussed in ^[eq:2PDTtoPDT]. 
+The effective mean transmittance after postselection is
+$$\left<\eta\right>= \frac{1}{\overline{\mathcal{F}}(\eta_\mathrm{min})} \int_{\eta_\mathrm{min}}^{1}\! \mathrm{d}\eta\, \eta\, \mathcal{P}(\eta)$$
+where $\overline{\mathcal{F}}(\eta_\mathrm{min}) = \int_{\eta_\mathrm{min}}^{1} \!\mathrm{d}\eta\, \mathcal{P}(\eta)$. 
+The analytical models defined through the first two moments of the transmittance reproduce these moments by definition. 
+In contrast the postselection protocol depends explicitly on the full probability distribution $\mathcal P(\eta)$. 
+Accurate predictions therefore require correct modelling of the entire distribution or equivalently of all higher moments. 
+This difference motivates a direct comparison between analytical model predictions and numerical results under postselection.
+
+^[fig:sq_thr] shows the output quadrature squeezing as a function of the postselection threshold $\eta_{\mathrm{min}}$. 
+Numerical results are compared with predictions of the analytical models.
+
 ![[nonclass_1_1.png]]
+
+In the limit $\eta_{\mathrm{min}} \to 0$ the postselection is omitted and the protocol depends only on the transmittance moments of the full probability distribution.
+Analytical models parameterised by transmittance moments therefore reproduce the numerical results.
+However, as discussed in ^[sec:validation], truncation of the lognormal model results in a slight mismatch with the numerical results.
+In contrast, the elliptic beam model, which is parameterised through moments of the beam shape parameters rather than the transmittance, exhibits a large discrepancy. 
+This underscores the statement (see ^[sec:validation]) that turbulence models should be parameterised directly in terms of transmittance statistics.
+
+For finite thresholds $\eta_{\mathrm{min}} > 0$ the discrepancies generally increase. 
+Among the models, the beta distribution model provides the closest agreement with the numerical results over the full range of $\eta_{\mathrm{min}}$. 
+This confirms that accurate modelling of the PDT is essential when postselection is applied.
+
+In the previous sections ^[sec:validation], ^[sec:timecoher] the aperture size was identified as the primary factor influencing the output results. 
+^[fig:sq_rap] illustrates the dependence of the output squeezing on the aperture radius for different postselection thresholds $\eta_{\mathrm{min}}$. 
+
 ![[nonclass_1_2.png]]
+
+Increasing the aperture size within a reasonable range generally has a larger effect on the output squeezing than adjusting the postselection threshold $\eta_{\mathrm{min}}$.
+ ^[sec:timecoher].
+Its influence, however, is less pronounced than in other cases discussed previously ^[sec:validation], ^[sec:timecoher].
+It should also be noted that postselection completely discards states for low-transmittance events. 
+This implies that when the rate of quantum states is an important quantity, adjusting the aperture size provides a more effective strategy to optimize squeezing.
 
 ### Amplitude squeezed coherent state with adaptive selection
 $\left|\alpha_0,\xi\right>=\hat D(\alpha_0)\hat S(\xi)\left|0\right>$ 
