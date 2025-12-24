@@ -1,6 +1,20 @@
 # Application
 ## Introduction
-## Quadrature-squeezed light
+This chapter investigates the practical application of quantum state transmission through turbulent atmospheric channels.
+Understanding the limits of quantum state preservation under realistic conditions is essential for designing robust quantum communication protocols. 
+We quantify the effects of channel properties, including temporal correlations, aperture size, and finite detector resolution, on different aspects of quantumness. 
+This analysis provides a practical framework for assessing the feasibility of free-space quantum tasks.
+
+We analyze three distinct manifestations of quantumness under these conditions. 
+First, we investigate the preservation of Gaussian entanglement between continuous-variable pulses separated by a finite time delay. 
+Second, we extend this analysis to discrete-variable systems, focusing on polarization-entangled states. 
+Finally, we consider adaptive selection strategies for single-mode nonclassicality, examining the impact of the temporal separation between a classical probe and the quantum state on squeezed vacuum and squeezed coherent states.
+
+A central theme of this discussion is the role of temporal correlations in the channel.
+We build on time-dependent transmittance simulations described in the previous chapter ^[sec:timecoh].
+Our analysis accounts for realistic conditions, including parametric down-conversion states rather than single-photon Bell states, the interplay between turbulence and quantum memory delay, detector efficiency, and the finite dimensionality of photon-number-resolving detectors.
+The results provide a quantitative framework for assessing the feasibility of free-space quantum tasks under realistic atmospheric conditions.
+
 ## Gaussian entanglement between pulses
 #### Quantum entanglement 
 describes correlations between distinct subsystems that cannot be explained by classical physics and that arise from the non separability of the joint quantum state.
@@ -304,13 +318,79 @@ Its influence, however, is less pronounced than in other cases discussed previou
 It should also be noted that postselection completely discards states for low-transmittance events. 
 This implies that when the rate of quantum states is an important quantity, adjusting the aperture size provides a more effective strategy to optimize squeezing.
 
-### Amplitude squeezed coherent state with adaptive selection
-$\left|\alpha_0,\xi\right>=\hat D(\alpha_0)\hat S(\xi)\left|0\right>$ 
+>[!danger] Losses aren't mentioned
 
-$$Q=\frac{\left\langle \Delta n^2\right\rangle}{\left\langle n\right\rangle}-1$$
-![[nonclass_2.png]]
-$$\Pi(n|\alpha)=\binom{N}{n}\left(1-e^{-|\alpha|^2/N}\right)^ne^{-(N-n)|\alpha|^2/N}$$
-$$Q_{N}=N\frac{\left\langle\Delta c^2\right\rangle}{\left\langle c\right\rangle(N-\left\langle c\right\rangle)}-1$$
-$$\sum_{n=0}^{N-1} \lambda(n) P(n) \leq \sup_{\alpha \in \mathbb{C}} \sum_{n=0}^{N-1} \lambda(n) \Pi(n|\alpha)$$
+### Amplitude squeezed coherent state with adaptive selection
+In this section we address a more realistic and more general scenario than in the previous section. 
+We study an amplitude squeezed coherent state which is defined as a squeezed vacuum displaced by a real amplitude $\alpha_0$ in phase space, $\left|\alpha_0,\xi\right>=\hat D(\alpha_0)\hat S(\xi)\left|0\right>$.
+Amplitude squeezed states exhibit reduced photon number fluctuations compared to a classical coherent state with the same mean intensity. 
+While a coherent state shows a Poissonian photon number distribution, amplitude squeezing leads to a narrower distribution. 
+This reduction of photon number fluctuations is a direct signature of nonclassicality.
+This means that nonclassicality can be assessed using photon number statistics, avoiding balanced homodyne detection with its requirement of phase stable reference fields and complex measurement setups.
+
+Nonclassicality in such situations is commonly characterized by the Mandel parameter
+$$Q=\frac{\left\langle \Delta \hat n^2\right\rangle}{\left\langle \hat n\right\rangle}-1$$
+Negative values of $Q$ correspond to sub Poissonian photon number statistics and therefore to nonclassical light. 
+This criterion relies on ideal photon number resolving detection and is therefore of limited applicability in realistic measurement scenarios.
+
+A more realistic detection model is based on an array of $N$ on-off detectors. 
+Each detector can only discriminate between the absence and presence of photons. 
+For a classical coherent state with complex amplitude $\alpha$, the resulting click statistics are binomial. 
+The corresponding response function for registering $m$ clicks, described by a positive operator valued measure (POVM) ^[@povb], is given by
+$$\Pi(m|\alpha)=\binom{N}{m}\left(1-e^{-|\alpha|^2/N}\right)^m e^{-(N-m)|\alpha|^2/N}$$
+This measurement captures the finite resolution of practical photon counting devices and reduces to ideal photon number resolving detection in the limit $N\to\infty$.
+In this setting, nonclassicality can be detected via sub binomial click statistics. 
+The corresponding parameter for such measurement is^[@vogelQN]
+$$Q_{N}=N\frac{\left\langle\Delta c^2\right\rangle}{\left\langle c\right\rangle(N-\left\langle c\right\rangle)}-1$$where $c$ denotes the number of clicks. 
+Negative values of $Q_N$ indicate nonclassical light.
+
+The described criteria provide sufficient but not necessary conditions for nonclassicality. 
+There exist nonclassical states whose click statistics remain classical.
+
+A more general method based on a Bell-like inequalities for detecting nonclassicality was recently introduced ^[@klimovS]. If there exists a choice of  $\lambda(m)$ such that the inequality
+$$\sum_{m=0}^{N-1} \lambda(m) P(m) \leq \sup_{\alpha \in \mathbb{C}} \sum_{m=0}^{N-1} \lambda(m) \Pi(m|\alpha)$$
+is violated, the statistics are necessarily nonclassical. 
+Here $P(m)$ is the measured click distribution. 
+We use the optimal sets of $\lambda(m)$ determined for array detectors with $N=2,3,5$ ^[@vady], which provide a practical tool for reliably detecting nonclassicality in realistic measurement setups.
+
+Using the results of the channel simulations obtained in ^[sec:timecorrr] for different values of time between classical probe and quantum pulse, we apply an adaptive selection strategy to preserve nonclassicality in atmospheric conditions. 
+We study the maximal time interval for a given threshold transmittance $\eta_\text{min}$ during which the click statistics remain nonclassical.
+
+>[!note] Mention losses and sim params.
+
+Figure ^[fig:nonclass] shows the wind-driven spatial shift $s$, corresponding to a temporal delay $\tau=s/v$ between the classical probe and the quantum pulse, at which different nonclassicality criteria no longer indicate nonclassicality.
+
+![[nonclass_2.png|200]]
+
+The Mandel parameter $Q$ reaches zero at $s = 7.2~\text{cm}$, indicating the limit of sub-Poissonian photon statistics for an ideal photon number resolving detector. 
+For arrays of on-off detectors, the sub-binomial parameters $Q_N$ reach zero at larger shifts: $Q_5 = 9.7~\text{cm}$, $Q_3 = 11.4~\text{cm}$, and $Q_2 = 14.2~\text{cm}$. 
+While $Q_N$ approaches $Q$ as $N$ increases, in the considered case smaller detector arrays detect nonclassicality for longer time intervals. 
+However, for other state parameters ($\xi=0.16$ and $\alpha_0=1.4$), the trend reverses, and larger detector arrays maintain nonclassicality over longer times.
+
+The figure also shows the difference between the left- and right-hand sides of the Bell-like inequalities ^[eq:vady], which quantifies the distance of the click statistics from the convex hull of coherent state click statistics.
+When this difference reaches zero, the click statistics can no longer be considered nonclassical.
+The inequalities reach zero at $s = 14.2~\text{cm}$ for $N=2$, $s = 19.6~\text{cm}$ for $N=3$, and exceed $s = 28~\text{cm}$ for $N=5$, which is the maximal value covered by the simulations.
+Notably, for $N=2$ the sub-binomial parameter $Q_2$ reaches zero at the same spatial shift as the Bell-like inequality, indicating a deeper connection between these two nonclassicality criteria for small detector arrays.
+Overall, these results show that the Bell-like criteria provide a robust detection of nonclassicality over extended time delays.
 
 ## Conclusion
+
+The analysis presented in this section characterizes the robustness of quantum correlations and nonclassicality in atmospheric channels. 
+We demonstrated that Gaussian entanglement between light pulses persists over millisecond timescales. 
+Its preservation increases monotonically with the spatial coherence radius, although nonlinear features are observed.
+
+Discrete-variable entanglement exhibits a distinct behavior, depending on both temporal correlations and deterministic losses. 
+Time-dependent losses in current quantum memories significantly restrict the viable pulse separation. 
+Simulations indicate that atmospheric coherence alone allows delays of tens of milliseconds, whereas memory decay reduces this to a few milliseconds. 
+This discrepancy highlights the need for high-efficiency storage components.
+
+The study of single-mode nonclassicality emphasizes the utility of adaptive selection techniques. 
+By monitoring a classical probe pulse, quantum transmission events can be conditionally selected during periods of high transmittance. 
+The beta-distribution model accurately predicts the nonclassicality of squeezed states under postselection in the limit of instantaneous adaptive selection ($\tau \to 0$).
+For finite $\tau$, two-time PDT models are required, but such models are currently lacking. 
+Numerical studies of amplitude-squeezed states show that adaptive selection improves nonclassicality even for pulse separations of tens of milliseconds. 
+Bell-like inequalities provide a more sensitive measure of nonclassicality in this context.
+
+In conclusion, temporal correlations in atmospheric quantum channels provide a window for effective quantum communication. 
+Exploiting these correlations increases the effective Hilbert-space dimensionality and allows adaptive selection strategies to significantly improve nonclassicality preservation. 
+Future work can include experimental validation of the reported findings in time-dependent atmospheric channels.
