@@ -41,46 +41,71 @@ This model remains simple and analytically tractable, and is shown to improve pr
 
 
 ## The model
-
-This is the conditional distribution..  It describes the probability of transmittance given a specific, fixed beam size $S$.
-
-To account for the variability of the beam spot size $S$ in a turbulent medium, the static Beam Wandering model is generalized by treating $S$ as a stochastic variable. 
-The resulting global probability density $\mathcal{P}(\eta)$ is obtained by marginalizing over the fluctuations of $S$ ~~"like" the law of total probability~~ obtainingn in the result the compound probability distribution
-$$\mathcal{P}\!\left(\,\eta\mid\langle x^2_0 \rangle,\langle \eta \rangle,\langle \eta^2 \rangle\right)=\int_{0}^\infty dS \,\mathcal{P}_\text{BW}\!\left(\,\eta\mid\langle x^2_0 \rangle,S\right) P(S\mid\mu,\sigma)$$
-where $P(S\mid\mu,\sigma)$ is the pdf of the beam width $S$, defined as the log-normal
-$$P(S\mid\mu,\sigma)=\frac{1}{S\sigma\sqrt{2\pi}}\exp{-\frac{\left(\ln{S}-\mu\right)^2}{2\sigma^2}},
+The PDT of the proposed model is defined as a compound distribution that extends the beam wandering model by treating the beam size $S$ as a random variable:
 $$
-it depends on $\mu=\mu(\langle \eta \rangle,\langle \eta^2 \rangle)$ and $\sigma=\sigma(\langle \eta \rangle,\langle \eta^2 \rangle)$. In ^[sec:beamshape] we show the existing correlation between $S$ and $x_0$, but it's small for weak and moderate turbulnce, so here assume not correlated. 
+%\label{eq:acbpdt}
+\mathcal{P}\!\left(\,\eta\mid\langle x^2_0 \rangle,\langle \eta \rangle,\langle \eta^2 \rangle\right)=\int_{0}^\infty dS \,\mathcal{P}_\text{BW}\!\left(\,\eta\mid\langle x^2_0 \rangle,S\right) P(S\mid\mu,\sigma)$$
+The fluctuations of the beam size $S$ are incorporated through the distribution $P(S\mid\mu,\sigma)$. 
+Its parameters  $\mu=\mu(\langle \eta \rangle,\langle \eta^2 \rangle)$ and $\sigma=\sigma(\langle \eta \rangle,\langle \eta^2 \rangle)$ are fixed by enforcing the prescribed moments $\langle\eta\rangle$ and $\langle\eta^2\rangle$.
+As a result the transmittance statistics account simultaneously for beam displacement and beam deformation and specified by the second moment of beam displacement $\langle x_0^2\rangle$ and the first two moments of the transmittance.
 
-- Lognormal validation..
+Since the beam size is strictly positive its distribution must have positive support.
+Numerical simulations further show that its empirical distribution is well approximated by a log normal distribution for all considered in ^[sec:valid] channels.
+This observation aligns with the treatment of turbulence-induced distortions as multiplicative, which often leads to log normal statistics.
+Therefore the beam size distribution is chosen as
+$$P(S\mid\mu,\sigma)=\frac{1}{S\sigma\sqrt{2\pi}}\exp\left[{-\frac{\left(\ln{S}-\mu\right)^2}{2\sigma^2}}\right],
+$$
 
-Calculting the first two moment of the ^[eq:acb] we found the implicit definition for the parameters $\mu$ and $\sigma$
+Figure ^[fig:lognormvalid] illustrates this agreement for a channel of moderate turbulence with $F_0 = z_\mathrm{ap}$. 
+![[lognormvalidS.png|200]]
+Channels with strong turbulence exhibit similar agreement, while weak turbulence channels show even better correspondence.
+This agreement supports the use of the log-normal approximation for the beam size distribution across different turbulence regimes.
+
+In principle the parameters $\mu$ and $\sigma$ could be inferred from the moments $\langle S\rangle$ and $\langle S^2\rangle$.
+However this choice leads to biased transmittance moments, as discussed above.
+Instead the present model applies transmittance moment matching.
+The parameters $\mu$ and $\sigma$ are therefore defined implicitly by computing the first two transmittance moments of the model^[eq:acbpdt], which yields
 $$
 \begin{cases} 
 \langle \eta \rangle &= \int_0^\infty \mathrm{d}S \, P(S\mid\mu,\sigma) \, \langle \eta \rangle_{\mathrm{BW}} \\ 
 \langle \eta^2 \rangle &= \int_0^\infty \mathrm{d}S \, P(S\mid\mu,\sigma) \, \langle \eta^2 \rangle_{\mathrm{BW}} 
 \end{cases}
 $$
-where $\langle \eta^2 \rangle$ and $\langle \eta^2 \rangle$ are the first moment of the Beam wandering model which was found in ^[@esposito]
-$$\langle \eta \rangle_{\mathrm{BW}} = 1 - \exp\left(-2\frac{a^2}{4\langle x_0^2 \rangle + S}\right)$$
+Here $\langle\eta\rangle_{\mathrm{BW}}$ and $\langle\eta^2\rangle_{\mathrm{BW}}$ denote the moments of the beam wandering model evaluated at fixed $S$.
 
+As derived in ^[@esposito], these moments of the beam wandering model take the form
+$$\langle \eta \rangle_{\mathrm{BW}} = 1 - \exp\left(-2\frac{a^2}{4\langle x_0^2 \rangle + S}\right)$$
 $$
 \begin{split}
 \langle \eta^2 \rangle_{\mathrm{BW}} &= 1 - 2 \exp\left(-2\frac{a^2}{4\langle x_0^2 \rangle + S}\right) + \\ 
 &\exp\left(-\frac{\alpha^2}{2}\right) \left[1 - Q\left(\frac{\alpha}{\sqrt{1-\beta^2}}, \frac{\alpha \beta}{\sqrt{1-\beta^2}}\right) + Q\left(\frac{\alpha \beta}{\sqrt{1-\beta^2}}, \frac{\alpha}{\sqrt{1-\beta^2}}\right)\right]
 \end{split}
 $$
-
-where:
+where the function $Q$ denotes the Marcum $Q$ function of order one ^[@Qfunc], and the auxiliary parameters are defined as
 $$\alpha = \frac{2a}{\sqrt{S}} \left[\frac{2 p(p+1)}{2 p^2+3 p+1}\right]^{1/2}$$
 $$\beta = (2p+1)^{-1}, \quad p = \frac{1}{8}\frac{S}{\langle x_0^2 \rangle}$$
 
-and $Q$ is the Marcum Q-function of order 1. 
-They can be calculated numerically using any optimization algorithm, starting from the initial point $\mu_0 = \ln\left(\frac{\langle S \rangle^2}{\sqrt{\langle S^2 \rangle}}\right), \sigma^2_0 = \ln\left(\frac{\langle S^2 \rangle}{\langle S \rangle^2}\right)$ if $\langle S \rangle$ and $\langle S^2 \rangle$ are known.
-* To deal with the infinite upper limit of the integral, we can truncate the tail at the point $S_{\mathrm{max}}$, where $P(S > S_{\mathrm{max}}) < \delta$. This point can be found using the Percentage Point Function (also known as the inverse CDF) of the log-normal distribution as $S_{\mathrm{max}} = \mathrm{PPF}(1 - \delta)$.
+Because the resulting system of equations have no closed form solution exists, the parameters $\mu$ and $\sigma$ are obtained numerically. 
+When estimates of $\langle S\rangle$ and $\langle S^2\rangle$ are available they provide a convenient initial guess
+$$
+\mu_0 = \ln\left(\frac{\langle S \rangle^2}{\sqrt{\langle S^2 \rangle}}\right), \quad \sigma^2_0 = \ln\left(\frac{\langle S^2 \rangle}{\langle S \rangle^2}\right)$$
+After determining the parameters $\mu$ and $\sigma$, the PDT ^[acbpdt] is evaluated by numerical integration over the beam size variable $S$.
+
+Finally the infinite support of the log normal distribution requires truncation for numerical implementation. 
+The upper limit is chosen as $S_{\mathrm{max}}$ such that the tail probability satisfies $P(S>S_{\mathrm{max}})<\delta$. 
+This cutoff is obtained from the percentage point function of the log normal distribution as $S_{\mathrm{max}} = \mathrm{PPF}(1 - \delta)$.
+This truncation bounds the neglected probability mass and has negligible impact on the evaluated transmittance moments.
 
 ## Validation
 - show my own that first plots - KS values as in validation section of CBm, BWm, EB, ..
 
 ## Conclusion
 
+
+- In ^[sec:beamshape] we show the existing correlation between $S$ and $x_0$, but it's small for weak and moderate turbulnce, so here assume not correlated. 
+- We assume the fluctuations of the beam center (wandering) and the fluctuations of the beam spot size (broadening) occur on different spatial scales of turbulence, allowing us to treat $x_0$ and $S$ as statistically independent variables.
+
+- further improvements for mean eta
+
+- split-step complex and requires huge computation and requires Cn2, this model quick, can be defined from eta, eta2, x0, which can be estimated from mesurements of the beam at aperture plane. 
+- From other side it much accurate that other physically based models.
