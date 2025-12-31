@@ -97,15 +97,32 @@ This cutoff is obtained from the percentage point function of the log normal dis
 This truncation bounds the neglected probability mass and has negligible impact on the evaluated transmittance moments.
 
 ## Validation
-- show my own that first plots - KS values as in validation section of CBm, BWm, EB, ..
+- we conduct the same procedure as in the ^[sec:validation] section and compare the proposed model with the beam-based models and overal best identified beta distribution model.
+- ^[fig:acbks] shows the KS-statistic distance between numerically obtained PDT and the analytical models
+- ![[acbks.png|500]]
+- left image shows the case of best performance of the proposed model which coresponds to the channel of weak turbulence $F_0=z_\text{ap}$.
+    - the proposed modes shows drastic improvement comparing to beam-shape models and the best performance among all existing analyt models in the region of small apertures.
+    - In the ^[fig:acbpdt] the example of the PDT for the $R_\text{ap}=0.4~\text{cm}$ is shown.
+    - ![[acbpdt.png|250]]
+    - We see that the Beta distribution model despite as well beign defined through the first moments of trasmittance has different shape that numerically simulated PDT.
+    - The beam-based model with moments matching on the other hand has almost perfect match in this case.
+    - In the region of large apertures compared to the beam size, the performance of the proposed model is generally decreased.
+        - At the point of local minima of the elliptical beam ($R_\text{ap}/W_\text{LT}\approx1.2$), the proposed model shows worse agreement.
+        - At this point, the mode of the elliptical beam model PDT concidance with the mode of the numerically simulated PDT.
+        - While the mode matching could in principle show better agreement compared to the moments matchin, it wouldn't be practical to estimate PDT mode in experiment as well .. no analyt expreesions for the transmittance mode.
+- right image shows the worst case among channels.
+    - Beta model shows better performance across all apertures range.
+    - But the proposed model in general significally outperforms the other physical based models. 
+    - The other considered channels of weak turbulence with $F_0=\infty$ and moderate turbulence with $F_0=\infty$ shows the similar result.
+    - the channel of moderate turbulence with $F_0=z_\text{ap}$ shows intermediate results
 
 ## Conclusion
-
 
 - In ^[sec:beamshape] we show the existing correlation between $S$ and $x_0$, but it's small for weak and moderate turbulnce, so here assume not correlated. 
 - We assume the fluctuations of the beam center (wandering) and the fluctuations of the beam spot size (broadening) occur on different spatial scales of turbulence, allowing us to treat $x_0$ and $S$ as statistically independent variables.
 
-- further improvements for mean eta
+- here we assumed maximally good estimated parameters of eta. Noises in experimental measurements or mistakes in analytical approximations can result is worse performance.
+    - further study and  improvements for mean eta
 
 - split-step complex and requires huge computation and requires Cn2, this model quick, can be defined from eta, eta2, x0, which can be estimated from mesurements of the beam at aperture plane. 
 - From other side it much accurate that other physically based models.
