@@ -129,11 +129,26 @@ The channel with moderate turbulence and $F_0 = z_\text{ap}$ yields intermediate
 
 ## Conclusion
 
-- In ^[sec:beamshape] we show the existing correlation between $S$ and $x_0$, but it's small for weak and moderate turbulnce, so here assume not correlated. 
-- We assume the fluctuations of the beam center (wandering) and the fluctuations of the beam spot size (broadening) occur on different spatial scales of turbulence, allowing us to treat $x_0$ and $S$ as statistically independent variables.
+We introduced a physically motivated PDT model complemented by transmittance moment matching.
+While the model provides an intermediate approximation of the beam shape between the beam wandering and elliptical beam approaches, its first two moments of the transmittance are imposed by design.
+This removes the misspecification bias observed in the beam-based models and directly targets the quantities relevant for quantum protocol performance.
 
-- here we assumed maximally good estimated parameters of eta. Noises in experimental measurements or mistakes in analytical approximations can result is worse performance.
-    - further study and  improvements for mean eta
+The model relies on two structural assumptions.
+First, we assume that fluctuations of the beam centroid $x_0$ and of the beam spot size $S$ occur on distinct spatial scales of turbulence, allowing them to be treated as statistically independent.
+As shown in ^[sec:beamshape], small correlations between $x_0$ and $S$ exist but remain negligible for weak and moderate turbulence.
+Second, beam ellipticity and higher-order deformations are not modeled explicitly.
+Their contributions are absorbed into effective beam size fluctuations through moment matching.
+Consequently, the inferred moments of $S$ lose a direct physical interpretation but achieve consistency at the level of transmittance statistics.
 
-- split-step complex and requires huge computation and requires Cn2, this model quick, can be defined from eta, eta2, x0, which can be estimated from mesurements of the beam at aperture plane. 
-- From other side it much accurate that other physically based models.
+Validation against numerical simulations demonstrates a substantial improvement over existing physically motivated models across most channels.
+In the weak turbulence regime with $F_0=z_\text{ap}$ and small apertures, the model outperforms all existing analytical approaches.
+More generally, performance is better for $F_0=z_\text{ap}$ compared to $F_0=z_\infty$ and for aperture radii smaller than the average beam size.
+
+Validation was performed using the first two transmittance moments, $\langle \eta \rangle$ and $\langle \eta^2 \rangle$, obtained directly from simulations. 
+When analytical approximations of these moments are used, or when experimental noise and systematic errors affect their estimation, the model’s performance can degrade. 
+This limitation motivates further work on improved analytical expressions for low-order transmittance moments.
+
+Overall, the model provides a robust physically grounded description of PDT.
+It requires only simple numerical integration and parameter optimization, resulting in substantially lower computational cost than the full phase screen simulations.
+Furthermore, it defines PDT in terms of measurable quantities at the aperture plane, such as beam wandering $\langle x_0 \rangle$ and the first two transmittance moments $\langle \eta \rangle$ and $\langle \eta^2 \rangle$, whereas the phase screen method requires detailed turbulence profiles.
+These features make it suitable for practical applications in quantum communication.
