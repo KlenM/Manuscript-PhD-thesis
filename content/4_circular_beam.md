@@ -97,24 +97,35 @@ This cutoff is obtained from the percentage point function of the log normal dis
 This truncation bounds the neglected probability mass and has negligible impact on the evaluated transmittance moments.
 
 ## Validation
-- we conduct the same procedure as in the ^[sec:validation] section and compare the proposed model with the beam-based models and overal best identified beta distribution model.
-- ^[fig:acbks] shows the KS-statistic distance between numerically obtained PDT and the analytical models
-- ![[acbks.png|500]]
-- left image shows the case of best performance of the proposed model which coresponds to the channel of weak turbulence $F_0=z_\text{ap}$.
-    - the proposed modes shows drastic improvement comparing to beam-shape models and the best performance among all existing analyt models in the region of small apertures.
-    - In the ^[fig:acbpdt] the example of the PDT for the $R_\text{ap}=0.4~\text{cm}$ is shown.
-    - ![[acbpdt.png|250]]
-    - We see that the Beta distribution model despite as well beign defined through the first moments of trasmittance has different shape that numerically simulated PDT.
-    - The beam-based model with moments matching on the other hand has almost perfect match in this case.
-    - In the region of large apertures compared to the beam size, the performance of the proposed model is generally decreased.
-        - At the point of local minima of the elliptical beam ($R_\text{ap}/W_\text{LT}\approx1.2$), the proposed model shows worse agreement.
-        - At this point, the mode of the elliptical beam model PDT concidance with the mode of the numerically simulated PDT.
-        - While the mode matching could in principle show better agreement compared to the moments matchin, it wouldn't be practical to estimate PDT mode in experiment as well .. no analyt expreesions for the transmittance mode.
-- right image shows the worst case among channels.
-    - Beta model shows better performance across all apertures range.
-    - But the proposed model in general significally outperforms the other physical based models. 
-    - The other considered channels of weak turbulence with $F_0=\infty$ and moderate turbulence with $F_0=\infty$ shows the similar result.
-    - the channel of moderate turbulence with $F_0=z_\text{ap}$ shows intermediate results
+
+We apply the same validation procedure as in ^[sec:validation].
+We compare the proposed model with beam based models and with the generally best performing beta distribution model.
+The comparison is based on the Kolmogorov-Smirnov statistic between numerically obtained PDT and the analytical models.
+The results are summarized in ^[fig:acbks].
+
+![[acbks.png|500]]
+
+The left part of ^[fig:acbks] corresponds to the channel with weak turbulence and $F_0 = z_\text{ap}$. 
+This case yields the best overall performance of the proposed model. 
+The improvement over beam shape based models is pronounced, in particular for small aperture radii. 
+Moreover, in this region the proposed model yields the smallest KS statistic among all considered analytical models.
+An explicit example of PDT for $R_\text{ap} = 0.4~\text{cm}$ is shown in ^[fig:acbpdt].
+![[acbpdt.png|250]]
+
+In ^[fig:acbpdt] the beta distribution model deviates in shape from the numerically simulated distribution, despite being defined through the same first moments of the transmittance.
+The beam based model with moment matching shows an almost perfect agreement in this specific case, since the skewness, given by the third moment of the transmittance, as well as the kurtosis are reproduced more accurately.
+
+For apertures large compared to the beam size, the agreement of the proposed model is reduced.
+A distinct discrepancy appears near the local minimum of the elliptical beam transmittance at $R_\text{ap}/W_\text{LT} \approx 1.2$.
+At this point the elliptical beam model outperforms the proposed model, since its transmittance mode coincides with the mode of the numerically obtained distribution.
+Mode matching could in principle improve the agreement of the proposed model.
+However, such approach is not practical because the transmittance mode cannot be reliably estimated in experiments and no closed analytical expression for transmittance mode is available.
+
+The right panel of ^[fig:acbks] shows the results for the strong turbulence channel, which exhibits the largest overall deviations.
+In this case the beta distribution model provides better agreement over the full aperture range.
+The proposed model still significantly outperforms the other physically motivated models.
+Channels with weak turbulence and $F_0 = \infty$ and with moderate turbulence and $F_0 = \infty$ show similar behavior with slightly better performance.
+The channel with moderate turbulence and $F_0 = z_\text{ap}$ yields intermediate results between these two extremes.
 
 ## Conclusion
 
