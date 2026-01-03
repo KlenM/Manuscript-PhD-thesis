@@ -16,10 +16,21 @@ Beam based models are specified in terms of low order statistics of the beam sha
 These statistics are summarised in ^[tab:beamshapestats]. 
 They include the mean and variance of the beam centroid position and the mean and variance of an effective beam size parameter $S$.
 
-|                   |        in average         |       variability       |
-| :---------------- | :-----------------------: | :---------------------: |
-| **beam position** | $\langle x_0 \rangle = 0$ | $\langle x^2_0 \rangle$ |
-| **beam size**     |    $\langle S \rangle$    |  $\langle S^2 \rangle$  |
+```{=latex}
+\begin{table}[h!]
+\centering
+\begin{tabular}{l c c}
+\hline
+                   & \textbf{in average}      & \textbf{variability}   \\
+\hline
+\textbf{beam position} & $\langle x_0 \rangle = 0$ & $\langle x_0^2 \rangle$ \\
+\textbf{beam size}     & $\langle S \rangle$       & $\langle S^2 \rangle$   \\
+\hline
+\end{tabular}
+\caption{Average values and variability of the beam parameters.}
+\label{tab:beam_stats}
+\end{table}
+```
 
 The beam wandering model $\mathcal{P}_\text{BW}(\eta \mid \langle x_0^2 \rangle, \langle S \rangle)$ is a two parameter model. 
 It assumes a circular beam with fixed size $\langle S \rangle$ and neglects beam size fluctuations $\langle S^2 \rangle$.
