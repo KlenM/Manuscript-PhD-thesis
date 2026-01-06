@@ -48,13 +48,33 @@ They often reproduce the qualitative shape of numerically simulated PDTs but exh
 To overcome this misspecification bias we proposed a transmittance matching procedure.
 Based on this procedure, we construct a new physically grounded model with fewer parameters than the elliptical beam model, while producing unbiased estimates of the first two transmittance moments and outperforming it overall.
 
-### We also validated model assumptions for further dev of model.
-### Time
-> The transition from ensemble-based statistics to two-point correlations represents the theoretical advancement
-> - the spatial coherence radius, which determines the timescale over which successive pulses remain correlated
- >   - scales almost linerrly with aperture?
-### Application
+> validated model assumptions for further dev of model.
 
+To guide further development of physically grounded models, we validated the key assumptions underlying their construction.
+We demonstrated that the beam centroid displacement follows Gaussian statistics across all turbulence regimes.
+In contrast, the commonly assumed bivariate Gaussian distribution of beam semi-axis sizes fails systematically.
+The joint distribution exhibits strong suppression along the diagonal, which cannot be captured by a Gaussian model.
+Further investigation of this effect may benefit from connections to random matrix theory, which could provide a theoretical explanation for the observed structure.
+
+Existing models further assume statistical independence between the beam centroid position and the instantaneous beam size.
+We show that this assumption is violated.
+The induced correlations are small in the weak to moderate turbulence regime but become significant under strong turbulence.
+Neglecting these correlations leads to an underestimation of the PDT spread in this regime.
+
+### Time
+- The PDT models are capable to describe only single pulse propagataion or the case of very large time separation between pulse.
+    - The practical scenaria involves high repetitve pulse propagation
+    - so the quantum state imposed high correlation transmittance.
+- In this work, utilizing the Taylors frozen-turbulence hypothesis, we introduced the two-time PDT, which  enables complete description of two consequtive correlated pulses.
+- to characterize atmospherical quantum channels correlation property we  introduced the aperture-averaged spatial coherence radius $\rho_0$, which is defined as the time interval between pulses, when the Pearson correlation of transmittances falls to $e^{-1}$.
+    - It serves as the measure for the persistence of temporal correlations.
+- As in the case of single-time PDT, the aperture plays primary role.
+    - We show, that aperture-averaged spatial coherence radius increases almost linearly with the aperture radius, with some small nonlinear deviation.
+- The transition from ensemble-based statistics to two-point correlations represents the theoretical advancement of this work.
+ 
+### Application
+- The introduced framework of two-time PDT enables the analysis of variaty of qunatum protocols in turbulent atmosphere.
+- 
 
 ## how your work moves the field forward.
 >  - Prove the "So What?" (Argumentative) [1p]
