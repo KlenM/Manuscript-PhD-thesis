@@ -69,6 +69,7 @@ SECTIONS = {'0_0': ('Annot', 2 * 0.13),
             '4': ('CircB', 0.5),
             '5': ('TimeC', 0.7),
             '6': ('Appl', 0.8),
+            '7': ('Concl', 0.35),
            }
 
 for file, count in symbols.items():
