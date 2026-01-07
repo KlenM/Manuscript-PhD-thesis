@@ -99,17 +99,28 @@ We further demonstrated that adaptive selection techniques can enhance the noncl
 The analysis was performed for both ideal photodetection and on-off array detectors configurations.
 In this regime, Bell like inequalities provide a more sensitive probe of nonclassicality criteria.
 
-- ---
-- essential for designing robust quantum communication protocols. 
+> how your work moves the field forward.
 
+We showed that the commonly assumed implication from optical field fluctuation mechanisms to transmittance statistics does not hold. 
+Even when a single physical effect dominates optical field behavior, finite aperture averaging fundamentally reshapes transmittance statistics.
+We identify the receiver aperture as the primary parameter controlling the PDT shape.
+For example, in a fixed strong turbulence scenario, a small receiver aperture produces a PDT with a log normal shape, consistent with predictions obtained by transferring optical field statistics to transmittance.
+However, increasing only the aperture size leads to a negatively skewed PDT, a behavior qualitatively similar to that predicted by beam wandering based models that are commonly assumed to be applicable in weak turbulence.
+This demonstrates that apparent agreement with different PDT models arises from aperture size rather than from the dominance of a specific physical mechanism, thereby invalidating such model selection heuristics.
+Also, this conclusion is general and applies not only to quantum channels but also to classical optical links, since any detection system involves a finite-sized aperture.
 
-## how your work moves the field forward.
->  - Prove the "So What?" (Argumentative) [1p]
-> - understanding: aperture, ...; "practical": ...
-> - Theoretical, Methodological, or Practical
-> - iideas
->     - there is a sad tendency (but probably down?) to use only avarage value of transmittance for QKD protocols
+We emphasize that physically grounded PDT models expressed in terms of transmittance moments, rather than beam shape statistics, are more relevant for quantum communication.
+Physically grounded models parameterized by beam shape statistics can reproduce the qualitative shape of PDTs, yet systematically bias the most important quantities for quantum protocols: the mean and variance of transmittance.
+In addition, validating which assumptions used in physically grounded models are justified provides a clear guide for refining and developing more accurate models in the future.
+
+Finally, we introduce an empirical Beta distribution model for the PDT that generally outperforms existing approaches across the full range of aperture sizes and turbulence conditions.
+Some modern studies still use only the average transmittance when evaluating quantum key distribution or other quantum communication protocols, which provides an incomplete and potentially misleading description of the channel.
+The simplicity of the analytical Beta model allows these analyses to incorporate the full transmittance statistics, enabling more accurate theoretical predictions and experimental evaluation.
+
 ## Limitations and Future Research
+
+Hovewer atmos complex system many params, impossible to consider all, so we focus on the minimal viable description
+The limitations of the present study include channel limitations like ...
 
 > - Show self-awareness. (Reflective & Objective) [1p]
 > - (horizontal, gauss beam - higher order, circular aperture, constant cn2, kolmogorov model, frozen turbulence hypothesis, stationar)
@@ -118,3 +129,9 @@ In this regime, Bell like inequalities provide a more sensitive probe of nonclas
 ## sense of completion and significance
 > - The Global Perspective: matters in the "real world"
 > - enduring value - Avoid ending on a limitation
+
+
+- The library provides a practical implementation of phase screen simulations with flexible phase screen generation. 
+    - Its code is publicly available and has attracted interest from the community.
+- essential for designing robust quantum communication protocols. 
+
