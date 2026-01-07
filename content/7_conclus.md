@@ -20,7 +20,7 @@
 ## Synthesis of findings:
 ### numsim
 
-### valid
+> validation, models
 
 We show that transferring assumptions about the light field before aperture directly to the transmittance value distribution is not valid.
 Beam wandering is the most pronounced effect in weak turbulence, but this does not imply that beam wandering based PDT models are accurate in this regime.
@@ -61,20 +61,47 @@ We show that this assumption is violated.
 The induced correlations are small in the weak to moderate turbulence regime but become significant under strong turbulence.
 Neglecting these correlations leads to an underestimation of the PDT spread in this regime.
 
-### Time
-- The PDT models are capable to describe only single pulse propagataion or the case of very large time separation between pulse.
-    - The practical scenaria involves high repetitve pulse propagation
-    - so the quantum state imposed high correlation transmittance.
-- In this work, utilizing the Taylors frozen-turbulence hypothesis, we introduced the two-time PDT, which  enables complete description of two consequtive correlated pulses.
-- to characterize atmospherical quantum channels correlation property we  introduced the aperture-averaged spatial coherence radius $\rho_0$, which is defined as the time interval between pulses, when the Pearson correlation of transmittances falls to $e^{-1}$.
-    - It serves as the measure for the persistence of temporal correlations.
-- As in the case of single-time PDT, the aperture plays primary role.
-    - We show, that aperture-averaged spatial coherence radius increases almost linearly with the aperture radius, with some small nonlinear deviation.
-- The transition from ensemble-based statistics to two-point correlations represents the theoretical advancement of this work.
- 
-### Application
-- The introduced framework of two-time PDT enables the analysis of variaty of qunatum protocols in turbulent atmosphere.
-- 
+> time correlations
+
+The PDT models describe either single pulse propagation or pulses separated by times much longer than the atmospheric correlation time.
+However, real quantum communication systems operate at high repetition rates.
+Consecutive pulses therefore propagate through strongly correlated atmospheric conditions.
+The channel transmittance becomes temporally correlated, and this correlation is imprinted on the output quantum states.
+Such effects are not captured by existing models.
+
+In this work, we extended the PDT framework by introducing a two time PDT formulation.
+The resulting two time PDT provides a complete statistical description of two consecutive pulses with arbitrary temporal separation.
+Its properties were studied numerically under Taylor’s frozen turbulence hypothesis.
+
+To quantify temporal correlation properties of atmospheric quantum channels, we introduced the aperture averaged spatial coherence radius $\rho_0$.
+It is defined as the temporal separation at which the Pearson correlation coefficient of pulse transmittances decays to $e^{-1}$.
+As in the single time PDT, the receiver aperture plays a dominant role.
+We showed that the aperture averaged spatial coherence radius increases approximately linearly over a practically relevant range of aperture radii.
+The aperture size therefore acts as an effective control parameter for achieving desired levels of transmittance correlation, corresponding to several centimeters of spatial coherence or several milliseconds of temporal coherence.
+
+The transition from ensemble based statistics to explicit two point correlations constitutes the main theoretical advancement of this work.
+It closes a gap between idealized single pulse models and realistic high repetition quantum communication scenarios.
+
+> Application
+
+The introduced two time PDT framework enables the analysis of a broad class of quantum communication protocols in turbulent atmospheric channels.
+We applied it to study three key quantum properties under realistic operating conditions, including practical source imperfections, deterministic losses in quantum memory storage, finite detector efficiency, and limited detector resolution.
+This enables direct assessment of protocol performance beyond idealized assumptions.
+
+We investigated the temporal window over which two entangled systems separated by a time delay $\tau$ preserve entanglement in an atmospheric environment.
+For continuous variable systems, entanglement witnesses are robust against constant losses.
+As a result, nonclassical correlations can persist for several milliseconds.
+In contrast, discrete variable systems are more sensitive to deterministic losses introduced by quantum memory.
+These losses reduce entanglement lifetimes from tens of milliseconds for the lossless quantum memory to a few milliseconds with realistic quantum memory losses.
+Improving quantum memory efficiency therefore remains a primary technical requirement for extending entanglement preservation times.
+
+We further demonstrated that adaptive selection techniques can enhance the nonclassicality of amplitude squeezed states propagating through the atmosphere, even for pulse separations on the order of tens of milliseconds.
+The analysis was performed for both ideal photodetection and on-off array detectors configurations.
+In this regime, Bell like inequalities provide a more sensitive probe of nonclassicality criteria.
+
+- ---
+- essential for designing robust quantum communication protocols. 
+
 
 ## how your work moves the field forward.
 >  - Prove the "So What?" (Argumentative) [1p]

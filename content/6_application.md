@@ -386,8 +386,8 @@ This discrepancy highlights the need for high-efficiency storage components.
 
 The study of single-mode nonclassicality emphasizes the utility of adaptive selection techniques. 
 By monitoring a classical probe pulse, quantum transmission events can be conditionally selected during periods of high transmittance. 
-The beta-distribution model accurately predicts the nonclassicality of squeezed states under postselection in the limit of instantaneous adaptive selection ($\tau \to 0$).
-For finite $\tau$, two-time PDT models are required, but such models are currently lacking. 
+The beta-distribution PDT model accurately predicts the nonclassicality of squeezed states under postselection in the limit of instantaneous adaptive selection ($\tau \to 0$).
+For finite $\tau$, two-time analytical PDT models are required, but such models are currently lacking. 
 Numerical studies of amplitude-squeezed states show that adaptive selection improves nonclassicality even for pulse separations of tens of milliseconds. 
 Bell-like inequalities provide a more sensitive measure of nonclassicality in this context.
 
