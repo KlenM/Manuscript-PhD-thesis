@@ -20,6 +20,8 @@
 ## Synthesis of findings:
 ### numsim
 
+> This research successfully implemented a Phase Screen Method utilizing a Sparse Spectrum (SS) generation approach. By adopting the Modified Von Karman spectrum, the resulting phase screens achieved an ideal structure function, effectively bypassing the low-frequency sampling errors inherent in traditional FFT-based methods.
+
 > validation, models
 
 We show that transferring assumptions about the light field before aperture directly to the transmittance value distribution is not valid.
@@ -119,12 +121,35 @@ The simplicity of the analytical Beta model allows these analyses to incorporate
 
 ## Limitations and Future Research
 
-Hovewer atmos complex system many params, impossible to consider all, so we focus on the minimal viable description
-The limitations of the present study include channel limitations like ...
+Atmospheric quantum channels depend on a large number of physical parameters.
+A fully comprehensive description is therefore impractical.
+In this work, attention was restricted to a minimal set of parameters sufficient to pinpoint the core physical effects.
+This choice enabled systematic analysis and clearer interpretation.
 
-> - Show self-awareness. (Reflective & Objective) [1p]
-> - (horizontal, gauss beam - higher order, circular aperture, constant cn2, kolmogorov model, frozen turbulence hypothesis, stationar)
-> - many-time pdt, analytical model of moments, qkd
+One class of limitations arises from simplified modeling assumptions.
+The transmitter optical field was modeled as a Gaussian beam, while higher order spatial modes are of significant interest in the literature.
+The receiver aperture was assumed to be circular, whereas realistic systems often employ more complex geometries such as Cassegrain apertures.
+Turbulence parameters, including the refractive index structure constant $C_n^2$ and the inner and outer scales $l_0$ and $L_0$, were taken to be constant along the propagation path. Only horizontal links were considered, while ground to satellite channels with altitude dependent $C_n^2$ profiles are of practical interest.
+These assumptions were adopted to focus on physical understanding rather than system specific details.
+All of these effects can be readily incorporated into the simulation framework developed in this thesis.
+
+A second class of limitations is associated with the intrinsic complexity of the real turbulent atmosphere.
+Real atmospheric turbulence is non stationary.
+Conditions evolve between day and night, across seasons, and over multi year time scales.
+The parameters $C_n^2$, $l_0$, and $L_0$ vary in time and space, whereas Kolmogorov based turbulence description assumes stationarity.
+Turbulence exhibits intermittency, with abrupt fluctuations separated by relatively stable intervals.
+Additional effects, such as spatial inhomogeneity in urban environments, boundary effects and aerosol scattering introduce fluctuations that are difficult to represent within theoretical models.
+These features constrain both modeling accuracy and direct comparison with theory.
+
+These properties of the atmosphere limit experimental validation.
+Controlled experiments under stable and well characterized conditions are challenging to realize.
+Further experimental studies are therefore required, including the development of measurement setups specifically designed for quantum channel characterization.
+Existing analytical models have been validated in certain regimes, typically by fitting transmittance histograms to experimental data.
+Such validation provides partial support but does not fully capture model performance,  given the previously discussed misspecification bias.
+Future validation efforts should combine high resolution intensity measurements with independent characterization of deterministic attenuation.
+
+> many time pdt
+> frozen turbulence hypothesis
 
 ## sense of completion and significance
 > - The Global Perspective: matters in the "real world"
