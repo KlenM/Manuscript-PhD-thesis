@@ -1,6 +1,6 @@
 # Conclusions {.unnumbered}
 
- [[0_1_introduction]]
+> [[0_1_introduction]]
 
 > - intro (Reiterate the "Why" and "What."	Confident & Direct) 
 >     - why this study was necessary [1p]
@@ -11,14 +11,14 @@
 >     - describes ensamble, don't account for correlations between consequnce pulses
 >     - A comprehensive numerical framework was required to resolve the applicability of these models and to characterize the temporal correlations
 
-## q communication
-## pdt (gap)
-- the range of validity of these models has remained unclear.
-    - Some of the models were validated with experimental data by fitting, but no compete understanding which model in which regime work better.
-- identify governing parameters, test model assumptions, and resolve temporal structure
+> ## q communication
+> ## pdt (gap)
+> - the range of validity of these models has remained unclear.
+>     - Some of the models were validated with experimental data by fitting, but no compete understanding which model in which regime work better.
+> - identify governing parameters, test model assumptions, and resolve temporal structure
 
-## Synthesis of findings:
-### numsim
+ >### Synthesis of findings:
+> #### numsim
 
 > This research successfully implemented a Phase Screen Method utilizing a Sparse Spectrum (SS) generation approach. By adopting the Modified Von Karman spectrum, the resulting phase screens achieved an ideal structure function, effectively bypassing the low-frequency sampling errors inherent in traditional FFT-based methods.
 
@@ -119,7 +119,7 @@ Finally, we introduce an empirical Beta distribution model for the PDT that gene
 Some modern studies still use only the average transmittance when evaluating quantum key distribution or other quantum communication protocols, which provides an incomplete and potentially misleading description of the channel.
 The simplicity of the analytical Beta model allows these analyses to incorporate the full transmittance statistics, enabling more accurate theoretical predictions and experimental evaluation.
 
-## Limitations and Future Research
+> Limitations and Future Research
 
 Atmospheric quantum channels depend on a large number of physical parameters.
 A fully comprehensive description is therefore impractical.
@@ -144,19 +144,30 @@ These features constrain both modeling accuracy and direct comparison with theor
 These properties of the atmosphere limit experimental validation.
 Controlled experiments under stable and well characterized conditions are challenging to realize.
 Further experimental studies are therefore required, including the development of measurement setups specifically designed for quantum channel characterization.
-Existing analytical models have been validated in certain regimes, typically by fitting transmittance histograms to experimental data.
+In previous studies, analytical models have been validated in certain regimes, typically by fitting transmittance histograms to experimental data.
 Such validation provides partial support but does not fully capture model performance,  given the previously discussed misspecification bias.
 Future validation efforts should combine high resolution intensity measurements with independent characterization of deterministic attenuation.
 
 > many time pdt
 > frozen turbulence hypothesis
 
-## sense of completion and significance
-> - The Global Perspective: matters in the "real world"
-> - enduring value - Avoid ending on a limitation
+> sense of completion and significance
 
+This thesis provides a consistent and practically usable description of atmospheric quantum channels beyond idealized assumptions.
+It resolves long standing ambiguities in the interpretation and applicability of probability distributions of transmittance.
+It establishes the receiver aperture as the dominant control parameter shaping transmittance statistics and temporal correlations, a conclusion that applies not only to quantum channels but also to classical free space optical links.
 
-- The library provides a practical implementation of phase screen simulations with flexible phase screen generation. 
-    - Its code is publicly available and has attracted interest from the community.
-- essential for designing robust quantum communication protocols. 
+This thesis provides a consistent and practically usable description of atmospheric quantum channels beyond idealized assumptions.
+It resolves long standing ambiguities in the interpretation and applicability of probability distributions of transmittance.
+It establishes the receiver aperture as the dominant control parameter shaping transmittance statistics and temporal correlations, with equal relevance for quantum channels and classical free space optical links.
+
+By combining high fidelity numerical simulation, systematic model testing, and explicit validation of physical assumptions, this work clarifies which elements of existing approaches are justified and which require revision.
+The introduced two time PDT framework extends ensemble based channel models to explicitly include correlations between consecutive pulses.
+The results demonstrate that temporal correlations induced by atmospheric time coherence increase the effective Hilbert space available for encoding and transferring quantum states of light.
+
+The provided simulation framework employs a phase screen method with Sparse Spectrum generation, reproducing the correct structure function and avoiding low frequency sampling errors inherent in FFT based methods.
+The framework has value for both theoretical analysis and system design. 
+Its code is publicly available and has attracted interest from the community.
+
+Together, these contributions establish a reliable foundation for evaluating and optimizing long distance atmospheric communication under realistic condition, which is essential for designing robust quantum communication protocols. 
 
