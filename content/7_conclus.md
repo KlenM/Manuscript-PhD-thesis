@@ -171,3 +171,5 @@ Its code is publicly available and has attracted interest from the community.
 
 Together, these contributions establish a reliable foundation for evaluating and optimizing long distance atmospheric communication under realistic condition, which is essential for designing robust quantum communication protocols. 
 
+> - [ ] is key statement for class fso that integrated instensity is limited instead of field presented here?
+> - [ ] allows for the generation of arbitrarily long phase screens, !!!

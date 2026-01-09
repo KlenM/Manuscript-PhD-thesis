@@ -38,3 +38,9 @@
 - also:
     - The Significance: Why does this matter right now?
     - Thesis Map
+
+
+>
+> - horizontal links with constant Cn2
+> - circular aperture
+
