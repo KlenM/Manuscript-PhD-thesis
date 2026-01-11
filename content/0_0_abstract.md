@@ -47,8 +47,6 @@ In practice, the turbulence coherence time is on the order of milliseconds, so c
 The probability distribution of transmittance cannot account for this temporal correlation.
 Ignoring it discards the exploitable structure that could be used for protocol optimization and introduces vulnerabilities in quantum security protocols that assume independent channel realizations.
 
-> - [ ] Add ground that analyt model applic assumed to be based on turbulence conditions.
-
 > ## 2. Development of a Numerical Framework
 
 The description of atmospheric quantum channels involves finite spatial integration of the squared magnitude of a field governed by a stochastic partial differential equation.
@@ -106,28 +104,71 @@ This model generally outperforms all other considered analytical models, and its
 
 > ## 5. Analysis of Temporal Correlations
 
-- Additionally, we extend our analysis beyond ensemble-averaging by investigating temporal correlations between consecutive pulses, introducing the two-time PDT to characterize the effects of atmospheric time-coherence on nonclassical state transfer.
+We extend the probability distribution of transmittance framework to account for temporal correlations in atmospheric quantum channels.
+Existing models describe isolated pulses or pulses separated by times exceeding the atmospheric correlation time, whereas realistic systems operate with high repetition rates, so consecutive pulses propagate through correlated turbulence that imprints on the output quantum states.
+These effects are not captured by single time PDT models.
+We introduce a two time PDT that provides a complete statistical description of two consecutive pulses with arbitrary temporal separation.
+Its properties are studied numerically under Taylor’s frozen turbulence hypothesis.
+
+To quantify temporal correlations, we define the aperture averaged spatial coherence radius as the temporal separation at which the Pearson correlation coefficient of transmittance decays to $e^{-1}$.
+The receiver aperture is identified as the dominant control parameter.
+The coherence radius increases approximately linearly with aperture size over a practically relevant range, corresponding to several milliseconds of temporal coherence.
+
+The resulting characteristic scale of transmittance corresponds to several centimeters of spatial coherence or several milliseconds of temporal coherence.
+As in the case of single time PDT, the receiver aperture dominates the behavior of correlation properties.
+The spatial coherence radius increases approximately linearly with aperture size over a practically relevant range.
+This highlights the role of aperture size as an effective control parameter for engineering transmittance correlations in atmospheric quantum communication protocols.
+
 > ## 6. Applications and Practical Significance
+
+The practical relevance of the framework is demonstrated through its application to several quantum protocols under realistic atmospheric conditions.
+We first analyze the preservation of continuous variable Gaussian entanglement between time separated pulses.
+The Simon inseparability criterion is used to determine the entanglement survival.
+We find that the threshold time for entanglement preservation is on the order of several milliseconds.
+This threshold depends on the receiver aperture and is naturally expressed in terms of the spatial coherence radius, which increases monotonically with aperture size but in a nonlinear manner.
+
+For discrete variable systems, we study the robustness of polarization entangled Bell states and parametric down conversion states.
+The results show that atmospheric turbulence alone allows quantum correlations to persist for tens of milliseconds.
+In practice, however, the achievable timescale is strongly limited by time dependent readout losses in quantum memory, which reduce the preservation time to a few milliseconds.
+The persistence of quantum correlations over these timescales indicates that employing two or more time-separated quantum states can increase the effective dimensionality of the Hilbert space.
+
+We further investigate adaptive real time selection protocols, in which bright classical pulses probe the channel transmittance prior to quantum transmission.
+This approach enhances the preservation of nonclassical properties of amplitude squeezed states by exploiting the nonvanishing correlations between consecutive pulses.
+Analyzing the Mandel parameter and its realistic counterpart for an array of on-off click detectors, we demonstrate an increase in the time over which nonclassicality is preserved, which extends across pulse separations of tens of milliseconds.
+These results demonstrate that temporal correlations in atmospheric channels can be leveraged as a practical resource for optimizing free-space quantum communication protocols.
+
+**Keywords:** 
+
+Free-space quantum channels,
+Quantum communication,
+Atmospheric turbulence,
+Quantum optics, 
+Numerical simulation, 
+Phase screens,
+Split-step method,
+Validation,
+Probability distribution of transmittance (PDT),
+Temporal correlations,
+Spatial coherence radius,
+Entanglement,
+Continuous-variable entanglement,
+Discrete-variable entanglement,
+Adaptive selection protocols,
+Nonclassical states,
+Quantum memory,
+Strong fluctuation regime
 
 > від 5 до 15.
 
-**Keywords:** 
-Quantum Optics, 
-Atmospheric Turbulence, 
-Numerical Simulation, 
-Probability Density of Transmittance, 
-Entanglement, 
-Phase Screens.
-
->в яких опубліковані основні наукові результати дисертації;
-які засвідчують апробацію матеріалів дисертації;
-які додатково відображають наукові результати дисертації.
 
 **List of publications:**
 1. Klen, M., & Semenov, A. A. (2023). Numerical simulations of atmospheric quantum channels. Physical Review A, 108(3). https://doi.org/10.1103/physreva.108.033718
 2. Klen, M., Vasylyev, D., Vogel, W., & Semenov, A. A. (2024). Time correlations in atmospheric quantum channels. Physical Review A, 109(3). https://doi.org/10.1103/physreva.109.033712
 3. Pechonkin, I., Klen, M., & Semenov, A. A. (2025). Circular-beam approximation for quantum channels in a turbulent atmosphere. Physical Review A, 112(6). https://doi.org/10.1103/pv7j-4zpf
 
+>в яких опубліковані основні наукові результати дисертації;
+які засвідчують апробацію матеріалів дисертації;
+які додатково відображають наукові результати дисертації.
 
 ```{=latex}
 \clearpage
