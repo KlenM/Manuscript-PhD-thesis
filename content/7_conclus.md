@@ -173,3 +173,8 @@ Together, these contributions establish a reliable foundation for evaluating and
 
 > - [ ] is key statement for class fso that integrated instensity is limited instead of field presented here?
 > - [ ] allows for the generation of arbitrarily long phase screens, !!!
+>     - [ ] gpu? x20
+> - [ ] numsim limits: 
+>     - [ ] Markov approx - delta correlated atmosphere, but we often have Deltaz >> L_0
+>     - [ ] Paraxial Approximation (no need to account),
+>     - [ ] Vacuum Approximation (Split-Step) converged by big number of PS (numerical convergence?)
