@@ -17,7 +17,7 @@ The PDT in this model is defined by the Beta probability density function:
 
 $$
 %\label{Eq:pdt_beta}
-\mathcal{P}(\eta; a, b) = \frac{1}{B(a, b)} \eta^{a-1} (1-\eta)^{b-1}.
+\mathcal{P}\!\left(\eta\,; \left<\eta\right>, \left<\eta^2\right>\right) = \frac{1}{B(a, b)} \eta^{a-1} (1-\eta)^{b-1}.
 $$
 where $B(a,b)$ is the Beta function.
 The internal parameters $a$ and $b$ are expressed through the first two moments of the transmittance, $\left<\eta\right>$ and $\left<\eta^2\right>$, as

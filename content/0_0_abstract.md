@@ -36,16 +36,18 @@ This process is equivalent to a linear loss channel characterized by the transmi
 The single scalar $\eta$ encapsulates the complex three-dimensional propagation physics relevant for quantum state transmission.
 
 Atmospheric turbulence is a stochastic process, making the channel transmittance a random variable. 
-The probability distribution of transmittance $\mathcal P(\eta)$, fully characterizes the statistics of quasi-monochromatic pulse propagation through an atmospheric quantum channel. 
+The probability distribution of transmittance (PDT), fully characterizes the statistics of quasi-monochromatic pulse propagation through an atmospheric quantum channel. 
 This framework enables explicit input-output relations between the transmitted and received quantum states, forming the basis for protocol performance analysis.
 
-Several analytical models for the probability distribution of transmittance have been developed, but their range of validity remains unclear.
+Several analytical models for the PDT have been developed, but their range of validity remains unclear.
 Although some models were validated by fitting, this approach lacks rigor and may represent parameters that are biased relative to actual atmospheric conditions.
 Furthermore, some assumptions underlying these models have not yet been validated.
 The existing framework describes an ensemble of independent single-beam propagation events.
 In practice, the turbulence coherence time is on the order of milliseconds, so consecutive pulses propagate through correlated atmospheric conditions.
 The probability distribution of transmittance cannot account for this temporal correlation.
 Ignoring it discards the exploitable structure that could be used for protocol optimization and introduces vulnerabilities in quantum security protocols that assume independent channel realizations.
+
+> - [ ] Add ground that analyt model applic assumed to be based on turbulence conditions.
 
 > ## 2. Development of a Numerical Framework
 
@@ -66,27 +68,42 @@ The resulting framework enables a comprehensive analysis of free space optical c
 
 > ## 3. Validation of Physical Assumptions
 
-We analyze the probability distribution of transmittance obtained from numerical simulations across three turbulence regimes and compare the results with analytical models.
-For weak and moderate turbulence, the numerical distributions are bell-shaped and unimodal, while in the strong turbulence regime they become broader and flatter.
-All distributions exhibit characteristic asymmetry near the transmittance boundaries at zero and one.
-Using the Kolmogorov–Smirnov statistic, we quantify the difference between the empirical distributions and the analytical models.
-We examine two physically motivated models, the beam-wandering and elliptical-beam models, alongside the truncated lognormal approach and a hybrid total-probability model.
+We analyze the probability distribution of transmittance obtained from numerical simulations for free space optical channels under weak, moderate, and strong turbulence regimes.
+The numerical results are compared with several analytical models.
+These include two physically motivated beam-shape based models, namely the beam wandering and elliptical beam models, the truncated lognormal model, and a hybrid approach the total probability model.
+The agreement between empirical and analytical distributions is quantified using the Kolmogorov-Smirnov statistic.
 
-- validation
-    - we begin analysis by validation.
-    - undertand the behaviour, properties
-    - 
+The numerical distributions are generally unimodal and bell shaped.
+In strong turbulence they become broader and flatter.
+Since the transmittance is bounded between zero and one, this constraint strongly affects the distribution shape.
+The aperture size relative to the average beam size is identified as the dominant control parameter.
+For small apertures, transmittance values concentrate near zero, which enforces a positive skew.
+For large apertures, the upper bound at unity induces negative skew.
+Accurate prediction of the first moments of transmittance is therefore necessary for any analytical model to produce valid distributions.
 
-- tasks
-    - the simulation of transmittance value through aperture enables validation of the existing analytical PDT models.
-    - 
-    - The existed analytical PDT models will be validated compared to the numerical simulation empirical PDT.
-    - By analyzing the results of light propagation the unjustified assumptions used in analytical models is 
-    - this approach allows the generation of phase scree which perfectly represent the theoretical equations ever for large size of phase screens.
-- 
-> ## 4. Introduction of New Analytical Models
+Our findings reveal that the applicability of a model is predominantly influenced by the ratio of the aperture to the average beam size.
+Consequently, the conventional model-selection heuristics based on turbulence strength are seen as inferior.
+The truncated lognormal model, which always exhibits positive skew, provides a consistent description for small apertures across all turbulence regimes but its accuracy worsens for larger apertures.
+The beam-shape based models mainly exhibit negative skew, which makes them more suitable for large aperture channels, where they provide an accurate match to the shape of the probability distribution of transmittance.
+However, these models suffer from misspecification bias because they are parameterized through moments of beam shape variables instead of transmittance itself.
+This leads to systematic shifts of the distribution mode and inaccurate estimation of the mean transmittance.
+The total probability model, which combines these two approaches, captures the skewness transition induced by changes in the aperture size.
+For small apertures, its performance closely follows that of the lognormal model, while for large apertures it yields some improvement in the predicting of the transmittance distribution.
 
-- We introduce a highly applicable empirical model based on the Beta distribution and propose a simplified circular-beam approximation that utilizes a transmittance-moment matching technique to eliminate inherent biases. 
+ To mitigate the misspecification bias, we introduce a transmittance matching technique that reformulates beam-shape based models in terms of the first moments of transmittance.
+This method is applied to a model with an intermediate description between the beam wandering and elliptical beam models because of the complex, semi-analytical formulation of the latter.
+Despite its simpler formulation compared to the elliptical beam model, it generally outperforms it across all turbulence regimes.
+
+We also test key assumptions underlying physically based models.
+The beam centroid is confirmed to follow a two dimensional normal distribution, but its statistical independence from beam shape deformations is violated, especially in strong turbulence.
+In the elliptical beam model, the logarithms of the semi axes are assumed to follow a bivariate Gaussian distribution. 
+Numerical simulations instead reveal a strong suppression of probability density along the diagonal, which indicates that the two axes are rarely equal.
+These findings will guide the future development of the beam-shape based models.
+
+Finally, we propose an empirical model of PDT based on the Beta distribution.
+Its bounded support naturally matches the physical range of transmittance and it reproduces the skewness transition with aperture size.
+This model generally outperforms all other considered analytical models, and its simple analytical formulation makes it well-suited for theoretical predictions and practical application.
+
 > ## 5. Analysis of Temporal Correlations
 
 - Additionally, we extend our analysis beyond ensemble-averaging by investigating temporal correlations between consecutive pulses, introducing the two-time PDT to characterize the effects of atmospheric time-coherence on nonclassical state transfer.
