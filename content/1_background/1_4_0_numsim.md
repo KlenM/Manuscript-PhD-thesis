@@ -1,1 +1,1 @@
-## Numerical Simulation of Atmospheric Quantum Channels
+## Numerical Simulation via the pyatmosphere framework

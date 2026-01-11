@@ -48,6 +48,7 @@ The probability distribution of transmittance cannot account for this temporal c
 Ignoring it discards the exploitable structure that could be used for protocol optimization and introduces vulnerabilities in quantum security protocols that assume independent channel realizations.
 
 > ## 2. Development of a Numerical Framework
+> Numerical simulations were performed using the open-source Python library `pyatmosphere`, developed as part of this work to implement ...
 
 The description of atmospheric quantum channels involves finite spatial integration of the squared magnitude of a field governed by a stochastic partial differential equation.
 This formulation hinders analytical progress and makes physical interpretation challenging.
@@ -143,23 +144,36 @@ Free-space quantum channels,
 Quantum communication,
 Atmospheric turbulence,
 Quantum optics, 
-Numerical simulation, 
-Phase screens,
-Split-step method,
-Validation,
+Phase-screens numerical simulation, 
+Split-step with sparse spectrum method, 
+pyatmosphere (Python library),
 Probability distribution of transmittance (PDT),
-Temporal correlations,
+Transmittance matching method,
+Circular beam model,
+Two-time Probability Distribution of Transmittance (Two-time PDT), 
+Temporal correlations in free-space channels,
+Time-bin encoding,
 Spatial coherence radius,
-Entanglement,
-Continuous-variable entanglement,
-Discrete-variable entanglement,
+CV and DV entanglement, 
 Adaptive selection protocols,
-Nonclassical states,
-Quantum memory,
+Nonclassicality preservation, 
+Quantum memory in atmosphere,
 Strong fluctuation regime
 
 > від 5 до 15.
 
+> To .pdf metadata:
+>Truncated lognormal model, 
+>Beam wandering model, 
+>Elliptical beam model, 
+>Total probability model, 
+>Beta distribution model, 
+
+>Target Research Community:
+>- Information Theorists & Channel Modelers
+>- Computational Physicists & Atmospheric Scientists
+>- Pure Quantum Optics Researchers
+>- Quantum Engineers & Experimentalists
 
 **List of publications:**
 1. Klen, M., & Semenov, A. A. (2023). Numerical simulations of atmospheric quantum channels. Physical Review A, 108(3). https://doi.org/10.1103/physreva.108.033718
