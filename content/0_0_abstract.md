@@ -113,7 +113,7 @@ Its properties are studied numerically under Taylor’s frozen turbulence hypoth
 
 To quantify temporal correlations, we define the aperture averaged spatial coherence radius as the temporal separation at which the Pearson correlation coefficient of transmittance decays to $e^{-1}$.
 The receiver aperture is identified as the dominant control parameter.
-The coherence radius increases approximately linearly with aperture size over a practically relevant range, corresponding to several milliseconds of temporal coherence.
+The coherence radius increases approximately linearly with aperture size over a practically relevant range, corresponding to the scale of several milliseconds of temporal coherence.
 
 The resulting characteristic scale of transmittance corresponds to several centimeters of spatial coherence or several milliseconds of temporal coherence.
 As in the case of single time PDT, the receiver aperture dominates the behavior of correlation properties.
@@ -137,6 +137,8 @@ We further investigate adaptive real time selection protocols, in which bright c
 This approach enhances the preservation of nonclassical properties of amplitude squeezed states by exploiting the nonvanishing correlations between consecutive pulses.
 Analyzing the Mandel parameter and its realistic counterpart for an array of on-off click detectors, we demonstrate an increase in the time over which nonclassicality is preserved, which extends across pulse separations of tens of milliseconds.
 These results demonstrate that temporal correlations in atmospheric channels can be leveraged as a practical resource for optimizing free-space quantum communication protocols.
+
+> - [ ] Final words, "Innovation and practical significance."
 
 **Keywords:** 
 
