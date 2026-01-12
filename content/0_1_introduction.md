@@ -79,6 +79,30 @@ Collectively, these metrics allow for a direct assessment of nonlocal correlatio
 
 #### Scientific Novelty of the Results.
 
+- *Systematic validation of analytical PDT models* was performed by benchmarking  against the results of numerical simulations. 
+  Results show that common assumptions, such as the log-normal model’s validity in strong turbulence and the beam-wandering model’s validity in weak turbulence, are incomplete.
+- *Receiver aperture as the dominant parameter shaping transmittance* was demonstrated by analyzing the ratio between aperture radius and beam size. 
+  Small apertures yield PDTs skewed positively near zero, while larger apertures produce negative skewness. 
+  These findings highlight the importance of accurately predicting the third moment of transmittance and explain why models with positive skew, such as the truncated log-normal, perform better for small apertures, whereas beam-shape–based models capture the negative skew for large apertures.
+- *Misspecification bias in physically motivated models* arises when models are parametrized using beam-shape moments rather than transmittance moments. In this case, the resulting PDT exhibits a pronounced shift relative to numerical data, which can compromise quantum protocols that depend on precise mean and variance of transmittance.
+- *Validation of statistical assumptions in beam-shape models* shows that while beam-centroid displacement is accurately Gaussian, it is not independent of beam deformations, particularly under strong turbulence. 
+  Logarithms of beam semi-axes are not jointly Gaussian as assumed in the elliptic-beam model, exhibiting strong suppression along the diagonal. 
+  These results indicate that more advanced statistical descriptions are required for precise transmittance distribution modelling.
+- *Transmittance-moment matching method for beam-shape models* is introduced to eliminate the misspecification bias. 
+  The parameters of the beam-shape models are expressed through transmittance moments rather than beam-shape parameters. 
+  This method preserves physical interpretability while ensuring consistency with the key statistical characteristics of the quantum channel. 
+  The resulting analytical model outperforms all previous beam-shape based approaches.
+- *Empirical Beta distribution PDT model* provides a flexible alternative with natural support on [0,1]. 
+  Parameterized by the first two transmittance moments, allowing it to capture a highly variable range of distribution shapes, it captures the transition from positive to negative skewness with changing aperture size. 
+  It generally outperforms existing analytical models across turbulence regimes and aperture sizes.
+- *Two-Time PDT framework* generalizes the channel description from static ensemble averages by introducing the joint transmittance distribution at two times. This captures temporal correlations between pulses in high-repetition-rate systems and enables analysis of time-bin encoded protocols.
+- *Introduction of aperture-averaged spatial coherence radius* $\rho_0$ defines the wind-driven displacement at which transmittance correlations decay to $e^{-1}$. 
+  It scales approximately linearly with aperture radius, quantifying temporal coherence and guiding optimal pulse separation or repetition rates for quantum protocols.
+- *Quantification of temporal resources in atmospheric channels for quantum protocols* demonstrates that entanglement can be preserved over millisecond timescales. 
+  The main limiting factor for discrete-variable entanglement is quantum memory; under ideal memory conditions, preservation extends to tens of milliseconds. 
+  Adaptive selection using bright classical pulses is analyzed under realistic constraints, providing quantitative bounds for exploiting temporal correlations to maintain nonclassicality. 
+  These results indicate substantial potential to enlarge the effective Hilbert-space dimensionality.
+
 #### Practical Significance.
 
 #### Statement of Authorship.
