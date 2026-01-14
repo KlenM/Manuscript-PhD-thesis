@@ -1,39 +1,38 @@
 # Introduction
 #### Relevance and Motivation.
-> Focuses on the critical analysis of the current state of the field and the definition of the research problem.
 
-> - Free space quantum channels are a central component of long distance quantum communication.
-> - fibers a blackbone for local networks, but satellite-to-ground ... becaus vacuum near-zero absorption.
-> - "last mile" problem - atmos turb degrades
-> - not determenistically but stochastically
-> - other tasks Quntum communication with moving parties .. involve propagation in atmosphere.
-> 
-> - stat props of the field ampitude after propagation through atmos ... was studied extensively^.
-> - Defined concepts of the beam shape properties as beam wandering, spreading, speckles,..
-> - However the qunatitty of interest transmittance is a derived quantity.
->     - (explain why it's quantity of interest)
-> - it's complex because it's defined as integrated intensity over the aperture shape normalized on the emitted intensity
-> - the statistical properties of it is not studied as well as .. .
-> - current state .. are .. that a toolset of single-time prob dist of transm (PDT) models was esteblished.
-> 
-> - the range of validity of these models has remained unclear.
->     - Some of the models were validated with experimental data by fitting, but no compete understanding which model in which regime work better.
-> - numsim
-> 
-> - The PDT provides a statistical description of the transmittance ensemble. 
-> - It predicts the probability of different outcomes when a single pulse propagates through the atmosphere.
-> - ignore correlations between consecutive pulses.
-> - *It can be also used for the sequence of pulses when the time intervals between them are very large.*
-> 
-> - this thesis answers ....
-> - to identify governing parameters, test model assumptions, and resolve temporal structure
-> 
-> - also:
->     - The Significance: Why does this matter right now?
->     - Thesis Map
+Free space quantum channels are a core element of long distance quantum communication.
+Optical fibers form the backbone of local and regional networks.
+Global scale communication, however, requires satellite-to-ground links, where propagation occurs predominantly in vacuum with near zero absorption.
+Several other quantum communication tasks also rely on free space propagation, including links with moving platforms and mobile ground stations.
+In all such scenarios, atmospheric propagation is unavoidable at least over part of the link.
 
-> - horizontal links with constant Cn2
-> - circular aperture
+Atmospheric turbulence constitutes the dominant obstacle in these channels.
+Its effect arises from stochastic fluctuations of the atmospheric refractive index, which induce random variations of the received optical signal.
+The statistical properties of the optical field amplitude after atmospheric propagation have been studied extensively.
+Well established concepts describe beam wandering, beam spreading, scintillation, and speckle formation.
+These descriptions capture the spatial structure of the optical field at the receiver plane but do not directly address the quantities most relevant for quantum communication.
+
+For practical quantum communication, the relevant quantity is the channel transmittance.
+It is defined as the optical intensity integrated over the receiver aperture and normalized to the emitted intensity.
+Transmittance is the central random variable that determines the quantum state of a quasi-monochromatic light mode after propagation through the atmosphere.
+Therefore, an accurate characterization of the probability distribution of transmittance (PDT) is required for the description of quantum state propagation in free space.
+
+Despite its importance, transmittance has received less systematic treatment than field amplitude statistics.
+Existing analytical models of the PDT are derived either from field statistics at a fixed spatial point or from phenomenological descriptions of first order beam shape parameters at the aperture plane.
+However, the applicability range of these models remains unclear.
+Several distributions have been validated by fitting experimental data, but this approach does not establish clear criteria for model selection.
+Without a clear understanding of their domain of validity, the predictive power of these models is limited.
+
+A further conceptual gap arises from the implicit assumption of statistical independence between pulses in the standard PDT framework.
+The PDT provides an ensemble description of a single propagation event and treats successive pulses independently.
+This assumption holds only when the time separation between pulses exceeds the atmospheric correlation time.
+In modern high repetition rate quantum communication systems, consecutive pulses propagate through strongly correlated turbulence.
+In this regime, temporal correlations become significant and must be explicitly accounted for.
+Addressing this limitation is essential for realistic modeling of high rate atmospheric quantum channels.
+
+> - [ ] horizontal links with constant Cn2
+> - [ ] circular aperture
 
 #### Research Purpose and Objectives.
 

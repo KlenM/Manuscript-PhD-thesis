@@ -24,6 +24,9 @@
 
 > validation, models
 
+>ideas:
+>- As an aperture integrated quantity, transmittance depends explicitly on the receiver geometry and aperture size, which makes its statistical behavior more complex than that of the local field amplitude.
+
 We show that transferring assumptions about the light field before aperture directly to the transmittance value distribution is not valid.
 Beam wandering is the most pronounced effect in weak turbulence, but this does not imply that beam wandering based PDT models are accurate in this regime.
 A good fit of the truncated lognormal distribution in strong turbulence does not justify its universal use across strong turbulence scenarios.
