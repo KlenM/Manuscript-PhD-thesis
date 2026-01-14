@@ -37,6 +37,15 @@
 
 #### Research Purpose and Objectives.
 
+The purpose of this work is to establish a comprehensive framework for the accurate characterization of atmospheric quantum channels by advancing the modeling of transmittance statistics and temporal correlations in order to determine the quantum properties of light propagating through a turbulent atmosphere.
+To achieve this purpose, the following objectives are formulated:
+- Develop a robust numerical model of atmospheric quantum channels that enables accurate spatial and temporal sampling of channel transmittance.
+- Systematically validate existing analytical PDT models over a wide range of turbulence regimes, including weak, moderate, and strong turbulence, and identify their domains of applicability.
+- Investigate the statistical properties of beam shape parameters in order to test the unverified assumptions underlying physically motivated models.
+- Based on the results of the preceding analyses, develop improved analytical models of atmospheric quantum channels.
+- Analyze and quantify temporal correlations of transmittance fluctuations.
+- Evaluate quantum properties in turbulent media under realistic conditions, including continuous-variable and discrete-variable entanglement between temporally separated pulses, as well as the efficiency of adaptive real time selection techniques for preserving nonclassicality.
+
 #### Research Methods.
 
 An analytical description of atmospheric quantum channels is complicated by the complexity of the underlying theoretical framework.
