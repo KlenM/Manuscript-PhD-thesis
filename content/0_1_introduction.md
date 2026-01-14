@@ -1,15 +1,4 @@
 # Introduction
-> - Motivation, Relevance of the topic
-> - Aim and objectives of the research
-> - Research methods
-> - Scientific novelty of the obtained results
-> - Practical significance of the obtained results
-> - Personal contribution of the researcher
-> - List of publications
-> - Approval/validation of the results
-> - Acknowledgements
-
-
 #### Relevance and Motivation.
 > Focuses on the critical analysis of the current state of the field and the definition of the research problem.
 
@@ -105,13 +94,54 @@ Collectively, these metrics allow for a direct assessment of nonlocal correlatio
 
 #### Practical Significance.
 
+A central difficulty in current practice is the absence of clear criteria for selecting analytical models of the PDT in a given scenario.
+Here, we resolve this ambiguity by establishing a correspondence between the ratio of the receiver aperture radius to the averaged beam radius and the analytical models that perform accurately in the corresponding regime.
+For instance, small apertures lead to truncated log normal statistics, while larger apertures produce negatively skewed distributions consistent with beam shape based models.
+This criterion allows for the systematic selection of models and replaces previous flawed selection heuristics.
+
+To support practical applications, we introduce an empirical analytical model based on the Beta distribution.
+The model is simple and flexible, yet remains fully analytical, and it reproduces the main classes of observed transmittance statistics.
+Its parameters can be efficiently estimated from numerical or experimental data, making the model suitable for real time evaluation of quantum protocols under realistic atmospheric conditions.
+
+Existing descriptions of atmospheric quantum channels treat quantum pulses as statistically independent ensembles.
+This assumption breaks down in modern systems operating at high repetition rates, where successive pulses propagate through strongly correlated turbulence.
+This thesis introduces the two time probability distribution of transmittance to explicitly describe joint statistics of two consecutive pulses.
+We also introduce the aperture-averaged spatial coherence radius which provides a practical criterion for choosing pulse repetition rates that either exploit or suppress correlation effects, depending on the protocol objective.
+This extension represents a necessary step from idealized single pulse models toward realistic high rate quantum communication.
+
+Numerical simulations show that atmospheric turbulence allows preservation of entanglement over time scales of several milliseconds.
+With further development of quantum memories, storage times of tens of milliseconds are expected for discrete variable entanglement.
+Taken together, these results demonstrate the feasibility of correlation aware strategies, including adaptive selection techniques, for preserving nonclassicality in realistic atmospheric channels.
+
 #### Statement of Authorship.
+
+The research presented in the papers 1 and 2 was primarily conducted by the candidate. 
+The scientific advisor, Andrii Semenov, provided the core conceptual ideas, research direction, and supervisory control throughout the project.
+The co-authors -- specifically D. Vasylyev, W. Vogel, and M. Bohmann -- provided assistance through enlightening discussions that helped refine the theoretical results and the interpretation of simulated data.
+
+In the paper 3 my individual contributions to the research included providing the numerical framework utilized for beam shape distribution analysis and performing the extensive model validation. 
+Additionally, I proposed the moment matching technique to eliminate the model-misspecification bias found in previous models. 
 
 #### Approbation of Research Results.
 
+The results of the dissertation were presented at seminars of the Bogolyubov Institute for Theoretical Physics of the National Academy of Sciences of Ukraine, as well as at Ukrainian and international conferences, in particular:
+1. M. Klen and A. A. Semenov, "Free-space quantum channels: Numerical simulations", US-Ukraine Quantum Forum 2023, August 28-31, 2023
+2. M. Klen, "Quantum light in atmospheric turbulence", 25th Symposium on photonics and optics SPO 2024, Kyiv, (Ukraine), November 8, 2024 
+3. M. Klen, "Numerical simulations in free-space quantum channels", poster session at Quantum 2025: From Foundations of Quantum Mechanics to Quantum Information and Quantum Metrology & Sensing, Turin, (Italy), May 18-24, 2025
+
 #### Structure and Volume of the Thesis. 
 
-The dissertation consists of an introduction, fourXXX chapters, conclusions, a list of references (xxx titles), and x appendices. The total volume of the work is xxx pages, including xx tables and xx figures.
-> corresponding to logically completed stages of research
+The dissertation consists of an introduction, seven chapters, conclusions, and a list of references (0 titles). 
+The total volume of the work is 0 pages, including 0 tables and 0 figures.
 
-#### Relationship of the Work to Scientific Programs, Plans, Themes, and Grants. 
+#### Relationship of the Work to Scientific Programs and Grants. 
+
+The dissertation was completed at the Bogolyubov Institute for Theoretical Physics of the National Academy of Sciences of Ukraine. 
+It is related to the following academic programs, topics, and grants:
+1. National Research Foundation of Ukraine through Project No. 2020.02/0111, Nonclassical and hybrid correlations of quantum systems under realistic conditions. 
+2. National Research Foundation of Ukraine through Project No. 2023.03/0165, Quantum correlations of electromagnetic radiation. 
+3. Simons Foundation “Presidential Discretionary-Ukraine Support grant” 
+
+```{=latex}
+\clearpage
+```
