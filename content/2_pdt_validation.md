@@ -1,15 +1,47 @@
 # Validation of existing models
- - why pdf study matters - repeat the problem statement idea of "lognomal for strong or weak"
- - (goal) validate analytical models of PDT against numerical simulations and to identify their ranges of applicability across three system conditions.
- - description of parameters
- - evaluation metric
-     - pros: in many task excidance is important - CDF. So the KS shows the difference between CDFs.
- - structure
 
-## Type of parameters
-- (Nature -) Experiment - Kolmogorov theory - Correlation function - Model parameters ??..
-- Cn2 parameters and Gamma2 parameters
-- table of models (there are a lot so the reader need visual aid)
+The probability distribution of transmittance describes an atmospheric quantum channel.
+It defines the input-output relation between quantum states and enables quantitative analysis of protocol performance in free space links.
+Proper characterization of the PDT is essential, since the correctness of any protocol analysis depends directly on the accuracy of the assumed model.
+
+Several analytical models of the PDT have been proposed.
+The earliest approach adopts statistical models of optical intensity fluctuations from classical optics.
+Since the transmittance is bounded by unity, events exceeding one must be discarded.
+This leads to the truncated lognormal model.
+A second class of models is based on a phenomenological description of the beam in the receiver aperture plane.
+The beam centroid is assumed to undergo two dimensional Gaussian wandering.
+Under a fixed size circular beam approximation this yields the beam wandering model.
+By introducing additional assumptions on elliptical beam deformation, the elliptical beam model provides an improved description of atmospheric quantum channels.
+A later model assumes statistical independence between beam wandering and beam shape deformations.
+These effects are combined to construct the total probability PDT model.
+
+There remains significant uncertainty regarding the physical regimes in which these models are applicable.
+The lognormal distribution of the optical field is derived within the weak turbulence Rytov approximation.
+Nevertheless, the truncated lognormal models has been reported to fit experimental data obtained under strong turbulence conditions^[@exp].
+Beam wandering is a pronounced feature of light propagation through weak turbulence and the beam wandering model is therefore commonly associated with this regime.
+The elliptical beam model is reported to reproduce experimental data under weak to moderate turbulence.
+This turbulence based classification is incomplete which motivates a more systematic analysis of model applicability.
+
+In this section, numerical simulations of atmospheric channels are performed for three different turbulence conditions.
+The results are used to validate existing analytical models and to identify their ranges of applicability.
+Model comparison is carried out using the Kolmogorov-Smirnov statistic, defined as
+
+$$D_M = \sup_{\eta} \left| F_M(\eta) - F(\eta) \right|$$
+where $F_M(\eta)=M^{-1}\sum_{i=1}^M\theta(\eta-\eta_i)$ denotes the empirical distribution function obtained from simulation, $M$ is the sample size, $\theta(\eta)$ is the Heaviside step function, and $F(\eta)$ cumulative distribution function of the analytical model.
+The goal is to determine which model performs best in a given scenario rather than to perform formal hypothesis testing.
+The Kolmogorov-Smirnov statistic therefore provides a simple and sufficient metric.
+It directly quantifies discrepancies between cumulative distributions, which is especially relevant for tasks where tail probabilities such as exceedance $1 - F(\eta)$ determine system performance.
+
+Existing analytical models are typically parametrized by quantities derived from second and fourth order field correlation functions $\Gamma_2$ and $\Gamma_4$^[sec:gamma] in the aperture plane.
+In particular, the first and second moments of the transmittance $\left<\eta\right>$ and $\left<\eta^2\right>$ can be obtained^[sec:eta12] from the field correlation functions and can be easily measured experimentally.
+Beam shape parameters such as long term beam size, short term beam size, beam wandering variance, and beam size fluctuations^[sec:bwetc] require more involved measurements but remain experimentally accessible.
+
+In theoretical analyses, deriving the correlation functions in terms of channel parameters such as the refractive index structure constant, inner and outer scales, and propagation distance requires restrictive approximations that become impractical in moderate to strong turbulence. 
+This leads to additional error in the PDT when it is inferred from the channel parameters.
+To isolate the performance of the PDT models from these analytical approximations, this work estimates all model parameters directly from phase screen simulations.
+This approach provides unbiased parameter estimation and enables the validation of analytical models independently of external parameter errors
+
+> - table of models (there are a lot so the reader need visual aid)
 
 ## Beta distribution model
 Before performing the validation of existing analytical models, we introduce an additional empirical model of the probability distribution of transmittance based on the Beta distribution^[@beta].
