@@ -34,8 +34,8 @@ An alternative and widely used approach for simulating wave propagation through 
 In this technique, the turbulent medium is modeled as a series of discrete, statistically independent layers that impose random phase distortions on the wavefront, allowing efficient numerical computation of amplitude and phase fluctuations over long propagation distances. 
 The theoretical description and implementation details of this method are discussed in the following ^[@sec:1_4_0numsim].
 
-### Probability density function  of the irradiance
-Of particular interest is the probability density function  of the irradiance.
+### Probability density function of the irradiance
+Of particular interest is the probability density function of the irradiance.
 It provides a statistical description of the intensity fluctuations, or scintillations. 
 In weak fluctuation regimes, assuming a Gaussian refractive-index field and using the Born approximation with first-order perturbation theory, the irradiance is described by the modified Rician distribution^[@rice1944,strohbehn1975]. 
 However, experimental studies by Parry and Pusey^[@parry1979] showed that the theoretical moments predicted by this model were systematically lower than measured values, even under weak turbulence conditions.

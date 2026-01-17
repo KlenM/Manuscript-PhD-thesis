@@ -22,14 +22,14 @@ Beam wandering is a pronounced feature of light propagation through weak turbule
 The elliptical beam model is reported to reproduce experimental data under weak to moderate turbulence.
 This turbulence based classification is incomplete which motivates a more systematic analysis of model applicability.
 
-In this section, numerical simulations of atmospheric channels are performed for three different turbulence conditions.
+In this section, numerical simulations of atmospheric channels are performed for three different turbulence conditions which are characterized with the value of the Rytov parameter $\sigma_{\mathrm{R}}^2 = 1.23 \, C_n^2 k^{7/6} z_\text{ap}^{11/6}$.
 The results are used to validate existing analytical models and to identify their ranges of applicability.
 Model comparison is carried out using the Kolmogorov-Smirnov statistic, defined as
 
 $$D_M = \sup_{\eta} \left| F_M(\eta) - F(\eta) \right|$$
 where $F_M(\eta)=M^{-1}\sum_{i=1}^M\theta(\eta-\eta_i)$ denotes the empirical distribution function obtained from simulation, $M$ is the sample size, $\theta(\eta)$ is the Heaviside step function, and $F(\eta)$ cumulative distribution function of the analytical model.
 The goal is to determine which model performs best in a given scenario rather than to perform formal hypothesis testing.
-The Kolmogorov-Smirnov statistic therefore provides a simple and sufficient metric.
+The Kolmogorov-Smirnov (KS) statistic therefore provides a simple and sufficient metric.
 It directly quantifies discrepancies between cumulative distributions, which is especially relevant for tasks where tail probabilities such as exceedance $1 - F(\eta)$ determine system performance.
 
 Existing analytical models are typically parametrized by quantities derived from second and fourth order field correlation functions $\Gamma_2$ and $\Gamma_4$^[sec:gamma] in the aperture plane.
@@ -40,6 +40,8 @@ In theoretical analyses, deriving the correlation functions in terms of channel 
 This leads to additional error in the PDT when it is inferred from the channel parameters.
 To isolate the performance of the PDT models from these analytical approximations, this work estimates all model parameters directly from phase screen simulations.
 This approach provides unbiased parameter estimation and enables the validation of analytical models independently of external parameter errors
+
+> - [ ] No determenistic losses!
 
 > - table of models (there are a lot so the reader need visual aid)
 
@@ -68,111 +70,213 @@ This makes the model straightforward to implement and interpret.
 Finally, the shape of the Beta distribution PDT generally resembles the numerically obtained transmittance distributions across a wide range of turbulence conditions.
 Therefore, we expect it to exhibit good agreement with numerical simulations, as will be shown in the following sections.
 
+> rewrite params?
+
 ## Results and discussion
 ### Weak channel
-- Rytov parameter $\sigma_\mathrm{R}^2=0.2$
-- Overview
-    - channel length $z_\mathrm{ap}=1\text{ km}$
-    - structure constant for the index of refraction $C_n^2=5\times10^{-15}$ (m$^{-2/3}$)
-    - initial beam-spot radius at the transmitter, $W_0=2$~(cm)
-    - wavelength $\lambda=2\pi/k=809$~(nm)
-    - outer scale $L_0=80$~(m)
-    - inner scale $\ell_0=10^{-3}$~(m)
-- "For $F_0=+\infty$, the Rayleigh length is $z_\mathrm{R}=kW_0^2/2\approx1.553~\mathrm{km}$, which is greater than the channel length $z_\mathrm{ap}{=}1~\mathrm{km}$."
-- Simulation parameters:
-    -  spatial grid with 512 points along one axis
-    - spatial grid steps are 0.3 mm
-    - The number of spectral rings is $N=1024$
-    - "The inner and outer bounds of the spectrum are $K_\mathrm{min}=1/15 L_0$ and $K_\mathrm{max}=2/\ell_0$, respectively"
-    - "The number of phase screens is chosen from the condition that the Rytov parameter for the interscreen distance does not exceed $0.1$ (cf.~Refs.~\cite{Schmidt_book,Martin1988}). It is equal to 10"
-        - the Rytov parameter for the interscreen distances in these cases are $3\times10^{-3}$
-    - The number of samples $M=10^5$ for all channels
-- we will consider two types of source beam collimated -- F = infty -- and focused -- F = z_ap.
-    - this will have significant differece in some aspects.
-- note logarithmic scale. we recall the the same visual distance between for example 10-3 to 10-2 and 10-2 to 10-1 corresponds to 10 times different actual distance.
+
+We consider a weak turbulence channel with Rytov parameter $\sigma_\mathrm{R}^2 = 0.2$.
+Physical and numerical parameters are listed in ^[tab:weak_params].
+
+```{=latex}
+\begin{table*}[t]
+\centering
+\caption{Weak turbulence channel parameters ($\sigma_{\mathrm{R}}^2 = 0.2$).}
+\label{tab:weak_params}
+\small
+\begin{tabularx}{\textwidth}{l l l | l l}
+\toprule
+\textbf{Physical Parameter} & \textbf{Symbol} & \textbf{Value} & \textbf{Numerical Setting} & \textbf{Value} \\ 
+\midrule
+Channel length & $z_{\mathrm{ap}}$ & $1$~km & Phase screens & $10$ \\
+Structure constant & $C_n^2$ & $5 \times 10^{-15}$ & Grid size & $512 \times 512$ \\
+Inner scale & $\ell_0$ & $1$~mm & Spatial step & $0.3$~mm \\
+Outer scale & $L_0$ & $80$~m & Spectral rings & $1024$ \\
+Wavelength & $\lambda$ & $809$~nm & Interscreen Rytov parameter & $3 \times 10^{-3}$ \\
+Beam radius & $W_0$ & $2$~cm & Sample size & $10^5$ \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+```
+
+
+Two initial beam curvatures are examined.
+The first case uses $F_0 = +\infty$ and corresponds to a collimated beam.
+The second case uses $F_0 = z_\text{ap}$ and corresponds to a geometrically focused beam that minimizes the beam radius at the aperture plane in the absence of turbulence ^[@geomfocus].
+
 #### Collimated beam.
+
+For the collimated beam with $F_0 = +\infty$, the Kolmogorov-Smirnov statistics comparing analytical models to the numerical PDT are shown in ^[@fig:ks_weak_inf].
+The vertical axis is plotted on a logarithmic scale, so equal visual separations correspond to order of magnitude differences in the actual KS distance.
 
 
 ![\label{fig:ks_weak_inf}Weak zap](validation/weak_inf_ks_values.svg)
-- Despite the physically motivated nature of the beam wandering and elliptical beam models they show the worst agreement with the numerical PDT.
-    - elliptic beam minima, of fig 2
-- The truncated lognormal model reproduces the numerical PDT fairly well for small apertures, but its accuracy degrades for larger apertures.
-- The reason is the change of skewness in the numerical PDT—from positive to negative—as the aperture increases, while the truncated lognormal distribution remains positively skewed for any parameters.
-- The total probability models show performance nearly identical to their base distributions.
-    - ?since beam wander effects are weak?.
-- The beta distribution provides the best overall agreement, with its KS statistic reaching a minimum around $\langle\eta\rangle=0.5$, where the numerical PDT is nearly symmetric.
+
+Despite their direct physical motivation, the beam wandering and elliptic beam models exhibit the poorest agreement with the numerical distributions across most aperture sizes.
+The elliptic beam model nevertheless displays pronounced minima of the KS statistic when the aperture radius slightly exceeds the long term beam radius.
+
+The truncated lognormal model reproduces the numerical transmittance distribution reasonably well.
+Its accuracy degrades as the aperture radius increases because the numerical distribution changes its skewness from positive to negative values, while the truncated lognormal distribution remains positively skewed for any choice of parameters.
+
+The total probability model perform nearly identically to the underlying lognormal distribution in this regime, which contradicts the interpretation that beam wandering plays a dominant role in shaping transmittance statistics under weak turbulence.
+
+Among all considered models, the beta distribution yields the best overall agreement.
+Its KS statistic reaches a minimum near $\langle \eta \rangle \approx 0.5$, where the numerical probability distribution of transmittance is close to symmetric.
+This behavior is consistent with the flexibility of the beta distribution in interpolating between positively and negatively skewed shapes.
+
+At the aperture corresponding to the KS minimum of the elliptic beam model, the mode of this analytical distribution coincides with the mode of the numerical distribution, as shown in ^[@fig:pdt_weak_inf].
 
 ![\label{fig:pdt_weak_inf}Weak inf](validation/weak_inf_pdt_0_03.svg)
 
-- At the aperture corresponding to the elliptical beam model’s KS minimum, the mode of the distribution coincides with the mode of the numerical PDT, which can be seen in the fig X.
-    - At other aperture sizes this model has biased mode and transmittance modes.
-- the BW assumes fixed shape of the beam, so the transmittance can't be bigger then the trasmittance of the coaxial circular beam of coresponding width.
-    - this is reflected in the distinct shape of the beam wandering model, which can't catch the right tail of the numerical distribution.
-- Overall, for weak turbulence the transmittance fluctuations are small, and the PDT tends to a quasi-Gaussian shape whenever $0 \ll \langle\eta\rangle \ll 1$.
+This aperture is indicated by the vertical line in ^[@fig:ks_weak_inf].
+For other aperture sizes, the elliptic beam model exhibits biased values of both the mode and the mean transmittance $\langle \eta \rangle$.
+
+The beam wandering model assumes a fixed circular beam profile, which implies that the transmittance cannot exceed that of a perfectly coaxial beam.
+This constraint manifests as a sharp cutoff of the right tail of the distribution and prevents the model from reproducing the high transmittance events observed numerically.
+
+Overall, under weak turbulence the transmittance fluctuations remain small, and for $0 \ll \langle \eta \rangle \ll 1$ the numerical distributions approach a quasi Gaussian shape.
 
 #### Focused beam.
 
+For the focused configuration with $F_0 = z_\mathrm{ap}$, the KS statistics are shown in ^[@fig:ks_weak_zap].
 
 ![\label{fig:ks_weak_zap}Weak zap](validation/weak_zap_ks_values.svg)
 
-For the focused beam, all analytical models show poorer agreement with numerical PDTs than in the collimated case.
-This should not be misinterpreted as a degradation of channel performance.
-A focused beam typically produces a smaller spot at the aperture plane and thus achieves a higher average transmittance for the same aperture radius, improving overall link efficiency.
-The lower KS scores here simply indicate that existing analytical PDT models fail to capture the more complex field statistics in this focusing regime.
+All analytical models demonstrate systematically poorer agreement with numerical probability distributions compared to the collimated case.
+This deterioration should not be interpreted as reduced channel performance.
+A focused beam produces a smaller spot at the aperture plane and therefore achieves a higher average transmittance for the same aperture radius, which improves link efficiency.
+The larger KS values instead indicate that existing analytical models do not adequately capture the more complex field statistics.
 
-Among all models, the total probability models demonstrate the best performance, especially for small to moderate aperture sizes.
+Among all considered models, the total probability model provide the best overall agreement for small and moderate aperture radii.
+However, when the aperture radius satisfies $R_\mathrm{ap} \gtrsim W_\mathrm{LT}$, these models are no longer defined.
+In this domain, the beta distribution yields the smallest KS distance among the remaining models.
 
-- However, when the aperture radius $R_\text{ap} \gtrsim W_\text{LT}$  the total probility models can't be defined.
-    - In this domain the beta model produce best performance.
+The numerical and analytical PDTs corresponding to the minima of the total probability models are shown in ^[@fig:pdt_weak_zap].
+
+> - [ ] Change TB to TL
 
 ![\label{fig:pdt_weak_zap}Weak zap](validation/weak_zap_pdt_0_015.svg)
 
-- The truncated lognormal model shows mismatched skewness and a physically unrealistic finite probability density at $\eta \to 1$ due to truncation.
-- elliptic beam model have biased mean transmittance
-- The beta model, while based on matching the first two moments, underestimates higher-order moments (skewness and kurtosis).
-    - When combined with the beam wandering statistics in the total probability model, however, the resulting PDT matches the numerical distribution almost perfectly in both shape and position.
+The truncated lognormal distribution exhibits an incorrect skewness and an unphysical finite probability density at $\eta = 1$, which arises from the imposed truncation.
+The elliptic beam model again shows biased estimates of both the mode and the mean transmittance.
+
+The beta distribution, while matching the first two moments by construction, underestimates higher order moments such as skewness and kurtosis.
+In the focused beam weak turbulence regime, the total probability approach provides the closest overall agreement with the numerical results. 
+However, when the total probability model is not applicable, the beta distribution yields the best agreement among the remaining analytical models.
+
 ### Moderate channel
 
-- "is 1.6 km. Such a channel has been implemented in Erlangen, Germany"
+We next consider a moderate turbulence channel with Rytov parameter $\sigma_\mathrm{R}^2 = 1.5$. This regime corresponds to realistic atmospheric conditions for the horizontal atmospheric channel in Erlangen, Germany. 
+The physical and numerical parameters used in the simulations are summarized in Table ^[@tab:moderate_params].
+
+```{=latex}
+\begin{table*}[t]
+\centering
+\caption{Moderate turbulence channel parameters ($\sigma_{\mathrm{R}}^2 = 1.5$).}
+\label{tab:moderate_params}
+\small
+\begin{tabularx}{\textwidth}{l l l | l l}
+\toprule
+\textbf{Physical Parameter} & \textbf{Symbol} & \textbf{Value} & \textbf{Numerical Setting} & \textbf{Value} \\ 
+\midrule
+Channel length & $z_{\mathrm{ap}}$ & $1.6$~km & Phase screens & $10$ \\
+Structure constant & $C_n^2$ & $1.5 \times 10^{-14}$ & Grid size & $512 \times 512$ \\
+Inner scale & $\ell_0$ & $1$~mm & Spatial step & $0.4$~mm \\
+Outer scale & $L_0$ & $80$~m & Spectral rings & $1024$ \\
+Wavelength & $\lambda$ & $809$~nm & Interscreen Rytov parameter & $2.2 \times 10^{-2}$ \\
+Beam radius & $W_0$ & $2$~cm & Sample size & $10^5$ \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+```
+
 #### Collimated Beam.
-- For small apertures, the beta model provides the best fit to the numerical PDT.
-    - However, for small apertures beta total probability model performs even worse than than simple beta model.
-- As shown in Fig. X, the beta model reproduces the overall shape and width of the numerical PDT accurately.
-    - In contrast, the truncated lognormal model—although defined via the first two moments—produces a narrower distribution and underestimates the variance.
-    - This bias originates from the fact that truncation changes the actual moments of the distribution; the fitted parameters correspond to the full (untruncated) lognormal rather than the truncated one.
-- At apertures $R_\text{ap}\approx W_\text{LT}$, the total probability models outperform all others.
-    - Here, also, the modes of the beam wandering  and elliptical beam models coincide with the mode of the numerical PDT, resulting in the KS minima for these models.
+
+For the collimated configuration with $F_0 = +\infty$, the Kolmogorov-Smirnov statistics comparing analytical models to numerical transmittance distributions are shown in ^[@fig:ks_moderate_inf].
 
 ![\label{fig:pdt_moderate_inf}Moderate inf](validation/moderate_inf_ks_values.svg)
 
+The overall behavior is qualitatively similar to the weak turbulence case.
+For small aperture radii, the beta distribution provides the best agreement with the numerical PDT.
+As the aperture increases, its performance gradually degrades.
 
+As seen in the left panel of ^[@fig:pdt_moderate_inf], the beta model accurately reproduces the overall shape of the numerical distribution in this regime.
+In contrast, the truncated lognormal model produces a systematically narrower distribution, despite being parametrized using the first two moments.
+This bias likely arises because truncation alters the effective moments of the distribution, while the fitted parameters correspond to the underlying untruncated lognormal.
+An additional contribution may come from mismatched higher order statistics, in particular the kurtosis.
 
-![\label{fig:ks_moderate_inf}Moderate inf](validation/moderate_inf_pdt_0_05.svg)
+![\label{fig:pdt_moderate_inf}Moderate inf](validation/moderate_inf_pdt_0_05.svg)
+
+At aperture radii $R_\mathrm{ap} \approx W_\mathrm{LT}$, the total probability model outperforms all other approaches as it seen in ^[fig:ks_moderate_inf] and the right panel of ^[fig:pdt_moderate_inf].
+In this range, the modes of the beam wandering and elliptic beam models coincide with the mode of the numerical distribution, which leads to pronounced minima of the KS statistic for these models.
+The beta distribution, although accurate in mean and variance, underestimates the kurtosis in this regime, which limits its performance compare to the total probability model.
 
 #### Focused Beam.
 
+For the focused configuration with $F_0 = z_\mathrm{ap}$, the KS statistics are shown in ^[@fig:ks_moderate_zap].
+As in the weak turbulence channel, focusing leads to systematically poorer agreement between analytical models and numerical results compared to the collimated case.
+
+
 ![\label{fig:pdt_moderate_zap}Moderate zap](validation/moderate_zap_ks_values.svg)
 
-- As in the weak channel, the focused beam results in generally worse agreement between analytical and numerical models than the collimated beam.
-- The beta model again performs best, outperformed a bit by the total probability models when the aperture is around $R_\text{ap}\approx W_\text{LT}$.
-- When the modes of beam wandering and elliptic beam modes match numerical PDT at ~1 they shows best performance.
-- in the fig X we can see the reason of generally worse performance
+The beta distribution again provides the best overall performance across most aperture sizes.
+Near $R_\mathrm{ap} \approx W_\mathrm{LT}$, the total probability models slightly outperform the beta distribution.
+At apertures where the modes of the beam wandering and elliptic beam models coincide with the numerical mode, these models temporarily achieve their best agreement.
 
-![\label{fig:ks_moderate_zap}Moderate zap](validation/moderate_zap_pdt_0_012.svg)
+The underlying reason for the generally worse performance of all analytical models is illustrated in ^[@fig:pdt_moderate_zap].
+In this regime, the numerical probability distribution develops a strongly non Gaussian plateau, with an extended interval of $\eta$ over which the probability density remains approximately constant.
+Such a feature cannot be captured by any of the considered analytical models, all of which predict smooth unimodal distributions with decaying tails.
 
-- The numerical PDT in this regime develops a highly non-Gaussian plateau, with nearly constant probability density over a finite interval of η.
-- This feature cannot be reproduced by any of the studied parametric models, all of which assume unimodal, smoothly decaying distributions.
+
+![\label{fig:pdt_moderate_zap}Moderate zap](validation/moderate_zap_pdt_0_012.svg)
+
+Overall, the agreement between analytical models and numerical results is worse in this regime than in the strong turbulence channel analyzed in the following section.'
 
 ### Strong channel
 
+As the propagation distance increases, the difference between the spot sizes of a geometrically focused beam with $F_0 = z_\mathrm{ap}$ and a collimated beam with $F_0 = +\infty$ becomes negligible at the aperture plane.
+Consequently, only the collimated configuration is considered in the strong turbulence regime.
+We analyze a strong turbulence channel characterized by the Rytov parameter $\sigma_\mathrm{R}^2 = 33.3$.
+The corresponding physical and numerical parameters are listed in Table ^[@tab:strong_params].
+
+```{=latex}
+\begin{table*}[t]
+\centering
+\caption{Strong turbulence channel parameters ($\sigma_{\mathrm{R}}^2 = 33.3$).}
+\label{tab:strong_params}
+\small
+\begin{tabularx}{\textwidth}{l l l | l l}
+\toprule
+\textbf{Physical Parameter} & \textbf{Symbol} & \textbf{Value} & \textbf{Numerical Setting} & \textbf{Value} \\ 
+\midrule
+Channel length & $z_{\mathrm{ap}}$ & $50$~km & Phase screens & $30$ \\
+Structure constant & $C_n^2$ & $6 \times 10^{-16}$ & Grid size & $4096 \times 4096$ \\
+Inner scale & $\ell_0$ & $1$~mm & Spatial step & $1$~mm \\
+Outer scale & $L_0$ & $80$~m & Spectral rings & $1024$ \\
+Wavelength & $\lambda$ & $808$~nm & Interscreen Rytov parameter & $6.5 \times 10^{-2}$ \\
+Beam radius & $W_0$ & $6$~cm & Sample size & $10^5$ \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+```
+
+The Kolmogorov-Smirnov statistics comparing analytical models to numerical transmittance distributions are shown in ^[@fig:ks_strong_inf].
+Even in this strong turbulence regime, the overall behavior resembles that observed in the previously considered regimes.
+
 ![\label{fig:pdt_moderate_inf}Moderate inf](validation/strong_inf_ks_values.svg)
 
-- Interestingly, the behavior of the 33 Rytov channel resembles that of the moderate focused channel with sigma_rytov2 = 5.
-- The only difference is that for very small apertures $R_\text{ap} \lesssim 0.1W_\text{LT}$ the truncated lognormal model shows slightly better performance (see Fig. X).
+The main qualitative difference appears at very small apertures $R_\mathrm{ap} \lesssim 0.1 W_\mathrm{LT}$.
+In this range, the truncated lognormal model exhibits better agreement with the numerical results, as illustrated in ^[@fig:pdt_strong_inf].
 
-![\label{fig:ks_strong_inf}Strong inf](validation/strong_inf_pdt_0_1.svg)
+![\label{fig:pdt_strong_inf}Strong inf](validation/strong_inf_pdt_0_1.svg)
 
-- In this range, the beta model changes its shape to the $(1-\eta)^{\beta-1}$ - like shape when the shape of the numerical PDT still resembles the lognormal shape.
+As the ratio $R_\mathrm{ap} / W_\mathrm{LT} \to 0$, the aperture can be treated as point like relative to both the overall beam size and the characteristic scintillation scale of the optical field.
+The transmittance distribution then approaches the probability distribution of irradiance at a point, rather than an aperture averaged quantity.
+
+Point irradiance statistics in atmospheric turbulence have been studied extensively in classical atmospheric optics and are discussed in^[@sec:pdf_irradiance].
+In this context, the lognormal distribution is a standard model, which explains the relatively good performance of the truncated lognormal model for very small apertures.
+
+For strong turbulence, other irradiance models such as the negative exponential, K-distribution, lognormal-Rician, or gamma-gamma distributions, as reviewed in ^[@sec:pdf_irradiance],  may provide a more accurate description of PDT for the range of very small apertures.
 
 ### Conclusion
 
@@ -192,7 +296,7 @@ Physically, increasing the turbulence strength primarily leads to a broader PDT 
 However, changing the aperture size mainly affects the skewness of the numerical PDT, and many analytical models fail to reproduce this asymmetry accurately.
 In particular, the lognormal model always yields positively skewed distributions, whereas the beam wandering model consistently produces negatively skewed ones.
 The elliptical beam model generally yields negative skewness, with only a minor positive skew for small apertures, which remains insufficient to reproduce the numerical PDT.
-Among the considered models, the total probability models and the Beta model most successfully reproduce the skewness of the numerical PDT.
+Among the considered models, the total probability model and the Beta model most successfully reproduce the skewness of the numerical PDT.
 
 Overall, across the entire parameter space examined, the analytical PDT models exhibit distinct strengths and weaknesses, which can be summarized as follows.
 The empirical Beta model generally exhibits the best performance according to the KS-statistics, thanks to its naturally bounded support $\eta\in [0,1]$ and its ability to reproduce the skewness near the boundary points.
