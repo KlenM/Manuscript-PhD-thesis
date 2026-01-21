@@ -247,11 +247,11 @@ Only under strong turbulence a measurable dependence arises, but even then, its 
 ## Distribution of the beam semi-axes
 
 In this section we move beyond the analysis of beam wandering and beam spreading and examine the statistical behavior of the semi-axes of the elliptical Gaussian approximation of the beam shape.
-This effect is a central element of the elliptical beam model ^[@sec:elbeam], which explicitly includes the influence of random fluctuations of the semi-axes $W_{1,2}$.
+This effect is a central element of the elliptical beam model ^[sec:elbeam], which explicitly includes the influence of random fluctuations of the semi-axes $W_{1,2}$.
 In this model the logarithms of the squared semi-axes are assumed to follow a bivariate Gaussian distribution.
 However, the validity of this assumption is not established.
 
-To test the validity of the Gaussian assumption, we generate $5\cdot10^{5}$ independent realizations of the beam propagations described in ^[@sec:valid].
+To test the validity of the Gaussian assumption, we generate $5\cdot10^{5}$ independent realizations of the beam propagations described in ^[sec:valid].
 For every realization, we first compute the elements of the spot-shape matrix
 $$\mathbf{S} = \begin{pmatrix} S_{xx} & S_{xy} \\ S_{xy} & S_{yy} \end{pmatrix}$$
 using the definition given in ^[@eq:elS].

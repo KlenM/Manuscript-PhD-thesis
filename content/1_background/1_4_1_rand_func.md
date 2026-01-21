@@ -3,7 +3,7 @@
 > - One support point for a dedicated section is to add a bit of math vibe to the thesis
 > - Also, in the case of including of random processes paper - here is the place for background
 
-When studying light propagation through random media, it is essential to introduce the minimal framework of random functions. In our problem, randomness enters through spatial variations of the refractive index, which in turn induces randomness in most derived quantities like beam properties at the aperture plane or the transmittance values. By treating these quantities as random functions, we can systematically describe their statistical properties, characterize correlations, study ergodicity property markov property, etc.
+When studying light propagation through random media, it is essential to introduce the minimal framework of random functions. In our problem, randomness enters through spatial variations of the refractive index, which in turn induces randomness in most derived quantities like beam properties at the aperture plane or the transmittance values. By treating these quantities as random functions, we can systematically describe their statistical properties, characterize correlations, study ergodicity property markov property, etc ^[@kampen2011,andrews2005,mandel1995].
 
 Let's consider a function $\xi$ of two parameters:
 $$\xi: T \times \Omega \to \xi(t, \omega)$$
@@ -13,7 +13,7 @@ If we fix the outcome $\omega$ -- i.e., select one specific universe, then we ob
 This is referred to as a sample path or realization of the random function.
 Examples of two sample paths as functions of $t$ are shown in ^[fig:sample_paths].
 
-![\label{fig:sample_paths}Sample path of some random function](file:///home/klen/syncthing/desktop/physics/phd/thesis/images/draft/random_process.svg)
+![\label{fig:sample_paths}Examples of two sample paths of the random function $\xi(t, \omega)$. In this context, the random function represents atmospheric channel transmittance $\eta$. The pink line corresponds to the realization $\xi^{(\omega_1)}(t)$, while the blue line corresponds to $\xi^{(\omega_2)}(t)$. Each path illustrates the deterministic evolution of the channel transmittance over time $t$ for a fixed outcome $\omega$.](background/eta_process.pdf)
 
 If we fix the domain parameter $t$ -- i.e., look at all possible universes at a single time, then we obtain a random variable $\xi_t$.
 In this view, the random function can be seen as a family of random variables $\{\xi_t\}_{t\in T}$ indexed by $t \in T$.
@@ -50,7 +50,7 @@ For the stationary random function it only depends on the time difference $\math
 
 While correlation function characterize how similar the values at distance $r$, sometimes it's useful to consider how different the values at distance $r$, which is possible with the structure function
 $$D(t_1,t_2)=\mathbb E|\xi_{t_1}-\xi_{t_2}|^2=\int_{-\infty}^\infty\int_{-\infty}^\infty |x_1 - x_2|^2 dF_{t_1,t_2}(x_1,x_2)$$
-The structure function is a powerful tool in the theory of random function with stationary increment, but in the case of stationary functions it also depends only on the time difference $\tau$ and it simply relates to the correlation function as $D(\tau) = 2 \left(B(0) - \mathrm{Re}\, B(\tau)\right)$.
+The structure function is a powerful tool in the theory of random function with stationary increment^[@kolmogorov1941], but in the case of stationary functions it also depends only on the time difference $\tau$ and it simply relates to the correlation function as $D(\tau) = 2 \left(B(0) - \mathrm{Re}\, B(\tau)\right)$.
 
 In turbulent atmosphere science it's also common to characterize random fields with the complimentary to correlation function power spectral density function $\Phi(k)$, defined as Fourier transformation^[Wiener–Khinchin_theorem]:
 $$\Phi(\lambda) = \frac{1}{2\pi}\int e^{-i\lambda\tau} B(\tau)\, d\tau$$

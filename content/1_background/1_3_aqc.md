@@ -5,7 +5,7 @@ They showed that a light beam distorted by atmospheric turbulence, when passing 
 The channel is characterized by an effective transmittance coefficient $\eta \in [0,1]$.
 This coefficient represents the fraction of the total beam intensity that passes through the aperture.
 
-While linear-loss channels can be specified in the density-operator formalism, a particularly elegant and tractable representation is obtained when quantum states are described in the Glauber–Sudarshan $P$-function representation^[eq:Pdef].
+While linear-loss channels can be specified in the density-operator formalism, a particularly elegant and tractable representation is obtained when quantum states are described in the Glauber–Sudarshan $P$-function representation^[eq:Pdef] ^[@glauber1963,sudarshan1963a].
 Then, the input-output relation for linear-loss channels can be expressed as:
 $$P_{out}(\alpha) = \frac{1}{\eta} P_{in}\left(\frac{\alpha}{\sqrt{\eta}}\right)$$
 
@@ -17,7 +17,7 @@ The PDT encodes the statistics of turbulence and depends on multiple parameters:
 The probability density of transmittance (PDT) is the primary defining characteristic of atmospheric quantum channels, as it fully captures the stochastic effects of turbulence on the output quantum state.
 
 Direct experimental reconstruction of PDT is possible either via homodyne detection of quantum states^[@semenov2009] or via classical intensity measurements at the receiver with a photodiode.
-However, experimental studies face significant challenges.
+However, experimental studies are  generally complicated.
 They require expensive setups with two synchronized sites separated by large distances.
 Measurements must be carried out under uncontrolled atmospheric conditions, which complicates the study, and temporal fluctuations further hinder precise characterization.
 These difficulties highlight the importance of studying atmospheric quantum channels in controlled and well-characterized way.
@@ -45,12 +45,11 @@ We will discuss the precise mechanism of these perturbations in the next subsect
 Several analytical models of the probability distribution of transmittance were developed between 2009 and 2018 to describe the statistical properties of atmospheric quantum channels.
 These models are typically formulated in terms of parameters derived from the field correlation function, such as the average transmittance, transmittance variance, or beam-spot parameters at the aperture plane, including the mean beam-spot radius and the variance of the beam-center position.
 
-The truncated lognormal distribution model^[@semenov2009] originates from the phenomenological lognormal model of irradiance but introduces an additional truncation condition at the point $\eta=1$.  Despite being derived under the Rytov approximation in classical optics, this model was reported to yield reasonable agreement under strong turbulence conditions^[@vasylyev2016].
+The truncated lognormal distribution model^[@semenov2009] originates based on the lognormal model of irradiance^[sec:pdf_irradiance] but introduces an additional truncation condition at the point $\eta=1$.  Despite being derived under the Rytov approximation in classical optics, this model was reported to yield reasonable agreement under strong turbulence conditions^[@capraro2012,vasylyev2016].
 
 The beam-wandering model^[@vasylyev2012] accounts for random deflection of the beam’s center of mass from the propagation axis while neglecting beam-shape deformation.
 It assumes a normally distributed beam-center position in the aperture plane, resulting in a log-negative Weibull distribution for the PDT.
-Since the model depends only on the beam-shape parameters, it has the notable drawback that it produces biased estimates of the mean transmittance parameters.
-This model is primarily applicable under weak turbulence conditions.
+The model depends only on the beam-shape parameters, and it's supposed to be applicable under weak turbulence conditions.
 
 The elliptical-beam model^[@vasylyev2016] extends the beam-wandering approach by incorporating elliptical shape distortions, thereby capturing additional contributions to the cumulative beam decomposition of the intensity at the aperture plane.
 This added complexity requires numerical evaluation of the model parameters.

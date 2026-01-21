@@ -10,7 +10,7 @@ As a result, the transmittance $\eta_t$ of consecutive pulses is correlated at d
 In this section we analyze the case of two consecutive pulses separated by a time interval $\tau$.
 With the numerical model, we compute the joint statistics of two consecutive transmittances.
 In particular, we study how the temporal correlation of the transmittance depends on the time separation $\tau$.
-We also describe the PDT in scenarios relevant for adaptive selection techniques, where the first signal is a strong classical pulse used to estimate the channel transmittance, and the second is a quantum signal whose transmittance is conditioned on the measured transmittance of the first.
+We also describe the PDT in scenarios relevant for adaptive selection techniques^[@vallone2015], where the first signal is a strong classical pulse used to estimate the channel transmittance, and the second is a quantum signal whose transmittance is conditioned on the measured transmittance of the first.
 In the ^[sec:application], we will demonstrate how these results guide continuous-variable and discrete-variable entanglement propagation protocols, and how they can be employed to enhance the preservation of nonclassicality through adaptive selection techniques.
 
 ## Two-time PDT

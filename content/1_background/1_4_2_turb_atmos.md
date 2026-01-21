@@ -1,7 +1,7 @@
 ### Theory of turbulent atmosphere
 Turbulence is widely recognized as one of the most complex and challenging phenomena in nature.
-The complexity are rooted in the Navier-Stokes equations, which results in  the non-linear, multi-scale, and intrinsically chaotic behavior of the system, making precise prediction impossible over extended periods.
-Thus the atmospheric study mostly relies on statistical descriptions and the main object for sdescription is the wind velocity random field.
+The complexity are rooted in the Navier-Stokes equations, which results in  the non-linear, multi-scale, and intrinsically chaotic behavior of the system, making precise prediction impossible over extended periods^[@lorenz1963,frisch1995].
+Thus the atmospheric study mostly relies on statistical descriptions^[@kolmogorov1941] and the main object for description is the wind velocity random field.
 
 #### Energy cascade model of turbulence. {#sec:turb_cascade}
 There are various sources that creates turbulence like wind shear, thermal convection, buoyancy effects, obstacles, but the statistical properties of the resulting flow tend to show similar universal behavior.
@@ -27,12 +27,12 @@ For $\mathcal R_r < 1$ the structure dissipates their energy rapidly due to visc
 It's widely used in the literature to associate these structures with turbulent eddies of diameter $r$ and linear velocity difference $v_r$. Then, inertial time corresponds to the time it takes for an eddy to complete one rotation. Although turbulent eddies are not well defined, they can be valuable for illustrating the intuition about turbulence dynamics.
 
 We can define two characteristic lengths that play important role in turbulent atmosphere theory.
-The outer scale of turbulence $L_0$ can be considered as the typical size of the largest eddies or characteristic size of the system, like the altitude of laser beam propagation ^[@??], with typical values of $L_0 \approx 80\mathrm{m} - 1\mathrm{km}$.
+The outer scale of turbulence $L_0$ can be considered as the typical size of the largest eddies or characteristic size of the system, like the altitude of laser beam propagation ^[@coulman1988], with typical values of $L_0 \approx 20\mathrm{m} - 100\mathrm{m}$^[@martin2000].
 The inner scale or turbulence $l_0$ can be considered as the scale at which $\mathcal R_{l_0} \approx 1$, with typical value of $l_0 \approx 1\mathrm{mm} - 1\mathrm{cm}$.
 The interval of scales between $l_0$ and $L_0$ is called as the inertial range.
 
 #### Structure function of the velocity field.
-In the 1940s Kolmogorov assumed that energy enters the turbulent system at large scales $L_0$, cascades through inertial range scales without energy loss, and finally dissipates at the $l_0$ scale due to the viscosity.
+In the 1940s Kolmogorov assumed^[@kolmogorov1941] that energy enters the turbulent system at large scales $L_0$, cascades through inertial range scales without energy loss, and finally dissipates at the $l_0$ scale due to the viscosity.
 This is so called energy cascade model of turbulence.
 In this case the energy flux from a scale to another by unit mass defined as the kinetic energy divided by deformation time must be a constant:
 $$\varepsilon \sim \frac{v_r^2}{T_I}=\frac{v_r^3}{r}=\mathrm{const}$$
@@ -43,16 +43,16 @@ where $C_v^2$ is the velocity structure constant (units of $\mathrm m^{4/3}\math
 #### Structure function of the index of refraction.
 As can be seen from ^[eq:parax], the refractive index $n$ is the single parameter of the medium that affects light propagation.
 It, in turn, depends on temperature, pressure, humidity, and other atmospheric variables.
-The dominant contribution arises from temperature fluctuations, since temperature relaxes much more slowly than the other parameters.
+The dominant contribution arises from temperature fluctuations, since temperature relaxes much more slowly than the other parameters^[@hill1980].
 In the inertial range of turbulence, the advective transport strongly dominates over diffusion, so temperature behaves as a passive scalar transported by the turbulent velocity field.
 Consequently, the structure functions of the refractive index, temperature, and velocity fields exhibit the same scaling behavior $D_n(r) \sim D_T(r) \sim D_v(r)$, and therefore
 $$D_n(r) = C_n^2 r^{2/3}\,,\quad l_0\ll r\ll L_0$$
 where $C_n^2$ is the refractive-index structure constant -- the parameter the primarily determines the turbulence strength.
 
 It is also very common to define the Kolmogorov turbulence model with the power spectral density function, which can be obtained using ^[eq:DtoPhi] as
-$$\Phi(k)=0.033 C_n^2 \kappa^{-11/3}\,\quad 2\pi/L_0 \ll \kappa \ll 2\pi/l_0$$
+$$\Phi(\kappa)=0.033 C_n^2 \kappa^{-11/3}\,\quad 2\pi/L_0 \ll \kappa \ll 2\pi/l_0$$
 where $\kappa = 2\pi/l$ is the spatial frequency and $C_n^2$ is the refractive index structure constant.
-Near ground level, $C_n^2$ ranges from around $10^{-17}$ m$^{-2/3}$ (weak turbulence) to $10^{-13}$ m$^{-2/3}$ (strong turbulence).
+Near ground level, $C_n^2$ ranges from around $10^{-17}$ m$^{-2/3}$ (weak turbulence) to $10^{-13}$ m$^{-2/3}$ (strong turbulence)^[@andrews2005].
 
 The Kolmogorov power-law spectrum model, because of its simple expression, is mostly used in analytical calculations.
 However the $-11/3$ power introduce some challenges when used under integrals over $\kappa$.
@@ -65,9 +65,9 @@ where $\kappa_0 = 2\pi/L_0$ and $\kappa_m = 5.92/l_0$ represent the outer and in
 
 It is worth emphasizing that when this turbulence theory was first proposed, it consisted entirely of theoretical predictions.
 Its experimental confirmation came nearly a decade later and showed the first clear validation of the theory.
-After some time, more sophisticated numerical and analytical approaches based directly on the Navier–Stokes equations were conducted
+After some time, more sophisticated numerical and analytical approaches based directly on the Navier-Stokes equations were conducted^[@andrews1992a].
 These studies validated the $-5/3$ power-law dependence of the energy spectrum in the inertial subrange.
-However, they also revealed additional fine structures, such as a small bump in the high-frequency (viscous) range of the spectrum.
+However, they also revealed additional fine structures, such as a small bump in the high-frequency (viscous) range of the spectrum^[@hill1978a].
 But overall, while the refined models introduced deeper physical insights, they largely supported the fundamental scaling laws established by Kolmogorov and the modified von Karman spectrum.
 
 >- "the amount of supporting experimental evidence is amazing ( M y r u p [2.9] and K a i m a l et al. [2.10])," ([“Laser Beam Propagation in the Atmosphere”, 1978, p. 24](zotero://select/library/items/6VHCHVKG)) ([pdf](zotero://open-pdf/library/items/4WBAA526?page=24&annotation=UBIAQ3SV))
@@ -77,7 +77,7 @@ But overall, while the refined models introduced deeper physical insights, they 
 > by Charnotski 10.1364/JOSAA.30.002455
 >This question can be one of the further problems to study, after maturity of the current level of study of atmospheric quantum channels.
 
-![\label{fig:psd_scales}The model of turbulent atmosphere and its power spectral density for Kolmogorov model blue and Modified von Karmal model green](file:///home/klen/syncthing/desktop/physics/phd/thesis/src/generated/psd_scales.svg)
+![\label{fig:psd_scales}Power spectral density of atmospheric turbulence models. The blue line represents the Kolmogorov model, while the green line depicts the Modified von Karman model, highlighting the latter’s accounting for the inner and outer scales ($l_0$ and $L_0$).](file:///home/klen/syncthing/desktop/physics/phd/thesis/src/generated/psd_scales.svg)
 
 The Figure ^[fig:psd_scales] summarizes the model of atmospheric turbulence.
 It depicts the energy flow through scales starting from large scales of energy injection, going through inertial range where the turbulent motion is predominant process and to the region of energy dissipation by viscosity.
@@ -94,7 +94,7 @@ However, these models do not directly address the temporal statistics of the tur
 This lack of a temporal description is critical for several reasons.
 It is required for studying the temporal properties of the impact of the turbulent atmosphere on phenomena like light propagation.
 For experimental atmosphere study, most atmospheric experiments rely on small number of fixed in space sensors to record fluctuations over time because this setup is significantly easier to realize in practice than true spatial sampling.
-The answer to the question how to compare the temporal data with the spatial statistics provided by G. I. Taylor in 1937 with the Frozen Turbulence Hypothesis.
+The answer to the question how to compare the temporal data with the spatial statistics provided by G. I. Taylor in 1937 with the Frozen Turbulence Hypothesis^[@taylor1938].
 
 The hypothesis is based on the difference between two atmospheric time scales.
 The first is the advection time, which can be defined as the duration required for the mean wind of speed $v$ to carry turbulent structure of size $r$ across the observation point, so $T_v = r/v$.

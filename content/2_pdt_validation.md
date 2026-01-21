@@ -4,7 +4,7 @@ The probability distribution of transmittance describes an atmospheric quantum c
 It defines the input-output relation between quantum states and enables quantitative analysis of protocol performance in free space links.
 Proper characterization of the PDT is essential, since the correctness of any protocol analysis depends directly on the accuracy of the assumed model.
 
-Several analytical models of the PDT have been proposed.
+Several analytical models of the PDT have been proposed ^[sec:pdtmodels].
 The earliest approach adopts statistical models of optical intensity fluctuations from classical optics.
 Since the transmittance is bounded by unity, events exceeding one must be discarded.
 This leads to the truncated lognormal model.
@@ -17,20 +17,20 @@ These effects are combined to construct the total probability PDT model.
 
 There remains significant uncertainty regarding the physical regimes in which these models are applicable.
 The lognormal distribution of the optical field is derived within the weak turbulence Rytov approximation.
-Nevertheless, the truncated lognormal models has been reported to fit experimental data obtained under strong turbulence conditions^[@exp].
+Nevertheless, the truncated lognormal models has been reported to fit experimental data obtained under strong turbulence conditions^[@capraro2012].
 Beam wandering is a pronounced feature of light propagation through weak turbulence and the beam wandering model is therefore commonly associated with this regime.
 The elliptical beam model is reported to reproduce experimental data under weak to moderate turbulence.
 This turbulence based classification is incomplete which motivates a more systematic analysis of model applicability.
 
 In this section, numerical simulations of atmospheric channels are performed for three different turbulence conditions which are characterized with the value of the Rytov parameter $\sigma_{\mathrm{R}}^2 = 1.23 \, C_n^2 k^{7/6} z_\text{ap}^{11/6}$.
 The results are used to validate existing analytical models and to identify their ranges of applicability.
-Model comparison is carried out using the Kolmogorov-Smirnov statistic, defined as
+Model comparison is carried out using the Kolmogorov-Smirnov statistic^[@conover1999], defined as
 
 $$D_M = \sup_{\eta} \left| F_M(\eta) - F(\eta) \right|$$
 where $F_M(\eta)=M^{-1}\sum_{i=1}^M\theta(\eta-\eta_i)$ denotes the empirical distribution function obtained from simulation, $M$ is the sample size, $\theta(\eta)$ is the Heaviside step function, and $F(\eta)$ cumulative distribution function of the analytical model.
 The goal is to determine which model performs best in a given scenario rather than to perform formal hypothesis testing.
 The Kolmogorov-Smirnov (KS) statistic therefore provides a simple and sufficient metric.
-It directly quantifies discrepancies between cumulative distributions, which is especially relevant for tasks where tail probabilities such as exceedance $1 - F(\eta)$ determine system performance.
+It directly quantifies discrepancies between cumulative distributions, which is especially relevant for tasks where tail probabilities such as exceedance $1 - F(\eta)$ determine system performance^[@vasylyev2012].
 
 Existing analytical models are typically parametrized by quantities derived from second and fourth order field correlation functions $\Gamma_2$ and $\Gamma_4$^[sec:gamma] in the aperture plane.
 In particular, the first and second moments of the transmittance $\left<\eta\right>$ and $\left<\eta^2\right>$ can be obtained^[sec:eta12] from the field correlation functions and can be easily measured experimentally.
@@ -46,7 +46,7 @@ This approach provides unbiased parameter estimation and enables the validation 
 > - table of models (there are a lot so the reader need visual aid)
 
 ## Beta distribution model
-Before performing the validation of existing analytical models, we introduce an additional empirical model of the probability distribution of transmittance based on the Beta distribution^[@beta].
+Before performing the validation of existing analytical models, we introduce an additional empirical model of the probability distribution of transmittance based on the Beta distribution^[@johnson1995].
 The PDT in this model is defined by the Beta probability density function:
 
 $$
