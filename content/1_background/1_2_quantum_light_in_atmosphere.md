@@ -27,14 +27,14 @@ This method is widely used for analyzing the statistical properties of optical f
 Nevertheless, this formulation remains valid only under weak turbulence conditions^[@andrews2005].
 
 Further developments aimed at extending the range of validity beyond weak turbulence have employed alternative frameworks such as the parabolic equation method and extended Rytov theory^[@andrews2005], the phase approximation of the Huygens–Kirchhoff method^[@banakh1977], and the photon distribution function approach^[@baskov2018]. 
-In contemporary studies, many approaches are based on the extended Huygens–Fresnel (eHF) principle^[@lutomirski1971]. 
+In contemporary studies, many approaches are based on the extended Huygens-Fresnel principle^[@lutomirski1971]. 
 However, it has been pointed out that commonly used variations of this method do not provide significant improvements over traditional methods^[@charnotskii2015].
 
 An alternative and widely used approach for simulating wave propagation through turbulence is the phase screen method^[@martin1988,frehlich2000,schmidt2010]. 
 In this technique, the turbulent medium is modeled as a series of discrete, statistically independent layers that impose random phase distortions on the wavefront, allowing efficient numerical computation of amplitude and phase fluctuations over long propagation distances. 
-The theoretical description and implementation details of this method are discussed in the following ^[@sec:1_4_0numsim].
+The theoretical description and implementation details of this method will be discussed in the ^[sec:ps].
 
-### Probability density function of the irradiance
+### Probability density function of the irradiance {#sec:pdf_irradiance}
 Of particular interest is the probability density function of the irradiance.
 It provides a statistical description of the intensity fluctuations, or scintillations. 
 In weak fluctuation regimes, assuming a Gaussian refractive-index field and using the Born approximation with first-order perturbation theory, the irradiance is described by the modified Rician distribution^[@rice1944,strohbehn1975]. 

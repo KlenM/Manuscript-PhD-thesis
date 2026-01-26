@@ -1,6 +1,6 @@
 # Conclusions {.unnumbered}
 
-> [[0_1_introduction]]
+>- [ ] write intro to conclus as intro
 
 > - intro (Reiterate the "Why" and "What."	Confident & Direct) 
 >     - why this study was necessary [1p]

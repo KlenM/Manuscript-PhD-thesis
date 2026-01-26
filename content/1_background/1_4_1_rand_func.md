@@ -8,12 +8,14 @@ When studying light propagation through random media, it is essential to introdu
 Let's consider a function $\xi$ of two parameters:
 $$\xi: T \times \Omega \to \xi(t, \omega)$$
 where $t \in T$ is the domain parameter (time, space, etc.) and $\omega \in \Omega$ is an outcome, which can be usefully interpreted as a specific realization of a universe from the set of all possible parallel worlds.
-~~The function $\xi$ is what we call a random function~~. This form allows us to adopt two complementary perspectives.
+This form allows us to adopt two complementary perspectives.
 If we fix the outcome $\omega$ -- i.e., select one specific universe, then we obtain a deterministic function $\xi^{(\omega)}(t)$.
 This is referred to as a sample path or realization of the random function.
 Examples of two sample paths as functions of $t$ are shown in ^[fig:sample_paths].
 
 ![\label{fig:sample_paths}Examples of two sample paths of the random function $\xi(t, \omega)$. In this context, the random function represents atmospheric channel transmittance $\eta$. The pink line corresponds to the realization $\xi^{(\omega_1)}(t)$, while the blue line corresponds to $\xi^{(\omega_2)}(t)$. Each path illustrates the deterministic evolution of the channel transmittance over time $t$ for a fixed outcome $\omega$.](background/eta_process.pdf)
+
+>~~The function $\xi$ is what we call a random function~~. 
 
 If we fix the domain parameter $t$ -- i.e., look at all possible universes at a single time, then we obtain a random variable $\xi_t$.
 In this view, the random function can be seen as a family of random variables $\{\xi_t\}_{t\in T}$ indexed by $t \in T$.
@@ -44,16 +46,22 @@ This simplifies the process, such as all functions $F_t(x) \ \forall t \in T$ ar
 
 We can characterize random functions with moments.
 The first moment $\mu(t)=\mathbb E\, \xi_t = \int_{-\infty}^\infty x dF_t(x)$ is the mean value.
-For the stationary random function it is constant $\mu=\mu(t)$, so it's often useful to redefine our random process with a new random process $\xi_t - \mu$, as we did with the refractive index random field ^[eq:deltan]. The second moment is the correlation function, which gives more precise characteristic of the random function:
+For the stationary random function it is constant $\mu=\mu(t)$, so it's often useful to redefine our random process with a new random process $\xi_t - \mu$. The second moment is the correlation function, which gives more precise characteristic of the random function:
 $$B(t_1, t_2) = \mathbb E\, \xi_{t_1}\overline{\xi_{t_2}} = \int_{-\infty}^\infty\int_{-\infty}^\infty x_1 x_2 dF_{t_1,t_2}(x_1,x_2)$$
 For the stationary random function it only depends on the time difference $\mathbb E\, \xi_{t}\overline{\xi_{t+\tau}} = B(\tau)$.
 
+>  as we did with the refractive index random field ^[eq:deltan
+
 While correlation function characterize how similar the values at distance $r$, sometimes it's useful to consider how different the values at distance $r$, which is possible with the structure function
-$$D(t_1,t_2)=\mathbb E|\xi_{t_1}-\xi_{t_2}|^2=\int_{-\infty}^\infty\int_{-\infty}^\infty |x_1 - x_2|^2 dF_{t_1,t_2}(x_1,x_2)$$
+$$
+%\label{eq:struct_func}
+D(t_1,t_2)=\mathbb E|\xi_{t_1}-\xi_{t_2}|^2=\int_{-\infty}^\infty\int_{-\infty}^\infty |x_1 - x_2|^2 dF_{t_1,t_2}(x_1,x_2)$$
 The structure function is a powerful tool in the theory of random function with stationary increment^[@kolmogorov1941], but in the case of stationary functions it also depends only on the time difference $\tau$ and it simply relates to the correlation function as $D(\tau) = 2 \left(B(0) - \mathrm{Re}\, B(\tau)\right)$.
 
-In turbulent atmosphere science it's also common to characterize random fields with the complimentary to correlation function power spectral density function $\Phi(k)$, defined as Fourier transformation^[Wiener–Khinchin_theorem]:
-$$\Phi(\lambda) = \frac{1}{2\pi}\int e^{-i\lambda\tau} B(\tau)\, d\tau$$
+In turbulent atmosphere science it's also common to characterize random fields with the complimentary to correlation function power spectral density function $\Phi(k)$, defined as Fourier transformation^[@wiener1930,khintchine1934]:
+$$
+%\label{eq:psd_theory}
+\Phi(\lambda) = \frac{1}{2\pi}\int e^{-i\lambda\tau} B(\tau)\, d\tau$$
 In one of the next subsection we will explicitly present several models for refractive index random field using power spectral density function formalism.
 
 >- know avg mean square difference
@@ -67,6 +75,7 @@ As in the case of regular functions, it can be very useful to represent random f
 
 In the limit we get the spectral representation theorem (Cramér–Karhunen), which states that any stationary process $\xi(t)$ can be represented in the form of the Fourier-Stieltjes integral:
 $$
+%\label{eq:FSint}
 \xi(t) = \int_{-\infty}^\infty e^{i\lambda t} dZ(\lambda)
 $$
 where $dZ(\lambda)$ is a random increment, which associates a random variable for each interval $[\lambda, \lambda + d\lambda]$, with the following properties:

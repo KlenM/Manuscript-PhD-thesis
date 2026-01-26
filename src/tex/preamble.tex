@@ -5,6 +5,7 @@
 
 \usepackage{fontspec}
 \setmainfont{Nimbus Roman}
+\newfontfamily{\helvetica}{Nimbus Sans}
 
 \usepackage{amssymb,amsfonts,amsmath}
 \usepackage{enumerate}
@@ -15,28 +16,32 @@
 \usepackage{booktabs}
 \usepackage{array,longtable}
 
+\usepackage[left=3.1cm, right=1.3cm, top=2.2cm, bottom=2.2cm]{geometry}
 \usepackage{geometry}
 % \geometry{left=3cm}
 % \geometry{right=1cm}
 % \geometry{top=2cm}
 % \geometry{bottom=2cm}
-\geometry{left=3cm}
-\geometry{right=1.5cm}
-\geometry{top=2.5cm}
-\geometry{bottom=2.5cm}
-\renewcommand{\baselinestretch}{1.4} % 1.5 interval
-\parindent 1.27cm % paragraph indent
+
+\usepackage{setspace}
+\setstretch{1.5}
+% \renewcommand{\baselinestretch}{1.4} % 1.5 interval
+
+\setlength{\parindent}{1.27cm}
 
 % Uncomment to stop hyphenation
 \usepackage[none]{hyphenat}
 \sloppy
+\usepackage{microtype}
 
 \usepackage{hyperref}
 \hypersetup{
     colorlinks, urlcolor={blue},
     linkcolor={blue}, citecolor={blue}, filecolor={blue},
     pdfauthor={Mykyta Klen},
-    pdftitle={Numerical simulation of Atmospheric Quatum Channels}
+    pdftitle={Statistical models and temporal coherence of quantum light in the turbulent atmosphere},
+    pdfkeywords={Free-space quantum channels, Quantum communication, Atmospheric turbulence, Quantum optics, Phase-screens numerical simulation, Split-step with sparse spectrum method, pyatmosphere (Python library), Probability distribution of transmittance (PDT), Transmittance matching method, Circular beam model, Two-time Probability Distribution of Transmittance (Two-time PDT), Temporal correlations in free-space channels, Time-bin encoding, Spatial coherence radius, CV and DV entanglement, Adaptive selection protocols, Nonclassicality preservation, Quantum memory in atmosphere, Strong fluctuation regime, Truncated lognormal model, Beam wandering model, Elliptical beam model, Total probability model, Beta distribution model},
+    pdfsubject={PhD Thesis}
 }
 \usepackage[capitalize,nameinlink]{cleveref}
 
@@ -67,10 +72,14 @@
 \setlist{nolistsep}
 \renewcommand{\labelitemi}{--}
 
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+
 \usepackage{caption}
 \DeclareCaptionLabelSeparator{defffis}{ -- }
-\captionsetup[figure]{name=Figure,justification=centering, labelsep=defffis, format=plain}
-\captionsetup[table]{name=Table,justification=raggedright,  format=plain, labelsep=defffis, singlelinecheck=false, margin=1.27cm}
+\captionsetup[figure]{name=Figure,justification=centering, labelsep=defffis, format=plain, font={stretch=1.2}}
+\captionsetup[table]{name=Table,justification=raggedright,  format=plain, labelsep=defffis, singlelinecheck=false, font={stretch=1.2}, margin=1.27cm}
 
 % \newcommand{\anonsection}[1]{
 %     \phantomsection
@@ -103,6 +112,7 @@
         \caption{#3}%
     \end{figure}%
 }
+\floatplacement{figure}{ht}
 
 
 \setlength{\bibitemsep}{0pt} % equivalent to \setlength{\itemsep}{0pt}
@@ -118,22 +128,24 @@
 
 \definecolor{green}{RGB}{34,139,34}
 \definecolor{red}{RGB}{178,34,34}
+\definecolor{thesisorange}{RGB}{235, 126, 35}
+\definecolor{thesisblue}{RGB}{30, 50, 100}
 
-\makeatletter
-\renewenvironment{thebibliography}[1]
-    {\section*{\refname}
-        \list{\@biblabel{\@arabic\c@enumiv}}
-           {\settowidth\labelwidth{\@biblabel{#1}}
-            \leftmargin\labelsep
-            \itemindent 16.7mm
-            \@openbib@code
-            \usecounter{enumiv}
-            \let\p@enumiv\@empty
-            \renewcommand\theenumiv{\@arabic\c@enumiv}
-        }
-        \setlength{\itemsep}{0pt}
-    }
-\makeatother
+% \makeatletter
+% \renewenvironment{thebibliography}[1]
+%     {\section*{\refname}
+%         \list{\@biblabel{\@arabic\c@enumiv}}
+%            {\settowidth\labelwidth{\@biblabel{#1}}
+%             \leftmargin\labelsep
+%             \itemindent 16.7mm
+%             \@openbib@code
+%             \usecounter{enumiv}
+%             \let\p@enumiv\@empty
+%             \renewcommand\theenumiv{\@arabic\c@enumiv}
+%         }
+%         \setlength{\itemsep}{0pt}
+%     }
+% \makeatother
 
 % \makeatletter
 % \renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%

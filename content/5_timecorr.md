@@ -1,4 +1,4 @@
-# Time correlations in Atmospheric Quantum Channels
+# Time correlations in Atmospheric Quantum Channels {#sec:timecorr}
 
 In the previous sections we treated the PDT as describing an ensemble of independent single-shot propagations of quantum states of light through a turbulent atmosphere.
 This can also be viewed as a sequence of quantum states transmitted with sufficiently large time intervals, such that each transmission is effectively independent and no temporal correlations exist between them.
@@ -14,15 +14,15 @@ We also describe the PDT in scenarios relevant for adaptive selection techniques
 In the ^[sec:application], we will demonstrate how these results guide continuous-variable and discrete-variable entanglement propagation protocols, and how they can be employed to enhance the preservation of nonclassicality through adaptive selection techniques.
 
 ## Two-time PDT
-To describe the two-time probability distribution of transmittance (PDT), we extend the model introduced in ^[sec:numeroical_model] to account for time-dependent fluctuations of the refractive index. In this approach, the refractive index is represented as
+To describe the two-time probability distribution of transmittance (PDT), we extend the PDT framework (see ^[sec:aqc]) to account for time-dependent fluctuations of the refractive index. In this approach, the refractive index is represented as
 $$n_t(\mathbf{r},z)=1+\delta n_t(\mathbf{r},z)$$
 where $\delta n_t(\mathbf{r},z)$ denotes the small, time-dependent, stochastic perturbation caused by atmospheric turbulence.
-The evolution of the complex field amplitude $u_t(\mathbf{r},z)$ under these conditions is governed by the paraxial wave equation ^[eq:paraxial], which, for a time-dependent refractive index, takes the form
+The evolution of the complex field amplitude $u_t(\mathbf{r},z)$ under these conditions is governed by the paraxial wave equation ^[eq:parax], which, for a time-dependent refractive index, takes the form
 $$
 2ik\frac{\partial u_t(\mathbf{r},z)}{\partial z}+\Delta_\mathbf{r}
 u_t(\mathbf{r},z)+2k^2\delta n_t(\mathbf{r},z) u_t(\mathbf{r},z)=0,
 $$
-To specify the temporal evolution of the refractive index we adopt the Taylor's frozen-turbulence hypothesis ^[eq:taylor] described in ^[sec:taylor].
+To specify the temporal evolution of the refractive index we adopt the Taylor's frozen-turbulence hypothesis ^[eq:taylor_n] described in ^[sec:turb].
 Under this assumption, time-dependent turbulence can be represented as a frozen spatial pattern advected by the wind.
 
 The transmittance through a receiving aperture $\mathcal{A}$ at time $t$ is then given by the aperture-averaged intensity of the propagated field:
@@ -30,7 +30,7 @@ $$
 \eta_t=\int_\mathcal{A}d^2\mathbf{r} \left|u_t(\mathbf{r},z_\mathrm{ap})\right|^2.
 $$
 We consider two temporal modes at $t=0$ and $t=\tau$.
-The two mode input output relation for the Glauber P function for channels with fixed linear losses $\eta_0$ and $\eta_\tau$ reads by analogy with single time relation^[eq:Pfunc] ^[@twomodeP]
+The two mode input output relation for the Glauber P function for channels with fixed linear losses $\eta_0$ and $\eta_\tau$ reads by analogy with single time relation^[eq:PoutPin]
 $$
 P_\mathrm{out}(\alpha_0,\alpha_\tau|\eta_0,\eta_\tau)=
 \frac{1}{\eta_0\eta_\tau}P_\mathrm{in}\left(\frac{\alpha_0}{\sqrt{\eta_0}},\frac{\alpha_\tau}{\sqrt{\eta_\tau}}\right)
@@ -88,19 +88,17 @@ The inner and outer turbulence scales are set to $\ell_0 = 1~\text{mm}$ and $L_0
 The source is a Gaussian beam of wavelength $\lambda = 808~\text{nm}$ with initial beam width $W_0 = 8~\text{cm}$ and curvature radius $F_0 = 50~\text{km}$.
 
 The numerical grid contains $2048$ points in both transverse directions with a grid step of $1~\text{mm}$.
-The Sparse Spectrum phase screen method ^[sec:phasescreen] is used with $1024$ spectral rings.
+The Sparse Spectrum phase screen method ^[sec:numsim] is used with $1024$ spectral rings.
 The spectral bounds are defined $K_\mathrm{min}=1/15 L_0$ and $K_\mathrm{max}=2/\ell_0$.
-The propagation path is discretized into $15$ phase screens ^[@Schmidt_book; @Martin1988].
+The propagation path is discretized into $15$ phase screens (see^[sec:verification]).
 For each of the three channels we generate $5\times10^4$ independent realizations for different values of time interval $\tau$ and aperture radius $R_\text{ap}$.
 
 ## Results
 ### Two-time PDT
 The joint distribution of the transmittance at two different times offers a direct view of the statistical dependence between consecutive pulses separated by the time interval $\tau=s/v$.
-In ^[fig:2timpdt] the two dimensional kernel density estimates of the joint PDT are shown for short and long pulse separation times for $R_\text{ap}=??$.
->[!attention] Rap
+In ^[fig:2timepdt] the two dimensional kernel density estimates of the joint PDT are shown for short and long pulse separation times for $R_\text{ap}=20~\text{cm}$.
 
-![[twotimepdt.pdf]]
-> (the weakest one channel)
+![\label{fig:2timepdt}Two-time PDT $\mathcal{P}(\eta_0, \eta_\tau)$ for the channel with $\sigma_{\mathrm{R}}^2 = 5.5$ and $R_\text{ap} = 20~\text{cm}$. The left panel shows a short pulse separation, where the distribution is concentrated along the diagonal, indicating high temporal correlation. The right panel shows a longer separation, where the distribution spreads and approaches a product of marginals $\mathcal{P}(\eta_0)\mathcal{P}(\eta_\tau)$, signifying nearly independent transmittance events.](time_corr/twotimepdt.pdf)
 
 For the smaller time interval $s=3~\text{cm}$ ($\tau=3~\text{ms}$) the distribution is sharply concentrated along the diagonal.
 The local refractive index pattern is only slightly changed over such a short interval, so the transmittance undergoes only minor variations.
@@ -116,14 +114,15 @@ It directly reveals how the atmosphere preserves correlations between consecutiv
 
 ### Spatial coherence radius
 >[!attention] wrong description !
-
-Figure ^[fig:weak] presents the Pearson correlation between the aperture-averaged transmittances $\eta_0$ and $\eta_\tau$ as a function of the pulse separation time $\tau$ for two receiving apertures.
-![[corr.pdf]]
->(the weakest one)
-
+>- what specifically?? 
+>- [ ] fix words about independence on turbulence strength
+ 
+^[fig:pearson_eta_corr] presents the Pearson correlation between the aperture-averaged transmittances $\eta_0$ and $\eta_\tau$ as a function of the pulse separation time $\tau$ for two receiving apertures.
 The correlation exhibits a strictly monotonic decrease as $s$ increases, reflecting the decorrelation caused by the transversal motion of refractive-index inhomogeneities.
 
-To quantify this behaviour by a single physically interpretable measure, we introduce the aperture-averaged spatial coherence radius $\rho_0$, defined as the value of the wind-driven shift $s$ for which the Pearson correlation falls to $e^{-1}$^[@andrws].
+![\label{fig:pearson_eta_corr}Pearson correlation coefficient between transmittances $\eta_0$ and $\eta_\tau$ as a function of the wind-driven shift $s$ for two different aperture radii $R_\text{ap}$. The horizontal dotted line indicates the $e^{-1}$ threshold used to define the spatial coherence radius $\rho_0$. Results are shown for the turbulence channel with $\sigma_{\mathrm{R}}^2 = 5.5$.](time_corr/corr.pdf)
+
+To quantify this behaviour by a single physically interpretable measure, we introduce the aperture-averaged spatial coherence radius $\rho_0$, defined as the value of the wind-driven shift $s$ for which the Pearson correlation falls to $e^{-1}$^[@andrews2005].
 This coherence radius captures the time interval $\tau$ (transverse wind-driven shift $s$) over which statistical correlations persist.
 In practical free-space quantum communication this parameter quantifies the minimal pulse rate $v/\rho_0$ above which successive quantum states experience non-negligible correlations.
 
@@ -133,7 +132,7 @@ This can be explained by noting that a larger aperture captures a broader region
 
 A more systematic view is provided in ^[fig:scr_ap], which shows $\rho_0$ as a function of aperture radius across all simulated turbulence regimes.
 
-![[corr_length.pdf]]
+![\label{fig:scr_ap}Aperture-averaged spatial coherence radius $\rho_0$ as a function of the aperture radius $R_\text{ap}$ for three turbulence regimes.](time_corr/corr_length.pdf)
 
 The figure indicates that the spatial coherence radius $\rho_0$ grows monotonically when the aperture radius $R_\text{ap}$ becomes larger.
 This implies that a wider aperture allows the optical field to maintain its nonclassical features for a longer time.
@@ -154,8 +153,7 @@ The conditional PDT provides the exact probability distribution of the transmitt
 
 ^[fig:condpdt] shows the conditional PDT of the second pulse for different spatial shifts $s$ corresponding to various time intervals $\tau$ between pulses for $\eta_\text{min}=0.45$.
 
-![[cond_pdt.pdf]]
->Conditional PDT is presented for a transmittance threshold of $\eta_\text{min} = 0.45$, a refractive-index structure constant $C_n^2 = 2 \times 10^{-16},\text{m}^{-2/3}$, an aperture radius $R_\text{ap} = 30,\text{cm}$, and varying values of the wind-driven shift $s$.
+![\label{fig:condpdt}Conditional PDT $\mathcal{P}(\eta_\tau \mid \eta_0 > \eta_\text{min})$ for varying wind-driven shifts $s$. At small shifts (e.g., $s=1$ cm), the distribution is located at high transmittance values, validating the predictive power of the probe pulse. As the shift increases, the distribution broadens and eventually converges to the unconditioned single-time PDT (grey solid line), marking the limit of adaptive selection effectiveness.](time_corr/cond_pdt.pdf)
 
 For small shifts, up to $s \sim 1~\text{cm}$ ($\tau \sim 1~\text{ms}$), the conditional distribution closely resembles the ideal case with $s=0$, indicating that the transmittance of the first pulse reliably predicts the second pulse.
 As $s$ increases to several centimeters (several milliseconds), the probability of transmittance values below the threshold $\eta_\mathrm{min}$ becomes more significant.
@@ -166,7 +164,7 @@ For longer intervals, the predictive power of the classical probe decreases, and
 This analysis provides a quantitative framework for designing adaptive protocols and predicting their performance in realistic quantum communication systems.
 The application of these results for preserving nonclassical properties will be demonstrated in ^[sec:application].
 
-## Conclusion
+## Conclusion {#sec:conclusion_timecorr}
 
 The analysis of time correlations in atmospheric quantum channels demonstrates that the transmittance of consecutive optical pulses cannot generally be treated as independent.
 The concept of the two-time PDT $\mathcal{P}(\eta_0,\eta_\tau)$ provides a complete and tractable framework to quantify these correlations.

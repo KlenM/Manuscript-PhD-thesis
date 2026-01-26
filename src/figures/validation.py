@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.16.5"
+__generated_with = "0.19.4"
 app = marimo.App(width="medium")
 
 
@@ -18,7 +18,7 @@ def _():
     from scipy.interpolate import interp1d
 
 
-    plt.style.use("../klen.mplstyle")
+    plt.style.use("klen.mplstyle")
 
     def get_hist(eta):
         kde = gaussian_kde(eta)
@@ -117,7 +117,7 @@ def _():
     @dataclass
     class TotalProbabilityPlotParams(PlotParams):
         name: str = "total_probability"
-        label: Optional[str] = "$\\mathsf{T_L}$"
+        label: Optional[str] = "T"
         color: str = "#e28544"
         zorder: int = 3
 
@@ -328,9 +328,16 @@ def _(plt):
     return
 
 
+@app.cell
+def _():
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""# Online channel""")
+    mo.md(r"""
+    # Online channel
+    """)
     return
 
 
@@ -391,7 +398,7 @@ def _(
         return _f
 
     _f = _()
-    # _f.savefig('generated/psd_scales.svg')
+    # _f.savefig('generated/psd_scales.pdf')
     _f.tight_layout()
     _f
     return
@@ -406,7 +413,9 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""# weak_inf""")
+    mo.md(r"""
+    # weak_inf
+    """)
     return
 
 
@@ -445,7 +454,7 @@ def _(
         _name = plot_pdt(_ax, 'weak_inf', aperture_radius=aperture_weak_inf, models=models)
         _ax.set_ylim(0, 24)
         _f.tight_layout()
-        _f.savefig(f'plots/{_name}.svg', bbox_inches='tight', pad_inches=1/50)
+        _f.savefig(f'tmp/{_name}.pdf', bbox_inches='tight', pad_inches=1/50)
         return _f
 
     mo.hstack([_(), "", ""], widths=[2,2,1])
@@ -456,7 +465,6 @@ def _(
 def _(
     BeamWanderingPlotParams,
     BetaPlotParams,
-    BetaTotalProbabilityPlotParams,
     EllipticalBeamPlotParams,
     FIGSIZE_SOLO,
     LognormalPlotParams,
@@ -473,7 +481,7 @@ def _(
             BetaPlotParams(label_pos=11, label_dx=0.003, ks_smooth=4),
             EllipticalBeamPlotParams(label_pos=23, ks_smooth=4),
             TotalProbabilityPlotParams(label_pos=14, ks_smooth=1),
-            BetaTotalProbabilityPlotParams(label_pos=16, ks_smooth=5),
+            # BetaTotalProbabilityPlotParams(label_pos=16, ks_smooth=5),
             # NumEllipticalBeamPlotParams(label_pos=30, ks_smooth=1),
             # NumTotalProbabilityPlotParams(label_pos=26, ks_smooth=4),
             # NumBetaTotalProbabilityPlotParams(label_pos=34, ks_smooth=4),
@@ -481,8 +489,9 @@ def _(
         _f, _ax = plt.subplots(1, 1, figsize=FIGSIZE_SOLO)
         filename = plot_ks_values(ax=_ax, channel_name='weak_inf', models=models, apertures=[aperture_weak_inf])
         _ax.set_ylim(1e-3, 1)
+        _ax.set_xlim(0.03, 1.35)
         _f.tight_layout()
-        _f.savefig(f'plots/weak_inf_ks_values.svg', bbox_inches='tight', pad_inches=1/25.4)
+        _f.savefig(f'tmp/weak_inf_ks_values.pdf', bbox_inches='tight', pad_inches=1/25.4)
         return _f
 
     mo.hstack([_(), "", ""], widths=[2,2,1])
@@ -491,7 +500,9 @@ def _(
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""# weak_zap""")
+    mo.md(r"""
+    # weak_zap
+    """)
     return
 
 
@@ -504,11 +515,11 @@ def _():
 @app.cell
 def _(
     BetaPlotParams,
-    BetaTotalProbabilityPlotParams,
     EllipticalBeamPlotParams,
     FIGSIZE_SOLO,
     LognormalPlotParams,
     NumericalPlotParams,
+    TotalProbabilityPlotParams,
     aperture_weak_zap,
     mo,
     plot_pdt,
@@ -521,14 +532,14 @@ def _(
             BetaPlotParams(ks_smooth=1, label_pos=168, label_dy=0.005, label_dx=0.001),
             EllipticalBeamPlotParams(smooth=2.5, ks_smooth=4, label_pos=140, label_dy=0.025),
             # NumEllipticalBeamPlotParams(smooth=2.5, ks_smooth=4, label_pos=125, label_dy=0.025),
-            # TotalProbabilityPlotParams(label_pos=150),
-            BetaTotalProbabilityPlotParams(label_pos=161),
+            TotalProbabilityPlotParams(label_pos=161),
+            # BetaTotalProbabilityPlotParams(label_pos=161),
         ]
 
         _f, _ax = plt.subplots(1, 1, figsize=FIGSIZE_SOLO)
         _name = plot_pdt(_ax, 'weak_zap', aperture_radius=aperture_weak_zap, models=models)
         _f.tight_layout()
-        _f.savefig(f'plots/{_name}.svg', bbox_inches='tight', pad_inches=1/50)
+        _f.savefig(f'tmp/{_name}.pdf', bbox_inches='tight', pad_inches=1/50)
         return _f
 
     mo.hstack([_(), "", ""], widths=[2,2,1])
@@ -539,7 +550,6 @@ def _(
 def _(
     BeamWanderingPlotParams,
     BetaPlotParams,
-    BetaTotalProbabilityPlotParams,
     EllipticalBeamPlotParams,
     FIGSIZE_SOLO,
     LognormalPlotParams,
@@ -555,8 +565,8 @@ def _(
             BeamWanderingPlotParams(label_pos=17, ks_smooth=4.5),
             BetaPlotParams(label_pos=13, label_dx=0.003),
             EllipticalBeamPlotParams(label_pos=23, ks_smooth=4),
-            TotalProbabilityPlotParams(label_pos=14, ks_smooth=1),
-            BetaTotalProbabilityPlotParams(label_pos=16, ks_smooth=2),
+            TotalProbabilityPlotParams(label_pos=16, ks_smooth=1),
+            # BetaTotalProbabilityPlotParams(label_pos=16, ks_smooth=2),
             # NumEllipticalBeamPlotParams(label_pos=30, ks_smooth=1),
             # NumTotalProbabilityPlotParams(label_pos=26, ks_smooth=4),
             # NumBetaTotalProbabilityPlotParams(label_pos=34, ks_smooth=4),
@@ -564,8 +574,9 @@ def _(
         _f, _ax = plt.subplots(1, 1, figsize=FIGSIZE_SOLO)
         filename = plot_ks_values(ax=_ax, channel_name='weak_zap', models=models, apertures=[aperture_weak_zap])
         _ax.set_ylim(1e-3, 1)
+        _ax.set_xlim(0.03, 1.5)
         _f.tight_layout()
-        _f.savefig(f'plots/weak_zap_ks_values.svg', bbox_inches='tight', pad_inches=1/25.4)
+        _f.savefig(f'tmp/weak_zap_ks_values.pdf', bbox_inches='tight', pad_inches=1/25.4)
         return _f
 
     mo.hstack([_(), "", ""], widths=[2,2,1])
@@ -574,7 +585,9 @@ def _(
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""# moderate_inf""")
+    mo.md(r"""
+    # moderate_inf
+    """)
     return
 
 
@@ -629,7 +642,7 @@ def _(
         _ax[1].set_ylim(0, 15)
         _ax[1].set_ylabel(None)
         # _f.tight_layout()
-        _f.savefig(f'plots/{_name}.svg', bbox_inches='tight', pad_inches=1/50)
+        _f.savefig(f'tmp/{_name}.pdf', bbox_inches='tight', pad_inches=1/50)
         return _f
 
     mo.hstack([_(), ""], widths=[2,1])
@@ -640,7 +653,6 @@ def _(
 def _(
     BeamWanderingPlotParams,
     BetaPlotParams,
-    BetaTotalProbabilityPlotParams,
     EllipticalBeamPlotParams,
     FIGSIZE_SOLO,
     LognormalPlotParams,
@@ -658,7 +670,7 @@ def _(
             BetaPlotParams(label_pos=11, label_dx=0.003, ks_smooth=4),
             EllipticalBeamPlotParams(label_pos=23, ks_smooth=4),
             TotalProbabilityPlotParams(label_pos=12, ks_smooth=1),
-            BetaTotalProbabilityPlotParams(label_pos=20, ks_smooth=5),
+            # BetaTotalProbabilityPlotParams(label_pos=20, ks_smooth=5),
             # NumEllipticalBeamPlotParams(label_pos=30, ks_smooth=1),
             # NumTotalProbabilityPlotParams(label_pos=26, ks_smooth=4),
             # NumBetaTotalProbabilityPlotParams(label_pos=34, ks_smooth=4),
@@ -666,8 +678,9 @@ def _(
         _f, _ax = plt.subplots(1, 1, figsize=FIGSIZE_SOLO)
         filename = plot_ks_values(ax=_ax, channel_name='moderate_inf', models=models, apertures=[aperture_moderate_inf, aperture_moderate_inf_2])
         _ax.set_ylim(4e-3, 1)
+        _ax.set_xlim(0.03, 1.25)
         _f.tight_layout()
-        _f.savefig(f'plots/moderate_inf_ks_values.svg', bbox_inches='tight', pad_inches=1/25.4)
+        _f.savefig(f'tmp/moderate_inf_ks_values.pdf', bbox_inches='tight', pad_inches=1/25.4)
         return _f
 
     mo.hstack([_(), "", ""], widths=[2,2,1])
@@ -676,7 +689,9 @@ def _(
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""# moderate_zap""")
+    mo.md(r"""
+    # moderate_zap
+    """)
     return
 
 
@@ -690,7 +705,6 @@ def _():
 def _(
     BeamWanderingPlotParams,
     BetaPlotParams,
-    BetaTotalProbabilityPlotParams,
     EllipticalBeamPlotParams,
     FIGSIZE_SOLO,
     LognormalPlotParams,
@@ -709,7 +723,7 @@ def _(
             BetaPlotParams(ks_smooth=1, label_pos=36, label_dy=0.005, label_dx=0.001),
             EllipticalBeamPlotParams(smooth=2.5, ks_smooth=4, label_pos=46, label_dy=0.025),
             TotalProbabilityPlotParams(label_pos=30),
-            BetaTotalProbabilityPlotParams(label_pos=27),
+            # BetaTotalProbabilityPlotParams(label_pos=27),
         ]
 
         _f, _ax = plt.subplots(1, 1, figsize=FIGSIZE_SOLO)
@@ -717,7 +731,7 @@ def _(
         _ax.set_xlim(0, 0.46)
         _ax.set_ylim(0, 8.9)
         _f.tight_layout()
-        _f.savefig(f'plots/{_name}.svg', bbox_inches='tight', pad_inches=1/50)
+        _f.savefig(f'tmp/{_name}.pdf', bbox_inches='tight', pad_inches=1/50)
         return _f
 
     mo.hstack([_(), "", ""], widths=[2,2,1])
@@ -728,7 +742,6 @@ def _(
 def _(
     BeamWanderingPlotParams,
     BetaPlotParams,
-    BetaTotalProbabilityPlotParams,
     EllipticalBeamPlotParams,
     FIGSIZE_SOLO,
     LognormalPlotParams,
@@ -742,10 +755,10 @@ def _(
         models=[
             LognormalPlotParams(label_pos=28),
             BeamWanderingPlotParams(label_pos=17, ks_smooth=4),
-            BetaPlotParams(label_pos=11, label_dx=0.003, ks_smooth=4),
+            BetaPlotParams(label_pos=18, label_dx=0.003, ks_smooth=4),
             EllipticalBeamPlotParams(label_pos=23, ks_smooth=0),
-            TotalProbabilityPlotParams(label_pos=12, ks_smooth=1),
-            BetaTotalProbabilityPlotParams(label_pos=20, ks_smooth=1),
+            TotalProbabilityPlotParams(label_pos=7, ks_smooth=1),
+            # BetaTotalProbabilityPlotParams(label_pos=20, ks_smooth=1),
             # NumEllipticalBeamPlotParams(label_pos=30, ks_smooth=1),
             # NumTotalProbabilityPlotParams(label_pos=26, ks_smooth=4),
             # NumBetaTotalProbabilityPlotParams(label_pos=34, ks_smooth=4),
@@ -753,8 +766,9 @@ def _(
         _f, _ax = plt.subplots(1, 1, figsize=FIGSIZE_SOLO)
         filename = plot_ks_values(ax=_ax, channel_name='moderate_zap', models=models, apertures=[aperture_moderate_zap])
         _ax.set_ylim(4e-3, 1)
+        _ax.set_xlim(0.03, 1.25)
         _f.tight_layout()
-        _f.savefig(f'plots/moderate_zap_ks_values.svg', bbox_inches='tight', pad_inches=1/25.4)
+        _f.savefig(f'tmp/moderate_zap_ks_values.pdf', bbox_inches='tight', pad_inches=1/25.4)
         return _f
 
     mo.hstack([_(), "", ""], widths=[2,2,1])
@@ -763,7 +777,9 @@ def _(
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""# strong_inf""")
+    mo.md(r"""
+    # strong_inf
+    """)
     return
 
 
@@ -801,7 +817,7 @@ def _(
         _ax.set_xlim(0, 0.05)
         # _ax.set_ylim(0, 15.4)
         _f.tight_layout()
-        _f.savefig(f'plots/{_name}.svg', bbox_inches='tight', pad_inches=1/50)
+        _f.savefig(f'tmp/{_name}.pdf', bbox_inches='tight', pad_inches=1/50)
         return _f
 
     mo.hstack([_(), "", ""], widths=[2,2,1])
@@ -812,7 +828,6 @@ def _(
 def _(
     BeamWanderingPlotParams,
     BetaPlotParams,
-    BetaTotalProbabilityPlotParams,
     EllipticalBeamPlotParams,
     FIGSIZE_SOLO,
     LognormalPlotParams,
@@ -824,12 +839,12 @@ def _(
 ):
     def _():
         models=[
-            LognormalPlotParams(label_pos=28),
-            BeamWanderingPlotParams(label_pos=17, ks_smooth=4.5),
+            LognormalPlotParams(label_pos=25),
+            BeamWanderingPlotParams(label_pos=14, ks_smooth=4.5),
             BetaPlotParams(label_pos=11, label_dx=0.003, ks_smooth=4),
-            EllipticalBeamPlotParams(label_pos=23, ks_smooth=4),
-            TotalProbabilityPlotParams(label_pos=12, ks_smooth=1),
-            BetaTotalProbabilityPlotParams(label_pos=20, ks_smooth=5),
+            EllipticalBeamPlotParams(label_pos=18, ks_smooth=4),
+            TotalProbabilityPlotParams(label_pos=16, ks_smooth=1),
+            # BetaTotalProbabilityPlotParams(label_pos=20, ks_smooth=5),
             # NumEllipticalBeamPlotParams(label_pos=30, ks_smooth=1),
             # NumTotalProbabilityPlotParams(label_pos=26, ks_smooth=4),
             # NumBetaTotalProbabilityPlotParams(label_pos=34, ks_smooth=4),
@@ -837,8 +852,9 @@ def _(
         _f, _ax = plt.subplots(1, 1, figsize=FIGSIZE_SOLO)
         filename = plot_ks_values(ax=_ax, channel_name='strong_inf', models=models, apertures=[aperture_strong_inf])
         _ax.set_ylim(4e-3, 1)
+        _ax.set_xlim(0.03, 1.15)
         _f.tight_layout()
-        _f.savefig(f'plots/strong_inf_ks_values.svg', bbox_inches='tight', pad_inches=1/25.4)
+        _f.savefig(f'tmp/strong_inf_ks_values.pdf', bbox_inches='tight', pad_inches=1/25.4)
         return _f
 
     mo.hstack([_(), "", ""], widths=[2,2,1])

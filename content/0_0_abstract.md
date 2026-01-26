@@ -1,6 +1,6 @@
 # Анотація {#sec:annotation_ua .unnumbered}
-**Клен М.Д. Чисельне моделювання квантових каналів в турбулентній атмосфері**. *-- Квалiфiкацiйна наукова праця на правах рукопису.*
-*Дисертацiя на здобуття наукового степеня доктора фiлософiї за спецiальнiстю 01.04.02 ”Теоретична фiзика” (104 - Фiзика та астрономiя). - Iнститут теоретичної фiзики iм. М.М. Боголюбова Нацiональної академiї наук України, Київ, 2026.*
+**Клен М.Д.** Статистичні моделі та часова когерентність квантового світла в турбулентній атмосфері. *-- Квалiфiкацiйна наукова праця на правах рукопису.*
+*Дисертацiя на здобуття наукового степеня доктора фiлософiї за спецiальнiстю 01.04.02 "Теоретична фiзика" (104 - Фiзика та астрономiя). -- Iнститут теоретичної фiзики iм. М.М. Боголюбова Нацiональної академiї наук України, Київ, 2026.*
 
 Квантові канали у вільному просторі забезпечують квантовий зв'язок на великі відстані в умовах, коли передача по оптичному волокну є недоцільною.
 Це охоплює значні дистанції, де експоненціальні втрати на поглинання в оптичному волокні унеможливлюють його використання, а також зв'язок між мобільними платформами, такими як супутниково-наземні канали та авіаційні системи.
@@ -111,23 +111,23 @@
 Однак на практиці досяжний часовий масштаб суттєво обмежений залежними від часу втратами на зберігання і зчитування в квантовій пам'яті, що скорочує час збереження заплутаності до декількох мілісекунд.
 Стійкість квантових кореляцій протягом таких часових інтервалів вказує на те, що використання двох або більше розділених у часі квантових станів може збільшити ефективну розмірність Гільбертового простору.
 
-**Ключовi слова:** 
-Квантові канали у вільному просторі, 
-Квантовий зв'язок, 
-Атмосферна турбулентність, 
-Квантова оптика, 
-Чисельне моделювання методом фазових екранів, 
-Розподіл імовірностей ефективності проходження (РІЕП), 
-Метод узгодження ефективності проходження, 
-Модель кругового променя, 
-Двочасовий розподіл імовірностей ефективності проходження (Двочасовий РІЕП), 
-Часові кореляції в каналах у вільному просторі, 
-Часове кодування, 
-Просторовий радіус когерентності, 
-Заплутаність неперервних та дискретних змінних, 
-Протоколи адаптивного вибору, 
-Збереження некласичності, 
-Квантова пам'ять в атмосфері, 
+**Ключовi слова:**
+Квантові канали у вільному просторі,
+Квантовий зв'язок,
+Атмосферна турбулентність,
+Квантова оптика,
+Чисельне моделювання методом фазових екранів,
+Розподіл імовірностей ефективності проходження (РІЕП),
+Метод узгодження ефективності проходження,
+Модель кругового променя,
+Двочасовий розподіл імовірностей ефективності проходження (Двочасовий РІЕП),
+Часові кореляції в каналах у вільному просторі,
+Часове кодування,
+Просторовий радіус когерентності,
+Заплутаність неперервних та дискретних змінних,
+Протоколи адаптивного вибору,
+Збереження некласичності,
+Квантова пам'ять в атмосфері,
 Режим сильної турбулетності.
 
 **Cписок публiкацiй:**
@@ -143,12 +143,12 @@
 > 5-7 pages
 
 # Abstract {#sec:annotation_en .unnumbered}
-**Klen M.D. Numerical simulation of atmospheric quantum channels.** -- *Qualifying scientific work in the form of a manuscript.*
-*Dissertation for the degree of Doctor of Philosophy in the specialty 01.04.02 ”Theoretical Physics” (104 - Physics and Astronomy). - Bogolyubov Institute for Theoretical Physics of the National Academy of Sciences of Ukraine, Kyiv, 2025.*
+**Klen M.D.** Statistical models and temporal coherence of quantum light in the turbulent atmosphere. -- *Qualifying scientific work in the form of a manuscript.*
+*Dissertation for the degree of Doctor of Philosophy in the specialty 01.04.02 "Theoretical Physics" (104 - Physics and Astronomy). -- Bogolyubov Institute for Theoretical Physics of the National Academy of Sciences of Ukraine, Kyiv, 2025.*
 
 > ## 1. Context and the Problem of Stochastic Transmittance
 
-Free-space quantum channels enable long-distance quantum communication in regimes where optical fiber transmission is impractical. 
+Free-space quantum channels enable long-distance quantum communication in regimes where optical fiber transmission is impractical.
 This includes very long distances where exponential fiber absorption losses prohibit fiber links, as well as communication between mobile platforms such as satellite-to-ground links and aircraft-based systems.
 Optical radiation is the optimal carrier for quantum information in such scenarios because it preserves quantum states over long distances.
 This enables a range of quantum communication protocols, including quantum key distribution, quantum teleportation, and entanglement swapping.
@@ -162,8 +162,8 @@ Subsequent measurements involve a finite optical system aperture, which truncate
 This process is equivalent to a linear loss channel characterized by the transmittance $\eta$, defined as the fraction of beam power captured by the receiver aperture.
 The single scalar $\eta$ encapsulates the complex three-dimensional propagation physics relevant for quantum state transmission.
 
-Atmospheric turbulence is a stochastic process, making the channel transmittance a random variable. 
-The probability distribution of transmittance (PDT), fully characterizes the statistics of quasi-monochromatic pulse propagation through an atmospheric quantum channel. 
+Atmospheric turbulence is a stochastic process, making the channel transmittance a random variable.
+The probability distribution of transmittance (PDT), fully characterizes the statistics of quasi-monochromatic pulse propagation through an atmospheric quantum channel.
 This framework enables explicit input-output relations between the transmitted and received quantum states, forming the basis for protocol performance analysis.
 
 Several analytical models for the PDT have been developed, but their range of validity remains unclear.
@@ -185,11 +185,11 @@ This creates a gap between theoretical description and characterization of trans
 
 In this thesis, we employ numerical simulations to gain quantitative insight into the resulting transmittance statistics.
 We employ the split step method for wave propagation in random media, which is widely used in classical optics and commonly referred to as the phase screen method.
-A central limitation of this approach is undersampling of the low frequency part of the turbulence spectrum. 
+A central limitation of this approach is undersampling of the low frequency part of the turbulence spectrum.
 To overcome this limitation, we adopt the sparse spectrum method, which generates phase screens whose statistics match the prescribed theoretical spectrum.
 
 With a proper choice of the number of phase screens and other simulation parameters, the sparse spectrum phase screen approach closes the gap between numerical simulation results and the underlying theoretical description.
-Moreover, the ability to generate phase screens of arbitrary size with correct statistical properties enables the study of temporal evolution of atmospheric channels under Taylor frozen turbulence hypothesis. 
+Moreover, the ability to generate phase screens of arbitrary size with correct statistical properties enables the study of temporal evolution of atmospheric channels under Taylor frozen turbulence hypothesis.
 The resulting framework enables a comprehensive analysis of free space optical channels and quantum properties of light propagating through the atmosphere.
 
 > ## 3. Validation of Physical Assumptions
@@ -216,13 +216,13 @@ This leads to systematic shifts of the distribution mode and inaccurate estimati
 The total probability model, which combines these two approaches, captures the skewness transition induced by changes in the aperture size.
 For small apertures, its performance closely follows that of the lognormal model, while for large apertures it yields some improvement in the predicting of the transmittance distribution.
 
- To mitigate the misspecification bias, we introduce a transmittance matching technique that reformulates beam-shape based models in terms of the first moments of transmittance.
+To mitigate the misspecification bias, we introduce a transmittance matching technique that reformulates beam-shape based models in terms of the first moments of transmittance.
 This method is applied to a model with an intermediate description between the beam wandering and elliptical beam models because of the complex, semi-analytical formulation of the latter.
 Despite its simpler formulation compared to the elliptical beam model, it generally outperforms it across all turbulence regimes.
 
 We also test key assumptions underlying physically based models.
 The beam centroid is confirmed to follow a two dimensional normal distribution, but its statistical independence from beam shape deformations is violated, especially in strong turbulence.
-In the elliptical beam model, the logarithms of the semi axes are assumed to follow a bivariate Gaussian distribution. 
+In the elliptical beam model, the logarithms of the semi axes are assumed to follow a bivariate Gaussian distribution.
 Numerical simulations instead reveal a strong suppression of probability density along the diagonal, which indicates that the two axes are rarely equal.
 These findings will guide the future development of the beam-shape based models.
 
@@ -265,35 +265,35 @@ These results demonstrate that temporal correlations in atmospheric channels can
 
 > - [ ] Final words, "Innovation and practical significance."
 
-**Keywords:** 
+**Keywords:**
 Free-space quantum channels,
 Quantum communication,
 Atmospheric turbulence,
-Quantum optics, 
-Phase-screens numerical simulation, 
-Split-step with sparse spectrum method, 
+Quantum optics,
+Phase-screens numerical simulation,
+Split-step with sparse spectrum method,
 pyatmosphere (Python library),
 Probability distribution of transmittance (PDT),
 Transmittance matching method,
 Circular beam model,
-Two-time Probability Distribution of Transmittance (Two-time PDT), 
+Two-time Probability Distribution of Transmittance (Two-time PDT),
 Temporal correlations in free-space channels,
 Time-bin encoding,
 Spatial coherence radius,
-CV and DV entanglement, 
+CV and DV entanglement,
 Adaptive selection protocols,
-Nonclassicality preservation, 
+Nonclassicality preservation,
 Quantum memory in atmosphere,
 Strong fluctuation regime
 
 > від 5 до 15.
 
 > To .pdf metadata:
->Truncated lognormal model, 
->Beam wandering model, 
->Elliptical beam model, 
->Total probability model, 
->Beta distribution model, 
+>Truncated lognormal model,
+>Beam wandering model,
+>Elliptical beam model,
+>Total probability model,
+>Beta distribution model,
 
 >Target Research Community:
 >- Information Theorists & Channel Modelers

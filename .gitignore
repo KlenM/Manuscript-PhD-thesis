@@ -3,3 +3,4 @@ __marimo__/
 .aux/
 main.pdf
 src/tex/converted/
+tmp/

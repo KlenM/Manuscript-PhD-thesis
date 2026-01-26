@@ -1,16 +1,18 @@
-## Quantum channels in turbulent atmosphere
+## Quantum channels in turbulent atmosphere {#sec:aqc}
 In the work of Semenov and Vogel (2009)^[@semenov2009], a more general problem of quantum state of light transformation after propagation through a turbulent atmosphere was considered.
 Taking into account the size of the collecting telescope and the fact that the total intensity after propagation cannot exceed the total intensity of the initial state, they derived the input-output relation of a quantum channel in a turbulent atmosphere.
 They showed that a light beam distorted by atmospheric turbulence, when passing through a finite aperture, can be modeled as a linear-loss quantum channel.
 The channel is characterized by an effective transmittance coefficient $\eta \in [0,1]$.
 This coefficient represents the fraction of the total beam intensity that passes through the aperture.
 
-While linear-loss channels can be specified in the density-operator formalism, a particularly elegant and tractable representation is obtained when quantum states are described in the Glauber–Sudarshan $P$-function representation^[eq:Pdef] ^[@glauber1963,sudarshan1963a].
+While linear-loss channels can be specified in the density-operator formalism, a particularly elegant and tractable representation is obtained when quantum states are described in the Glauber–Sudarshan $P$-function representation^[eq:rho2P] ^[@glauber1963,sudarshan1963a].
 Then, the input-output relation for linear-loss channels can be expressed as:
-$$P_{out}(\alpha) = \frac{1}{\eta} P_{in}\left(\frac{\alpha}{\sqrt{\eta}}\right)$$
+$$
+%\label{eq:PoutPin}
+P_{out}(\alpha) = \frac{1}{\eta} P_{in}\left(\frac{\alpha}{\sqrt{\eta}}\right)$$
 
 However, in the atmospheric case, the effective transmittance $\eta$ is not a fixed constant. Since the refractive index $n(\boldsymbol{r}, t)$ is a random field, every realization of turbulence corresponds to a different value of $\eta$. Consequently, the atmospheric quantum channel is a statistical mixture of lossy channels, described by averaging over all possible transmittance values:
-$$%\label{eq:Pdef}
+$$%\label{eq:PDTdef}
 P_{out}(\alpha) = \int_0^1 d \eta \mathcal{P}(\eta) \frac{1}{\eta} P_{in}\left(\frac{\alpha}{\sqrt{\eta}}\right)$$
 where $P(\eta)$ is the probability density of transmittance (PDT).
 The PDT encodes the statistics of turbulence and depends on multiple parameters: the source beam properties (e.g., waist size, wavelength), the atmospheric channel (e.g., turbulence strength, path length, model), and the aperture geometry.
@@ -41,7 +43,7 @@ We will discuss the precise mechanism of these perturbations in the next subsect
 >
 >Quantum channels are linear maps that transform one quantum state to another and satisfy the completely positive and trace-preserving (CPTP) conditions.
 
-### Analytical models of PDT
+### Analytical models of PDT {#sec:pdt}
 Several analytical models of the probability distribution of transmittance were developed between 2009 and 2018 to describe the statistical properties of atmospheric quantum channels.
 These models are typically formulated in terms of parameters derived from the field correlation function, such as the average transmittance, transmittance variance, or beam-spot parameters at the aperture plane, including the mean beam-spot radius and the variance of the beam-center position.
 

@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.16.5"
+__generated_with = "0.19.4"
 app = marimo.App(width="medium")
 
 
@@ -32,7 +32,6 @@ def _():
         x = np.linspace(min(eta), max(eta), 200)
         y = kde(x)
         return x, y
-
 
     return (
         Path,
@@ -77,7 +76,9 @@ def _(Path, config):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""# Beam centroid""")
+    mo.md(r"""
+    # Beam centroid
+    """)
     return
 
 
@@ -172,17 +173,17 @@ def _(CHANNELS, beam_centroid):
     def generate_markdown_tables(data):
         channels = ["weak", "moderate", "strong"]
         output = []
-    
+
         for channel in channels:
             output.append("| Channel | Skew | Kurtosis |")
             output.append("|:---|:---:|:---:|")
-        
+
             for measure, stats in data.items():
                 if measure.startswith(channel + '_'):
                     output.append(f"| {measure} | {stats['skew']:.3f} | {stats['kurtosis']:.3f} |")
-        
+
             output.append("")
-    
+
         return '\n'.join(output)
 
     _data = {channel_name: beam_centroid.cumulants(channel_name)
@@ -471,7 +472,9 @@ def _(plt):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""# Online channel""")
+    mo.md(r"""
+    # Online channel
+    """)
     return
 
 
@@ -540,7 +543,9 @@ def _(
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""# weak_inf""")
+    mo.md(r"""
+    # weak_inf
+    """)
     return
 
 
@@ -625,7 +630,9 @@ def _(
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""# weak_zap""")
+    mo.md(r"""
+    # weak_zap
+    """)
     return
 
 
@@ -708,7 +715,9 @@ def _(
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""# moderate_inf""")
+    mo.md(r"""
+    # moderate_inf
+    """)
     return
 
 
@@ -810,7 +819,9 @@ def _(
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""# moderate_zap""")
+    mo.md(r"""
+    # moderate_zap
+    """)
     return
 
 
@@ -897,7 +908,9 @@ def _(
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""# strong_inf""")
+    mo.md(r"""
+    # strong_inf
+    """)
     return
 
 
