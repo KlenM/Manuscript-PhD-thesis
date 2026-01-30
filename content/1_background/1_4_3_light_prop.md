@@ -82,10 +82,14 @@ x_0 = \int_{\mathbb{R}^2} d^2\boldsymbol{r} \, x\, |u(\boldsymbol{r}, z_\mathrm{
 While it is obvious that under the assumption of isotropic turbulence (see ^[sec:turb_cascade]) average value of the beam centroid $\left<x_0\right>=0$, it remains an open question whether its distribution is Gaussian.
 In particular, for strong turbulence the distribution can deviate, for example by exhibiting heavy tails.
 The second moment is referred to as the long-term beam-spot radius. It defined as
-$$W_\mathrm{LT}^2 = 4\int_{\mathbb{R}^2} d^2\boldsymbol{r} \, x^2\, \Gamma_2(\boldsymbol{r}, z_{\mathrm{ap}})$$
+$$
+%\label{eq:WLT2}
+W_\mathrm{LT}^2 = 4\int_{\mathbb{R}^2} d^2\boldsymbol{r} \, x^2\, \Gamma_2(\boldsymbol{r}, z_{\mathrm{ap}})$$
 and represents the effective spatial extent of the beam after propagation through turbulence, incorporating both diffraction and spreading due to the turbulence effects.
 The variance of the beam-centroid coordinate, often referred to as beam wandering, characterizes the random displacement of the beam’s center of gravity
-$$\sigma_\mathrm{BW}^2=\left<x_0^2\right>=
+$$
+%\label{eq:SBW2}
+\sigma_\mathrm{BW}^2=\left<x_0^2\right>=
 \int_{\mathbb{R}^4} d^2\boldsymbol{r}_1  d^2\boldsymbol{r}_2 \, x_1 x_2 \,\Gamma_4(\boldsymbol{r}_1, \boldsymbol{r}_2, z_\mathrm{ap})
 $$
 And complementary to these two quantities the squared beam-spot radius, which is also referred to as the short-term beam-spot radius, is defined as

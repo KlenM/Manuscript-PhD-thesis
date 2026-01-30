@@ -62,7 +62,9 @@ Other problem with this model arises when we take look at the low spectrum regio
 We can see that this model yields infinite value of power density as $L_0 \to \infty$ which is sometimes used to simplify calculation.
 Such unphysical condition can be fixed by  introducing models that behaves the same in the internal region but smoothly fall-off in the energy and viscosity ranges.
 One of such models is modified von Karman model which introduce decay of power spectral density at the $l_0$ and $L_0$ values
-$$\boxed{\Phi_n(\kappa) = 0.033 C_n^2 \frac{\exp(-\kappa^2/\kappa_m^2)}{(\kappa^2 + \kappa_0^2)^{11/6}}}$$
+$$
+%\label{eq:mvk}
+\boxed{\Phi_n(\kappa) = 0.033 C_n^2 \frac{\exp(-\kappa^2/\kappa_m^2)}{(\kappa^2 + \kappa_0^2)^{11/6}}}$$
 where $\kappa_0 = 2\pi/L_0$ and $\kappa_m = 5.92/l_0$ represent the outer and inner scale cutoffs, respectively.
 
 It is worth emphasizing that when this turbulence theory was first proposed, it consisted entirely of theoretical predictions.

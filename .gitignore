@@ -1,6 +1,7 @@
 __pycache__/
 __marimo__/
 .aux/
+src/tex/svg-inkscape/
 main.pdf
 src/tex/converted/
 tmp/

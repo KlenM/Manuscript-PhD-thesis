@@ -139,8 +139,8 @@ The results of the dissertation were presented at seminars of the Bogolyubov Ins
 
 #### Structure and Volume of the Thesis.
 
-The dissertation consists of an introduction, seven chapters, conclusions, and a list of references (0 titles).
-The total volume of the work is 0 pages, including 0 tables and 0 figures.
+The dissertation consists of an introduction, seven chapters, conclusions, and a list of references (122 references).
+The total volume of the work is 152 pages, including 90 equations, 9 tables and 31 figures.
 
 #### Relationship of the Work to Scientific Programs and Grants.
 

@@ -200,7 +200,7 @@ As the aperture increases, its performance gradually degrades.
 
 As seen in the left panel of ^[fig:pdt_moderate_inf], the beta model accurately reproduces the overall shape of the numerical distribution in this regime.
 In contrast, the truncated lognormal model produces a systematically narrower distribution, despite being parametrized using the first two moments.
-This bias likely arises because truncation alters the effective moments of the distribution, while the fitted parameters correspond to the underlying untruncated lognormal.
+This bias arises because truncation alters the effective moments of the distribution, while the fitted parameters correspond to the underlying untruncated lognormal.
 An additional contribution may come from mismatched higher order statistics, in particular the kurtosis.
 
 ![\label{fig:pdt_moderate_inf}PDT for a collimated beam in moderate turbulence at an aperture radius of $R_{\text{ap}} = 0.9~\text{cm}$ (left panel) and $R_{\text{ap}} = 5~\text{cm}$ (right panel). The beam wandering (W), elliptical beam (E), truncated lognormal (L), total probability (T), and beta distribution (B) models and numerical simulation results (N).](validation/moderate_inf_pdt_0_05.pdf)
@@ -226,7 +226,7 @@ Such a feature cannot be captured by any of the considered analytical models, al
 
 ![\label{fig:pdt_moderate_zap}PDT for a focused beam ($F_0 = z_{\mathrm{ap}}$) with an aperture radius of $R_{\text{ap}} = 1.2~\text{cm}$  in a moderate turbulence channel ($\sigma_{\mathrm{R}}^2 = 1.5$). The numerical simulation (N) is compared with the truncated lognormal (L), beam wandering (W), elliptical beam (E), total probability (T) and Beta distribution (B) models.](validation/moderate_zap_pdt_0_012.pdf)
 
-Overall, the agreement between analytical models and numerical results is worse in this regime than in the strong turbulence channel analyzed in the following section.'
+Overall, the agreement between analytical models and numerical results is worse in this regime than in the strong turbulence channel analyzed in the following section.
 
 ### Strong channel
 
