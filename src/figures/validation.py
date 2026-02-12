@@ -372,10 +372,10 @@ def _(
             # BeamWanderingPlotParams(),
             # LognormalPlotParams(ks_smooth=0, label_dy=0.04),
             # BetaPlotParams(ks_smooth=0, label_dy=0.005, label_dx=0.001),
-            # EllipticalBeamPlotParams(smooth=0, label_dy=0.025),
+            EllipticalBeamPlotParams(smooth=0, label_dy=0.025),
             # NumEllipticalBeamPlotParams(smooth=0, ks_smooth=4, label_pos=125, label_dy=0.025),
-            TotalProbabilityPlotParams(),
-            BetaTotalProbabilityPlotParams(),
+            # TotalProbabilityPlotParams(),
+            # BetaTotalProbabilityPlotParams(),
         ]
 
         _f, _ax = plt.subplots(1, 2, figsize=(150/25.4, 60/25.4))

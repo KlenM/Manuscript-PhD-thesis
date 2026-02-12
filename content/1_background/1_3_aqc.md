@@ -5,7 +5,7 @@ They showed that a light beam distorted by atmospheric turbulence, when passing 
 The channel is characterized by an effective transmittance coefficient $\eta \in [0,1]$.
 This coefficient represents the fraction of the total beam intensity that passes through the aperture.
 
-While linear-loss channels can be specified in the density-operator formalism, a particularly elegant and tractable representation is obtained when quantum states are described in the Glauber–Sudarshan $P$-function representation^[eq:rho2P] ^[@glauber1963,sudarshan1963a].
+While linear-loss channels can be specified in the density-operator formalism, a particularly elegant and tractable representation is obtained when quantum states are described in the Glauber-Sudarshan $P$-function representation^[eq:rho2P] ^[@glauber1963,sudarshan1963a].
 Then, the input-output relation for linear-loss channels can be expressed as:
 $$
 %\label{eq:PoutPin}

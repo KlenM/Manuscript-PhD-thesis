@@ -15,7 +15,7 @@ Examples of two sample paths as functions of $t$ are shown in ^[fig:sample_paths
 
 ![\label{fig:sample_paths}Examples of two sample paths of the random function $\xi(t, \omega)$. In this context, the random function represents atmospheric channel transmittance $\eta$. The pink line corresponds to the realization $\xi^{(\omega_1)}(t)$, while the blue line corresponds to $\xi^{(\omega_2)}(t)$. Each path illustrates the deterministic evolution of the channel transmittance over time $t$ for a fixed outcome $\omega$.](background/eta_process.pdf)
 
->~~The function $\xi$ is what we call a random function~~. 
+>~~The function $\xi$ is what we call a random function~~.
 
 If we fix the domain parameter $t$ -- i.e., look at all possible universes at a single time, then we obtain a random variable $\xi_t$.
 In this view, the random function can be seen as a family of random variables $\{\xi_t\}_{t\in T}$ indexed by $t \in T$.
@@ -73,7 +73,7 @@ In one of the next subsection we will explicitly present several models for refr
 #### Spectral representation.
 As in the case of regular functions, it can be very useful to represent random functions in the form of Fourier transform. It was shown, that any stationary random function can be arbitrarily closely represented on some interval $-T < t < T$ as a linear combination of finite number independent harmonic oscillators of the form $\xi_k e^{i\lambda_k t}$, where $\xi_k$ are some complex random variables with mean zero values and $\lambda_k$ are some real constants.
 
-In the limit we get the spectral representation theorem (Cramér–Karhunen), which states that any stationary process $\xi(t)$ can be represented in the form of the Fourier-Stieltjes integral:
+In the limit we get the spectral representation theorem (Cramer-Karhunen), which states that any stationary process $\xi(t)$ can be represented in the form of the Fourier-Stieltjes integral:
 $$
 %\label{eq:FSint}
 \xi(t) = \int_{-\infty}^\infty e^{i\lambda t} dZ(\lambda)

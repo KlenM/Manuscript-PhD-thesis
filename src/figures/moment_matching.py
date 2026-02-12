@@ -4,7 +4,7 @@ __generated_with = "0.19.4"
 app = marimo.App(width="medium")
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _():
     import marimo as mo
     import numpy as np
@@ -70,7 +70,7 @@ def _():
     return FIGSIZE_DOUBLE, FIGSIZE_SOLO
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _():
     from dataclasses import dataclass
     from typing import Optional
@@ -202,7 +202,7 @@ def _():
     )
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(
     NumericalPlotParams,
     Path,
@@ -435,7 +435,7 @@ def _(
         _ax[1].set_xlabel("Normalized aperture radius "
                       "$R_{{\\mathrm{{ap}}}} / W_{{\\mathrm{{LT}}}}$", labelpad=3, fontsize=12)
 
-    
+
         # _f.tight_layout()
         _f.savefig(f'tmp/MM_ks_values.pdf', bbox_inches='tight', pad_inches=1/25.4)
         return _f
@@ -476,7 +476,7 @@ def _(FIGSIZE_SOLO, gaussian_kde, np, pd, plt):
         x = np.linspace(min(dx2_mean), max(dx2_mean), 200)
         y = kde(x)
         ax.fill_between(x * 10000, 0, y, label='Simulated data', color='#00baf7')
-    
+
         # ax.hist(dx2_mean, bins=100, density=True);
         # _x = np.linspace(*ax.get_xlim(), 100)
         log_model, mu, s2 = fit_lognormal(dx2_mean)
@@ -494,6 +494,84 @@ def _(FIGSIZE_SOLO, gaussian_kde, np, pd, plt):
     plt.tight_layout()
     _f.savefig(f'tmp/MM_Spdf.pdf', bbox_inches='tight', pad_inches=1/50)
     plt.show()
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    # Presentation
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(
+    BeamWanderingPlotParams,
+    EllipticalBeamPlotParams,
+    FIGSIZE_SOLO,
+    NumericalPlotParams,
+    mo,
+    plot_pdt,
+    plt,
+):
+    def _():
+        models = [
+            NumericalPlotParams(smooth=1.8, label_pos=178, label_dy=-0.04, label_dx=0.00),
+            BeamWanderingPlotParams(label_pos=145),
+            # LognormalPlotParams(ks_smooth=1, label_pos=152, label_dy=0.04),
+            # BetaPlotParams(ks_smooth=1, label_pos=70, label_dy=0.005, label_dx=0.001),
+            EllipticalBeamPlotParams(smooth=2.5, ks_smooth=4, label_pos=160, label_dy=0.025),
+            # MMPlotParams(smooth=2.5, ks_smooth=4, label_pos=103, label_dy=0.025),
+            # NumEllipticalBeamPlotParams(smooth=2.5, ks_smooth=4, label_pos=125, label_dy=0.025),
+            # TotalProbabilityPlotParams(label_pos=150),
+            # BetaTotalProbabilityPlotParams(label_pos=161),
+        ]
+
+        _f, _ax = plt.subplots(1, 1, figsize=FIGSIZE_SOLO)
+        _name = plot_pdt(_ax, 'weak_zap', aperture_radius=0.015, models=models)
+        _ax.set_ylim(0, 11)
+        _ax.set_xlim(0.5, 1)
+        _f.tight_layout()
+        _f.savefig(f'tmp/pres_MM_{_name}.png', bbox_inches='tight', pad_inches=1/50, dpi=400)
+        return _f
+
+    mo.hstack([_(), "", ""], widths=[2,2,1])
+    return
+
+
+@app.cell
+def _(
+    BeamWanderingPlotParams,
+    EllipticalBeamPlotParams,
+    FIGSIZE_SOLO,
+    NumericalPlotParams,
+    mo,
+    plot_pdt,
+    plt,
+):
+    def _():
+        models = [
+            NumericalPlotParams(smooth=1.8, label_pos=178, label_dy=-0.04, label_dx=0.00),
+            BeamWanderingPlotParams(label_pos=183),
+            # LognormalPlotParams(ks_smooth=1, label_pos=152, label_dy=0.04),
+            # BetaPlotParams(ks_smooth=1, label_pos=70, label_dy=0.005, label_dx=0.001),
+            EllipticalBeamPlotParams(smooth=2.5, ks_smooth=4, label_pos=182, label_dy=0.025),
+            # MMPlotParams(smooth=2.5, ks_smooth=4, label_pos=103, label_dy=0.025),
+            # NumEllipticalBeamPlotParams(smooth=2.5, ks_smooth=4, label_pos=125, label_dy=0.025),
+            # TotalProbabilityPlotParams(label_pos=150),
+            # BetaTotalProbabilityPlotParams(label_pos=161),
+        ]
+
+        _f, _ax = plt.subplots(1, 1, figsize=FIGSIZE_SOLO)
+        _name = plot_pdt(_ax, 'weak_zap', aperture_radius=0.021, models=models)
+        _ax.set_ylim(0, 38)
+        _ax.set_xlim(0.88, 1)
+        _f.tight_layout()
+        _f.savefig(f'tmp/pres_MM_{_name}.png', bbox_inches='tight', pad_inches=1/50, dpi=400)
+        return _f
+
+    mo.hstack([_(), "", ""], widths=[2,2,1])
     return
 
 
