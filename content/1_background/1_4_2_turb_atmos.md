@@ -14,7 +14,7 @@ This assumption forms a workable starting point for studying the statistical pro
 >"By making one further assumption of incompressible turbulence, that is, g. v = 0 (Batchelor [2.4]), we can write D, in terms of Dr,," (["Laser Beam Propagation in the Atmosphere", 1978, p. 23](zotero://select/library/items/6VHCHVKG)) ([pdf](zotero://open-pdf/library/items/4WBAA526?page=23&annotation=VDDGJIX8))
 >"Clifford [-2.52] also showed that the depolarization effects of the atmosphere are negligible even when the wavelength 2 is greater than the inner scale Io" (["Laser Beam Propagation in the Atmosphere", 1978, p. 39](zotero://select/library/items/6VHCHVKG)) ([pdf](zotero://open-pdf/library/items/4WBAA526?page=39&annotation=BFRJZMRA))
 
-Let's consider the structure function of the velocity field -- ensemble average over turbulent atmosphere realizations of the square of longitudinal velocity difference at two points in space.
+Let's consider the structure function of the velocity field---ensemble average over turbulent atmosphere realizations of the square of longitudinal velocity difference at two points in space.
 $$%\label{eq:kolmStructFunc}
 D_v(r) = \left<|v(x) - v(x+r)|^2\right> \equiv  v_r^2$$
 Since we assume homogeneous and isotropic turbulence, the statistics of fluctuations do not depend on the direction.
@@ -47,7 +47,7 @@ The dominant contribution arises from temperature fluctuations, since temperatur
 In the inertial range of turbulence, the advective transport strongly dominates over diffusion, so temperature behaves as a passive scalar transported by the turbulent velocity field.
 Consequently, the structure functions of the refractive index, temperature, and velocity fields exhibit the same scaling behavior $D_n(r) \sim D_T(r) \sim D_v(r)$, and therefore
 $$D_n(r) = C_n^2 r^{2/3}\,,\quad l_0\ll r\ll L_0$$
-where $C_n^2$ is the refractive-index structure constant -- the parameter the primarily determines the turbulence strength.
+where $C_n^2$ is the refractive-index structure constant, which primarily determines the strength of the turbulence.
 
 > - It is also very common to define the Kolmogorov turbulence model with the power spectral density function, which can be obtained using ^[eq:DtoPhi] as
 
@@ -119,6 +119,6 @@ Despite these limitations, the frozen turbulence approximation is widely used in
 
 > link to adaptive optics as a proof of use
 
->In general, this makes some limits on the observation times, however, for a small region of interest -- such as an optical aperture -- it can often be applied over sufficiently long timescales.
+>In general, this makes some limits on the observation times, however, for a small region of interest---such as an optical aperture---it can often be applied over sufficiently long timescales.
 
 >### Turbulence strength $C_n^2$ parameter estimation

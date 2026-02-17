@@ -125,7 +125,7 @@ Taken together, these results demonstrate the feasibility of correlation aware s
 
 The research presented in the papers 1 and 2 was primarily conducted by the candidate.
 The scientific advisor, Andrii Semenov, provided the core conceptual ideas, research direction, and supervisory control throughout the project.
-The co-authors -- specifically D. Vasylyev, W. Vogel, and M. Bohmann -- provided assistance through enlightening discussions that helped refine the theoretical results and the interpretation of simulated data.
+The co-authors---specifically D. Vasylyev, W. Vogel, and M. Bohmann---provided assistance through enlightening discussions that helped refine the theoretical results and the interpretation of simulated data.
 
 In the paper 3 my individual contributions to the research included providing the numerical framework utilized for beam shape distribution analysis and performing the extensive model validation.
 Additionally, I proposed the moment matching technique to eliminate the model-misspecification bias found in previous models.

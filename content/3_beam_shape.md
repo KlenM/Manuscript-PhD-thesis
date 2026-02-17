@@ -15,8 +15,8 @@ Consequently, it does not allow confident estimation of higher-order moments, su
 To address this, we perform a systematic numerical study across several turbulence strengths.
 
 Given the isotropy of turbulence, the distribution of the beam centroid is radially symmetric.
-Consequently, it is sufficient to consider only a single-dimensional projection along the $x$-axis -- the beam-centroid coordinate $x_0$, defined as^[eq:x0].
-To verify whether the distribution is Gaussian, we generate $5\cdot10^{5}$ realizations of beam propagation, compute the corresponding values of $x_0$ according to ^[eq:x0], and estimate the higher-order moments -- the skewness and excess kurtosis^[@joanes1998].
+Consequently, it is sufficient to consider only a single-dimensional projection along the $x$-axis---the beam-centroid coordinate $x_0$, defined as^[eq:x0].
+To verify whether the distribution is Gaussian, we generate $5\cdot10^{5}$ realizations of beam propagation, compute the corresponding values of $x_0$ according to ^[eq:x0], and estimate the higher-order moments---the skewness and excess kurtosis^[@joanes1998].
 These higher-order moments provide a quantitative measure of deviations from the Gaussian assumption: skewness captures asymmetry in the distribution, while excess kurtosis reflects the presence of heavy tails or peakedness.
 
 To systematically evaluate the effect of turbulence strength, we perform this analysis across a range of atmospheric conditions, spanning weak to strong turbulence.

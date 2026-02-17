@@ -1,6 +1,6 @@
 # Анотація {#sec:annotation_ua .unnumbered}
-**Клен М.Д.** Статистичні моделі та часова когерентність квантового світла в турбулентній атмосфері. *-- Квалiфiкацiйна наукова праця на правах рукопису.*
-*Дисертацiя на здобуття наукового степеня доктора фiлософiї за спецiальнiстю 01.04.02 "Теоретична фiзика" (104 - Фiзика та астрономiя). -- Iнститут теоретичної фiзики iм. М.М. Боголюбова Нацiональної академiї наук України, Київ, 2026.*
+**Клен М.Д.** Статистичні моделі та часова когерентність квантового світла в турбулентній атмосфері.*---Квалiфiкацiйна наукова праця на правах рукопису.*
+*Дисертацiя на здобуття наукового степеня доктора фiлософiї за спецiальнiстю 01.04.02 "Теоретична фiзика" (104--Фiзика та астрономiя).---Iнститут теоретичної фiзики iм. М.М. Боголюбова Нацiональної академiї наук України, Київ, 2026.*
 
 Квантові канали у вільному просторі забезпечують квантовий зв'язок на великі відстані в умовах, коли передача по оптичному волокну є недоцільною.
 Це охоплює значні дистанції, де експоненціальні втрати на поглинання в оптичному волокні унеможливлюють його використання, а також зв'язок між мобільними платформами, такими як супутниково-наземні канали та авіаційні системи.
@@ -144,8 +144,8 @@
 > 5-7 pages
 
 # Abstract {#sec:annotation_en .unnumbered}
-**Klen M.D.** Statistical models and temporal coherence of quantum light in the turbulent atmosphere. -- *Qualifying scientific work in the form of a manuscript.*
-*Dissertation for the degree of Doctor of Philosophy in the specialty 01.04.02 "Theoretical Physics" (104 - Physics and Astronomy). -- Bogolyubov Institute for Theoretical Physics of the National Academy of Sciences of Ukraine, Kyiv, 2025.*
+**Klen M.D.** Statistical models and temporal coherence of quantum light in the turbulent atmosphere.---*Qualifying scientific work in the form of a manuscript.*
+*Dissertation for the degree of Doctor of Philosophy in the specialty 01.04.02 "Theoretical Physics" (104--Physics and Astronomy).---Bogolyubov Institute for Theoretical Physics of the National Academy of Sciences of Ukraine, Kyiv, 2025.*
 
 > ## 1. Context and the Problem of Stochastic Transmittance
 

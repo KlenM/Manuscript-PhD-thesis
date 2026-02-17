@@ -9,7 +9,7 @@ Let's consider a function $\xi$ of two parameters:
 $$\xi: T \times \Omega \to \xi(t, \omega)$$
 where $t \in T$ is the domain parameter (time, space, etc.) and $\omega \in \Omega$ is an outcome, which can be usefully interpreted as a specific realization of a universe from the set of all possible parallel worlds.
 This form allows us to adopt two complementary perspectives.
-If we fix the outcome $\omega$ -- i.e., select one specific universe, then we obtain a deterministic function $\xi^{(\omega)}(t)$.
+If we fix the outcome $\omega$---i.e., select one specific universe---then we obtain a deterministic function $\xi^{(\omega)}(t)$.
 This is referred to as a sample path or realization of the random function.
 Examples of two sample paths as functions of $t$ are shown in ^[fig:sample_paths].
 
@@ -17,7 +17,7 @@ Examples of two sample paths as functions of $t$ are shown in ^[fig:sample_paths
 
 >~~The function $\xi$ is what we call a random function~~.
 
-If we fix the domain parameter $t$ -- i.e., look at all possible universes at a single time, then we obtain a random variable $\xi_t$.
+If we fix the domain parameter $t$---i.e., look at all possible universes at a single time---then we obtain a random variable $\xi_t$.
 In this view, the random function can be seen as a family of random variables $\{\xi_t\}_{t\in T}$ indexed by $t \in T$.
 
 We can define some random function by specifying all distribution functions of the form ^[@yaglom2004]:
