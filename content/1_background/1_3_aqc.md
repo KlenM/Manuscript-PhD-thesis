@@ -9,11 +9,11 @@ While linear-loss channels can be specified in the density-operator formalism, a
 Then, the input-output relation for linear-loss channels can be expressed as:
 $$
 %\label{eq:PoutPin}
-P_{out}(\alpha) = \frac{1}{\eta} P_{in}\left(\frac{\alpha}{\sqrt{\eta}}\right)$$
+P_{out}(\alpha) = \frac{1}{\eta} P_\mathrm{in}\left(\frac{\alpha}{\sqrt{\eta}}\right)$$
 
 However, in the atmospheric case, the effective transmittance $\eta$ is not a fixed constant. Since the refractive index $n(\boldsymbol{r}, t)$ is a random field, every realization of turbulence corresponds to a different value of $\eta$. Consequently, the atmospheric quantum channel is a statistical mixture of lossy channels, described by averaging over all possible transmittance values:
 $$%\label{eq:PDTdef}
-P_{out}(\alpha) = \int_0^1 d \eta \mathcal{P}(\eta) \frac{1}{\eta} P_{in}\left(\frac{\alpha}{\sqrt{\eta}}\right)$$
+P_{out}(\alpha) = \int_0^1 d \eta \mathcal{P}(\eta) \frac{1}{\eta} P_\mathrm{in}\left(\frac{\alpha}{\sqrt{\eta}}\right)$$
 where $P(\eta)$ is the probability density of transmittance (PDT).
 The PDT encodes the statistics of turbulence and depends on multiple parameters: the source beam properties (e.g., waist size, wavelength), the atmospheric channel (e.g., turbulence strength, path length, model), and the aperture geometry.
 The probability density of transmittance (PDT) is the primary defining characteristic of atmospheric quantum channels, as it fully captures the stochastic effects of turbulence on the output quantum state.
@@ -71,12 +71,12 @@ It also remains an open question under which conditions each model should be app
 > origin, assumptions, key formula, and expected regime of validity.
 >
 > #### Beam wandering model.
-> $\mathcal{P}(\eta; W^2_\text{ST}, \sigma_\text{BW}^2)$
+> $\mathcal{P}(\eta; W^2_\mathrm{ST}, \sigma_\mathrm{BW}^2)$
 >
 > #### Elliptical beam model.
 >
 > #### Total probability law model.
->  $\mathcal{P}(\eta; \left<\eta\right>, \left<\eta^2\right>, W^2_\text{ST}, \sigma_\text{BW}^2)$
+>  $\mathcal{P}(\eta; \left<\eta\right>, \left<\eta^2\right>, W^2_\mathrm{ST}, \sigma_\mathrm{BW}^2)$
 >
 
 > - [ ] Where is the single-photon propagation introduced for the transmittance value?

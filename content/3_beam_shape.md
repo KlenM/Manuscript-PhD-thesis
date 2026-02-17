@@ -56,14 +56,14 @@ Focused $F=z_{\text{ap}}$ & $-0.0043$ & $-0.0038$ \\
 > | Weak channel            | Skewness | Excess curtosis |
 > | :---------------------- | :------: | :-------------: |
 > | Collimated $F=\infty$   |  0.0058  |      0.014      |
-> | Focused $F=z_\text{ap}$ | −0.0043  |     −0.0038     |
+> | Focused $F=z_\mathrm{ap}$ | −0.0043  |     −0.0038     |
 
 The skewness and excess kurtosis are effectively zero.
 These results indicate that, under weak turbulence, the beam-centroid displacement can be reliably modeled as a two-dimensional Gaussian random variable for both collimated and focused beams.
 This directly supports the standard assumption used in analytical models for the weak-turbulence regime.
 
 ### Moderate turbulence channel
-We next consider a stronger turbulence condition with propagation length $L=1.6\text{km}$ and Rytov variance $\sigma^2_\text{R}=1.5$.
+We next consider a stronger turbulence condition with propagation length $L=1.6\text{km}$ and Rytov variance $\sigma^2_\mathrm{R}=1.5$.
 The full set of channel parameters is given in ^[tab:moderate_params].
 The kernel-estimated probability density functions of the beam-centroid coordinate $x_0$ for both the collimated and focused beams are shown in ^[fig:x0_moderate].
 
@@ -91,13 +91,13 @@ Focused $F=z_{\text{ap}}$ & $-0.003$ & $-0.0279$ \\
 > | Weak channel            | Skewness | Excess curtosis |
 > | :---------------------- | :------: | :-------------: |
 > | Collimated $F=\infty$   |  0.0172  |     −0.0046     |
-> | Focused $F=z_\text{ap}$ |  −0.003  |     −0.0279     |
+> | Focused $F=z_\mathrm{ap}$ |  −0.003  |     −0.0279     |
 
 In both cases, the skewness and excess kurtosis remain very small.
 Thus, even at moderate turbulence strength, the beam-centroid position continues to be well described by a two-dimensional Gaussian random variable.
 
 ### Strong turbulence channel
-Finally, we consider the strong-turbulence channel with propagation length $L=50\text{km}$ and Rytov variance $\sigma_\text{R}^2=33.3$.
+Finally, we consider the strong-turbulence channel with propagation length $L=50\text{km}$ and Rytov variance $\sigma_\mathrm{R}^2=33.3$.
 The full set of channel parameters is given in ^[tab:strong_params].
 The kernel-estimated probability density function of the beam-centroid coordinate $x_0$ is shown in ^[fig:x0_strong].
 
@@ -146,26 +146,26 @@ S(r_0,\eta)=\frac{\left\langle\Delta r_0 \Delta\eta\right\rangle}{\sqrt{\left\la
 For every atmospheric channel listed in ^[sec:validation] and for each aperture radius, we perform $5\cdot10^5$ independent beam-propagation simulations, compute $r_0 = \sqrt{x_0^2 + y_0^2}$, where $x_0$ is defined as^[eq:x0] and $y_0$ is defined in the same way, evaluate transmittance $\eta$ according to ^[eq:eta] and estimate $S(r_0,\eta)$ ^[eq:r0eta].
 The dependence of the correlation on the aperture radius is shown in ^[fig:r0eta].
 
-![\label{fig:r0eta}Pearson correlation coefficient $S(r_0, \eta)$ between the beam-centroid displacement $r_0$ and transmittance $\eta$ as a function of the normalized aperture radius $R_\text{ap}/W_\text{LT}$. The plots compare collimated ($F_0 = +\infty$) and focused ($F_0 = z_\text{ap}$) beams across weak (W), moderate (M), and strong (S) turbulence regimes.](beam_shape/original_r_0_eta.pdf)
+![\label{fig:r0eta}Pearson correlation coefficient $S(r_0, \eta)$ between the beam-centroid displacement $r_0$ and transmittance $\eta$ as a function of the normalized aperture radius $R_\mathrm{ap}/W_\mathrm{LT}$. The plots compare collimated ($F_0 = +\infty$) and focused ($F_0 = z_\mathrm{ap}$) beams across weak (W), moderate (M), and strong (S) turbulence regimes.](beam_shape/original_r_0_eta.pdf)
 
 
 Across all atmospheric channels, the correlation between centroid displacement and transmittance is negative, reflecting the obvious fact that larger beam wandering reduces received power.
-The magnitude of this correlation strongly depends on the ratio between the aperture radius and the long-term beam radius $R_\text{ap}/W_\text{LT}$.
+The magnitude of this correlation strongly depends on the ratio between the aperture radius and the long-term beam radius $R_\mathrm{ap}/W_\mathrm{LT}$.
 
-For aperture radii much larger than $W_\text{LT}$, almost the full beam enters the receiver aperture regardless of its displacement.
+For aperture radii much larger than $W_\mathrm{LT}$, almost the full beam enters the receiver aperture regardless of its displacement.
 The correlation in this case close to zero.
-For aperture radii much smaller than $W_\text{LT}$, the beam is strongly clipped even without wandering.
+For aperture radii much smaller than $W_\mathrm{LT}$, the beam is strongly clipped even without wandering.
 Variations in the centroid position change the already-strong clipping only slightly, so the correlation again becomes small.
 The strongest correlation appears in the intermediate regime when
-$R_\text{ap} \lesssim W_\text{LT}$.
+$R_\mathrm{ap} \lesssim W_\mathrm{LT}$.
 Here, the aperture captures the central part of the beam, and centroid motion produces large changes in overlap of the field intensity and the aperture.
-The minimum typically occurs around $R_\text{ap} \approx 0.5 W_\text{LT}$.
+The minimum typically occurs around $R_\mathrm{ap} \approx 0.5 W_\mathrm{LT}$.
 
-A clear trend also appears when comparing channels with initial curvature $F_0 = z_\text{ap}$ and $F_0 = +\infty$.
+A clear trend also appears when comparing channels with initial curvature $F_0 = z_\mathrm{ap}$ and $F_0 = +\infty$.
 Channels with the geometrically focused beams show larger correlations.
 A plausible interpretation is that focused beams exhibit smaller spreading fluctuations, meaning that transmittance fluctuations come less from beam-size changes and more from centroid displacement.
 With spreading variation suppressed, wandering has a comparatively stronger impact on the received power, which increases the correlation.
-This also explains why the total-probability model performs particularly well for the corresponding weak channel ^[sec:valid_weak] and for the moderate channel in the region $R_\text{ap} \lesssim W_\text{LT}$ ^[sec:valid_moderate].
+This also explains why the total-probability model performs particularly well for the corresponding weak channel ^[sec:valid_weak] and for the moderate channel in the region $R_\mathrm{ap} \lesssim W_\mathrm{LT}$ ^[sec:valid_moderate].
 
 It is commonly accepted that in weak turbulence the beam is mainly affected by wandering, while in stronger turbulence small-scale distortions and speckles dominate the beam structure ^[@andrews2005].
 Based on these observations, it is often assumed in the literature that models based on the beam-wandering effect should perform better in weak turbulence^[@vasylyev2012,vasylyev2016], whereas in strong turbulence the lognormal model is expected to be more appropriate^[@vasylyev2018], as it represents the limiting statistics of multiplicative small-scale distortions.
@@ -199,7 +199,7 @@ S(r_0,\eta_{r_0})=\frac{\left\langle\Delta r_0 \Delta\eta_{r_0}\right\rangle}{\s
 we isolate the statistical relationship between centroid motion and the residual beam-shape fluctuations, independent of the displacement effect.
 The results are summarized in ^[fig:r0eta0].
 
-![\label{fig:r0eta0} Pearson correlation coefficient $S(r_0, \eta_{r_0})$ between the beam-centroid displacement $r_0$ and the tracked transmittance $\eta_{r_0}$ (where the aperture is centered on the instantaneous beam center). The results cover weak (W), moderate (M), and strong (S) turbulence channels for both collimated ($F_0 = +\infty$) and focused ($F_0 = z_\text{ap}$) beams.](beam_shape/original_r_0_eta_tracked.pdf)
+![\label{fig:r0eta0} Pearson correlation coefficient $S(r_0, \eta_{r_0})$ between the beam-centroid displacement $r_0$ and the tracked transmittance $\eta_{r_0}$ (where the aperture is centered on the instantaneous beam center). The results cover weak (W), moderate (M), and strong (S) turbulence channels for both collimated ($F_0 = +\infty$) and focused ($F_0 = z_\mathrm{ap}$) beams.](beam_shape/original_r_0_eta_tracked.pdf)
 
 For the majority of atmospheric channels and aperture radii, the correlations are very weak, indicating that beam centroid displacements and higher-order beam-shape fluctuations are largely independent.
 Slightly higher correlations are observed in the strong-turbulence channel for small aperture radii, where realizations with larger centroid displacements $r_0$ tend to produce smaller transmittance values compared to realizations with $r_0$ near the optical axis.
@@ -240,7 +240,7 @@ Strong & 0.32 &  \\
 \end{table}
 ```
 
-> | Channel  | $F_0=+\infty$ | $F_0=z_\text{ap}$ |
+> | Channel  | $F_0=+\infty$ | $F_0=z_\mathrm{ap}$ |
 > | -------- | :-----------: | :---------------: |
 > | Weak     |     0.016     |       0.039       |
 > | Moderate |     0.08      |       0.15        |
@@ -290,30 +290,30 @@ The dominant feature is a strong suppression of points along the diagonal $\Thet
 Apart from this suppression along the diagonal, there is also a noticeable deviation between the overall shape of the data and the covariance ellipse.
 At the same time, the covariance ellipse is nearly circular, indicating that the linear correlation between $\Theta_{1}$ and $\Theta_{2}$ is weak.
 
-To quantify these departures from Gaussianity, we rotate the coordinate system so that the transformed data becomes symmetric around $\Theta_{(s)}=0$.
+To quantify these departures from Gaussianity, we rotate the coordinate system so that the transformed data becomes symmetric around $\Theta_\mathrm{(s)}=0$.
 The transformed variables are defined as
 $$
 \begin{split}
-\Theta_{(s)}&=(\Theta_1-\Theta_2)/\sqrt{2}\\
-\Theta_{(a)}&=(\Theta_1+\Theta_2)/\sqrt{2}
+\Theta_\mathrm{(s)}&=(\Theta_1-\Theta_2)/\sqrt{2}\\
+\Theta_\mathrm{(a)}&=(\Theta_1+\Theta_2)/\sqrt{2}
 \end{split}$$
-The variable $\Theta_{(s)}$ is proportional to the logarithm of the ratio of the squared semi-axes and thus captures their relative deformation.
-The variable $\Theta_{(a)}$ is proportional to the logarithm of the product $W_1^2 W_2^2$, and therefore characterizes the overall beam area expansion.
-For each turbulence regime, we compute the skewness and the excess kurtosis of both $\Theta_{(s)}$ and $\Theta_{(a)}$.
+The variable $\Theta_\mathrm{(s)}$ is proportional to the logarithm of the ratio of the squared semi-axes and thus captures their relative deformation.
+The variable $\Theta_\mathrm{(a)}$ is proportional to the logarithm of the product $W_1^2 W_2^2$, and therefore characterizes the overall beam area expansion.
+For each turbulence regime, we compute the skewness and the excess kurtosis of both $\Theta_\mathrm{(s)}$ and $\Theta_\mathrm{(a)}$.
 These statistics quantify the degree of non-Gaussianity, with the results summarized in ^[tab:thetasthetaa].
 
 ```{=latex}
 \begin{table}[h!]
 \centering
-\caption{Higher-order moments of the transformed beam-shape variables $\Theta_{(s)}$ and $\Theta_{(a)}$ for different turbulence channels.}
+\caption{Higher-order moments of the transformed beam-shape variables $\Theta_\mathrm{(s)}$ and $\Theta_\mathrm{(a)}$ for different turbulence channels.}
 \label{tab:thetasthetaa}
 \begin{tabular}{|l|l|c|c|c|c|}
 \hline
 Channel & $F_0$ & \multicolumn{2}{c|}{Skewness} & \multicolumn{2}{c|}{Excess kurtosis} \\ \cline{3-6}
-        &                              & $\Theta_{(s)}$ & $\Theta_{(a)}$ & $\Theta_{(s)}$ & $\Theta_{(a)}$ \\ \hline\hline
-Weak     & $z_\text{ap}$               & $-0.6\times10^{-3}$ & $0.25$  & $-0.85$ & $0.23$ \\
+        &                              & $\Theta_\mathrm{(s)}$ & $\Theta_\mathrm{(a)}$ & $\Theta_\mathrm{(s)}$ & $\Theta_\mathrm{(a)}$ \\ \hline\hline
+Weak     & $z_\mathrm{ap}$               & $-0.6\times10^{-3}$ & $0.25$  & $-0.85$ & $0.23$ \\
          & $\infty$                     & $-10\times10^{-3}$  & $-0.1$  & $-1$    & $-0.006$ \\ \hline
-Moderate & $z_\text{ap}$               & $9.8\times10^{-3}$  & $0.25$  & $-0.81$ & $0.12$ \\
+Moderate & $z_\mathrm{ap}$               & $9.8\times10^{-3}$  & $0.25$  & $-0.81$ & $0.12$ \\
          & $\infty$                     & $-3.7\times10^{-3}$ & $0.15$  & $-0.99$ & $-0.11$ \\ \hline
 Strong   & $\infty$                     & $-9\times10^{-3}$   & $0.32$  & $-0.77$ & $0.25$ \\ \hline
 \end{tabular}
@@ -323,16 +323,16 @@ Strong   & $\infty$                     & $-9\times10^{-3}$   & $0.32$  & $-0.77
 
 > | Channel  | Initial beam curvature $F_0$ |            Skewness |                | Excess kurtosis |                |
 > | -------- | -------------------------- | ------------------ | ------------- | -------------- | ------------- |
-> |          |                              |      $\Theta_{(s)}$ | $\Theta_{(a)}$ |  $\Theta_{(s)}$ | $\Theta_{(a)}$ |
-> | Weak     |        $z_\text{ap}$         | $-0.6\times10^{-3}$ |         $0.25$ |         $-0.85$ |         $0.23$ |
+> |          |                              |      $\Theta_\mathrm{(s)}$ | $\Theta_\mathrm{(a)}$ |  $\Theta_\mathrm{(s)}$ | $\Theta_\mathrm{(a)}$ |
+> | Weak     |        $z_\mathrm{ap}$         | $-0.6\times10^{-3}$ |         $0.25$ |         $-0.85$ |         $0.23$ |
 > |          |           $\infty$           |  $-10\times10^{-3}$ |         $-0.1$ |            $-1$ |       $-0.006$ |
-> | Moderate |        $z_\text{ap}$         |  $9.8\times10^{-3}$ |         $0.25$ |         $-0.81$ |         $0.12$ |
+> | Moderate |        $z_\mathrm{ap}$         |  $9.8\times10^{-3}$ |         $0.25$ |         $-0.81$ |         $0.12$ |
 > |          |           $\infty$           | $-3.7\times10^{-3}$ |         $0.15$ |         $-0.99$ |        $-0.11$ |
 > | Strong   |           $\infty$           |   $-9\times10^{-3}$ |         $0.32$ |         $-0.77$ |         $0.25$ |
 
-The distribution of $\Theta_{(s)}$ is highly symmetric, yet it is clearly platykurtic.
-This behavior directly reflects the strong suppression of probability density at $\Theta_{(s)} = 0$ (equivalently, $\Theta_{1} = \Theta_{2}$), which is the dominant non-Gaussian feature of the data.
-In contrast, the distribution of $\Theta_{(a)}$ is notably asymmetric, but its excess kurtosis is closer to zero.
+The distribution of $\Theta_\mathrm{(s)}$ is highly symmetric, yet it is clearly platykurtic.
+This behavior directly reflects the strong suppression of probability density at $\Theta_\mathrm{(s)} = 0$ (equivalently, $\Theta_{1} = \Theta_{2}$), which is the dominant non-Gaussian feature of the data.
+In contrast, the distribution of $\Theta_\mathrm{(a)}$ is notably asymmetric, but its excess kurtosis is closer to zero.
 
 Taken together, these observations show that the joint distribution of $\Theta_1$ and $\Theta_2$ cannot be adequately described by a bivariate Gaussian model, indicating that a deeper analysis of the statistical properties of $\mathbf{S}$ is necessary.
 Understanding the behavior of the $\mathbf{S}$ eigenvalues can be further advanced through methods and insights from random matrix theory.

@@ -64,8 +64,8 @@ Such unphysical condition can be fixed by  introducing models that behaves the s
 One of such models is modified von Karman model which introduce decay of power spectral density at the $l_0$ and $L_0$ values
 $$
 %\label{eq:mvk}
-\boxed{\Phi_n(\kappa) = 0.033 C_n^2 \frac{\exp(-\kappa^2/\kappa_m^2)}{(\kappa^2 + \kappa_0^2)^{11/6}}}$$
-where $\kappa_0 = 2\pi/L_0$ and $\kappa_m = 5.92/l_0$ represent the outer and inner scale cutoffs, respectively.
+\boxed{\Phi_n(\kappa) = 0.033 C_n^2 \frac{\exp(-\kappa^2/\kappa_\mathrm{m}^2)}{(\kappa^2 + \kappa_0^2)^{11/6}}}$$
+where $\kappa_0 = 2\pi/L_0$ and $\kappa_\mathrm{m} = 5.92/l_0$ represent the outer and inner scale cutoffs, respectively.
 
 It is worth emphasizing that when this turbulence theory was first proposed, it consisted entirely of theoretical predictions.
 Its experimental confirmation came nearly a decade later and showed the first clear validation of the theory.

@@ -91,14 +91,14 @@ The numerical grid contains $2048$ points in both transverse directions with a g
 The Sparse Spectrum phase screen method ^[sec:numsim] is used with $1024$ spectral rings.
 The spectral bounds are defined $K_\mathrm{min}=1/15 L_0$ and $K_\mathrm{max}=2/\ell_0$.
 The propagation path is discretized into $15$ phase screens (see^[sec:verification]).
-For each of the three channels we generate $5\times10^4$ independent realizations for different values of time interval $\tau$ and aperture radius $R_\text{ap}$.
+For each of the three channels we generate $5\times10^4$ independent realizations for different values of time interval $\tau$ and aperture radius $R_\mathrm{ap}$.
 
 ## Results
 ### Two-time PDT
 The joint distribution of the transmittance at two different times offers a direct view of the statistical dependence between consecutive pulses separated by the time interval $\tau=s/v$.
-In ^[fig:2timepdt] the two dimensional kernel density estimates of the joint PDT are shown for short and long pulse separation times for $R_\text{ap}=20~\text{cm}$.
+In ^[fig:2timepdt] the two dimensional kernel density estimates of the joint PDT are shown for short and long pulse separation times for $R_\mathrm{ap}=20~\text{cm}$.
 
-![\label{fig:2timepdt}Two-time PDT $\mathcal{P}(\eta_0, \eta_\tau)$ for the channel with $\sigma_{\mathrm{R}}^2 = 5.5$ and $R_\text{ap} = 20~\text{cm}$. The left panel shows a short pulse separation, where the distribution is concentrated along the diagonal, indicating high temporal correlation. The right panel shows a longer separation, where the distribution spreads and approaches a product of marginals $\mathcal{P}(\eta_0)\mathcal{P}(\eta_\tau)$, signifying nearly independent transmittance events.](time_corr/twotimepdt.pdf)
+![\label{fig:2timepdt}Two-time PDT $\mathcal{P}(\eta_0, \eta_\tau)$ for the channel with $\sigma_{\mathrm{R}}^2 = 5.5$ and $R_\mathrm{ap} = 20~\text{cm}$. The left panel shows a short pulse separation, where the distribution is concentrated along the diagonal, indicating high temporal correlation. The right panel shows a longer separation, where the distribution spreads and approaches a product of marginals $\mathcal{P}(\eta_0)\mathcal{P}(\eta_\tau)$, signifying nearly independent transmittance events.](time_corr/twotimepdt.pdf)
 
 For the smaller time interval $s=3~\text{cm}$ ($\tau=3~\text{ms}$) the distribution is sharply concentrated along the diagonal.
 The local refractive index pattern is only slightly changed over such a short interval, so the transmittance undergoes only minor variations.
@@ -114,34 +114,34 @@ It directly reveals how the atmosphere preserves correlations between consecutiv
 
 ### Spatial coherence radius
 >[!attention] wrong description !
->- what specifically?? 
+>- what specifically??
 >- [ ] fix words about independence on turbulence strength
- 
+
 ^[fig:pearson_eta_corr] presents the Pearson correlation between the aperture-averaged transmittances $\eta_0$ and $\eta_\tau$ as a function of the pulse separation time $\tau$ for two receiving apertures.
 The correlation exhibits a strictly monotonic decrease as $s$ increases, reflecting the decorrelation caused by the transversal motion of refractive-index inhomogeneities.
 
-![\label{fig:pearson_eta_corr}Pearson correlation coefficient between transmittances $\eta_0$ and $\eta_\tau$ as a function of the wind-driven shift $s$ for two different aperture radii $R_\text{ap}$. The horizontal dotted line indicates the $e^{-1}$ threshold used to define the spatial coherence radius $\rho_0$. Results are shown for the turbulence channel with $\sigma_{\mathrm{R}}^2 = 5.5$.](time_corr/corr.pdf)
+![\label{fig:pearson_eta_corr}Pearson correlation coefficient between transmittances $\eta_0$ and $\eta_\tau$ as a function of the wind-driven shift $s$ for two different aperture radii $R_\mathrm{ap}$. The horizontal dotted line indicates the $e^{-1}$ threshold used to define the spatial coherence radius $\rho_0$. Results are shown for the turbulence channel with $\sigma_{\mathrm{R}}^2 = 5.5$.](time_corr/corr.pdf)
 
 To quantify this behaviour by a single physically interpretable measure, we introduce the aperture-averaged spatial coherence radius $\rho_0$, defined as the value of the wind-driven shift $s$ for which the Pearson correlation falls to $e^{-1}$^[@andrews2005].
 This coherence radius captures the time interval $\tau$ (transverse wind-driven shift $s$) over which statistical correlations persist.
 In practical free-space quantum communication this parameter quantifies the minimal pulse rate $v/\rho_0$ above which successive quantum states experience non-negligible correlations.
 
-For channel with $C_n^2 = 1 \times 10^{-16},\text{m}^{-2/3}$ and small receiving aperture $R_\text{ap}=2\text{ cm}$, the observed spatial coherence radius is $\rho_0=6\text{ cm}$ which corresponds to $\tau=6~\text{ms}$.
-For the same channel but large aperture $R_\text{ap}=20\text{ cm}$ the coherence radius increases to $\rho_0=13\text{ cm}$.
+For channel with $C_n^2 = 1 \times 10^{-16},\text{m}^{-2/3}$ and small receiving aperture $R_\mathrm{ap}=2\text{ cm}$, the observed spatial coherence radius is $\rho_0=6\text{ cm}$ which corresponds to $\tau=6~\text{ms}$.
+For the same channel but large aperture $R_\mathrm{ap}=20\text{ cm}$ the coherence radius increases to $\rho_0=13\text{ cm}$.
 This can be explained by noting that a larger aperture captures a broader region of the wavefront, so the turbulence-induced intensity pattern must be shifted much farther by the wind before the transmittance changes noticeably.
 
 A more systematic view is provided in ^[fig:scr_ap], which shows $\rho_0$ as a function of aperture radius across all simulated turbulence regimes.
 
-![\label{fig:scr_ap}Aperture-averaged spatial coherence radius $\rho_0$ as a function of the aperture radius $R_\text{ap}$ for three turbulence regimes.](time_corr/corr_length.pdf)
+![\label{fig:scr_ap}Aperture-averaged spatial coherence radius $\rho_0$ as a function of the aperture radius $R_\mathrm{ap}$ for three turbulence regimes.](time_corr/corr_length.pdf)
 
-The figure indicates that the spatial coherence radius $\rho_0$ grows monotonically when the aperture radius $R_\text{ap}$ becomes larger.
+The figure indicates that the spatial coherence radius $\rho_0$ grows monotonically when the aperture radius $R_\mathrm{ap}$ becomes larger.
 This implies that a wider aperture allows the optical field to maintain its nonclassical features for a longer time.
-For a fixed aperture radius the dependence on the Rytov variance $\sigma_R^2$ is weak within the analyzed interval from five to sixteen.
+For a fixed aperture radius the dependence on the Rytov variance $\sigma_\mathrm{R}^2$ is weak within the analyzed interval from five to sixteen.
 This observation suggests that the aperture plays the primary role in setting the coherence properties of such channels.
 
 In conclusion, the spatial coherence radius $\rho_0$ determines the temporal interval over which successive pulses remain statistically correlated, directly influencing the decay of quantum correlations in turbulent atmospheric channels.
 The impact of turbulence strength on $\rho_0$ remains limited across the examined range, while the change produced by the receiver aperture size is noticeably larger.
-As a result, $\rho_0(R_\text{ap})$ serves as a practical parameter for studying entanglement propagation in turbulent atmosphere and provides guidance for selecting pulse repetition rates for which temporal correlations can be exploited (or can be safely neglected) in realistic atmospheric quantum channels.
+As a result, $\rho_0(R_\mathrm{ap})$ serves as a practical parameter for studying entanglement propagation in turbulent atmosphere and provides guidance for selecting pulse repetition rates for which temporal correlations can be exploited (or can be safely neglected) in realistic atmospheric quantum channels.
 
 ### Conditional PDT
 
@@ -151,9 +151,9 @@ If the transmittance is below the threshold, the quantum pulse is discarded.
 By selectively transmitting only those quantum pulses that are likely to encounter high transmittance channel conditions, the protocol can enhance the preservation of nonclassical properties and increases the performance of quantum communication protocols.
 The conditional PDT provides the exact probability distribution of the transmittance of the second pulse under this selection procedure.
 
-^[fig:condpdt] shows the conditional PDT of the second pulse for different spatial shifts $s$ corresponding to various time intervals $\tau$ between pulses for $\eta_\text{min}=0.45$.
+^[fig:condpdt] shows the conditional PDT of the second pulse for different spatial shifts $s$ corresponding to various time intervals $\tau$ between pulses for $\eta_\mathrm{min}=0.45$.
 
-![\label{fig:condpdt}Conditional PDT $\mathcal{P}(\eta_\tau \mid \eta_0 > \eta_\text{min})$ for varying wind-driven shifts $s$. At small shifts (e.g., $s=1$ cm), the distribution is located at high transmittance values, validating the predictive power of the probe pulse. As the shift increases, the distribution broadens and eventually converges to the unconditioned single-time PDT (grey solid line), marking the limit of adaptive selection effectiveness.](time_corr/cond_pdt.pdf)
+![\label{fig:condpdt}Conditional PDT $\mathcal{P}(\eta_\tau \mid \eta_0 > \eta_\mathrm{min})$ for varying wind-driven shifts $s$. At small shifts (e.g., $s=1$ cm), the distribution is located at high transmittance values, validating the predictive power of the probe pulse. As the shift increases, the distribution broadens and eventually converges to the unconditioned single-time PDT (grey solid line), marking the limit of adaptive selection effectiveness.](time_corr/cond_pdt.pdf)
 
 For small shifts, up to $s \sim 1~\text{cm}$ ($\tau \sim 1~\text{ms}$), the conditional distribution closely resembles the ideal case with $s=0$, indicating that the transmittance of the first pulse reliably predicts the second pulse.
 As $s$ increases to several centimeters (several milliseconds), the probability of transmittance values below the threshold $\eta_\mathrm{min}$ becomes more significant.

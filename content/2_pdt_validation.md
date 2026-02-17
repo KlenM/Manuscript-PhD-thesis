@@ -25,7 +25,7 @@ Beam wandering is a pronounced feature of light propagation through weak turbule
 The elliptical beam model is reported to reproduce experimental data under weak to moderate turbulence.
 This turbulence based classification is incomplete which motivates a more systematic analysis of model applicability.
 
-In this section, numerical simulations of atmospheric channels are performed for three different turbulence conditions which are characterized with the value of the Rytov parameter $\sigma_{\mathrm{R}}^2 = 1.23 \, C_n^2 k^{7/6} z_\text{ap}^{11/6}$.
+In this section, numerical simulations of atmospheric channels are performed for three different turbulence conditions which are characterized with the value of the Rytov parameter $\sigma_{\mathrm{R}}^2 = 1.23 \, C_n^2 k^{7/6} z_\mathrm{ap}^{11/6}$.
 The results are used to validate existing analytical models and to identify their ranges of applicability.
 Model comparison is carried out using the Kolmogorov-Smirnov (KS) statistic^[@conover1999], defined as
 $$D_M = \sup_{\eta} \left| F_M(\eta) - F(\eta) \right|$$
@@ -102,14 +102,14 @@ Beam radius & $W_0$ & $2$~cm & Sample size & $10^5$ \\
 
 Two initial beam curvatures are examined.
 The first case uses $F_0 = +\infty$ and corresponds to a collimated beam.
-The second case uses $F_0 = z_\text{ap}$ and corresponds to a geometrically focused beam that minimizes the beam radius at the aperture plane in the absence of turbulence ^[@andrews2005].
+The second case uses $F_0 = z_\mathrm{ap}$ and corresponds to a geometrically focused beam that minimizes the beam radius at the aperture plane in the absence of turbulence ^[@andrews2005].
 
 #### Collimated beam.
 
 For the collimated beam with $F_0 = +\infty$, the Kolmogorov-Smirnov statistics comparing analytical models to the numerical PDT are shown in ^[fig:ks_weak_inf].
 The vertical axis is plotted on a logarithmic scale, so equal visual separations correspond to order of magnitude differences in the actual KS distance.
 
-![\label{fig:ks_weak_inf}Kolmogorov-Smirnov (KS) statistic $D_M$ as a function of the aperture radius for a collimated beam $F_0=\infty$ in a weak turbulence channel ($\sigma_{\mathrm{R}}^2 = 0.2$). The performance of the beam wandering (W), elliptical beam (E), truncated lognormal (L), total probability (T), and beta distribution (B) models are compared against numerical simulation data. The vertical line indicates the aperture radius ($R_\text{ap} = 3~\text{cm}$) where the elliptical beam model achieves its minimum KS distance.](validation/weak_inf_ks_values.pdf)
+![\label{fig:ks_weak_inf}Kolmogorov-Smirnov (KS) statistic $D_M$ as a function of the aperture radius for a collimated beam $F_0=\infty$ in a weak turbulence channel ($\sigma_{\mathrm{R}}^2 = 0.2$). The performance of the beam wandering (W), elliptical beam (E), truncated lognormal (L), total probability (T), and beta distribution (B) models are compared against numerical simulation data. The vertical line indicates the aperture radius ($R_\mathrm{ap} = 3~\text{cm}$) where the elliptical beam model achieves its minimum KS distance.](validation/weak_inf_ks_values.pdf)
 
 Despite their direct physical motivation, the beam wandering and elliptic beam models exhibit the poorest agreement with the numerical distributions across most aperture sizes.
 The elliptic beam model nevertheless displays pronounced minima of the KS statistic when the aperture radius slightly exceeds the long term beam radius.
@@ -127,7 +127,7 @@ At the aperture corresponding to the KS minimum of the elliptic beam model, the 
 This aperture is indicated by the vertical line in ^[fig:ks_weak_inf].
 For other aperture sizes, the elliptic beam model exhibits biased values of both the mode and the mean transmittance $\langle \eta \rangle$.
 
-![\label{fig:pdt_weak_inf}Probability distribution of transmittance (PDT) for a collimated beam $F_0=\infty$ in a weak turbulence channel ($\sigma_{\mathrm{R}}^2 = 0.2$) with an aperture radius of $R_\text{ap} = 3~\text{cm}$. The numerical simulation (N) is compared with the beam wandering (W), truncated lognormal (L), elliptical beam (E), and beta distribution (B) models.](validation/weak_inf_pdt_0_03.pdf)
+![\label{fig:pdt_weak_inf}Probability distribution of transmittance (PDT) for a collimated beam $F_0=\infty$ in a weak turbulence channel ($\sigma_{\mathrm{R}}^2 = 0.2$) with an aperture radius of $R_\mathrm{ap} = 3~\text{cm}$. The numerical simulation (N) is compared with the beam wandering (W), truncated lognormal (L), elliptical beam (E), and beta distribution (B) models.](validation/weak_inf_pdt_0_03.pdf)
 
 The beam wandering model assumes a fixed circular beam profile, which implies that the transmittance cannot exceed that of a perfectly coaxial beam.
 This constraint manifests as a sharp cutoff of the right tail of the distribution and prevents the model from reproducing the high transmittance events observed numerically.
@@ -264,7 +264,7 @@ Even in this strong turbulence regime, the overall behavior resembles that obser
 The main qualitative difference appears at very small apertures $R_\mathrm{ap} \lesssim 0.1 W_\mathrm{LT}$.
 In this range, the truncated lognormal model exhibits better agreement with the numerical results, as illustrated in ^[fig:pdt_strong_inf].
 
-![\label{fig:pdt_strong_inf}Probability distribution of transmittance (PDT) for a collimated beam $F_0=\infty$ in a strong turbulence channel ($\sigma_{\mathrm{R}}^2 = 33.3$) with an aperture radius of $R_\text{ap} = 10~\text{cm}$. The numerical simulation (N) is compared with the truncated lognormal (L), elliptical beam (E), and beta distribution (B) models.](validation/strong_inf_pdt_0_1.pdf)
+![\label{fig:pdt_strong_inf}Probability distribution of transmittance (PDT) for a collimated beam $F_0=\infty$ in a strong turbulence channel ($\sigma_{\mathrm{R}}^2 = 33.3$) with an aperture radius of $R_\mathrm{ap} = 10~\text{cm}$. The numerical simulation (N) is compared with the truncated lognormal (L), elliptical beam (E), and beta distribution (B) models.](validation/strong_inf_pdt_0_1.pdf)
 
 As the ratio $R_\mathrm{ap} / W_\mathrm{LT} \to 0$, the aperture can be treated as point like relative to both the overall beam size and the characteristic scintillation scale of the optical field.
 The transmittance distribution then approaches the probability distribution of irradiance at a point, rather than an aperture averaged quantity.
@@ -302,7 +302,7 @@ An exception occurs for small apertures under strong turbulence, when the numeri
 In this regime, the Beta model’s estimated parameters may reflect in the L-shaped form, and the lognormal model can outperform the Beta model.
 
 The total probability model, which combines the positively skewed lognormal and negatively skewed beam wandering models, performs similarly to the base lognormal model for small apertures.
-However, when the aperture size becomes comparable to the average beam spot width ($R_\text{ap} \lesssim W_\text{LT}$), the model captures the high kurtosis of the numerical PDT, allowing it to outperform other models in some narrow parameter range.
+However, when the aperture size becomes comparable to the average beam spot width ($R_\mathrm{ap} \lesssim W_\mathrm{LT}$), the model captures the high kurtosis of the numerical PDT, allowing it to outperform other models in some narrow parameter range.
 
 The physically grounded beam wandering and elliptical beam models are strongly affected by bias in the first transmittance moments (mean and variance).
 This is the reason why they perform well when their parameters are fitted using least-squares methods^[sec:pdt], but poorly when the beam shape parameters are estimated directly from numerical simulations.

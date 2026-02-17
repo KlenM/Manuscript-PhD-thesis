@@ -94,12 +94,12 @@ The horizontal axis represents the wind-driven shift $s$, which corresponds to t
 The vertical axis shows the squeezing parameter $\xi$ of the initial TMSV state.
 The shaded regions correspond to $\mathcal W<0$, where the Simon criterion certifies that the received state remains entangled.
 
-![\label{fig:cvent}Regions of entanglement preservation for a two-mode squeezed vacuum (TMSV) state as a function of the wind-driven shift $s$ and the initial squeezing parameter $\xi$. Threshold boundaries ($\mathcal{W} = 0$) are shown for $\sigma_\text{R}^2=5.5$, $\sigma_\text{R}^2=11$, and $\sigma_\text{R}^2=16.5$ (dashed, solid, and dot-dashed lines, respectively). The shaded areas indicate the regime where the Simon certifier $\mathcal{W}$ is negative, indicating that the state remains entangled after transmission. The aperture radius is $R_\text{ap} = 20~\text{cm}$.](application/entanglement.pdf)
+![\label{fig:cvent}Regions of entanglement preservation for a two-mode squeezed vacuum (TMSV) state as a function of the wind-driven shift $s$ and the initial squeezing parameter $\xi$. Threshold boundaries ($\mathcal{W} = 0$) are shown for $\sigma_\mathrm{R}^2=5.5$, $\sigma_\mathrm{R}^2=11$, and $\sigma_\mathrm{R}^2=16.5$ (dashed, solid, and dot-dashed lines, respectively). The shaded areas indicate the regime where the Simon certifier $\mathcal{W}$ is negative, indicating that the state remains entangled after transmission. The aperture radius is $R_\mathrm{ap} = 20~\text{cm}$.](application/entanglement.pdf)
 
 The figure reveals a counterintuitive feature: increasing the squeezing parameter $\xi$ reduces the maximum wind-driven shift for which entanglement is preserved.
 As a result, stronger squeezing does not improve entanglement robustness in atmospheric channels.
 
-For a squeezing parameter of $\xi = 2$ and a turbulence strength of $\sigma_R^2 = 11$, Gaussian entanglement remains for wind-driven shifts up to $s = 6.4\ \mathrm{cm}$, corresponding to a time separation of $\tau = 6.4\ \mathrm{ms}$ for a transverse wind speed of $v = 10\ \mathrm{m/s}$.
+For a squeezing parameter of $\xi = 2$ and a turbulence strength of $\sigma_\mathrm{R}^2 = 11$, Gaussian entanglement remains for wind-driven shifts up to $s = 6.4\ \mathrm{cm}$, corresponding to a time separation of $\tau = 6.4\ \mathrm{ms}$ for a transverse wind speed of $v = 10\ \mathrm{m/s}$.
 This demonstrates that entanglement between light pulses is highly robust, persisting beyond millisecond time intervals.
 However, losses associated with the quantum memory can significantly reduce the absolute value of the Simon certifier.
 
@@ -111,7 +111,7 @@ Larger coherence allows entanglement to survive larger wind-driven shifts.
 At the same time, the threshold decreases with increasing squeezing.
 The nonlinear behavior highlights the nontrivial interplay between initial squeezing, channel correlations, and receiver geometry in determining entanglement robustness.
 
-![\label{fig:sthbyrho}The threshold wind-driven shift $s_\mathrm{th}$ at which entanglement is lost, against the spatial coherence radius $\rho_0$ for channels with  $\sigma_\text{R}^2=5.5$, $\sigma_\text{R}^2=11$, and $\sigma_\text{R}^2=16.5$ (dashed, solid, and dot-dashed lines, respectively). The monotonic increase confirms that larger receiver apertures directly extend the time interval during which entanglement is preserved, however the dependence is nonlinear. ](application/witness_coherence.pdf)
+![\label{fig:sthbyrho}The threshold wind-driven shift $s_\mathrm{th}$ at which entanglement is lost, against the spatial coherence radius $\rho_0$ for channels with  $\sigma_\mathrm{R}^2=5.5$, $\sigma_\mathrm{R}^2=11$, and $\sigma_\mathrm{R}^2=16.5$ (dashed, solid, and dot-dashed lines, respectively). The monotonic increase confirms that larger receiver apertures directly extend the time interval during which entanglement is preserved, however the dependence is nonlinear. ](application/witness_coherence.pdf)
 
 In summary, we have introduced and quantified the time interval over which entanglement between pulses is preserved, and analyzed how it depends on channel aperture, coherence radius, and squeezing.
 Gaussian entanglement is robust against atmospheric turbulence, while stronger squeezing does not improve its survival.
@@ -197,7 +197,7 @@ The dependence of the Bell parameter $\mathcal{B}$ on the temporal separation be
 For the PDC state, the Bell parameter additionally depends on the source parameter $\xi$.
 In the simulations, we optimize over $\xi$ by choosing the value that maximizes $\mathcal{B}$ for each separation $\tau$.
 
-![\label{fig:bell}Bell parameter $\mathcal{B}$ as a function of the pulse separation time $\tau$ for polarization-entangled states. Results compare the ideal Bell state with the parametric down-conversion (PDC) state, optimized for the squeezing parameter $\xi$. The channel with $\sigma_\text{R}^2=11$ and $R_\text{ap}=10~\text{cm}$ with wind speeds $v=5$ m/s (dashed line) and $v=10$ m/s (solid lines) are analysed.](application/bell.pdf)
+![\label{fig:bell}Bell parameter $\mathcal{B}$ as a function of the pulse separation time $\tau$ for polarization-entangled states. Results compare the ideal Bell state with the parametric down-conversion (PDC) state, optimized for the squeezing parameter $\xi$. The channel with $\sigma_\mathrm{R}^2=11$ and $R_\mathrm{ap}=10~\text{cm}$ with wind speeds $v=5$ m/s (dashed line) and $v=10$ m/s (solid lines) are analysed.](application/bell.pdf)
 
 Because of time-dependent losses in the channel, the wind-driven shift $s$ cannot be treated as interchangeable with the pulses time separation $\tau$.
 To account for this effect, we consider two wind speeds, $v = 10$ and $v = 5$.
@@ -301,13 +301,13 @@ Here $P(m)$ is the measured click distribution.
 We use the optimal sets of $\lambda(m)$ determined for array detectors with $N=2,3,5$ ^[@kovtoniuk2024], which provide a practical tool for reliably detecting nonclassicality in realistic measurement setups.
 
 Using the results of the channel simulations obtained in ^[sec:timecorr] for different values of time between classical probe and quantum pulse, we apply an adaptive selection strategy to preserve nonclassicality in atmospheric conditions.
-We study the maximal time interval for a given threshold transmittance $\eta_\text{min}$ during which the click statistics remain nonclassical.
+We study the maximal time interval for a given threshold transmittance $\eta_\mathrm{min}$ during which the click statistics remain nonclassical.
 
 >[!note] Mention losses and sim params.
 
 ^[fig:nonclass] shows the wind-driven spatial shift $s$, corresponding to a temporal delay $\tau=s/v$ between the classical probe and the quantum pulse, at which different nonclassicality criteria no longer indicate nonclassicality.
 
-![\label{fig:nonclass} Maximum wind-driven shift $s$ for which nonclassicality remains detectable in an amplitude-squeezed coherent state ($\alpha_0=1.15, \xi=0.59$). The simulation assumes a moderate turbulence regime ($\sigma_R^2=11$), a receiver aperture $R_\text{ap} = 30$ cm, and total deterministic losses of 6 dB. An adaptive selection strategy is applied with a threshold transmittance $\eta_\text{min} = 0.1$. The plot compares the ideal Mandel parameter $Q$ against sub-binomial parameters $Q_N$ and Bell-like witnesses for detector arrays of size $N=2, 3,$ and $5$. Confidence intervals are derived from $10^6$ selected samples.](application/nonclass.pdf)
+![\label{fig:nonclass} Maximum wind-driven shift $s$ for which nonclassicality remains detectable in an amplitude-squeezed coherent state ($\alpha_0=1.15, \xi=0.59$). The simulation assumes a moderate turbulence regime ($\sigma_\mathrm{R}^2=11$), a receiver aperture $R_\mathrm{ap} = 30$ cm, and total deterministic losses of 6 dB. An adaptive selection strategy is applied with a threshold transmittance $\eta_\mathrm{min} = 0.1$. The plot compares the ideal Mandel parameter $Q$ against sub-binomial parameters $Q_N$ and Bell-like witnesses for detector arrays of size $N=2, 3,$ and $5$. Confidence intervals are derived from $10^6$ selected samples.](application/nonclass.pdf)
 
 The Mandel parameter $Q$ reaches zero at $s = 7.2~\text{cm}$, indicating the limit of sub-Poissonian photon statistics for an ideal photon number resolving detector.
 For arrays of on-off detectors, the sub-binomial parameters $Q_N$ reach zero at larger shifts: $Q_5 = 9.7~\text{cm}$, $Q_3 = 11.4~\text{cm}$, and $Q_2 = 14.2~\text{cm}$.
