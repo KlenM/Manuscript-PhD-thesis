@@ -7,7 +7,7 @@ In this work, we restrict the analysis to the Gaussian beam mode at the transmit
 
 The boundary condition at the transmitter plane $z=z_0$ takes the form of a Gaussian beam^[@andrews2005]
 $$%\label{eq:gaussbeam}
-\boxed{u(\mathbf{r};0)=\sqrt{\frac{2}{\pi W_0^2}}\exp\left[-\frac{\mathbf{r}^2}{W_0^2}-\frac{ik}{2F_0}\mathbf{r}^2\right]}$$
+\boxed{u(\mathbf{r};0)=\sqrt{\frac{2}{\pi W_0^2}}\exp\left[-\frac{\mathbf{r}^2}{W_0^2}-\frac{ik}{2F_0}\mathbf{r}^2\right]},$$
 where $W_0$ is the beam waist radius and $F_0$ is the radius of curvature of the wavefront. For collimated beams, $F_0 \to \infty$, while for focused beams, $F_0$ takes finite values.
 
 #### Paraxial wave equation in stochastic media.
@@ -20,7 +20,7 @@ where $W_0$ is the beam waist radius and $F_0$ is the radius of curvature of the
 >- [ ] n is real
 
 The electromagnetic field propagation in atmosphere is described with the scalar wave equation^[@strohbehn1968,siegman1986]. Separating temporal and spatial variables yields the Helmholtz equation
-$$\nabla^{2}E+k^{2}n^{2}E=0$$
+$$\nabla^{2}E+k^{2}n^{2}E=0,$$
 where $\nabla^2$ is the Laplacian operator and $k$ is the vacuum wave number.
 
 For Gaussian beams propagating along the z-axis over long distances, the paraxial approximation becomes valid^[@siegman1986].
@@ -30,7 +30,7 @@ Under paraxial approximation the assumption that the $z$ derivative of the ampli
 This leads to the paraxial scalar wave equation in a medium with spatially varying refractive index:
 $$
 %\label{eq:parax}
-\boxed{2ik\frac{\partial u(\mathbf{r};z)}{\partial z}+\Delta_\mathbf{r} u(\mathbf{r};z)+2k^2\delta n(\mathbf{r},z) u(\mathbf{r};z)=0}$$
+\boxed{2ik\frac{\partial u(\mathbf{r};z)}{\partial z}+\Delta_\mathbf{r} u(\mathbf{r};z)+2k^2\delta n(\mathbf{r},z) u(\mathbf{r};z)=0},$$
 where $\delta n(\mathbf{r},z) = n(\mathbf{r},z) - 1$ represents the refractive index perturbation.
 
 >- [ ] The paraxial equation uses $\Delta r\Delta_\mathbf{r} \delta r$​ notation but should clarify this represents the transverse Laplacian
@@ -42,12 +42,12 @@ where $\delta n(\mathbf{r},z) = n(\mathbf{r},z) - 1$ represents the refractive i
 #### Transmittance of channel.
 To quantify the optical power collected by the receiver, we calculate the transmittance at the aperture plane $z=z_\mathrm{ap}$:
 $$%\label{eq:eta}
-\boxed{\eta = \int_{S_\mathrm{ap}} d^2\boldsymbol{r} |u(\boldsymbol{r}, z_\mathrm{ap})|^2}$$
+\boxed{\eta = \int_{S_\mathrm{ap}} d^2\boldsymbol{r} |u(\boldsymbol{r}, z_\mathrm{ap})|^2},$$
 where $S_\mathrm{ap}$ defines the circular region of integration over aperture pupil of radius $R_\mathrm{ap}$ and $d^2\boldsymbol{r}=dxdy$.
 
 #### Vacuum propagation.
 For the case $\delta n = 0$ (homogeneous medium), the solution becomes straightforward. The Fresnel diffraction integral^[@goodman2017] describes the field evolution
-$$U(x,y,z)=\frac{e^{ikz}}{i\lambda z}\iint_{-\infty}^{\infty}U(x',y',0)e^{i\frac{k}{2z}[(x-x')^{2}+(y-y')^{2}]}dx'dy'$$
+$$U(x,y,z)=\frac{e^{ikz}}{i\lambda z}\iint_{-\infty}^{\infty}U(x',y',0)e^{i\frac{k}{2z}[(x-x')^{2}+(y-y')^{2}]}dx'dy'.$$
 This integral represents a convolution with the propagation kernel, based on the Huygens-Fresnel principle where each wavefront point acts as a source of secondary spherical wavelets.
 
 In the spatial frequency domain, this convolution becomes multiplication with the transfer function $H(f_{x},f_{y},z)=e^{ikz}e^{-i\pi\lambda z(f_{x}^{2}+f_{y}^{2})}$, known as the angular spectrum method. This formulation enables efficient numerical implementation using Fast Fourier Transform algorithms.
@@ -56,8 +56,12 @@ In the spatial frequency domain, this convolution becomes multiplication with th
 In the absence of refractive index fluctuations, a Gaussian beam ^[eq:gaussbeam] propagating in free space keeps its deterministic Gaussian profile at the aperture plane, as it represents the exact solution of the paraxial wave equation^[@siegman1986].
 When the beam travels through a turbulent atmosphere, random changes in the refractive index make the optical field at the aperture plane a stochastic quantity.
 To efficiently compress the vast amount of information required to describe the optical field distorted by turbulence, it is convenient to characterize the random fluctuations of the complex amplitude in terms of its second- and fourth-order correlation functions^[@andrews2005]
-$$\Gamma_2(\mathbf{r};z) = \left< |u(\mathbf{r};z_\mathrm{ap})|^2 \right>$$
-$$\Gamma_4(\mathbf{r}_1,\mathbf{r}_2;z_\mathrm{ap}) = \left< |u(\mathbf{r}_1;z_\mathrm{ap})|^2 |u(\mathbf{r}_2;z_\mathrm{ap})|^2 \right>$$
+$$
+\begin{split}
+\Gamma_2(\mathbf{r};z) &= \left< |u(\mathbf{r};z_\mathrm{ap})|^2 \right>,\\
+\Gamma_4(\mathbf{r}_1,\mathbf{r}_2;z_\mathrm{ap}) &= \left< |u(\mathbf{r}_1;z_\mathrm{ap})|^2 |u(\mathbf{r}_2;z_\mathrm{ap})|^2 \right>,
+\end{split}
+$$
 where $\langle \cdot \rangle$ denotes ensemble averaging over turbulence realizations.
 
 These correlation functions enable the calculation of several statistical quantities that are essential for parametrizing analytical models of atmospheric channels.
@@ -78,7 +82,7 @@ Let us consider statistical properties of the beam-spot at the aperture plane^[@
 The simplest property is the beam centroid, which defined for a single realization of turbulent atmosphere as
 $$
 %\label{eq:x0}
-x_0 = \int_{\mathbb{R}^2} d^2\boldsymbol{r} \, x\, |u(\boldsymbol{r}, z_\mathrm{ap})|^2$$
+x_0 = \int_{\mathbb{R}^2} d^2\boldsymbol{r} \, x\, |u(\boldsymbol{r}, z_\mathrm{ap})|^2.$$
 While it is obvious that under the assumption of isotropic turbulence (see ^[sec:turb_cascade]) average value of the beam centroid $\left<x_0\right>=0$, it remains an open question whether its distribution is Gaussian.
 In particular, for strong turbulence the distribution can deviate, for example by exhibiting heavy tails.
 The second moment is referred to as the long-term beam-spot radius. It defined as
@@ -90,14 +94,14 @@ The variance of the beam-centroid coordinate, often referred to as beam wanderin
 $$
 %\label{eq:SBW2}
 \sigma_\mathrm{BW}^2=\left<x_0^2\right>=
-\int_{\mathbb{R}^4} d^2\boldsymbol{r}_1  d^2\boldsymbol{r}_2 \, x_1 x_2 \,\Gamma_4(\boldsymbol{r}_1, \boldsymbol{r}_2, z_\mathrm{ap})
+\int_{\mathbb{R}^4} d^2\boldsymbol{r}_1  d^2\boldsymbol{r}_2 \, x_1 x_2 \,\Gamma_4(\boldsymbol{r}_1, \boldsymbol{r}_2, z_\mathrm{ap}).
 $$
 And complementary to these two quantities the squared beam-spot radius, which is also referred to as the short-term beam-spot radius, is defined as
 $$
 %\label{eq:Sshort_term}
 S=
 4\int_{\mathbb{R}^2} d^2\boldsymbol{r} \, (x - x_0)^2\, \Gamma_2(\boldsymbol{r}, z_{\mathrm{ap}})=
-W_\mathrm{LT}^2 - 4 \sigma_\mathrm{BW}^2$$
+W_\mathrm{LT}^2 - 4 \sigma_\mathrm{BW}^2,$$
 which characterizes the average instantaneous width of the beam, excluding the contribution from beam wandering.
 
 > conclusion

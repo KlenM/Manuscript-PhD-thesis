@@ -141,7 +141,7 @@ When the correlation between wandering and transmittance is high, such technique
 
 To quantify the contribution of beam wandering, we compute the Pearson correlation coefficient between the centroid displacement $r_0$ and the transmittance $\eta$, defined as
 $$%\label{eq:r0eta}
-S(r_0,\eta)=\frac{\left\langle\Delta r_0 \Delta\eta\right\rangle}{\sqrt{\left\langle\Delta r_0^2\right\rangle\left\langle \Delta\eta^2\right\rangle}}$$
+S(r_0,\eta)=\frac{\left\langle\Delta r_0 \Delta\eta\right\rangle}{\sqrt{\left\langle\Delta r_0^2\right\rangle\left\langle \Delta\eta^2\right\rangle}}.$$
 
 For every atmospheric channel listed in ^[sec:validation] and for each aperture radius, we perform $5\cdot10^5$ independent beam-propagation simulations, compute $r_0 = \sqrt{x_0^2 + y_0^2}$, where $x_0$ is defined as^[eq:x0] and $y_0$ is defined in the same way, evaluate transmittance $\eta$ according to ^[eq:eta] and estimate $S(r_0,\eta)$ ^[eq:r0eta].
 The dependence of the correlation on the aperture radius is shown in ^[fig:r0eta].
@@ -195,7 +195,8 @@ However, instead of measuring the transmittance $\eta$, we shift the receiver ap
 This procedure emulates an ideal adaptive-optics system that fully compensates for beam wandering.
 By analyzing the correlation between $r_0$ and $\eta_{r_0}$ with the Pearson correlation coefficient
 $$
-S(r_0,\eta_{r_0})=\frac{\left\langle\Delta r_0 \Delta\eta_{r_0}\right\rangle}{\sqrt{\left\langle\Delta r_0^2\right\rangle\left\langle \Delta\eta_{r_0}^2\right\rangle}}$$
+S(r_0,\eta_{r_0})=\frac{\left\langle\Delta r_0 \Delta\eta_{r_0}\right\rangle}{\sqrt{\left\langle\Delta r_0^2\right\rangle\left\langle \Delta\eta_{r_0}^2\right\rangle}}
+$$
 we isolate the statistical relationship between centroid motion and the residual beam-shape fluctuations, independent of the displacement effect.
 The results are summarized in ^[fig:r0eta0].
 
@@ -217,7 +218,8 @@ The coordinate system is subsequently rotated by the angle $\chi=\arctan\left({y
 In this rotated frame, the beam width $W_r$ along the $x_r$ axis is measured for each realization.
 The Pearson correlation coefficient between the magnitude of the centroid displacement $r_0$ with the corresponding beam width $W_r$ along the $x_r$ axis is estimated as
 $$
-S\left(r_0,W_r\right)=\frac{\left\langle\Delta r_0 \Delta W_r\right\rangle}{\sqrt{\left\langle\Delta r_0^2\right\rangle\left\langle \Delta W_r^2\right\rangle}}$$
+S\left(r_0,W_r\right)=\frac{\left\langle\Delta r_0 \Delta W_r\right\rangle}{\sqrt{\left\langle\Delta r_0^2\right\rangle\left\langle \Delta W_r^2\right\rangle}}.
+$$
 
 > - [ ] Define $W_r$...
 
@@ -262,18 +264,18 @@ However, the validity of this assumption is not established.
 
 To test the validity of the Gaussian assumption, we generate $5\cdot10^{5}$ independent realizations of the beam propagations described in ^[sec:validation].
 For every realization, we first compute the elements of the spot-shape matrix
-$$\mathbf{S} = \begin{pmatrix} S_{xx} & S_{xy} \\ S_{xy} & S_{yy} \end{pmatrix}$$
+$$\mathbf{S} = \begin{pmatrix} S_{xx} & S_{xy} \\ S_{xy} & S_{yy} \end{pmatrix},$$
 using the definition given in ^[eq:Sshort_term].
 This matrix describes the second-order moments of the beam intensity and determines both the orientation and the magnitudes of the semi-axes.
 We then compute the eigenvalues of $\mathbf{S}$ as
-$$W_{\pm}^2 = \frac{1}{2}\left( S_{xx}+S_{yy} \pm \sqrt{(S_{xx}-S_{yy})^2 + 4S_{xy}^2} \right)$$
+$$W_{\pm}^2 = \frac{1}{2}\left( S_{xx}+S_{yy} \pm \sqrt{(S_{xx}-S_{yy})^2 + 4S_{xy}^2} \right),$$
 which give the squared semi-axes of the ellipse aligned with the principal axes.
 
 Next, we assign the ordered pair $W_{1}^{2}, W_{2}^{2}$ according to the orientation of the ellipse in the transverse plane.
 If $S_{xy}>0$, then the principal axis corresponding to $W_{+}^{2}$ has a positive slope, and we take $W_{1}^{2}=W_{+}^{2}$ and $W_{2}^{2}=W_{-}^{2}$.
 If $S_{xy}\le 0$, the orientation is reversed, and we set $W_{1}^{2}=W_{-}^{2}$ and $W_{2}^{2}=W_{+}^{2}$.
 Finally, for each realization we compute the logarithmic variables
-$$\Theta_{1,2} = \ln(W_{1,2}^2/W_0^2)$$
+$$\Theta_{1,2} = \ln(W_{1,2}^2/W_0^2),$$
 which are the quantities assumed to follow the bivariate Gaussian distribution in the elliptical beam model.
 
 The scatter plot of the obtained pairs $(\Theta_1,\Theta_2)$ is shown in ^[fig:theta1theta2].
@@ -282,7 +284,7 @@ The scatter plot of the obtained pairs $(\Theta_1,\Theta_2)$ is shown in ^[fig:t
 
 To compare the empirical distribution with the bivariate Gaussian approximation, we compute the sample mean vector $\left<\Theta_i\right>$ and the sample covariance matrix $\Sigma_{ij} = \langle \Delta\Theta_i \Delta\Theta_j \rangle$ and plot the corresponding covariance ellipse, defined by
 $$
-\sum\limits_{i,j=1}^2\big(\Theta_i-\langle\Theta_i\rangle\big)\Sigma_{ij}^{-1}\big(\Theta_j-\langle\Theta_j\rangle\big)=4$$
+\sum\limits_{i,j=1}^2\big(\Theta_i-\langle\Theta_i\rangle\big)\Sigma_{ij}^{-1}\big(\Theta_j-\langle\Theta_j\rangle\big)=4,$$
 which represents the two-sigma contour expected under the Gaussian assumption.
 
 Visual inspection of the scatter plot and the corresponding covariance ellipse shows clear deviations from the bivariate Gaussian model.
@@ -295,7 +297,7 @@ The transformed variables are defined as
 $$
 \begin{split}
 \Theta_\mathrm{(s)}&=(\Theta_1-\Theta_2)/\sqrt{2}\\
-\Theta_\mathrm{(a)}&=(\Theta_1+\Theta_2)/\sqrt{2}
+\Theta_\mathrm{(a)}&=(\Theta_1+\Theta_2)/\sqrt{2}.
 \end{split}$$
 The variable $\Theta_\mathrm{(s)}$ is proportional to the logarithm of the ratio of the squared semi-axes and thus captures their relative deformation.
 The variable $\Theta_\mathrm{(a)}$ is proportional to the logarithm of the product $W_1^2 W_2^2$, and therefore characterizes the overall beam area expansion.

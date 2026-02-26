@@ -47,7 +47,7 @@ In the limit of infinite squeezing, the TMSV approaches the idealized EPR state 
 Two mode squeezed vacuum states can be generated using nondegenerate optical parametric oscillators or by interfering two single mode squeezed states on a balanced beam splitter^[@lvovsky2016].
 In the photon number basis, the TMSV state can be written as
 $$
-\left|\xi\right>=\cosh^{-1}\xi\sum_{n=0}^{\infty}(-\tanh \xi)^n\left|n,n\right>
+\left|\xi\right>=\cosh^{-1}\xi\sum_{n=0}^{\infty}(-\tanh \xi)^n\left|n,n\right>.
 $$
 
 #### Simon certifier.
@@ -77,7 +77,7 @@ $$
 \begin{split}
 \mathcal{W}=&\sinh^2\xi\Big[-\left\langle\sqrt{\eta_0\eta_\tau}\right\rangle^2\cosh^2\xi+\left\langle\eta_0\right\rangle\left\langle\eta_\tau\right\rangle\sinh^2\xi\Big]\\
 &\times\Big[1-\frac{\left\langle\sqrt{\eta_0\eta_\tau}\right\rangle^2}{4}\sinh^22\xi\\
-&+\sinh^2\xi\left(\left\langle\eta_0\right\rangle+\left\langle\eta_\tau\right\rangle+\left\langle\eta_0\right\rangle\left\langle\eta_\tau\right\rangle\sinh^2\xi\right)\Big]
+&+\sinh^2\xi\left(\left\langle\eta_0\right\rangle+\left\langle\eta_\tau\right\rangle+\left\langle\eta_0\right\rangle\left\langle\eta_\tau\right\rangle\sinh^2\xi\right)\Big].
 \end{split}
 $$
 According to the Simon criterion, the transmitted state is entangled if and only if $\mathcal W<0$.
@@ -133,7 +133,7 @@ The corresponding Bell state is written as
 $$
 \begin{split}
 \left| \mathcal{B} \right\rangle &= \frac{1}{\sqrt{2}} \Big( \left| \mathrm{h} \right\rangle_0 \left| \mathrm{v} \right\rangle_\tau - \left| \mathrm{v} \right\rangle_0 \left| \mathrm{h} \right\rangle_\tau \Big) \\
-&= \frac{1}{\sqrt{2}} \Big( \left| 1 \right\rangle_{\mathrm{h0}} \left| 0 \right\rangle_{\mathrm{v0}} \left| 0 \right\rangle_{\mathrm{h\tau}} \left| 1 \right\rangle_{\mathrm{v\tau}} - \left| 0 \right\rangle_{\mathrm{h0}} \left| 1 \right\rangle_{\mathrm{v0}} \left| 1 \right\rangle_{\mathrm{h\tau}} \left| 0 \right\rangle_{\mathrm{v\tau}} \Big)
+&= \frac{1}{\sqrt{2}} \Big( \left| 1 \right\rangle_{\mathrm{h0}} \left| 0 \right\rangle_{\mathrm{v0}} \left| 0 \right\rangle_{\mathrm{h\tau}} \left| 1 \right\rangle_{\mathrm{v\tau}} - \left| 0 \right\rangle_{\mathrm{h0}} \left| 1 \right\rangle_{\mathrm{v0}} \left| 1 \right\rangle_{\mathrm{h\tau}} \left| 0 \right\rangle_{\mathrm{v\tau}} \Big).
 \end{split}
 $$
 
@@ -143,7 +143,7 @@ In the relevant polarization and temporal modes, this superposition can be writt
 $$\left| \mathrm{PDC} \right\rangle = (\cosh\xi)^{-2} \sum\limits_{n=0}^{+\infty} \sqrt{n+1} \tanh^n \xi \left| \Phi_n \right\rangle$$
 with
 $$
-\left| \Phi_n \right\rangle = \frac{1}{\sqrt{n+1}} \sum\limits_{m=0}^{n} (-1)^m \left| n-m \right\rangle_{\mathrm{h0}} \left| m \right\rangle_{\mathrm{v0}} \left| m \right\rangle_{\mathrm{h\tau}} \left| n-m \right\rangle_{\mathrm{v\tau}}
+\left| \Phi_n \right\rangle = \frac{1}{\sqrt{n+1}} \sum\limits_{m=0}^{n} (-1)^m \left| n-m \right\rangle_{\mathrm{h0}} \left| m \right\rangle_{\mathrm{v0}} \left| m \right\rangle_{\mathrm{h\tau}} \left| n-m \right\rangle_{\mathrm{v\tau}}.
 $$
 The parameter $\xi$ is determined by the pump power and the nonlinear coupling strength.
 The term with $n = 1$ corresponds to a polarization Bell state occupying the two temporal modes, while higher order terms describe the simultaneous emission of multiple photon pairs.
@@ -274,7 +274,7 @@ This reduction of photon number fluctuations is a direct signature of nonclassic
 This means that nonclassicality can be assessed using photon number statistics, avoiding balanced homodyne detection with its requirement of phase stable reference fields and complex measurement setups.
 
 Nonclassicality in such situations is commonly characterized by the Mandel parameter
-$$Q=\frac{\left\langle \Delta \hat n^2\right\rangle}{\left\langle \hat n\right\rangle}-1$$
+$$Q=\frac{\left\langle \Delta \hat n^2\right\rangle}{\left\langle \hat n\right\rangle}-1.$$
 Negative values of $Q$ correspond to sub Poissonian photon number statistics and therefore to nonclassical light.
 This criterion relies on ideal photon number resolving detection and is therefore of limited applicability in realistic measurement scenarios.
 
@@ -282,11 +282,12 @@ A more realistic detection model is based on an array of $N$ on-off detectors.
 Each detector can only discriminate between the absence and presence of photons.
 For a classical coherent state with complex amplitude $\alpha$, the resulting click statistics are binomial.
 The corresponding response function for registering $m$ clicks, described by a positive operator valued measure (POVM) ^[@sperling2012], is given by
-$$\Pi(m|\alpha)=\binom{N}{m}\left(1-e^{-|\alpha|^2/N}\right)^m e^{-(N-m)|\alpha|^2/N}$$
+$$\Pi(m|\alpha)=\binom{N}{m}\left(1-e^{-|\alpha|^2/N}\right)^m e^{-(N-m)|\alpha|^2/N}.$$
 This measurement captures the finite resolution of practical photon counting devices and reduces to ideal photon number resolving detection in the limit $N\to\infty$.
 In this setting, nonclassicality can be detected via sub binomial click statistics.
 The corresponding parameter for such measurement is^[@sperling2012a]
-$$Q_{N}=N\frac{\left\langle\Delta c^2\right\rangle}{\left\langle c\right\rangle(N-\left\langle c\right\rangle)}-1$$where $c$ denotes the number of clicks.
+$$Q_{N}=N\frac{\left\langle\Delta c^2\right\rangle}{\left\langle c\right\rangle(N-\left\langle c\right\rangle)}-1,$$
+where $c$ denotes the number of clicks.
 Negative values of $Q_N$ indicate nonclassical light.
 
 The described criteria provide sufficient but not necessary conditions for nonclassicality.

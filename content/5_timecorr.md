@@ -15,12 +15,12 @@ In the ^[sec:application], we will demonstrate how these results guide continuou
 
 ## Two-time PDT
 To describe the two-time probability distribution of transmittance (PDT), we extend the PDT framework (see ^[sec:aqc]) to account for time-dependent fluctuations of the refractive index. In this approach, the refractive index is represented as
-$$n_t(\mathbf{r},z)=1+\delta n_t(\mathbf{r},z)$$
+$$n_t(\mathbf{r},z)=1+\delta n_t(\mathbf{r},z),$$
 where $\delta n_t(\mathbf{r},z)$ denotes the small, time-dependent, stochastic perturbation caused by atmospheric turbulence.
 The evolution of the complex field amplitude $u_t(\mathbf{r},z)$ under these conditions is governed by the paraxial wave equation ^[eq:parax], which, for a time-dependent refractive index, takes the form
 $$
 2ik\frac{\partial u_t(\mathbf{r},z)}{\partial z}+\Delta_\mathbf{r}
-u_t(\mathbf{r},z)+2k^2\delta n_t(\mathbf{r},z) u_t(\mathbf{r},z)=0,
+u_t(\mathbf{r},z)+2k^2\delta n_t(\mathbf{r},z) u_t(\mathbf{r},z)=0.
 $$
 To specify the temporal evolution of the refractive index we adopt the Taylor frozen-turbulence hypothesis ^[eq:taylor_n] described in ^[sec:turb].
 Under this assumption, time-dependent turbulence can be represented as a frozen spatial pattern advected by the wind.
@@ -33,19 +33,19 @@ We consider two temporal modes at $t=0$ and $t=\tau$.
 The two mode input output relation for the Glauber P function for channels with fixed linear losses $\eta_0$ and $\eta_\tau$ reads by analogy with single time relation^[eq:PoutPin]
 $$
 P_\mathrm{out}(\alpha_0,\alpha_\tau|\eta_0,\eta_\tau)=
-\frac{1}{\eta_0\eta_\tau}P_\mathrm{in}\left(\frac{\alpha_0}{\sqrt{\eta_0}},\frac{\alpha_\tau}{\sqrt{\eta_\tau}}\right)
+\frac{1}{\eta_0\eta_\tau}P_\mathrm{in}\left(\frac{\alpha_0}{\sqrt{\eta_0}},\frac{\alpha_\tau}{\sqrt{\eta_\tau}}\right).
 $$
 Averaging over the atmospheric realizations leads to the input output relation for the two time channel
 $$P_\mathrm{out}(\alpha_0,\alpha_\tau)=
-\int_\Xi d\eta_0d\eta_\tau \left[\frac{1}{\eta_0\eta_\tau}P_\mathrm{in}\left(\frac{\alpha_0}{\sqrt{\eta_0}},\frac{\alpha_\tau}{\sqrt{\eta_\tau}}\right)\right]\, \mathcal{P}(\eta_0,\eta_\tau)$$
+\int_\Xi d\eta_0d\eta_\tau \left[\frac{1}{\eta_0\eta_\tau}P_\mathrm{in}\left(\frac{\alpha_0}{\sqrt{\eta_0}},\frac{\alpha_\tau}{\sqrt{\eta_\tau}}\right)\right]\, \mathcal{P}(\eta_0,\eta_\tau),$$
 where $\Xi=[0,1]\times[0,1]$ and where the joint distribution $\mathcal{P}(\eta_0,\eta_\tau)$ is the two time probability distribution of the transmittance.
 
 The two time distribution provides a complete description of such atmospheric quantum channels.
 The usual single time PDT is obtained as its marginal
-  $$\mathcal{P}(\eta_0) = \int d\eta_\tau \mathcal{P}(\eta_0,\eta_\tau)$$
+$$\mathcal{P}(\eta_0) = \int d\eta_\tau \mathcal{P}(\eta_0,\eta_\tau).$$
 Adaptive selection protocols rely on conditional statistics.
 If the protocol keeps only those events for which the first classical probe pulse has transmittance $\eta_0 \ge \eta_\mathrm{min}$ then the conditional PDT describing the second quantum pulse at time $t=\tau$ is
-$$\mathcal{P}(\eta_\tau|\eta_0 \geq  \eta_\mathrm{min}) = \frac{1}{\overline{\mathcal{F}}(\eta_\mathrm{min})} \int_{\eta_\mathrm{min}}^{1} \mathrm{d}\eta_0 \mathcal{P}(\eta_\tau,\eta_0)$$
+$$\mathcal{P}(\eta_\tau|\eta_0 \geq  \eta_\mathrm{min}) = \frac{1}{\overline{\mathcal{F}}(\eta_\mathrm{min})} \int_{\eta_\mathrm{min}}^{1} \mathrm{d}\eta_0 \mathcal{P}(\eta_\tau,\eta_0),$$
 where
 $$\overline{\mathcal{F}}(\eta_\mathrm{min}) = \int_{\eta_\mathrm{min}}^{1} \mathrm{d}\eta_0 \mathcal{P}(\eta_0)$$
 is the exceedance.
@@ -73,7 +73,7 @@ By contrast, using a single velocity parameter $v$ for all phase screens ensures
 The coordinate system is rotated such that the new $x$ axis is aligned with the transverse wind direction.
 Under this choice of coordinates, consider two optical pulses propagating through the channel, one at time $t=0$ and the other at $t=\tau$.
 The turbulence along the propagation path is represented by multiple phase screens, and for each screen, the realization at these two times are related by
-$$\varphi_{\tau}(x,y,z) = \varphi_0(x + v \tau, y, z)$$
+$$\varphi_{\tau}(x,y,z) = \varphi_0(x + v \tau, y, z),$$
 where $s=v\tau$ represents the wind-driven shift of the turbulent pattern over the time interval $\tau$.
 
 For the given wind velocity, the displacement $s$ and the time interval  are interchangeable.

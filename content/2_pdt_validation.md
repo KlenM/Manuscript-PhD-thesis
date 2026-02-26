@@ -28,7 +28,7 @@ This turbulence based classification is incomplete which motivates a more system
 In this section, numerical simulations of atmospheric channels are performed for three different turbulence conditions which are characterized with the value of the Rytov parameter $\sigma_{\mathrm{R}}^2 = 1.23 \, C_n^2 k^{7/6} z_\mathrm{ap}^{11/6}$.
 The results are used to validate existing analytical models and to identify their ranges of applicability.
 Model comparison is carried out using the Kolmogorov-Smirnov (KS) statistic^[@conover1999], defined as
-$$D_M = \sup_{\eta} \left| F_M(\eta) - F(\eta) \right|$$
+$$D_M = \sup_{\eta} \left| F_M(\eta) - F(\eta) \right|,$$
 where $F_M(\eta)=M^{-1}\sum_{i=1}^M\theta(\eta-\eta_i)$ denotes the empirical distribution function obtained from simulation, $M$ is the sample size, $\theta(\eta)$ is the Heaviside step function, and $F(\eta)$ cumulative distribution function of the analytical model.
 The goal is to determine which model performs best in a given scenario rather than to perform formal hypothesis testing.
 The Kolmogorov-Smirnov statistic therefore provides a simple and sufficient metric.
@@ -52,7 +52,7 @@ Before performing the validation of existing analytical models, we introduce an 
 The PDT in this model is defined by the Beta probability density function:
 $$
 %\label{Eq:pdt_beta}
-\mathcal{P}\!\left(\eta\,; \left<\eta\right>, \left<\eta^2\right>\right) = \frac{1}{B(a, b)} \eta^{a-1} (1-\eta)^{b-1}.
+\mathcal{P}\!\left(\eta\,; \left<\eta\right>, \left<\eta^2\right>\right) = \frac{1}{B(a, b)} \eta^{a-1} (1-\eta)^{b-1},
 $$
 where $B(a,b)$ is the Beta function.
 The internal parameters $a$ and $b$ are expressed through the first two moments of the transmittance, $\left<\eta\right>$ and $\left<\eta^2\right>$, as

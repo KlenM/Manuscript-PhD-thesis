@@ -16,7 +16,7 @@ This assumption forms a workable starting point for studying the statistical pro
 
 Let us consider the structure function of the velocity field---ensemble average over turbulent atmosphere realizations of the square of longitudinal velocity difference at two points in space.
 $$%\label{eq:kolmStructFunc}
-D_v(r) = \left<|v(x) - v(x+r)|^2\right> \equiv  v_r^2$$
+D_v(r) = \left<|v(x) - v(x+r)|^2\right> \equiv  v_r^2.$$
 Since we assume homogeneous and isotropic turbulence, the statistics of fluctuations do not depend on the direction.
 We can define two time scales: the "inertial" time $T_I \sim r/v_r$ at which the structure of velocity difference deforms, and the "viscous" time $T_\nu \sim r^2/\nu$ at which the structure of velocity difference is smoothed by viscosity ^[@jimenez2004].
 Here $\nu$ is the kinematic viscosity (momentum diffusivity).
@@ -35,9 +35,9 @@ The interval of scales between $l_0$ and $L_0$ is called as the inertial range.
 In the 1940s Kolmogorov assumed^[@kolmogorov1941] that energy enters the turbulent system at large scales $L_0$, cascades through inertial range scales without energy loss, and finally dissipates at the $l_0$ scale due to the viscosity.
 This is so called energy cascade model of turbulence.
 In this case the energy flux from a scale to another by unit mass defined as the kinetic energy divided by deformation time must be a constant:
-$$\varepsilon \sim \frac{v_r^2}{T_I}=\frac{v_r^3}{r}=\mathrm{const}$$
+$$\varepsilon \sim \frac{v_r^2}{T_I}=\frac{v_r^3}{r}=\mathrm{const}.$$
 The dimensional analysis implies that the structure function ^[eq:kolmStructFunc] must be proportional to
-$$D_v(r)\sim\left(\varepsilon\, r\right)^{2/3}\equiv C_v^2 r^{2/3}\,,\quad l_0\ll r\ll L_0$$
+$$D_v(r)\sim\left(\varepsilon\, r\right)^{2/3}\equiv C_v^2 r^{2/3}\,,\quad l_0\ll r\ll L_0,$$
 where $C_v^2$ is the velocity structure constant (units of $\mathrm m^{4/3}\mathrm s^{-2}$).
 
 #### Structure function of the index of refraction.
@@ -46,13 +46,13 @@ It, in turn, depends on temperature, pressure, humidity, and other atmospheric v
 The dominant contribution arises from temperature fluctuations, since temperature relaxes much more slowly than the other parameters^[@hill1980].
 In the inertial range of turbulence, the advective transport strongly dominates over diffusion, so temperature behaves as a passive scalar transported by the turbulent velocity field.
 Consequently, the structure functions of the refractive index, temperature, and velocity fields exhibit the same scaling behavior $D_n(r) \sim D_T(r) \sim D_v(r)$, and therefore
-$$D_n(r) = C_n^2 r^{2/3}\,,\quad l_0\ll r\ll L_0$$
+$$D_n(r) = C_n^2 r^{2/3}\,,\quad l_0\ll r\ll L_0,$$
 where $C_n^2$ is the refractive-index structure constant, which primarily determines the strength of the turbulence.
 
 > - It is also very common to define the Kolmogorov turbulence model with the power spectral density function, which can be obtained using ^[eq:DtoPhi] as
 
 It is also very common to define the Kolmogorov turbulence model with the power spectral density function^[eq:psd_theory] as
-$$\Phi(\kappa)=0.033 C_n^2 \kappa^{-11/3}\,\quad 2\pi/L_0 \ll \kappa \ll 2\pi/l_0$$
+$$\Phi(\kappa)=0.033 C_n^2 \kappa^{-11/3}\,\quad 2\pi/L_0 \ll \kappa \ll 2\pi/l_0,$$
 where $\kappa = 2\pi/l$ is the spatial frequency and $C_n^2$ is the refractive index structure constant.
 Near ground level, $C_n^2$ ranges from around $10^{-17}$ m$^{-2/3}$ (weak turbulence) to $10^{-13}$ m$^{-2/3}$ (strong turbulence)^[@andrews2005].
 
@@ -64,7 +64,7 @@ Such unphysical condition can be fixed by  introducing models that behaves the s
 One of such models is modified von Karman model which introduce decay of power spectral density at the $l_0$ and $L_0$ values
 $$
 %\label{eq:mvk}
-\boxed{\Phi_n(\kappa) = 0.033 C_n^2 \frac{\exp(-\kappa^2/\kappa_\mathrm{m}^2)}{(\kappa^2 + \kappa_0^2)^{11/6}}}$$
+\boxed{\Phi_n(\kappa) = 0.033 C_n^2 \frac{\exp(-\kappa^2/\kappa_\mathrm{m}^2)}{(\kappa^2 + \kappa_0^2)^{11/6}}},$$
 where $\kappa_0 = 2\pi/L_0$ and $\kappa_\mathrm{m} = 5.92/l_0$ represent the outer and inner scale cutoffs, respectively.
 
 It is worth emphasizing that when this turbulence theory was first proposed, it consisted entirely of theoretical predictions.
@@ -107,7 +107,7 @@ Typical values for mean wind speed is  $v \sim 5-20\,\mathrm{m/s}$ in moderate t
 Then in the case when the advection time is much smaller than inertial time $T_v/T_I = v_r/v \ll 1$  we can assume that the index of refraction field is effectively frozen and evolve in time by moving with constant wind speed $\mathbf{v}: |\mathbf{v}|=v$ as a whole:
 $$
 %\label{eq:taylor_n}
-n(\mathbf{r},\,t)=n(\mathbf{r}-\mathbf{v}\,t,\,0)$$
+n(\mathbf{r},\,t)=n(\mathbf{r}-\mathbf{v}\,t,\,0).$$
 The intuition behind this can be supported by looking at clouds, which seem to keep their shape for a long time while drifting steadily with the wind.
 This phenomenon is known as the Taylor frozen turbulence hypothesis.
 

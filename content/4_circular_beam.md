@@ -55,7 +55,7 @@ This model remains simple and analytically tractable, and is shown to improve pr
 The PDT of the proposed model is defined as a compound distribution that extends the beam wandering model by treating the beam size $S$ as a random variable:
 $$
 %\label{eq:acbpdt}
-\mathcal{P}\!\left(\,\eta\mid\langle x^2_0 \rangle,\langle \eta \rangle,\langle \eta^2 \rangle\right)=\int_0^\infty dS \,\mathcal{P}_\mathrm{BW}\!\left(\,\eta\mid\langle x^2_0 \rangle,S\right) P(S\mid\mu,\sigma)$$
+\mathcal{P}\!\left(\,\eta\mid\langle x^2_0 \rangle,\langle \eta \rangle,\langle \eta^2 \rangle\right)=\int_0^\infty dS \,\mathcal{P}_\mathrm{BW}\!\left(\,\eta\mid\langle x^2_0 \rangle,S\right) P(S\mid\mu,\sigma).$$
 The fluctuations of the beam size $S$ are incorporated through the distribution $P(S\mid\mu,\sigma)$.
 Its parameters  $\mu=\mu(\langle \eta \rangle,\langle \eta^2 \rangle)$ and $\sigma=\sigma(\langle \eta \rangle,\langle \eta^2 \rangle)$ are fixed by enforcing the prescribed moments $\langle\eta\rangle$ and $\langle\eta^2\rangle$.
 As a result the transmittance statistics account simultaneously for beam displacement and beam deformation and specified by the second moment of beam displacement $\langle x_0^2\rangle$ and the first two moments of the transmittance.
@@ -64,7 +64,7 @@ Since the beam size is strictly positive its distribution must have positive sup
 Numerical simulations further show that its empirical distribution is well approximated by a log normal distribution for all considered in ^[sec:validation] channels.
 This observation aligns with the treatment of turbulence-induced distortions as multiplicative, which often leads to log normal statistics.
 Therefore the beam size distribution is chosen as
-$$P(S\mid\mu,\sigma)=\frac{1}{S\sigma\sqrt{2\pi}}\exp\left[{-\frac{\left(\ln{S}-\mu\right)^2}{2\sigma^2}}\right],
+$$P(S\mid\mu,\sigma)=\frac{1}{S\sigma\sqrt{2\pi}}\exp\left[{-\frac{\left(\ln{S}-\mu\right)^2}{2\sigma^2}}\right].
 $$
 
 ^[fig:lognormvalid] illustrates this agreement for a channel of moderate turbulence with $F_0 = z_\mathrm{ap}$, which represents the worst-case scenario among all channels.
@@ -80,27 +80,31 @@ The parameters $\mu$ and $\sigma$ are therefore defined implicitly by computing 
 $$
 \begin{cases}
 \langle \eta \rangle &= \int_0^\infty \mathrm{d}S \, P(S\mid\mu,\sigma) \, \langle \eta \rangle_{\mathrm{BW}} \\
-\langle \eta^2 \rangle &= \int_0^\infty \mathrm{d}S \, P(S\mid\mu,\sigma) \, \langle \eta^2 \rangle_{\mathrm{BW}}
+\langle \eta^2 \rangle &= \int_0^\infty \mathrm{d}S \, P(S\mid\mu,\sigma) \, \langle \eta^2 \rangle_{\mathrm{BW}}.
 \end{cases}
 $$
 Here $\langle\eta\rangle_{\mathrm{BW}}$ and $\langle\eta^2\rangle_{\mathrm{BW}}$ denote the moments of the beam wandering model evaluated at fixed $S$.
 
 As derived in ^[@esposito1967], these moments of the beam wandering model take the form
-$$\langle \eta \rangle_{\mathrm{BW}} = 1 - \exp\left(-2\frac{a^2}{4\langle x_0^2 \rangle + S}\right)$$
 $$
 \begin{split}
+\langle \eta \rangle_{\mathrm{BW}} &= 1 - \exp\left(-2\frac{a^2}{4\langle x_0^2 \rangle + S}\right),\\
 \langle \eta^2 \rangle_{\mathrm{BW}} &= 1 - 2 \exp\left(-2\frac{a^2}{4\langle x_0^2 \rangle + S}\right) + \\
-&\exp\left(-\frac{\alpha^2}{2}\right) \left[1 - Q\left(\frac{\alpha}{\sqrt{1-\beta^2}}, \frac{\alpha \beta}{\sqrt{1-\beta^2}}\right) + Q\left(\frac{\alpha \beta}{\sqrt{1-\beta^2}}, \frac{\alpha}{\sqrt{1-\beta^2}}\right)\right]
+&\exp\left(-\frac{\alpha^2}{2}\right) \left[1 - Q\left(\frac{\alpha}{\sqrt{1-\beta^2}}, \frac{\alpha \beta}{\sqrt{1-\beta^2}}\right) + Q\left(\frac{\alpha \beta}{\sqrt{1-\beta^2}}, \frac{\alpha}{\sqrt{1-\beta^2}}\right)\right],
 \end{split}
 $$
 where the function $Q$ denotes the Marcum $Q$ function of order one ^[@marcum1960], and the auxiliary parameters are defined as
-$$\alpha = \frac{2a}{\sqrt{S}} \left[\frac{2 p(p+1)}{2 p^2+3 p+1}\right]^{1/2}$$
-$$\beta = (2p+1)^{-1}, \quad p = \frac{1}{8}\frac{S}{\langle x_0^2 \rangle}$$
+$$
+\begin{split}
+\alpha &= \frac{2a}{\sqrt{S}} \left[\frac{2 p(p+1)}{2 p^2+3 p+1}\right]^{1/2},\\
+\beta &= (2p+1)^{-1}, \quad p = \frac{1}{8}\frac{S}{\langle x_0^2 \rangle}.
+\end{split}
+$$
 
 Because the resulting system of equations have no closed form solution exists, the parameters $\mu$ and $\sigma$ are obtained numerically.
 When estimates of $\langle S\rangle$ and $\langle S^2\rangle$ are available they provide a convenient initial guess
 $$
-\mu_0 = \ln\left(\frac{\langle S \rangle^2}{\sqrt{\langle S^2 \rangle}}\right), \quad \sigma^2_0 = \ln\left(\frac{\langle S^2 \rangle}{\langle S \rangle^2}\right)$$
+\mu_0 = \ln\left(\frac{\langle S \rangle^2}{\sqrt{\langle S^2 \rangle}}\right), \quad \sigma^2_0 = \ln\left(\frac{\langle S^2 \rangle}{\langle S \rangle^2}\right).$$
 After determining the parameters $\mu$ and $\sigma$, the PDT is evaluated by numerical integration over the beam size variable $S$.
 
 Finally the infinite support of the log normal distribution requires truncation for numerical implementation.
