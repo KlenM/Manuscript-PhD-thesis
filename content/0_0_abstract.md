@@ -172,7 +172,7 @@ Although some models were validated by fitting, this approach lacks rigor and ma
 Furthermore, some assumptions underlying these models have not yet been validated.
 
 The existing framework describes an ensemble of independent single-beam propagation events.
-In practice, the turbulence coherence time is on the order of milliseconds, so consecutive pulses propagate through correlated atmospheric conditions.
+In practice, the turbulence coherence time is on the order of milliseconds, hence consecutive pulses propagate through correlated atmospheric conditions.
 The probability distribution of transmittance cannot account for this temporal correlation.
 Ignoring it discards the exploitable structure that could be used for protocol optimization and introduces vulnerabilities in quantum security protocols that assume independent channel realizations.
 
@@ -234,7 +234,7 @@ This model generally outperforms all other considered analytical models, and its
 > ## 5. Analysis of Temporal Correlations
 
 We extend the probability distribution of transmittance framework to account for temporal correlations in atmospheric quantum channels.
-Existing models describe isolated pulses or pulses separated by times exceeding the atmospheric correlation time, whereas realistic systems operate with high repetition rates, so consecutive pulses propagate through correlated turbulence that imprints on the output quantum states.
+Existing models describe isolated pulses or pulses separated by times exceeding the atmospheric correlation time, whereas realistic systems operate with high repetition rates, hence consecutive pulses propagate through correlated turbulence that imprints on the output quantum states.
 These effects are not captured by single time PDT models.
 We introduce a two time PDT that provides a complete statistical description of two consecutive pulses with arbitrary temporal separation.
 Its properties are studied numerically under Taylor’s frozen turbulence hypothesis.

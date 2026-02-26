@@ -101,11 +101,11 @@ In ^[fig:2timepdt] the two dimensional kernel density estimates of the joint PDT
 ![\label{fig:2timepdt}Two-time PDT $\mathcal{P}(\eta_0, \eta_\tau)$ for the channel with $\sigma_{\mathrm{R}}^2 = 5.5$ and $R_\mathrm{ap} = 20~\text{cm}$. The left panel shows a short pulse separation, where the distribution is concentrated along the diagonal, indicating high temporal correlation. The right panel shows a longer separation, where the distribution spreads and approaches a product of marginals $\mathcal{P}(\eta_0)\mathcal{P}(\eta_\tau)$, signifying nearly independent transmittance events.](time_corr/twotimepdt.pdf)
 
 For the smaller time interval $s=3~\text{cm}$ ($\tau=3~\text{ms}$) the distribution is sharply concentrated along the diagonal.
-The local refractive index pattern is only slightly changed over such a short interval, so the transmittance undergoes only minor variations.
+Because the refractive index pattern changes only slightly over such a short interval, the transmittance undergoes only minor variations.
 As a result the two pulses show a high level of temporal correlation, implying a strong potential for entanglement preservation and effective use of adaptive protocols.
 
 For the larger time interval $s=17~\text{cm}$ ($\tau=17~\text{ms}$), the distribution spreads significantly.
-This behavior indicates that the turbulent pattern has moved a much greater transverse distance, so the two pulses experience nearly independent transmittance values.
+This behavior indicates that the turbulent pattern has moved a much greater transverse distance, hence the two pulses experience nearly independent transmittance values.
 The joint PDT approaches the product of the two single-time distributions $\mathcal{P}(\eta)$, indicating that the channel can be effectively described using only the single-time PDT.
 In this regime adaptive selection becomes less effective because the value of $\eta_0$ carries little information about $\eta_\tau$.
 
@@ -128,7 +128,7 @@ In practical free-space quantum communication this parameter quantifies the mini
 
 For channel with $C_n^2 = 1 \times 10^{-16},\text{m}^{-2/3}$ and small receiving aperture $R_\mathrm{ap}=2\text{ cm}$, the observed spatial coherence radius is $\rho_0=6\text{ cm}$ which corresponds to $\tau=6~\text{ms}$.
 For the same channel but large aperture $R_\mathrm{ap}=20\text{ cm}$ the coherence radius increases to $\rho_0=13\text{ cm}$.
-This can be explained by noting that a larger aperture captures a broader region of the wavefront, so the turbulence-induced intensity pattern must be shifted much farther by the wind before the transmittance changes noticeably.
+This can be explained by noting that a larger aperture captures a broader region of the wavefront, which means that the turbulence-induced intensity pattern must be shifted much farther by the wind before the transmittance changes noticeably.
 
 A more systematic view is provided in ^[fig:scr_ap], which shows $\rho_0$ as a function of aperture radius across all simulated turbulence regimes.
 
@@ -169,7 +169,7 @@ The application of these results for preserving nonclassical properties will be 
 The analysis of time correlations in atmospheric quantum channels demonstrates that the transmittance of consecutive optical pulses cannot generally be treated as independent.
 The concept of the two-time PDT $\mathcal{P}(\eta_0,\eta_\tau)$ provides a complete and tractable framework to quantify these correlations.
 
-Temporal correlations decay monotonically with the pulse separation, so the spatial coherence radius $\rho_0$ emerges as a central parameter for characterizing the persistence of temporal correlations between consecutive pulses.
+As temporal correlations decay monotonically with pulse separation, the spatial coherence radius $\rho_0$ emerges as the central parameter for characterizing the persistence of temporal correlations between consecutive pulses.
 Its value depends primarily on the receiver aperture and only weakly on turbulence strength within the considered range.
 This implies that by selecting the aperture size appropriately, one can control the timescale over which successive quantum states remain statistically correlated, which is directly relevant for entanglement preservation in turbulent atmospheric channels.
 For the channels studied, these correlations persist over several milliseconds, corresponding to wind-driven shifts of a few centimeters.

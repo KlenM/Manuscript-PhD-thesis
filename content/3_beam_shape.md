@@ -128,7 +128,7 @@ Collimated $F=\infty$ & 0.0008 & $-0.1064$ \\
 
 The skewness is essentially zero, but the negative excess kurtosis indicates a slight platykurtic shape.
 This confirms a mild departure from Gaussianity at very strong turbulence conditions.
-However, the deviation is still modest, so for most analytical purposes the Gaussian assumption remains sufficiently accurate even in this regime.
+However, the deviation is still modest, such that for most analytical purposes the Gaussian assumption remains sufficiently accurate even in this regime.
 
 ## Quantifying contribution of beam wandering to the PDT
 Beam wandering is one of the dominant low-order turbulence-induced perturbations of an optical beam.
@@ -155,7 +155,7 @@ The magnitude of this correlation strongly depends on the ratio between the aper
 For aperture radii much larger than $W_\mathrm{LT}$, almost the full beam enters the receiver aperture regardless of its displacement.
 The correlation in this case close to zero.
 For aperture radii much smaller than $W_\mathrm{LT}$, the beam is strongly clipped even without wandering.
-Variations in the centroid position change the already-strong clipping only slightly, so the correlation again becomes small.
+Variations in the centroid position change the already-strong clipping only slightly, consequently, the correlation remains small.
 The strongest correlation appears in the intermediate regime when
 $R_\mathrm{ap} \lesssim W_\mathrm{LT}$.
 Here, the aperture captures the central part of the beam, and centroid motion produces large changes in overlap of the field intensity and the aperture.
@@ -207,7 +207,7 @@ Slightly higher correlations are observed in the strong-turbulence channel for s
 
 In the second approach, we focus on the statistical relationship between the beam centroid displacement $r_0$ and the instantaneous beam width.
 Unlike the first approach, which evaluates correlations through the measured transmittance and therefore includes aperture effects, this method directly characterizes the intrinsic properties of the beam itself, independent of any receiver geometry.
-However, in this approach, small-scale random intensity fluctuations, such as speckles, are effectively excluded, so that the correlation reflects only the large-scale beam spreading.
+However, in this approach, small-scale random intensity fluctuations, such as speckles, are effectively excluded, such that the correlation reflects only the large-scale beam spreading.
 To properly account for the symmetry of the system, the beam width is defined along the direction of the centroid displacement vector $\mathbf{r}_0$, denoted $W_{r}$ (see example in ^[fig:beamWr0]).
 
 ![\label{fig:beamWr0}Representative realization of an instantaneous beam intensity profile illustrating the coordinate rotation used for width measurement. The vector $\mathbf{r}_0$ indicates the displacement of the beam centroid from the optical axis. The coordinate system is rotated by angle $\chi$ to align the $x_r$ axis with the wandering direction, allowing for the direct measurement of the beam width $W_r$ along the axis of displacement.](beam_shape/original_beam_profile.pdf)
@@ -292,7 +292,7 @@ The dominant feature is a strong suppression of points along the diagonal $\Thet
 Apart from this suppression along the diagonal, there is also a noticeable deviation between the overall shape of the data and the covariance ellipse.
 At the same time, the covariance ellipse is nearly circular, indicating that the linear correlation between $\Theta_{1}$ and $\Theta_{2}$ is weak.
 
-To quantify these departures from Gaussianity, we rotate the coordinate system so that the transformed data becomes symmetric around $\Theta_\mathrm{(s)}=0$.
+To quantify these departures from Gaussianity, we rotate the coordinate system in a way that the transformed data becomes symmetric around $\Theta_\mathrm{(s)}=0$.
 The transformed variables are defined as
 $$
 \begin{split}

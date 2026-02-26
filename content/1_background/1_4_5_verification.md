@@ -23,7 +23,7 @@ For weak and strong turbulence regimes where analytical expressions exist, addit
 Beam shape parameters such as $W_\mathrm{LT}$^[eq:WLT2] and $S_\mathrm{BW}$^[eq:SBW2] are compared against analytical predictions ^[@andrews2005].
 In particular, the limit $C_n^2=0$ is examined, where the numerical model must recover free space propagation.
 Furthermore, basic physical consistency is enforced.
-Total intensity is conserved during propagation, and aliasing is excluded by ensuring that the beam footprint remains well within the computational grid at all propagation distances, so that no wrap around occurs at the grid boundaries.
+Total intensity is conserved during propagation, and aliasing is excluded by ensuring that the beam footprint remains well within the computational grid at all propagation distances, thereby preventing wrap-around at the grid boundaries.
 
 There also exist several practical conditions and heuristics that constrain the discretization.
 The transverse grid spacing must satisfy the Nyquist condition $\Delta x < \ell_0 / 2$ to resolve the inner scale of turbulence.

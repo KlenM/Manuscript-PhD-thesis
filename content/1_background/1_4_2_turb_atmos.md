@@ -21,7 +21,7 @@ Since we assume homogeneous and isotropic turbulence, the statistics of fluctuat
 We can define two time scales: the "inertial" time $T_I \sim r/v_r$ at which the structure of velocity difference deforms, and the "viscous" time $T_\nu \sim r^2/\nu$ at which the structure of velocity difference is smoothed by viscosity ^[@jimenez2004].
 Here $\nu$ is the kinematic viscosity (momentum diffusivity).
 The ratio of these two time scales defines the Reynolds number $\mathcal R_r=T_\nu/T_I = v_r r/\nu$.
-When $\mathcal R_r \gg 1$ the viscous time is much longer than inertial time, so the structure of velocity difference deforms into other (smaller) structures before its energy dissipates by viscosity.
+When $\mathcal R_r \gg 1$ the viscous time is much longer than inertial time, thus the structure of velocity difference deforms into other (smaller) structures before its energy dissipates by viscosity.
 For $\mathcal R_r < 1$ the structure dissipates their energy rapidly due to viscosity.
 
 It is widely used in the literature to associate these structures with turbulent eddies of diameter $r$ and linear velocity difference $v_r$. Then, inertial time corresponds to the time it takes for an eddy to complete one rotation. Although turbulent eddies are not well defined, they can be valuable for illustrating the intuition about turbulence dynamics.
@@ -33,7 +33,7 @@ The interval of scales between $l_0$ and $L_0$ is called as the inertial range.
 
 #### Structure function of the velocity field.
 In the 1940s Kolmogorov assumed^[@kolmogorov1941] that energy enters the turbulent system at large scales $L_0$, cascades through inertial range scales without energy loss, and finally dissipates at the $l_0$ scale due to the viscosity.
-This is so called energy cascade model of turbulence.
+This mechanism is reffered to as the energy cascade model of turbulence.
 In this case the energy flux from a scale to another by unit mass defined as the kinetic energy divided by deformation time must be a constant:
 $$\varepsilon \sim \frac{v_r^2}{T_I}=\frac{v_r^3}{r}=\mathrm{const}.$$
 The dimensional analysis implies that the structure function ^[eq:kolmStructFunc] must be proportional to
@@ -44,7 +44,7 @@ where $C_v^2$ is the velocity structure constant (units of $\mathrm m^{4/3}\math
 The refractive index $n$ is the primary parameter of the medium that affects light propagation.
 It, in turn, depends on temperature, pressure, humidity, and other atmospheric variables.
 The dominant contribution arises from temperature fluctuations, since temperature relaxes much more slowly than the other parameters^[@hill1980].
-In the inertial range of turbulence, the advective transport strongly dominates over diffusion, so temperature behaves as a passive scalar transported by the turbulent velocity field.
+In the inertial range of turbulence, the advective transport strongly dominates over diffusion, hence temperature behaves as a passive scalar transported by the turbulent velocity field.
 Consequently, the structure functions of the refractive index, temperature, and velocity fields exhibit the same scaling behavior $D_n(r) \sim D_T(r) \sim D_v(r)$, and therefore
 $$D_n(r) = C_n^2 r^{2/3}\,,\quad l_0\ll r\ll L_0,$$
 where $C_n^2$ is the refractive-index structure constant, which primarily determines the strength of the turbulence.
@@ -101,7 +101,7 @@ For experimental atmosphere study, most atmospheric experiments rely on small nu
 The answer to the question how to compare the temporal data with the spatial statistics provided by G. I. Taylor in 1937 with the Frozen Turbulence Hypothesis^[@taylor1938].
 
 The hypothesis is based on the difference between two atmospheric time scales.
-The first is the advection time, which can be defined as the duration required for the mean wind of speed $v$ to carry turbulent structure of size $r$ across the observation point, so $T_v = r/v$.
+The first is the advection time, which can be defined as the duration required for the mean wind of speed $v$ to carry turbulent structure of size $r$ across the observation point, given by $T_v = r/v$.
 The second is the mentioned in^[sec:turb_cascade] the inertial time $T_I \sim r/v_r$.
 Typical values for mean wind speed is  $v \sim 5-20\,\mathrm{m/s}$ in moderate to strong wind condition and $v_r \sim 0.1-2\,\mathrm{m/s}$ for the root mean squared velocity fluctuation.
 Then in the case when the advection time is much smaller than inertial time $T_v/T_I = v_r/v \ll 1$  we can assume that the index of refraction field is effectively frozen and evolve in time by moving with constant wind speed $\mathbf{v}: |\mathbf{v}|=v$ as a whole:
@@ -113,7 +113,7 @@ This phenomenon is known as the Taylor frozen turbulence hypothesis.
 
 The Taylor frozen turbulence hypothesis is subject to several restrictions.
 As in the general Kolmogorov model of turbulence, it assumes that the turbulence is roughly homogeneous and isotropic.
-A key requirement of the hypothesis is that the advection time is much smaller than the inertial (or evolution) time of the turbulent structures, so that changes in the turbulence during transport are negligible.
+A key requirement of the hypothesis is that the advection time is much smaller than the inertial (or evolution) time of the turbulent structures, ensuring that changes in the turbulence during transport are negligible.
 The hypothesis also assumes a constant wind speed in both magnitude and direction; near obstacles, the ground, or in the presence of gusts, deviations from this assumption may occur.
 Despite these limitations, the frozen turbulence approximation is widely used in practice and provides a useful framework for modeling time-dependent turbulent fields.
 

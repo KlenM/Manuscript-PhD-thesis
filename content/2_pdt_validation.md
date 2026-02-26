@@ -45,7 +45,7 @@ This approach provides unbiased parameter estimation and enables the validation 
 
 > - [ ] No determenistic losses!
 
-> - table of models (there are a lot so the reader need visual aid)
+> - table of models (there are a lot, means that the reader need visual aid)
 
 ## Beta distribution model
 Before performing the validation of existing analytical models, we introduce an additional empirical model of the probability distribution of transmittance based on the Beta distribution^[@johnson1995].
@@ -107,7 +107,7 @@ The second case uses $F_0 = z_\mathrm{ap}$ and corresponds to a geometrically fo
 #### Collimated beam.
 
 For the collimated beam with $F_0 = +\infty$, the Kolmogorov-Smirnov statistics comparing analytical models to the numerical PDT are shown in ^[fig:ks_weak_inf].
-The vertical axis is plotted on a logarithmic scale, so equal visual separations correspond to order of magnitude differences in the actual KS distance.
+The vertical axis is plotted on a logarithmic scale, such that equal visual separations correspond to order of magnitude differences in the actual KS distance.
 
 ![\label{fig:ks_weak_inf}Kolmogorov-Smirnov (KS) statistic $D_M$ as a function of the aperture radius for a collimated beam $F_0=\infty$ in a weak turbulence channel ($\sigma_{\mathrm{R}}^2 = 0.2$). The performance of the beam wandering (W), elliptical beam (E), truncated lognormal (L), total probability (T), and beta distribution (B) models are compared against numerical simulation data. The vertical line indicates the aperture radius ($R_\mathrm{ap} = 3~\text{cm}$) where the elliptical beam model achieves its minimum KS distance.](validation/weak_inf_ks_values.pdf)
 

@@ -44,11 +44,11 @@ A random function is stationary if all of its final-dimensional distribution fun
 $$
 F_{t_1 + \tau, \dots, t_n+\tau}(x_1, \dots, x_n) = F_{t_1, \dots, t_n}(x_1, \dots, x_n)\,, \quad \forall t_i\,, \ i \in [1\dots n]\,, \ \forall n.
 $$
-This simplifies the process, such as all functions $F_t(x) \ \forall t \in T$ are identical, so we need only one $F_{t_0}(x)$; and instead of considering  $F_{t_1, t_2}(x_1, x_2) \ \forall t_1,t_2$ we need only the family of joint distributions indexed by the time difference $\tau=t_2-t_1$, and so on.
+This simplifies the process, such as all functions $F_t(x) \ \forall t \in T$ are identical, hence we need only one $F_{t_0}(x)$; and instead of considering  $F_{t_1, t_2}(x_1, x_2) \ \forall t_1,t_2$ we need only the family of joint distributions indexed by the time difference $\tau=t_2-t_1$, and so on.
 
 We can characterize random functions with moments.
 The first moment $\mu(t)=\mathbb E\, \xi_t = \int_{-\infty}^\infty x dF_t(x)$ is the mean value.
-For the stationary random function it is constant $\mu=\mu(t)$, so it is often useful to redefine our random process with a new random process $\xi_t - \mu$. The second moment is the correlation function, which gives more precise characteristic of the random function:
+For the stationary random function it is constant $\mu=\mu(t)$, which means that it is often useful to redefine our random process with a new random process $\xi_t - \mu$. The second moment is the correlation function, which gives more precise characteristic of the random function:
 $$B(t_1, t_2) = \mathbb E\, \xi_{t_1}\overline{\xi_{t_2}} = \int_{-\infty}^\infty\int_{-\infty}^\infty x_1 x_2 dF_{t_1,t_2}(x_1,x_2).$$
 For the stationary random function it only depends on the time difference $\mathbb E\, \xi_{t}\overline{\xi_{t+\tau}} = B(\tau)$.
 
