@@ -61,7 +61,7 @@ One of the objectives of this study is to determine the applicability range of a
 For this purpose, the Kolmogorov-Smirnov statistic is used to quantify the statistical distance between model cumulative distributions and empirical distributions obtained from simulations.
 
 The temporal dynamics are modeled using Taylor’s frozen turbulence hypothesis, which assumes that refractive index fluctuations are transported by transverse wind while remaining structurally unchanged.
-By combining this hypothesis with a sparse spectrum approach, we can generate arbitrarily long phase screens to simulate the channel's temporal evolution.
+By combining this hypothesis with a sparse spectrum approach, we can generate arbitrarily long phase screens to simulate the temporal evolution of the channel.
 This enables the consistent simulation of successive optical pulses as they propagate through the turbulent channel.
 
 This framework is suitable for studying time dependent channel effects.

@@ -51,7 +51,7 @@ The truncated lognormal distribution model^[@semenov2009] originates based on th
 
 The beam-wandering model^[@vasylyev2012] accounts for random deflection of the beam’s center of mass from the propagation axis while neglecting beam-shape deformation.
 It assumes a normally distributed beam-center position in the aperture plane, resulting in a log-negative Weibull distribution for the PDT.
-The model depends only on the beam-shape parameters, and it's supposed to be applicable under weak turbulence conditions.
+The model depends only on the beam-shape parameters, and it is supposed to be applicable under weak turbulence conditions.
 
 The elliptical-beam model^[@vasylyev2016] extends the beam-wandering approach by incorporating elliptical shape distortions, thereby capturing additional contributions to the cumulative beam decomposition of the intensity at the aperture plane.
 This added complexity requires numerical evaluation of the model parameters.

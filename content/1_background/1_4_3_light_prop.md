@@ -74,8 +74,8 @@ $$\begin{split}
 \end{split}$$
 requires the fourth order correlation function and characterizes the variability of the atmospheric channel transmittance.
 
-Let's consider statistical properties of the beam-spot at the aperture plane^[@andrews2005].
-The simplest property is the beam's center of gravity, which defined for a single realization of turbulent atmosphere as
+Let us consider statistical properties of the beam-spot at the aperture plane^[@andrews2005].
+The simplest property is the beam centroid, which defined for a single realization of turbulent atmosphere as
 $$
 %\label{eq:x0}
 x_0 = \int_{\mathbb{R}^2} d^2\boldsymbol{r} \, x\, |u(\boldsymbol{r}, z_\mathrm{ap})|^2$$
@@ -86,7 +86,7 @@ $$
 %\label{eq:WLT2}
 W_\mathrm{LT}^2 = 4\int_{\mathbb{R}^2} d^2\boldsymbol{r} \, x^2\, \Gamma_2(\boldsymbol{r}, z_{\mathrm{ap}})$$
 and represents the effective spatial extent of the beam after propagation through turbulence, incorporating both diffraction and spreading due to the turbulence effects.
-The variance of the beam-centroid coordinate, often referred to as beam wandering, characterizes the random displacement of the beam’s center of gravity
+The variance of the beam-centroid coordinate, often referred to as beam wandering, characterizes the random displacement of the beam centroid
 $$
 %\label{eq:SBW2}
 \sigma_\mathrm{BW}^2=\left<x_0^2\right>=

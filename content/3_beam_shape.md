@@ -181,7 +181,7 @@ This demonstrates that the mentioned above practice of extrapolating statistical
 
 > Unnecessary:
 >- Its impact is also strongly modulated by the receiver aperture.
->    - in this section, the importance of aperture isn't clear. It's for validation section
+>    - in this section, the importance of aperture is not clear. It is for validation section
 
 ## Beam-wandering and beam-shape correlations
 

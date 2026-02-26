@@ -22,7 +22,7 @@ $$
 2ik\frac{\partial u_t(\mathbf{r},z)}{\partial z}+\Delta_\mathbf{r}
 u_t(\mathbf{r},z)+2k^2\delta n_t(\mathbf{r},z) u_t(\mathbf{r},z)=0,
 $$
-To specify the temporal evolution of the refractive index we adopt the Taylor's frozen-turbulence hypothesis ^[eq:taylor_n] described in ^[sec:turb].
+To specify the temporal evolution of the refractive index we adopt the Taylor frozen-turbulence hypothesis ^[eq:taylor_n] described in ^[sec:turb].
 Under this assumption, time-dependent turbulence can be represented as a frozen spatial pattern advected by the wind.
 
 The transmittance through a receiving aperture $\mathcal{A}$ at time $t$ is then given by the aperture-averaged intensity of the propagated field:

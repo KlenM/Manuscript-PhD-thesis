@@ -14,7 +14,7 @@ This assumption forms a workable starting point for studying the statistical pro
 >"By making one further assumption of incompressible turbulence, that is, g. v = 0 (Batchelor [2.4]), we can write D, in terms of Dr,," (["Laser Beam Propagation in the Atmosphere", 1978, p. 23](zotero://select/library/items/6VHCHVKG)) ([pdf](zotero://open-pdf/library/items/4WBAA526?page=23&annotation=VDDGJIX8))
 >"Clifford [-2.52] also showed that the depolarization effects of the atmosphere are negligible even when the wavelength 2 is greater than the inner scale Io" (["Laser Beam Propagation in the Atmosphere", 1978, p. 39](zotero://select/library/items/6VHCHVKG)) ([pdf](zotero://open-pdf/library/items/4WBAA526?page=39&annotation=BFRJZMRA))
 
-Let's consider the structure function of the velocity field---ensemble average over turbulent atmosphere realizations of the square of longitudinal velocity difference at two points in space.
+Let us consider the structure function of the velocity field---ensemble average over turbulent atmosphere realizations of the square of longitudinal velocity difference at two points in space.
 $$%\label{eq:kolmStructFunc}
 D_v(r) = \left<|v(x) - v(x+r)|^2\right> \equiv  v_r^2$$
 Since we assume homogeneous and isotropic turbulence, the statistics of fluctuations do not depend on the direction.
@@ -24,7 +24,7 @@ The ratio of these two time scales defines the Reynolds number $\mathcal R_r=T_\
 When $\mathcal R_r \gg 1$ the viscous time is much longer than inertial time, so the structure of velocity difference deforms into other (smaller) structures before its energy dissipates by viscosity.
 For $\mathcal R_r < 1$ the structure dissipates their energy rapidly due to viscosity.
 
-It's widely used in the literature to associate these structures with turbulent eddies of diameter $r$ and linear velocity difference $v_r$. Then, inertial time corresponds to the time it takes for an eddy to complete one rotation. Although turbulent eddies are not well defined, they can be valuable for illustrating the intuition about turbulence dynamics.
+It is widely used in the literature to associate these structures with turbulent eddies of diameter $r$ and linear velocity difference $v_r$. Then, inertial time corresponds to the time it takes for an eddy to complete one rotation. Although turbulent eddies are not well defined, they can be valuable for illustrating the intuition about turbulence dynamics.
 
 We can define two characteristic lengths that play important role in turbulent atmosphere theory.
 The outer scale of turbulence $L_0$ can be considered as the typical size of the largest eddies or characteristic size of the system, like the altitude of laser beam propagation ^[@coulman1988], with typical values of $L_0 \approx 20\mathrm{m} - 100\mathrm{m}$^[@martin2000].

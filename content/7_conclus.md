@@ -2,13 +2,13 @@
 
 >- [ ] write intro to conclus as intro
 
-> - intro (Reiterate the "Why" and "What."	Confident & Direct) 
+> - intro (Reiterate the "Why" and "What."	Confident & Direct)
 >     - why this study was necessary [1p]
 >     - main claim or findings [2p]
 > - intro
 >     - qunatum network, long distance, satellites
 >     - existing toolset of models of PDT - applicability unclear
->     - describes ensamble, don't account for correlations between consequnce pulses
+>     - describes ensamble, do not account for correlations between consequnce pulses
 >     - A comprehensive numerical framework was required to resolve the applicability of these models and to characterize the temporal correlations
 
 > ## q communication
@@ -106,7 +106,7 @@ In this regime, Bell like inequalities provide a more sensitive probe of nonclas
 
 > how your work moves the field forward.
 
-We showed that the commonly assumed implication from optical field fluctuation mechanisms to transmittance statistics does not hold. 
+We showed that the commonly assumed implication from optical field fluctuation mechanisms to transmittance statistics does not hold.
 Even when a single physical effect dominates optical field behavior, finite aperture averaging fundamentally reshapes transmittance statistics.
 We identify the receiver aperture as the primary parameter controlling the PDT shape.
 For example, in a fixed strong turbulence scenario, a small receiver aperture produces a PDT with a log normal shape, consistent with predictions obtained by transferring optical field statistics to transmittance.
@@ -169,15 +169,15 @@ The introduced two time PDT framework extends ensemble based channel models to e
 The results demonstrate that temporal correlations induced by atmospheric time coherence increase the effective Hilbert space available for encoding and transferring quantum states of light.
 
 The provided simulation framework employs a phase screen method with Sparse Spectrum generation, reproducing the correct structure function and avoiding low frequency sampling errors inherent in FFT based methods.
-The framework has value for both theoretical analysis and system design. 
+The framework has value for both theoretical analysis and system design.
 Its code is publicly available and has attracted interest from the community.
 
-Together, these contributions establish a reliable foundation for evaluating and optimizing long distance atmospheric communication under realistic condition, which is essential for designing robust quantum communication protocols. 
+Together, these contributions establish a reliable foundation for evaluating and optimizing long distance atmospheric communication under realistic condition, which is essential for designing robust quantum communication protocols.
 
 > - [ ] is key statement for class fso that integrated instensity is limited instead of field presented here?
 > - [ ] allows for the generation of arbitrarily long phase screens, !!!
 >     - [ ] gpu? x20
-> - [ ] numsim limits: 
+> - [ ] numsim limits:
 >     - [ ] Markov approx - delta correlated atmosphere, but we often have Deltaz >> L_0
 >     - [ ] Paraxial Approximation (no need to account),
 >     - [ ] Vacuum Approximation (Split-Step) converged by big number of PS (numerical convergence?)

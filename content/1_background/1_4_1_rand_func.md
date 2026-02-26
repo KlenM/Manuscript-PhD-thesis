@@ -5,7 +5,7 @@
 
 When studying light propagation through random media, it is essential to introduce the minimal framework of random functions. In our problem, randomness enters through spatial variations of the refractive index, which in turn induces randomness in most derived quantities like beam properties at the aperture plane or the transmittance values. By treating these quantities as random functions, we can systematically describe their statistical properties, characterize correlations, study ergodicity property markov property, etc ^[@kampen2011,andrews2005,mandel1995].
 
-Let's consider a function $\xi$ of two parameters:
+Let us consider a function $\xi$ of two parameters:
 $$\xi: T \times \Omega \to \xi(t, \omega)$$
 where $t \in T$ is the domain parameter (time, space, etc.) and $\omega \in \Omega$ is an outcome, which can be usefully interpreted as a specific realization of a universe from the set of all possible parallel worlds.
 This form allows us to adopt two complementary perspectives.
@@ -46,19 +46,19 @@ This simplifies the process, such as all functions $F_t(x) \ \forall t \in T$ ar
 
 We can characterize random functions with moments.
 The first moment $\mu(t)=\mathbb E\, \xi_t = \int_{-\infty}^\infty x dF_t(x)$ is the mean value.
-For the stationary random function it is constant $\mu=\mu(t)$, so it's often useful to redefine our random process with a new random process $\xi_t - \mu$. The second moment is the correlation function, which gives more precise characteristic of the random function:
+For the stationary random function it is constant $\mu=\mu(t)$, so it is often useful to redefine our random process with a new random process $\xi_t - \mu$. The second moment is the correlation function, which gives more precise characteristic of the random function:
 $$B(t_1, t_2) = \mathbb E\, \xi_{t_1}\overline{\xi_{t_2}} = \int_{-\infty}^\infty\int_{-\infty}^\infty x_1 x_2 dF_{t_1,t_2}(x_1,x_2)$$
 For the stationary random function it only depends on the time difference $\mathbb E\, \xi_{t}\overline{\xi_{t+\tau}} = B(\tau)$.
 
 >  as we did with the refractive index random field ^[eq:deltan
 
-While correlation function characterize how similar the values at distance $r$, sometimes it's useful to consider how different the values at distance $r$, which is possible with the structure function
+While correlation function characterize how similar the values at distance $r$, sometimes it is useful to consider how different the values at distance $r$, which is possible with the structure function
 $$
 %\label{eq:struct_func}
 D(t_1,t_2)=\mathbb E|\xi_{t_1}-\xi_{t_2}|^2=\int_{-\infty}^\infty\int_{-\infty}^\infty |x_1 - x_2|^2 dF_{t_1,t_2}(x_1,x_2)$$
 The structure function is a powerful tool in the theory of random function with stationary increment^[@kolmogorov1941], but in the case of stationary functions it also depends only on the time difference $\tau$ and it simply relates to the correlation function as $D(\tau) = 2 \left(B(0) - \mathrm{Re}\, B(\tau)\right)$.
 
-In turbulent atmosphere science it's also common to characterize random fields with the complimentary to correlation function power spectral density function $\Phi(k)$, defined as Fourier transformation^[@wiener1930,khintchine1934]:
+In turbulent atmosphere science it is also common to characterize random fields with the complimentary to correlation function power spectral density function $\Phi(k)$, defined as Fourier transformation^[@wiener1930,khintchine1934]:
 $$
 %\label{eq:psd_theory}
 \Phi(\lambda) = \frac{1}{2\pi}\int e^{-i\lambda\tau} B(\tau)\, d\tau$$
@@ -84,7 +84,7 @@ $$
 \mathbb E\left[dZ(\lambda_1)\overline{dZ(\lambda_2)}\right]=0\,,\quad
 \mathbb E\left[\left|dZ(\lambda)\right|^2\right]=\Phi(\lambda)\,d\lambda
 $$
-where $\lambda_1 \neq \lambda_2$, and $\Phi(\lambda)$ power spectral density function of the process (given it's absolutely continuous).
+where $\lambda_1 \neq \lambda_2$, and $\Phi(\lambda)$ power spectral density function of the process (given it is absolutely continuous).
 
 > Moreover, if the process is Gaussian, then the random variables Zk are Gaussian and stochastically independent. This result generalizes the Karhunen–Loève transform.
 The spectral representation theorem provides a framework for numerical generation of random functions, which forms the basis of the phase screen generation method which we will describe in one of the next sections.
