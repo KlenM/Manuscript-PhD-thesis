@@ -125,10 +125,12 @@ Taken together, these results demonstrate the feasibility of correlation aware s
 
 The research presented in the papers 1 and 2 was primarily conducted by the candidate.
 The scientific advisor, Andrii Semenov, provided the core conceptual ideas, research direction, and supervisory control throughout the project.
-The co-authors---specifically D. Vasylyev, W. Vogel, and M. Bohmann---provided assistance through enlightening discussions that helped refine the theoretical results and the interpretation of simulated data.
+The co-authors---specifically D. Vasylyev and W. Vogel---provided assistance through enlightening discussions that helped refine the theoretical results and the interpretation of simulated data.
 
 In the paper 3 my individual contributions to the research included providing the numerical framework utilized for beam shape distribution analysis and performing the extensive model validation.
 Additionally, I proposed the moment matching technique to eliminate the model-misspecification bias found in previous models.
+
+In the paper 4 my individual contribution consisted of conducting numerical modeling, analyzing the obtained data, and preparing representative visualization materials, which constituted the basis of the presented materials.
 
 #### Approbation of Research Results.
 
@@ -147,9 +149,12 @@ The total volume of the work is 152 pages, including 90 equations, 9 tables and 
 
 The dissertation was completed at the Bogolyubov Institute for Theoretical Physics of the National Academy of Sciences of Ukraine.
 It is related to the following academic programs, topics, and grants:
-1. National Research Foundation of Ukraine through Project No. 2020.02/0111, Nonclassical and hybrid correlations of quantum systems under realistic conditions.
-2. National Research Foundation of Ukraine through Project No. 2023.03/0165, Quantum correlations of electromagnetic radiation.
-3. Simons Foundation "Presidential Discretionary-Ukraine Support grant"
+1. Відомча тема відділення фізики та астрономії НАН України “Індуковані шумом динаміка та кореляції в нерівноважних системах”, Р/К 0120U101347. 
+2. Відомча тема відділення фізики та астрономії НАН України “Стохастичні процеси в конденсованих середовищах, біологічних системах та полях випромінювання”, Р/К  0125U000031.
+3. Project of National Research Foundation of Ukraine No. 2020.02/0111, “Nonclassical and hybrid correlations of quantum systems under realistic conditions”.
+4. Project of National Research Foundation of Ukraine No. 2023.03/0165 “Quantum correlations of electromagnetic radiation”.
+5. Project Simons Foundation International SFI-PD-Ukraine-00014573, PI LB.
+
 
 ```{=latex}
 \clearpage
