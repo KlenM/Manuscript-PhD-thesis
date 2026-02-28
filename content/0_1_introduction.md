@@ -136,6 +136,7 @@ The results of the dissertation were presented at seminars of the Bogolyubov Ins
 1. M. Klen and A. A. Semenov, "Free-space quantum channels: Numerical simulations", US-Ukraine Quantum Forum 2023, August 28-31, 2023
 2. M. Klen, "Quantum light in atmospheric turbulence", 25th Symposium on photonics and optics SPO 2024, Kyiv, (Ukraine), November 8, 2024
 3. M. Klen, "Numerical simulations in free-space quantum channels", poster session at Quantum 2025: From Foundations of Quantum Mechanics to Quantum Information and Quantum Metrology & Sensing, Turin, (Italy), May 18-24, 2025
+4. A. Semenov, M. Klen, I. Pechonkin, "Quantum optics in the turbulent atmosphere: fundamental issues and applications": invited talk at the SPIE Sensors+Imaging Meeting. Quantum Technologies for Defense and Security II. Madrid, Spain. September 15–18, 2025.
 
 #### Structure and Volume of the Thesis.
 

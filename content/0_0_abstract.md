@@ -131,10 +131,10 @@
 Режим сильної турбулетності.
 
 **Cписок публiкацiй:**
-1. Klen, M., & Semenov, A. A. (2023). Numerical simulations of atmospheric quantum channels. Physical Review A, 108(3). https://doi.org/10.1103/physreva.108.033718
-2. Klen, M., Vasylyev, D., Vogel, W., & Semenov, A. A. (2024). Time correlations in atmospheric quantum channels. Physical Review A, 109(3). https://doi.org/10.1103/physreva.109.033712
-3. Pechonkin, I., Klen, M., & Semenov, A. A. (2025). Circular-beam approximation for quantum channels in a turbulent atmosphere. Physical Review A, 112(6). https://doi.org/10.1103/pv7j-4zpf
-4. Semenov, A., Klen, M., & Pechonkin, I. (2025). Quantum optics in the turbulent atmosphere: fundamental issues and applications. Quantum Technologies for Defence and Security II (p. 38). SPIE. https://doi.org/10.1117/12.3069599
+1. M. Klen and A. A. Semenov, "Numerical simulations of atmospheric quantum channels", Phys. Rev. A 108, 033718 (2023).
+2. M. Klen, D. Vasylyev, W. Vogel, and A. A. Semenov, "Time correlations in atmospheric quantum channels", Phys. Rev. A 109, 033712 (2024).
+3. I. Pechonkin, M. Klen, and A. A. Semenov, "Circular-beam approximation for quantum channels in a turbulent atmosphere", Phys. Rev. A 112, 063716 (2025).
+4. A. Semenov, M. Klen, and I. Pechonkin, "Quantum Optics in the Turbulent Atmosphere: Fundamental Issues and Applications", in Quantum Technologies for Defence and Security II, edited by V. Fernandez, G. Sorelli, and S. Schwartz (p. 38). Proceedings of SPIE 13676, 136760H-13 (2025).
 
 ```{=latex}
 \clearpage
@@ -303,10 +303,10 @@ Strong fluctuation regime
 >- Quantum Engineers & Experimentalists
 
 **List of publications:**
-1. Klen, M., & Semenov, A. A. (2023). Numerical simulations of atmospheric quantum channels. Physical Review A, 108(3). https://doi.org/10.1103/physreva.108.033718
-2. Klen, M., Vasylyev, D., Vogel, W., & Semenov, A. A. (2024). Time correlations in atmospheric quantum channels. Physical Review A, 109(3). https://doi.org/10.1103/physreva.109.033712
-3. Pechonkin, I., Klen, M., & Semenov, A. A. (2025). Circular-beam approximation for quantum channels in a turbulent atmosphere. Physical Review A, 112(6). https://doi.org/10.1103/pv7j-4zpf
-4. Semenov, A., Klen, M., & Pechonkin, I. (2025). Quantum optics in the turbulent atmosphere: fundamental issues and applications. Quantum Technologies for Defence and Security II (p. 38). SPIE. https://doi.org/10.1117/12.3069599
+1. M. Klen and A. A. Semenov, "Numerical simulations of atmospheric quantum channels", Phys. Rev. A 108, 033718 (2023).
+2. M. Klen, D. Vasylyev, W. Vogel, and A. A. Semenov, "Time correlations in atmospheric quantum channels", Phys. Rev. A 109, 033712 (2024).
+3. I. Pechonkin, M. Klen, and A. A. Semenov, "Circular-beam approximation for quantum channels in a turbulent atmosphere", Phys. Rev. A 112, 063716 (2025).
+4. A. Semenov, M. Klen, and I. Pechonkin, "Quantum Optics in the Turbulent Atmosphere: Fundamental Issues and Applications", in Quantum Technologies for Defence and Security II, edited by V. Fernandez, G. Sorelli, and S. Schwartz (p. 38). Proceedings of SPIE 13676, 136760H-13 (2025).
 
 >в яких опубліковані основні наукові результати дисертації;
 які засвідчують апробацію матеріалів дисертації;
