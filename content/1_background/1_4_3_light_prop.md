@@ -11,7 +11,7 @@ $$%\label{eq:gaussbeam}
 where $W_0$ is the beam waist radius and $F_0$ is the radius of curvature of the wavefront. For collimated beams, $F_0 \to \infty$, while for focused beams, $F_0$ takes finite values.
 
 #### Paraxial wave equation in stochastic media.
-> To describe the propagation of gaussian beams through turbulent atmosphere we begin from the general wave equation derived from Maxwell’s equations.
+> To describe the propagation of gaussian beams through turbulent atmosphere we begin from the general wave equation derived from Maxwell's equations.
 
 >- scalar wave, polarization or only one of 6 components.
 >- "smoothly varying stochastic refractive index" ([Andrews and Phillips, 2005, p. 137](zotero://select/library/items/IJGQ3J8A)) ([pdf](zotero://open-pdf/library/items/VGHZA9HX?page=161&annotation=XM7K93SD))
@@ -85,7 +85,7 @@ $$
 x_0 = \int_{\mathbb{R}^2} d^2\boldsymbol{r} \, x\, |u(\boldsymbol{r}, z_\mathrm{ap})|^2.$$
 While it is obvious that under the assumption of isotropic turbulence (see ^[sec:turb_cascade]) average value of the beam centroid $\left<x_0\right>=0$, it remains an open question whether its distribution is Gaussian.
 In particular, for strong turbulence the distribution can deviate, for example by exhibiting heavy tails.
-The second moment is referred to as the long-term beam-spot radius. It defined as
+The second moment is referred to as the long-term beam-spot radius. It is defined as
 $$
 %\label{eq:WLT2}
 W_\mathrm{LT}^2 = 4\int_{\mathbb{R}^2} d^2\boldsymbol{r} \, x^2\, \Gamma_2(\boldsymbol{r}, z_{\mathrm{ap}})$$

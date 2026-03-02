@@ -20,7 +20,7 @@
  >### Synthesis of findings:
 > #### numsim
 
-> This research successfully implemented a Phase Screen Method utilizing a Sparse Spectrum (SS) generation approach. By adopting the Modified Von Karman spectrum, the resulting phase screens achieved an ideal structure function, effectively bypassing the low-frequency sampling errors inherent in traditional FFT-based methods.
+> This research successfully implemented a phase-screen method utilizing a Sparse Spectrum (SS) generation approach. By adopting the Modified von Kármán spectrum, the resulting phase screens achieved an ideal structure function, effectively bypassing the low-frequency sampling errors inherent in traditional FFT-based methods.
 
 > validation, models
 
@@ -28,7 +28,7 @@
 >- As an aperture integrated quantity, transmittance depends explicitly on the receiver geometry and aperture size, which makes its statistical behavior more complex than that of the local field amplitude.
 
 We show that transferring assumptions about the light field before aperture directly to the transmittance value distribution is not valid.
-Beam wandering is the most pronounced effect in weak turbulence, but this does not imply that beam wandering based PDT models are accurate in this regime.
+Beam wandering is the most pronounced effect in weak turbulence, but this does not imply that beam-wandering based PDT models are accurate in this regime.
 A good fit of the truncated lognormal distribution in strong turbulence does not justify its universal use across strong turbulence scenarios.
 The same limitation applies to approaches that infer transmittance statistics from light field distributions in a point.
 Realistic measurements always involve a finite size aperture in contrast to the theoretical descriptions of the light field are typically defined at an infinitesimal point.
@@ -51,7 +51,7 @@ This means that accurately predicting the mean transmittance and variance, in ad
 In practice, these models often fail to do so.
 They often reproduce the qualitative shape of numerically simulated PDTs but exhibit systematic shifts.
 To overcome this misspecification bias we proposed a transmittance matching procedure.
-Based on this procedure, we construct a new physically grounded model with fewer parameters than the elliptical beam model, while producing unbiased estimates of the first two transmittance moments and outperforming it overall.
+Based on this procedure, we construct a new physically grounded model with fewer parameters than the elliptical-beam model, while producing unbiased estimates of the first two transmittance moments and outperforming it overall.
 
 > validated model assumptions for further dev of model.
 
@@ -74,13 +74,13 @@ Consecutive pulses therefore propagate through strongly correlated atmospheric c
 The channel transmittance becomes temporally correlated, and this correlation is imprinted on the output quantum states.
 Such effects are not captured by existing models.
 
-In this work, we extended the PDT framework by introducing a two time PDT formulation.
-The resulting two time PDT provides a complete statistical description of two consecutive pulses with arbitrary temporal separation.
-Its properties were studied numerically under Taylor’s frozen turbulence hypothesis.
+In this work, we extended the PDT framework by introducing a two-time PDT formulation.
+The resulting two-time PDT provides a complete statistical description of two consecutive pulses with arbitrary temporal separation.
+Its properties were studied numerically under Taylor's frozen turbulence hypothesis.
 
 To quantify temporal correlation properties of atmospheric quantum channels, we introduced the aperture averaged spatial coherence radius $\rho_0$.
 It is defined as the temporal separation at which the Pearson correlation coefficient of pulse transmittances decays to $e^{-1}$.
-As in the single time PDT, the receiver aperture plays a dominant role.
+As in the single-time PDT, the receiver aperture plays a dominant role.
 We showed that the aperture averaged spatial coherence radius increases approximately linearly over a practically relevant range of aperture radii.
 The aperture size therefore acts as an effective control parameter for achieving desired levels of transmittance correlation, corresponding to several centimeters of spatial coherence or several milliseconds of temporal coherence.
 
@@ -89,7 +89,7 @@ It closes a gap between idealized single pulse models and realistic high repetit
 
 > Application
 
-The introduced two time PDT framework enables the analysis of a broad class of quantum communication protocols in turbulent atmospheric channels.
+The introduced two-time PDT framework enables the analysis of a broad class of quantum communication protocols in turbulent atmospheric channels.
 We applied it to study three key quantum properties under realistic operating conditions, including practical source imperfections, deterministic losses in quantum memory storage, finite detector efficiency, and limited detector resolution.
 This enables direct assessment of protocol performance beyond idealized assumptions.
 
@@ -109,8 +109,8 @@ In this regime, Bell like inequalities provide a more sensitive probe of nonclas
 We showed that the commonly assumed implication from optical field fluctuation mechanisms to transmittance statistics does not hold.
 Even when a single physical effect dominates optical field behavior, finite aperture averaging fundamentally reshapes transmittance statistics.
 We identify the receiver aperture as the primary parameter controlling the PDT shape.
-For example, in a fixed strong turbulence scenario, a small receiver aperture produces a PDT with a log normal shape, consistent with predictions obtained by transferring optical field statistics to transmittance.
-However, increasing only the aperture size leads to a negatively skewed PDT, a behavior qualitatively similar to that predicted by beam wandering based models that are commonly assumed to be applicable in weak turbulence.
+For example, in a fixed strong turbulence scenario, a small receiver aperture produces a PDT with a lognormal shape, consistent with predictions obtained by transferring optical field statistics to transmittance.
+However, increasing only the aperture size leads to a negatively skewed PDT, a behavior qualitatively similar to that predicted by beam-wandering based models that are commonly assumed to be applicable in weak turbulence.
 This demonstrates that apparent agreement with different PDT models arises from aperture size rather than from the dominance of a specific physical mechanism, thereby invalidating such model selection heuristics.
 Also, this conclusion is general and applies not only to quantum channels but also to classical optical links, since any detection system involves a finite-sized aperture.
 
@@ -157,18 +157,18 @@ Future validation efforts should combine high resolution intensity measurements 
 > sense of completion and significance
 
 This thesis provides a consistent and practically usable description of atmospheric quantum channels beyond idealized assumptions.
-It resolves long standing ambiguities in the interpretation and applicability of probability distributions of transmittance.
+It resolves long standing ambiguities in the interpretation and applicability of PDTs.
 It establishes the receiver aperture as the dominant control parameter shaping transmittance statistics and temporal correlations, a conclusion that applies not only to quantum channels but also to classical free space optical links.
 
 This thesis provides a consistent and practically usable description of atmospheric quantum channels beyond idealized assumptions.
-It resolves long standing ambiguities in the interpretation and applicability of probability distributions of transmittance.
+It resolves long standing ambiguities in the interpretation and applicability of PDTs.
 It establishes the receiver aperture as the dominant control parameter shaping transmittance statistics and temporal correlations, with equal relevance for quantum channels and classical free space optical links.
 
 By combining high fidelity numerical simulation, systematic model testing, and explicit validation of physical assumptions, this work clarifies which elements of existing approaches are justified and which require revision.
-The introduced two time PDT framework extends ensemble based channel models to explicitly include correlations between consecutive pulses.
+The introduced two-time PDT framework extends ensemble based channel models to explicitly include correlations between consecutive pulses.
 The results demonstrate that temporal correlations induced by atmospheric time coherence increase the effective Hilbert space available for encoding and transferring quantum states of light.
 
-The provided simulation framework employs a phase screen method with Sparse Spectrum generation, reproducing the correct structure function and avoiding low frequency sampling errors inherent in FFT based methods.
+The provided simulation framework employs a phase-screen method with the sparse-spectrum generation, reproducing the correct structure function and avoiding low frequency sampling errors inherent in FFT based methods.
 The framework has value for both theoretical analysis and system design.
 Its code is publicly available and has attracted interest from the community.
 

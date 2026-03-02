@@ -173,7 +173,7 @@ Moreover, fitting of such analytical models to experimental data sets for a weak
 
 >"This is justified for weak turbulence, when speckles play no essential role." ([Vasylyev et al., 2016, p. 1](zotero://select/library/items/QEV8ZWED)) ([pdf](zotero://open-pdf/library/items/J49VGVHY?page=1&annotation=HLNYWFKI))
 >"Aperture transmission coefficient.– For weak absorption, beam-wandering losses are dominant." ([Vasylyev et al., 2012, p. 2](zotero://select/library/items/MTFCYJ8H)) ([pdf](zotero://open-pdf/library/items/DHFQCSBE?page=2&annotation=PTZWZMYV))
->"For some cases with long propagation lengths or strong turbulence, the effects of beam-spot distortions significantly dominate the resulting statistics, compared to the effects of beam wandering. In this case, the PDT can be approximated with reasonable accuracy by the truncated log-normal distribution" ([Vasylyev et al., 2018, p. 3](zotero://select/library/items/QRZKWNB4)) ([pdf](zotero://open-pdf/library/items/6VZUIQVQ?page=3&annotation=Z3TGZBAQ))
+>"For some cases with long propagation lengths or strong turbulence, the effects of beam-spot distortions significantly dominate the resulting statistics, compared to the effects of beam wandering. In this case, the PDT can be approximated with reasonable accuracy by the truncated lognormal distribution" ([Vasylyev et al., 2018, p. 3](zotero://select/library/items/QRZKWNB4)) ([pdf](zotero://open-pdf/library/items/6VZUIQVQ?page=3&annotation=Z3TGZBAQ))
 
 However, as seen in ^[fig:r0eta], the correlation between centroid displacement and transmittance for the weak-turbulence channel with $F_0=+\infty$ is lower than for all other channels.
 In general, the maximal correlation between centroid displacement and transmittance increases with turbulence strength.
@@ -192,7 +192,7 @@ We address this question using two complementary approaches.
 The first approach is a natural extension of the analysis presented in the previous subsection, with one key modification.
 As before, for each of the $5\cdot10^5$ simulated realizations we calculate the centroid displacement $r_0$.
 However, instead of measuring the transmittance $\eta$, we shift the receiver aperture to the instantaneous centroid position and evaluate the resulting transmittance, denoted $\eta_{r_0}$.
-This procedure emulates an ideal adaptive-optics system that fully compensates for beam wandering.
+This procedure emulates an ideal beam-tracking system that fully compensates for beam wandering.
 By analyzing the correlation between $r_0$ and $\eta_{r_0}$ with the Pearson correlation coefficient
 $$
 S(r_0,\eta_{r_0})=\frac{\left\langle\Delta r_0 \Delta\eta_{r_0}\right\rangle}{\sqrt{\left\langle\Delta r_0^2\right\rangle\left\langle \Delta\eta_{r_0}^2\right\rangle}}
@@ -200,7 +200,7 @@ $$
 we isolate the statistical relationship between centroid motion and the residual beam-shape fluctuations, independent of the displacement effect.
 The results are summarized in ^[fig:r0eta0].
 
-![\label{fig:r0eta0} Pearson correlation coefficient $S(r_0, \eta_{r_0})$ between the beam-centroid displacement $r_0$ and the tracked transmittance $\eta_{r_0}$ (where the aperture is centered on the instantaneous beam center). The results cover weak (W), moderate (M), and strong (S) turbulence channels for both collimated ($F_0 = +\infty$) and focused ($F_0 = z_\mathrm{ap}$) beams.](beam_shape/original_r_0_eta_tracked.pdf)
+![\label{fig:r0eta0} Pearson correlation coefficient $S(r_0, \eta_{r_0})$ between the beam-centroid displacement $r_0$ and the tracked transmittance $\eta_{r_0}$ (where the aperture is centered on the instantaneous beam centroid). The results cover weak (W), moderate (M), and strong (S) turbulence channels for both collimated ($F_0 = +\infty$) and focused ($F_0 = z_\mathrm{ap}$) beams.](beam_shape/original_r_0_eta_tracked.pdf)
 
 For the majority of atmospheric channels and aperture radii, the correlations are very weak, indicating that beam centroid displacements and higher-order beam-shape fluctuations are largely independent.
 Slightly higher correlations are observed in the strong-turbulence channel for small aperture radii, where realizations with larger centroid displacements $r_0$ tend to produce smaller transmittance values compared to realizations with $r_0$ near the optical axis.
@@ -248,7 +248,7 @@ Strong & 0.32 &  \\
 > | Moderate |     0.08      |       0.15        |
 > | Strong   |     0.32      |         -         |
 
-Overall, the correlations are small in the weak and moderate channels, indicating that beam wandering and large-scale spreading remain largely independent in these regimes.
+Overall, the correlations are small in the weak and moderate channels, indicating that beam-wandering and large-scale spreading remain largely independent in these regimes.
 A noticeable increase appears only for the strong-turbulence channel, indicating that, on average, beams become wider when their centroids deviate further from the propagation axis.
 The strength of this effect grows with increasing turbulence.
 
@@ -258,7 +258,7 @@ Only under strong turbulence a measurable dependence arises, but even then, its 
 ## Distribution of the beam semi-axes {#sec:semiaxes}
 
 In this section we move beyond the analysis of beam wandering and beam spreading and examine the statistical behavior of the semi-axes of the elliptical Gaussian approximation of the beam shape.
-This effect is a central element of the elliptical beam model ^[sec:pdt], which explicitly includes the influence of random fluctuations of the semi-axes $W_{1,2}$.
+This effect is a central element of the elliptical-beam model ^[sec:pdt], which explicitly includes the influence of random fluctuations of the semi-axes $W_{1,2}$.
 In this model the logarithms of the squared semi-axes are assumed to follow a bivariate Gaussian distribution.
 However, the validity of this assumption is not established.
 
@@ -276,7 +276,7 @@ If $S_{xy}>0$, then the principal axis corresponding to $W_{+}^{2}$ has a positi
 If $S_{xy}\le 0$, the orientation is reversed, and we set $W_{1}^{2}=W_{-}^{2}$ and $W_{2}^{2}=W_{+}^{2}$.
 Finally, for each realization we compute the logarithmic variables
 $$\Theta_{1,2} = \ln(W_{1,2}^2/W_0^2),$$
-which are the quantities assumed to follow the bivariate Gaussian distribution in the elliptical beam model.
+which are the quantities assumed to follow the bivariate Gaussian distribution in the elliptical-beam model.
 
 The scatter plot of the obtained pairs $(\Theta_1,\Theta_2)$ is shown in ^[fig:theta1theta2].
 
@@ -292,7 +292,7 @@ The dominant feature is a strong suppression of points along the diagonal $\Thet
 Apart from this suppression along the diagonal, there is also a noticeable deviation between the overall shape of the data and the covariance ellipse.
 At the same time, the covariance ellipse is nearly circular, indicating that the linear correlation between $\Theta_{1}$ and $\Theta_{2}$ is weak.
 
-To quantify these departures from Gaussianity, we rotate the coordinate system in a way that the transformed data becomes symmetric around $\Theta_\mathrm{(s)}=0$.
+To quantify these discrepancies from Gaussianity, we rotate the coordinate system in a way that the transformed data becomes symmetric around $\Theta_\mathrm{(s)}=0$.
 The transformed variables are defined as
 $$
 \begin{split}

@@ -1,11 +1,10 @@
 ### Theory of turbulent atmosphere {#sec:turb}
 Turbulence is widely recognized as one of the most complex and challenging phenomena in nature.
 The complexity are rooted in the Navier-Stokes equations, which results in  the non-linear, multi-scale, and intrinsically chaotic behavior of the system, making precise prediction impossible over extended periods^[@lorenz1963,frisch1995].
-Thus the atmospheric study mostly relies on statistical descriptions^[@kolmogorov1941] and the main object for description is the wind velocity random field.
+Thus the atmospheric study mostly relies on statistical descriptions^[@kolmogorov1941] and the main object for description is the velocity random field.
 
 #### Energy cascade model of turbulence. {#sec:turb_cascade}
 There are various sources that creates turbulence like wind shear, thermal convection, buoyancy effects, obstacles, but the statistical properties of the resulting flow tend to show similar universal behavior.
-
 We assume that turbulent atmosphere is stationary, homogeneous, and isotropic.
 Stationarity implies that the statistical properties of the flow do not change over time.
 Homogeneity means that no particular location in the space is special. Isotropy requires that no direction is privileged.
@@ -61,7 +60,7 @@ However the $-11/3$ power introduce some challenges when used under integrals ov
 Other problem with this model arises when we take look at the low spectrum region.
 We can see that this model yields infinite value of power density as $L_0 \to \infty$ which is sometimes used to simplify calculation.
 Such unphysical condition can be fixed by  introducing models that behaves the same in the internal region but smoothly fall-off in the energy and viscosity ranges.
-One of such models is modified von Karman model which introduce decay of power spectral density at the $l_0$ and $L_0$ values
+One of such models is modified von Kármán model which introduce decay of power spectral density at the $l_0$ and $L_0$ values
 $$
 %\label{eq:mvk}
 \boxed{\Phi_n(\kappa) = 0.033 C_n^2 \frac{\exp(-\kappa^2/\kappa_\mathrm{m}^2)}{(\kappa^2 + \kappa_0^2)^{11/6}}},$$
@@ -72,7 +71,7 @@ Its experimental confirmation came nearly a decade later and showed the first cl
 After some time, more sophisticated numerical and analytical approaches based directly on the Navier-Stokes equations were conducted^[@andrews1992].
 These studies validated the $-5/3$ power-law dependence of the energy spectrum in the inertial subrange.
 However, they also revealed additional fine structures, such as a small bump in the high-frequency (viscous) range of the spectrum^[@hill1978a].
-But overall, while the refined models introduced deeper physical insights, they largely supported the fundamental scaling laws established by Kolmogorov and the modified von Karman spectrum.
+But overall, while the refined models introduced deeper physical insights, they largely supported the fundamental scaling laws established by Kolmogorov and the modified von Kármán spectrum.
 
 >- "the amount of supporting experimental evidence is amazing ( M y r u p [2.9] and K a i m a l et al. [2.10])," (["Laser Beam Propagation in the Atmosphere", 1978, p. 24](zotero://select/library/items/6VHCHVKG)) ([pdf](zotero://open-pdf/library/items/4WBAA526?page=24&annotation=UBIAQ3SV))
 
@@ -84,16 +83,16 @@ But overall, while the refined models introduced deeper physical insights, they 
 The ^[fig:psd_scales] summarizes the model of atmospheric turbulence.
 It depicts the energy flow through scales starting from large scales of energy injection, going through inertial range where the turbulent motion is predominant process and to the region of energy dissipation by viscosity.
 
-![\label{fig:psd_scales}Power spectral density of atmospheric turbulence models. The blue line represents the Kolmogorov model, while the green line depicts the Modified von Karman model, highlighting the latter’s accounting for the inner and outer scales ($l_0$ and $L_0$).](file:///home/klen/syncthing/desktop/physics/phd/thesis/src/generated/psd_scales.svg)
+![\label{fig:psd_scales}Power spectral density of atmospheric turbulence models. The blue line represents the Kolmogorov model, while the green line depicts the Modified von Kármán model, highlighting how the latter accounts for the inner and outer scales ($l_0$ and $L_0$).](file:///home/klen/syncthing/desktop/physics/phd/thesis/src/generated/psd_scales.svg)
 
 >[!danger] Add
 >- [ ] Add paragraph that turb atm can be assumed as Gaussian process. We rely on this in PS section.
 
 >Sources: [pdf](https://oa.upm.es/88590/1/5480314.pdf) eddy concept try. Here v to n [source](https://subarutelescope.org/staff/guyon/15teaching.web/05AstrOptics2016.web/wdir.web/AstrOpt2016_11atmosphericturbulence.pdf)
->- [ ] we need some words about what is gaussian turbulence - why we use complex normal distr for phase screens generation
+>- [ ] we need some words about what is gaussian turbulence - why we use complex normal distr for phase-screen generation
 
 #### Frozen turbulence hypothesis.
-The Kolmogorov model, along with its modifications like the Von Karman spectrum, provides a strong theoretical basis for understanding the ensemble averaged statistics of turbulence.
+The Kolmogorov model, along with its modifications like the von Kármán spectrum, provides a strong theoretical basis for understanding the ensemble averaged statistics of turbulence.
 However, these models do not directly address the temporal statistics of the turbulent field.
 This lack of a temporal description is critical for several reasons.
 It is required for studying the temporal properties of the impact of the turbulent atmosphere on phenomena like light propagation.
@@ -102,7 +101,7 @@ The answer to the question how to compare the temporal data with the spatial sta
 
 The hypothesis is based on the difference between two atmospheric time scales.
 The first is the advection time, which can be defined as the duration required for the mean wind of speed $v$ to carry turbulent structure of size $r$ across the observation point, given by $T_v = r/v$.
-The second is the mentioned in^[sec:turb_cascade] the inertial time $T_I \sim r/v_r$.
+The second is the mentioned in^[sec:turb_cascade] inertial time $T_I \sim r/v_r$.
 Typical values for mean wind speed is  $v \sim 5-20\,\mathrm{m/s}$ in moderate to strong wind condition and $v_r \sim 0.1-2\,\mathrm{m/s}$ for the root mean squared velocity fluctuation.
 Then in the case when the advection time is much smaller than inertial time $T_v/T_I = v_r/v \ll 1$  we can assume that the index of refraction field is effectively frozen and evolve in time by moving with constant wind speed $\mathbf{v}: |\mathbf{v}|=v$ as a whole:
 $$

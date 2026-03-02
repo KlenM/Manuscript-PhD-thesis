@@ -33,10 +33,10 @@ F_{t_1,\dots,t_n}(x_1,\dots,x_n) &= \mathbb{P}[\xi_{t_1} < x_1,\dots \xi_{t_n} <
 \end{split}
 $$
 Other convenient way to specify a random function is using some analytic formula containing parameters which are random variables.
+We will call random processes time-indexed random functions, and random fields random functions indexed by multidimensional (2D or 3D) spatial variables.
 
 >". In the absence of such a family of probability distributions, it is customary to describe the random field in terms of its lowerorder statistical moments." ([Andrews and Phillips, 2005, p. 45](zotero://select/library/items/IJGQ3J8A)) ([pdf](zotero://open-pdf/library/items/VGHZA9HX?page=69&annotation=537H37EL))
 
-We will call random processes time-indexed random functions, and random fields random functions indexed by multidimensional (2D or 3D) spatial variables.
 
 #### Stationary random functions.
 The common class of random functions in physics is stationary random functions.
@@ -73,14 +73,14 @@ In one of the next subsection we will explicitly present several models for refr
 >- img
 
 #### Spectral representation.
-As in the case of regular functions, it can be very useful to represent random functions in the form of Fourier transform. It was shown, that any stationary random function can be arbitrarily closely represented on some interval $-T < t < T$ as a linear combination of finite number independent harmonic oscillators of the form $\xi_k e^{i\lambda_k t}$, where $\xi_k$ are some complex random variables with mean zero values and $\lambda_k$ are some real constants.
+As in the case of regular functions, it can be useful to represent random functions in the form of Fourier transform. It was shown, that any stationary random function can be arbitrarily closely represented on some interval $-T < t < T$ as a linear combination of finite number independent harmonic oscillators of the form $\xi_k e^{i\lambda_k t}$, where $\xi_k$ are some complex random variables with mean zero values and $\lambda_k$ are some real constants.
 
 In the limit we get the spectral representation theorem (Cramer-Karhunen), which states that any stationary process $\xi(t)$ can be represented in the form of the Fourier-Stieltjes integral:
 $$
 %\label{eq:FSint}
 \xi(t) = \int_{-\infty}^\infty e^{i\lambda t} dZ(\lambda),
 $$
-where $dZ(\lambda)$ is a random increment, which associates a random variable for each interval $[\lambda, \lambda + d\lambda]$, with the following properties:
+where $dZ(\lambda)$ is a random increment, which associates a random variable for each interval $[\lambda, \lambda + d\lambda]$, with the properties:
 $$
 \mathbb E\left[dZ(\lambda)\right]=0\,,\quad
 \mathbb E\left[dZ(\lambda_1)\overline{dZ(\lambda_2)}\right]=0\,,\quad
@@ -89,7 +89,7 @@ $$
 where $\lambda_1 \neq \lambda_2$, and $\Phi(\lambda)$ power spectral density function of the process (given it is absolutely continuous).
 
 > Moreover, if the process is Gaussian, then the random variables Zk are Gaussian and stochastically independent. This result generalizes the Karhunen–Loève transform.
-The spectral representation theorem provides a framework for numerical generation of random functions, which forms the basis of the phase screen generation method which we will describe in one of the next sections.
+The spectral representation theorem provides a framework for numerical generation of random functions, which forms the basis of the phase-screen generation method which we will describe in one of the next sections.
 
 >[Fourier-Stieltjes integral] ([pdf](zotero://open-pdf/library/items/AUHJNVFF?page=49&annotation=QFIE8QQV)) ([Yaglom, 2004, p. 49](zotero://select/library/items/NVY3HWQW))
 > Kolmog K10, K12 + [image] ([pdf](zotero://open-pdf/library/items/AUHJNVFF?page=67&annotation=RYT8TWV4)) ([Yaglom, 2004, p. 67](zotero://select/library/items/NVY3HWQW))

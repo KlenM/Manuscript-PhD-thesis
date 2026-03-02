@@ -9,7 +9,7 @@ Pioneering experimental efforts soon followed. Buttler et al. demonstrated the f
 Shortly after, Hughes et al. extended this to a 1.6 km urban channel, showing that the combined effects of turbulence and background light could be effectively mitigated ^[@hughes2002].
 Entanglement-based experiments pushed the boundaries further. In 2007 Ursin et al. successfully distributed entangled photons over a 144 km free-space channel between the Canary Islands, demonstrating that quantum entanglement could be preserved over unprecedented long distances ^[@ursin2007].
 In 2008-2009, experiments involving Earth-based and satellite stations, for both uplinks and downlinks, enabled the analysis of the feasibility of various QKD protocols ^[@villoresi2008,bonato2009].
-The launch of the Micius satellite in 2016 enabled quantum communication between cities via satellite, linking ground stations in Beijing and Graz (Austria), separated by 7600 km on Earth^[@liao2018].
+The launch of the Micius satellite in 2016 enabled quantum communication between cities via satellite, linking ground stations in Beijing (China) and Graz (Austria), separated by 7600 km on Earth^[@liao2018].
 This demonstrated that long-distance quantum links can be maintained through the atmosphere despite turbulence, absorption, and background light, opening the way toward a global quantum network^[@kimble2008].
 
 > [!note]- Options
@@ -30,7 +30,7 @@ Further developments aimed at extending the range of validity beyond weak turbul
 In contemporary studies, many approaches are based on the extended Huygens-Fresnel principle^[@lutomirski1971].
 However, it has been pointed out that commonly used variations of this method do not provide significant improvements over traditional methods^[@charnotskii2015].
 
-An alternative and widely used approach for simulating wave propagation through turbulence is the phase screen method^[@martin1988,frehlich2000,schmidt2010].
+An alternative and widely used approach for simulating wave propagation through turbulence is the phase-screen method^[@martin1988,frehlich2000,schmidt2010].
 In this technique, the turbulent medium is modeled as a series of discrete, statistically independent layers that impose random phase distortions on the wavefront, allowing efficient numerical computation of amplitude and phase fluctuations over long propagation distances.
 The theoretical description and implementation details of this method will be discussed in the ^[sec:ps].
 
@@ -44,9 +44,9 @@ This model generally agrees well with observations for short propagation paths o
 
 While the irradiance fluctuations are well described by the lognormal distribution in weak turbulence, experiments show that under very strong turbulence, the distribution tends toward a negative exponential.
 To account for strong scintillations, several models have been proposed^[@andrews2005].
-The K-distribution^[@jakeman1978] is based on a modulation process in which the irradiance follows a conditional negative exponential modulated with the gamma distributed process, providing good agreement with experimental data.
+The K-distribution^[@jakeman1978] is based on a modulation process in which the irradiance follows a conditional negative exponential modulated with the Gamma distributed process, providing good agreement with experimental data.
 The lognormal-Rician distribution models the irradiance as Rician, modulated by a lognormal distribution, and has been shown to better fit experimental observations^[@churnside1989], although it does not have a closed-form expression.
-The gamma-gamma distribution^[@al-habash2001] generalizes the K-distribution, with parameters that can be related to atmospheric conditions through models for large-scale and small-scale scintillations, and it offers a closed-form expression for the cumulative distribution function.
+The Gamma-Gamma distribution^[@al-habash2001] generalizes the K-distribution, with parameters that can be related to atmospheric conditions through models for large-scale and small-scale scintillations, and it offers a closed-form expression for the cumulative distribution function.
 Despite their empirical success in describing irradiance fluctuations in strong turbulence, these models remain phenomenological rather than being derived from first principles.
 
 ### Probability density function of photocounting

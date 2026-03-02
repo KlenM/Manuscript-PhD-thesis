@@ -8,19 +8,19 @@
 Це дозволяє реалізувати низку протоколів квантового зв'язку, включаючи квантовий розподіл ключів, квантову телепортацію та обмін квантовою заплутаністю.
 Ці можливості мають вирішальне значення для глобальної інфраструктури квантових мереж та архітектури квантового інтернету.
 
-Квантова інформація зазвичай кодується в квазімонохроматичних оптичних імпульсах, які можна апроксимувати як гаусові моди променя.
-Однак атмосферна турбулентність становить головну фізичну проблему.
+В низці розповзюджених застосувань, квантова інформація кодується в квазімонохроматичних оптичних імпульсах, які можна апроксимувати як гаусові моди світла.
+При цьому, атмосферна турбулентність становить одну з основних фізичних проблем.
 Випадкові коливання показника заломлення викликають блукання променя, спотворення хвильового фронту, сцинтиляцію та розширення променя.
 Ці ефекти нелінійно залежать від відстані поширення, інтенсивності турбулентності та довжини хвилі.
 Подальші вимірювання передбачають використання оптичної системи з скінченною апертурою, яка обрізає частину спотвореного профілю світла.
 Цей процес еквівалентний лінійному каналу з втратами, що характеризується ефективністю проходження $\eta$, яка визначається як частка інтенсивності променя, що уловлюється апертурою приймача.
-Один скаляр $\eta$ узагальнює складну тривимірну фізику поширення, що має значення для передачі квантового стану.
+У протоколах, що розглядається, одна величина $\eta$ узагальнює складну тривимірну фізику поширення, що має значення для передачі квантового стану.
 
 Атмосферна турбулентність є стохастичним процесом, що робить ефективність проходження каналу випадковою величиною.
 Розподіл імовірностей ефективності проходження (РІЕП) повністю характеризує статистику поширення квазімонохроматичного імпульсу через атмосферний квантовий канал.
 Ця концепція дозволяє встановити чіткі співвідношення між вхідними та вихідними даними для переданих і отриманих квантових станів, що є основою для аналізу ефективності протоколу.
 
-Було розроблено кілька аналітичних моделей для РІЕП, але межі їхньої застосовності залишаються нез’ясованими.
+Було розроблено кілька аналітичних моделей для РІЕП, але межі їхньої застосовності залишаються нез'ясованими.
 Хоча деякі моделі були підтверджені шляхом підгонки параметрів, цей підхід не є достатньо точним і може давати параметри, зміщені відносно фактичних атмосферних умов.
 Крім того, деякі припущення, що лежать в основі цих моделей, ще не були підтверджені.
 
@@ -116,7 +116,7 @@
 Квантовий зв'язок,
 Атмосферна турбулентність,
 Квантова оптика,
-Чисельне моделювання методом фазових екранів,
+Метод фазових екранів,
 Розподіл імовірностей ефективності проходження (РІЕП),
 Метод узгодження ефективності проходження,
 Модель кругового променя,
@@ -124,7 +124,7 @@
 Часові кореляції в каналах у вільному просторі,
 Часове кодування,
 Просторовий радіус когерентності,
-Заплутаність неперервних та дискретних змінних,
+Квантова заплутаність,
 Протоколи адаптивного вибору,
 Збереження некласичності,
 Квантова пам'ять в атмосфері,
@@ -144,8 +144,15 @@
 > 5-7 pages
 
 # Abstract {#sec:annotation_en .unnumbered}
-**Klen M.D.** Statistical models and temporal coherence of quantum light in the turbulent atmosphere.---*Qualifying scientific work in the form of a manuscript.*
-*Dissertation for the degree of Doctor of Philosophy in the specialty 01.04.02 "Theoretical Physics" (104--Physics and Astronomy).---Bogolyubov Institute for Theoretical Physics of the National Academy of Sciences of Ukraine, Kyiv, 2025.*
+**Klen M.D.** Statistical models and temporal coherence of quantum light in the turbulent atmosphere.---*Manuscript. Thesis for the degree of Doctor of Philosophy in the specialty 01.04.02
+"Theoretical Physics" (104--Physics and Astronomy).---Bogolyubov Institute for
+Theoretical Physics of National Academy of Sciences of Ukraine, Kyiv, 2025.*
+
+> ## Background
+> ### problem statement
+> ### technical challenges
+> ### existing gaps in modeling
+
 
 > ## 1. Context and the Problem of Stochastic Transmittance
 
@@ -185,11 +192,11 @@ Restrictive assumptions limit existing theory to specific limiting cases, leavin
 This creates a gap between theoretical description and characterization of transmittance statistics.
 
 In this thesis, we employ numerical simulations to gain quantitative insight into the resulting transmittance statistics.
-We employ the split step method for wave propagation in random media, which is widely used in classical optics and commonly referred to as the phase screen method.
+We employ the split step method for wave propagation in random media, which is widely used in classical optics and commonly referred to as the phase-screen method.
 A central limitation of this approach is undersampling of the low frequency part of the turbulence spectrum.
-To overcome this limitation, we adopt the sparse spectrum method, which generates phase screens whose statistics match the prescribed theoretical spectrum.
+To overcome this limitation, we adopt the sparse-spectrum method, which generates phase screens whose statistics match the prescribed theoretical spectrum.
 
-With a proper choice of the number of phase screens and other simulation parameters, the sparse spectrum phase screen approach closes the gap between numerical simulation results and the underlying theoretical description.
+With a proper choice of the number of phase screens and other simulation parameters, the sparse-spectrum phase-screen approach closes the gap between numerical simulation results and the underlying theoretical description.
 Moreover, the ability to generate phase screens of arbitrary size with correct statistical properties enables the study of temporal evolution of atmospheric channels under Taylor frozen turbulence hypothesis.
 The resulting framework enables a comprehensive analysis of free space optical channels and quantum properties of light propagating through the atmosphere.
 
@@ -197,7 +204,7 @@ The resulting framework enables a comprehensive analysis of free space optical c
 
 We analyze the probability distribution of transmittance obtained from numerical simulations for free space optical channels under weak, moderate, and strong turbulence regimes.
 The numerical results are compared with several analytical models.
-These include two physically motivated beam-shape based models, namely the beam wandering and elliptical beam models, the truncated lognormal model, and a hybrid approach the total probability model.
+These include two physically motivated beam-shape based models, namely the beam-wandering and elliptical-beam models, the truncated lognormal model, and a hybrid approach the total probability model.
 The agreement between empirical and analytical distributions is quantified using the Kolmogorov-Smirnov statistic.
 
 The numerical distributions are generally unimodal and bell shaped.
@@ -218,12 +225,12 @@ The total probability model, which combines these two approaches, captures the s
 For small apertures, its performance closely follows that of the lognormal model, while for large apertures it yields some improvement in the predicting of the transmittance distribution.
 
 To mitigate the misspecification bias, we introduce a transmittance matching technique that reformulates beam-shape based models in terms of the first moments of transmittance.
-This method is applied to a model with an intermediate description between the beam wandering and elliptical beam models because of the complex, semi-analytical formulation of the latter.
-Despite its simpler formulation compared to the elliptical beam model, it generally outperforms it across all turbulence regimes.
+This method is applied to a model with an intermediate description between the beam-wandering and elliptical-beam models because of the complex, semi-analytical formulation of the latter.
+Despite its simpler formulation compared to the elliptical-beam model, it generally outperforms it across all turbulence regimes.
 
 We also test key assumptions underlying physically based models.
 The beam centroid is confirmed to follow a two dimensional normal distribution, but its statistical independence from beam shape deformations is violated, especially in strong turbulence.
-In the elliptical beam model, the logarithms of the semi axes are assumed to follow a bivariate Gaussian distribution.
+In the elliptical-beam model, the logarithms of the semi axes are assumed to follow a bivariate Gaussian distribution.
 Numerical simulations instead reveal a strong suppression of probability density along the diagonal, which indicates that the two axes are rarely equal.
 These findings will guide the future development of the beam-shape based models.
 
@@ -235,14 +242,14 @@ This model generally outperforms all other considered analytical models, and its
 
 We extend the probability distribution of transmittance framework to account for temporal correlations in atmospheric quantum channels.
 Existing models describe isolated pulses or pulses separated by times exceeding the atmospheric correlation time, whereas realistic systems operate with high repetition rates, hence consecutive pulses propagate through correlated turbulence that imprints on the output quantum states.
-These effects are not captured by single time PDT models.
-We introduce a two time PDT that provides a complete statistical description of two consecutive pulses with arbitrary temporal separation.
-Its properties are studied numerically under Taylor’s frozen turbulence hypothesis.
+These effects are not captured by single-time PDT models.
+We introduce a two-time PDT that provides a complete statistical description of two consecutive pulses with arbitrary temporal separation.
+Its properties are studied numerically under Taylor's frozen turbulence hypothesis.
 
 To quantify temporal correlations, we define the aperture averaged spatial coherence radius as the temporal separation at which the Pearson correlation coefficient of transmittance decays to $e^{-1}$.
 The resulting characteristic scale of aperture averaged coherence radius corresponds to several centimeters of spatial coherence or several milliseconds of temporal coherence.
 
-As in the case of single time PDT, the receiver aperture dominates the behavior of correlation properties.
+As in the case of single-time PDT, the receiver aperture dominates the behavior of correlation properties.
 The spatial coherence radius increases approximately linearly with aperture size over a practically relevant range.
 This highlights the role of aperture size as an effective control parameter for engineering transmittance correlations in atmospheric quantum communication protocols.
 
@@ -271,8 +278,8 @@ Free-space quantum channels,
 Quantum communication,
 Atmospheric turbulence,
 Quantum optics,
-Phase-screens numerical simulation,
-Split-step with sparse spectrum method,
+Phase-screens method,
+Split-step with sparse-spectrum method,
 pyatmosphere (Python library),
 Probability distribution of transmittance (PDT),
 Transmittance matching method,
@@ -281,7 +288,7 @@ Two-time Probability Distribution of Transmittance (Two-time PDT),
 Temporal correlations in free-space channels,
 Time-bin encoding,
 Spatial coherence radius,
-CV and DV entanglement,
+Quantum entanglement,
 Adaptive selection protocols,
 Nonclassicality preservation,
 Quantum memory in atmosphere,
@@ -291,8 +298,8 @@ Strong fluctuation regime
 
 > To .pdf metadata:
 >Truncated lognormal model,
->Beam wandering model,
->Elliptical beam model,
+>Beam-wandering model,
+>Elliptical-beam model,
 >Total probability model,
 >Beta distribution model,
 

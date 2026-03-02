@@ -14,7 +14,7 @@ We also describe the PDT in scenarios relevant for adaptive selection techniques
 In the ^[sec:application], we will demonstrate how these results guide continuous-variable and discrete-variable entanglement propagation protocols, and how they can be employed to enhance the preservation of nonclassicality through adaptive selection techniques.
 
 ## Two-time PDT
-To describe the two-time probability distribution of transmittance (PDT), we extend the PDT framework (see ^[sec:aqc]) to account for time-dependent fluctuations of the refractive index. In this approach, the refractive index is represented as
+To describe the two-time PDT, we extend the PDT framework (see ^[sec:aqc]) to account for time-dependent fluctuations of the refractive index. In this approach, the refractive index is represented as
 $$n_t(\mathbf{r},z)=1+\delta n_t(\mathbf{r},z),$$
 where $\delta n_t(\mathbf{r},z)$ denotes the small, time-dependent, stochastic perturbation caused by atmospheric turbulence.
 The evolution of the complex field amplitude $u_t(\mathbf{r},z)$ under these conditions is governed by the paraxial wave equation ^[eq:parax], which, for a time-dependent refractive index, takes the form
@@ -30,18 +30,18 @@ $$
 \eta_t=\int_\mathcal{A}d^2\mathbf{r} \left|u_t(\mathbf{r},z_\mathrm{ap})\right|^2.
 $$
 We consider two temporal modes at $t=0$ and $t=\tau$.
-The two mode input output relation for the Glauber P function for channels with fixed linear losses $\eta_0$ and $\eta_\tau$ reads by analogy with single time relation^[eq:PoutPin]
+The two mode input output relation for the Glauber P function for channels with fixed linear losses $\eta_0$ and $\eta_\tau$ reads by analogy with single-time relation^[eq:PoutPin]
 $$
 P_\mathrm{out}(\alpha_0,\alpha_\tau|\eta_0,\eta_\tau)=
 \frac{1}{\eta_0\eta_\tau}P_\mathrm{in}\left(\frac{\alpha_0}{\sqrt{\eta_0}},\frac{\alpha_\tau}{\sqrt{\eta_\tau}}\right).
 $$
-Averaging over the atmospheric realizations leads to the input output relation for the two time channel
+Averaging over the atmospheric realizations leads to the input output relation for the two-time channel
 $$P_\mathrm{out}(\alpha_0,\alpha_\tau)=
 \int_\Xi d\eta_0d\eta_\tau \left[\frac{1}{\eta_0\eta_\tau}P_\mathrm{in}\left(\frac{\alpha_0}{\sqrt{\eta_0}},\frac{\alpha_\tau}{\sqrt{\eta_\tau}}\right)\right]\, \mathcal{P}(\eta_0,\eta_\tau),$$
-where $\Xi=[0,1]\times[0,1]$ and where the joint distribution $\mathcal{P}(\eta_0,\eta_\tau)$ is the two time probability distribution of the transmittance.
+where $\Xi=[0,1]\times[0,1]$ and where the joint distribution $\mathcal{P}(\eta_0,\eta_\tau)$ is the two-time PDT.
 
-The two time distribution provides a complete description of such atmospheric quantum channels.
-The usual single time PDT is obtained as its marginal
+The two-time PDT provides a complete description of such atmospheric quantum channels.
+The single-time PDT is obtained as its marginal
 $$\mathcal{P}(\eta_0) = \int d\eta_\tau \mathcal{P}(\eta_0,\eta_\tau).$$
 Adaptive selection protocols rely on conditional statistics.
 If the protocol keeps only those events for which the first classical probe pulse has transmittance $\eta_0 \ge \eta_\mathrm{min}$ then the conditional PDT describing the second quantum pulse at time $t=\tau$ is
@@ -55,7 +55,7 @@ This formulation makes it possible to track how these quantities depend on the p
 
 #### Numerical approach.
 
-For the numerical simulations we use the phase screen method introduced in ^[sec:numsim].
+For the numerical simulations we use the phase-screen method introduced in ^[sec:numsim].
 We extend this model to the time dependent case by incorporating the Taylor frozen flow hypothesis.
 
 First we note that the wind driven advection has a component in the longitudinal direction and a component in the transverse plane.
@@ -71,7 +71,7 @@ However, this approach would lead to an over-parameterized system with limited e
 By contrast, using a single velocity parameter $v$ for all phase screens ensures that the model remains tractable and allows us to isolate the specific effect of the wind-driven advection on the channel transmittance.
 
 The coordinate system is rotated such that the new $x$ axis is aligned with the transverse wind direction.
-Under this choice of coordinates, consider two optical pulses propagating through the channel, one at time $t=0$ and the other at $t=\tau$.
+Under this choice of coordinates, consider two optical pulses propagating through the channel, one at time $t=0$ and the another at $t=\tau$.
 The turbulence along the propagation path is represented by multiple phase screens, and for each screen, the realization at these two times are related by
 $$\varphi_{\tau}(x,y,z) = \varphi_0(x + v \tau, y, z),$$
 where $s=v\tau$ represents the wind-driven shift of the turbulent pattern over the time interval $\tau$.
@@ -88,7 +88,7 @@ The inner and outer turbulence scales are set to $\ell_0 = 1~\text{mm}$ and $L_0
 The source is a Gaussian beam of wavelength $\lambda = 808~\text{nm}$ with initial beam width $W_0 = 8~\text{cm}$ and curvature radius $F_0 = 50~\text{km}$.
 
 The numerical grid contains $2048$ points in both transverse directions with a grid step of $1~\text{mm}$.
-The Sparse Spectrum phase screen method ^[sec:numsim] is used with $1024$ spectral rings.
+The sparse-spectrum phase-screen method ^[sec:numsim] is used with $1024$ spectral rings.
 The spectral bounds are defined $K_\mathrm{min}=1/15 L_0$ and $K_\mathrm{max}=2/\ell_0$.
 The propagation path is discretized into $15$ phase screens (see^[sec:verification]).
 For each of the three channels we generate $5\times10^4$ independent realizations for different values of time interval $\tau$ and aperture radius $R_\mathrm{ap}$.
@@ -147,7 +147,7 @@ As a result, $\rho_0(R_\mathrm{ap})$ serves as a practical parameter for studyin
 
 Adaptive selection works by first sending a strong classical pulse through the channel at $t=0$.
 If the measured transmittance of this pulse exceeds a threshold $\eta_\mathrm{min}$, the subsequent quantum pulse is transmitted at $t=\tau$.
-If the transmittance is below the threshold, the quantum pulse is discarded.
+If the transmittance is less than the threshold, the quantum pulse is discarded.
 By selectively transmitting only those quantum pulses that are likely to encounter high transmittance channel conditions, the protocol can enhance the preservation of nonclassical properties and increases the performance of quantum communication protocols.
 The conditional PDT provides the exact probability distribution of the transmittance of the second pulse under this selection procedure.
 
@@ -176,7 +176,7 @@ For the channels studied, these correlations persist over several milliseconds, 
 
 The conditional PDT captures a complementary property relevant for adaptive selection protocols.
 By selecting quantum pulses based on the measured transmittance of a preceding classical probe, one can enhance the likelihood of transmitting through high-transmittance channel realizations.
-The conditional PDT provides a precise description of the second pulse probability distribution of transmittance under such selection protocols, directly influencing the preservation of nonclassical properties and the performance of other quantum communication protocols.
+The conditional PDT provides a precise description of the second pulse PDT under such selection protocols, directly influencing the preservation of nonclassical properties and the performance of other quantum communication protocols.
 
 Overall, the results show that two-time PDT and derived quantities like $\rho_0$ and conditional PDT are complementary tools.
 The spatial coherence radius quantifies the timescale over which successive pulses remain statistically correlated and is essential for entanglement-based protocols, while conditional PDT captures the potential for adaptive selection protocols, for example to enhance the preservation of nonclassicality.
