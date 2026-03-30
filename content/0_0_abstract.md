@@ -148,130 +148,93 @@
 "Theoretical Physics" (104--Physics and Astronomy).---Bogolyubov Institute for
 Theoretical Physics of National Academy of Sciences of Ukraine, Kyiv, 2025.*
 
-> ## Background
-> ### problem statement
-> ### technical challenges
-> ### existing gaps in modeling
+>## Background
+>### Context
 
+Fiber links form the foundation of local quantum communication networks over short distances. 
+However, as transmission distances increase, the exponential signal attenuation inherent in optical fibers becomes a prohibitive barrier that limits the size of quantum networks. 
+To overcome this physical limitation and enable a scalable quantum network that spans continents or connects to orbiting satellites, free-space optical links with satellite-based platforms offer an essential alternative. 
+By transmitting quantum states primarily through the vacuum space, these links effectively bypass the material-induced light loss inherent in glass fibers. 
+Additionally, the free-space approach allows for connections between moving ground stations, aircraft, and satellites, which fixed fiber infrastructure cannot establish.
 
-> ## 1. Context and the Problem of Stochastic Transmittance
+However, unlike the controlled environment of optical fibers, free-space links are subject to atmospheric turbulence that induces stochastic fluctuations in the refractive index and severely distorts the propagating beam.
+These perturbations manifest as beam wandering from the propagation axis and intensity fluctuations known as scintillation.
+Consequently, these effects introduce significant complexity in characterizing the channel statistics for free-space optical communication.
 
-Free-space quantum channels enable long-distance quantum communication in regimes where optical fiber transmission is impractical.
-This includes very long distances where exponential fiber absorption losses prohibit fiber links, as well as communication between mobile platforms such as satellite-to-ground links and aircraft-based systems.
-Optical radiation is the optimal carrier for quantum information in such scenarios because it preserves quantum states over long distances.
-This enables a range of quantum communication protocols, including quantum key distribution, quantum teleportation, and entanglement swapping.
-These capabilities are critical for global quantum network infrastructure and quantum internet architecture.
+>### Subject
 
-Quantum information is typically encoded in quasi-monochromatic optical pulses, which can be approximated as Gaussian beam modes.
-However, atmospheric turbulence constitutes the dominant physical challenge.
-Random refractive index fluctuations induce beam wander, wavefront distortion, scintillation, and beam spreading.
-These effects depend nonlinearly on propagation distance, turbulence strength, and wavelength.
-Subsequent measurements involve a finite optical system aperture, which truncates part of the distorted light profile.
-This process is equivalent to a linear loss channel characterized by the transmittance $\eta$, defined as the fraction of beam power captured by the receiver aperture.
-The single scalar $\eta$ encapsulates the complex three-dimensional propagation physics relevant for quantum state transmission.
+The impact of turbulence on the quantum state encoded in the quasi-monochromatic mode of light can be described by a single random variable---transmittance---which is defined as the ratio of intensity captured by the receiving aperture to the total beam intensity.
+Thus, the probability distribution of transmittance (PDT) is central to the characterization of atmospheric quantum channels.
+Despite its fundamental role, significant theoretical gaps persist regarding how this variable is modeled and utilized.
+First, there remains no clear understanding regarding model selection among the various analytical models for PDT modeling.
+Second, current literature relies on static ensemble descriptions that neglect time correlations.
+This approach fails to provide the dynamic characterization required by many practical quantum protocols in turbulent atmosphere.
 
-Atmospheric turbulence is a stochastic process, making the channel transmittance a random variable.
-The probability distribution of transmittance (PDT), fully characterizes the statistics of quasi-monochromatic pulse propagation through an atmospheric quantum channel.
-This framework enables explicit input-output relations between the transmitted and received quantum states, forming the basis for protocol performance analysis.
+>## Purpose
 
-Several analytical models for the PDT have been developed, but their range of validity remains unclear.
-Although some models were validated by fitting, this approach lacks rigor and may represent parameters that are biased relative to actual atmospheric conditions.
-Furthermore, some assumptions underlying these models have not yet been validated.
+To address these challenges, one of the primary objectives of this research is to establish the range of applicability for existing analytical models by comparing their predictions against numerical simulations.
+We also validate the underlying assumptions of current models in order to evaluate their suitability for different scenarios.
+Furthermore, the second component of this study investigates the temporal dependence of quantum properties in atmospheric turbulence.
+Specifically, we seek to quantify the resilience of entanglement and nonclassicality against stochastic fluctuations induced in these conditions.
 
-The existing framework describes an ensemble of independent single-beam propagation events.
-In practice, the turbulence coherence time is on the order of milliseconds, hence consecutive pulses propagate through correlated atmospheric conditions.
-The probability distribution of transmittance cannot account for this temporal correlation.
-Ignoring it discards the exploitable structure that could be used for protocol optimization and introduces vulnerabilities in quantum security protocols that assume independent channel realizations.
+>## Methods
 
-> ## 2. Development of a Numerical Framework
-> Numerical simulations were performed using the open-source Python library `pyatmosphere`, developed as part of this work to implement ...
+This study employs a numerical approach to simulate atmospheric channels based on the phase screen method, modeling the propagation path as a sequence of thin, phase-modulated layers separated by free-space vacuum segments.
+To address statistical discrepancies inherent in traditional generation techniques, we utilize the sparse spectrum approach that ensures generated phase screens strictly align with theoretical requirements.
+Additionally, this approach facilitates the generation of extended phase screens, enabling the application of the Taylor frozen turbulence hypothesis. 
+This method links the time-evolution of atmospheric transmittance to wind-driven displacements.
+We assess the predictive accuracy of existing analytical models against this data using the Kolmogorov-Smirnov statistic to measure how closely the analytical model predictions match the simulated data.
 
-The description of atmospheric quantum channels involves finite spatial integration of the squared magnitude of a field governed by a stochastic partial differential equation.
-This formulation hinders analytical progress and makes physical interpretation challenging.
-Restrictive assumptions limit existing theory to specific limiting cases, leaving broader turbulence regimes beyond the reach of analytical characterization.
-This creates a gap between theoretical description and characterization of transmittance statistics.
+>## Results
+>### Skewness
 
-In this thesis, we employ numerical simulations to gain quantitative insight into the resulting transmittance statistics.
-We employ the split step method for wave propagation in random media, which is widely used in classical optics and commonly referred to as the phase-screen method.
-A central limitation of this approach is undersampling of the low frequency part of the turbulence spectrum.
-To overcome this limitation, we adopt the sparse-spectrum method, which generates phase screens whose statistics match the prescribed theoretical spectrum.
+Numerical simulations spanning weak-to-strong turbulence regimes demonstrated that atmospheric turbulence strength primarily governs the variance of the PDT without significantly altering its fundamental shape. 
+Conversely, the skewness---representing the distribution’s asymmetry---exhibits high variability and sign reversals contingent upon the receiving aperture size. 
+Specifically, when the aperture is much smaller than the beam width, the distribution tail extends toward higher transmittance values (positive skewness); in contrast, larger apertures shift the tail toward lower transmittance values (negative skewness). 
+However, most analytical models are constrained by rigid skewness behaviour and fail to capture this aperture-driven transition.
 
-With a proper choice of the number of phase screens and other simulation parameters, the sparse-spectrum phase-screen approach closes the gap between numerical simulation results and the underlying theoretical description.
-Moreover, the ability to generate phase screens of arbitrary size with correct statistical properties enables the study of temporal evolution of atmospheric channels under Taylor frozen turbulence hypothesis.
-The resulting framework enables a comprehensive analysis of free space optical channels and quantum properties of light propagating through the atmosphere.
+>### Systematic errors
 
-> ## 3. Validation of Physical Assumptions
+We systematically analyzed the properties and limitations of existing analytical models.
+We identified that the beam-center cannot be considered independent of shape deformation, nor does the Gaussian joint distribution hypothesis hold for the logarithms of the beam semi-axes.
+Another issue is that, although analytical models parameterized by beam shape moments accurately approximate the overall PDT shape, numerical simulations reveal a systematic shift in their predicted mode and mean values.
+This discrepancy arises due to misspecification bias, as idealized circular or elliptical beam shapes cannot fully describe the beam shape deformations. 
+Consequently, such models introduce systematic errors and exhibit inferior Kolmogorov-Smirnov statistics compared to other models.
 
-We analyze the probability distribution of transmittance obtained from numerical simulations for free space optical channels under weak, moderate, and strong turbulence regimes.
-The numerical results are compared with several analytical models.
-These include two physically motivated beam-shape based models, namely the beam-wandering and elliptical-beam models, the truncated lognormal model, and a hybrid approach the total probability model.
-The agreement between empirical and analytical distributions is quantified using the Kolmogorov-Smirnov statistic.
+>### Models
 
-The numerical distributions are generally unimodal and bell shaped.
-In strong turbulence they become broader and flatter.
-Since the transmittance is bounded between zero and one, this constraint strongly affects the distribution shape.
-The aperture size relative to the average beam size is identified as the dominant control parameter.
-For small apertures, transmittance values concentrate near zero, which enforces a positive skew.
-For large apertures, the upper bound at unity induces negative skew.
-Accurate prediction of the first moments of transmittance is therefore necessary for any analytical model to produce valid distributions.
+To address the misspecification bias, we introduce the transmittance-moments-matching technique, which reparametrizes beam-shape based models in term of first transmittance moments.
+The circular beam model using this technique shows better values of the Kolmogorov-Smirnov statistics compared to other physics-based models.
+Our other empirical Beta-distribution model shows superior performance across the majority of tested regimes because it better accounts for aperture-driven skewness variations.
 
-Our findings reveal that the applicability of a model is predominantly influenced by the ratio of the aperture to the average beam size.
-Consequently, the conventional model-selection heuristics based on turbulence strength are seen as inferior.
-The truncated lognormal model, which always exhibits positive skew, provides a consistent description for small apertures across all turbulence regimes but its accuracy worsens for larger apertures.
-The beam-shape based models mainly exhibit negative skew, which makes them more suitable for large aperture channels, where they provide an accurate match to the shape of the probability distribution of transmittance.
-However, these models suffer from misspecification bias because they are parameterized through moments of beam shape variables instead of transmittance itself.
-This leads to systematic shifts of the distribution mode and inaccurate estimation of the mean transmittance.
-The total probability model, which combines these two approaches, captures the skewness transition induced by changes in the aperture size.
-For small apertures, its performance closely follows that of the lognormal model, while for large apertures it yields some improvement in the predicting of the transmittance distribution.
+>### Two-time PDT
 
-To mitigate the misspecification bias, we introduce a transmittance matching technique that reformulates beam-shape based models in terms of the first moments of transmittance.
-This method is applied to a model with an intermediate description between the beam-wandering and elliptical-beam models because of the complex, semi-analytical formulation of the latter.
-Despite its simpler formulation compared to the elliptical-beam model, it generally outperforms it across all turbulence regimes.
+To describe time correlations is atmospheric quantum channels, we develop a two-time PDT framework that moves beyond static ensemble descriptions to characterize joint transmittance distributions as a function of the time separation between two pulses. 
+Building on this, we introduce an aperture-averaged spatial coherence radius which quantifies the wind-driven displacement at which transmittance correlations decay to exp(-1). 
+Specifically, the defined coherence radius exhibits a linear scaling behavior relative to the receiving aperture size.
+This formalization provides a statistical foundation for quantifying temporal correlations in atmospheric quantum channels and analysing the resilience of quantum properties.
 
-We also test key assumptions underlying physically based models.
-The beam centroid is confirmed to follow a two dimensional normal distribution, but its statistical independence from beam shape deformations is violated, especially in strong turbulence.
-In the elliptical-beam model, the logarithms of the semi axes are assumed to follow a bivariate Gaussian distribution.
-Numerical simulations instead reveal a strong suppression of probability density along the diagonal, which indicates that the two axes are rarely equal.
-These findings will guide the future development of the beam-shape based models.
+>### Protocols
 
-Finally, we propose an empirical model of PDT based on the Beta distribution.
-Its bounded support naturally matches the physical range of transmittance and it reproduces the skewness transition with aperture size.
-This model generally outperforms all other considered analytical models, and its simple analytical formulation makes it well-suited for theoretical predictions and practical application.
+Building upon the two-time PDT, we quantify the resilience of entanglement and nonclassicality in atmospheric channels. 
+While entanglement between two pulses persists for time separations up to tens of milliseconds, quantum memory efficiency currently restricts practical discrete-variable entanglement to several milliseconds.
+Furthermore, adaptive selection protocols utilizing bright classical pulses to probe channel transmittance are established as a practical tool capable of preserving nonclassicality within tens of millisecond time intervals between the probe pulse and the quantum state.
 
-> ## 5. Analysis of Temporal Correlations
+>## Conclusions
 
-We extend the probability distribution of transmittance framework to account for temporal correlations in atmospheric quantum channels.
-Existing models describe isolated pulses or pulses separated by times exceeding the atmospheric correlation time, whereas realistic systems operate with high repetition rates, hence consecutive pulses propagate through correlated turbulence that imprints on the output quantum states.
-These effects are not captured by single-time PDT models.
-We introduce a two-time PDT that provides a complete statistical description of two consecutive pulses with arbitrary temporal separation.
-Its properties are studied numerically under Taylor's frozen turbulence hypothesis.
+In conclusion, this thesis resolves ambiguities regarding the understanding and characterization of atmospheric quantum channels.
+Specifically, existing analytical models often fail to reflect the aperture-dependent asymmetry observed in actual distributions.
+This necessitates a departure from using turbulence strength as the primary selection criterion, as this is insufficient for accurate modeling.
+Instead, this work establishes the size of the receiving aperture as the governing parameter for selecting the appropriate model.
 
-To quantify temporal correlations, we define the aperture averaged spatial coherence radius as the temporal separation at which the Pearson correlation coefficient of transmittance decays to $e^{-1}$.
-The resulting characteristic scale of aperture averaged coherence radius corresponds to several centimeters of spatial coherence or several milliseconds of temporal coherence.
+While the circular-beam model  with the developed transmittance-moments-matching approach demonstrates superior performance among physics-based models, its reliance on numerical integration limits broad application.
+Consequently, the proposed empirical Beta-distribution model emerges as the superior choice for practical implementation, providing a closed-form analytical expression parameterized by only two moments.
+This capability is particularly vital for quantum protocol analysis, where current methods often rely on constant-transmittance approximations that systematically ignore the random nature of atmospheric channels and introduce significant estimation errors.
+Utilizing the Beta-distribution model directly addresses this limitation, effectively eliminating potential loopholes in performance analysis by  demonstrating robust validity across the majority of parameter regimes.
 
-As in the case of single-time PDT, the receiver aperture dominates the behavior of correlation properties.
-The spatial coherence radius increases approximately linearly with aperture size over a practically relevant range.
-This highlights the role of aperture size as an effective control parameter for engineering transmittance correlations in atmospheric quantum communication protocols.
-
-> ## 6. Applications and Practical Significance
-
-The practical relevance of the framework is demonstrated through its application to several quantum protocols under realistic atmospheric conditions.
-We first analyze the preservation of continuous variable Gaussian entanglement between time separated pulses.
-The Simon inseparability criterion is used to determine the entanglement survival.
-We find that the threshold time for entanglement preservation is on the order of several milliseconds.
-This threshold depends on the receiver aperture and is naturally expressed in terms of the spatial coherence radius, which increases monotonically with aperture size but in a nonlinear manner.
-
-For discrete variable systems, we study the robustness of polarization entangled Bell states and parametric down conversion states.
-The results show that atmospheric turbulence alone allows quantum correlations to persist for tens of milliseconds.
-In practice, however, the achievable timescale is strongly limited by time dependent readout losses in quantum memory, which reduce the preservation time to a few milliseconds.
-The persistence of quantum correlations over these timescales indicates that employing two or more time-separated quantum states can increase the effective dimensionality of the Hilbert space.
-
-We further investigate adaptive real time selection protocols, in which bright classical pulses probe the channel transmittance prior to quantum transmission.
-This approach enhances the preservation of nonclassical properties of amplitude squeezed states by exploiting the nonvanishing correlations between consecutive pulses.
-Analyzing the Mandel parameter and its realistic counterpart for an array of on-off click detectors, we demonstrate an increase in the time over which nonclassicality is preserved, which extends across pulse separations of tens of milliseconds.
-These results demonstrate that temporal correlations in atmospheric channels can be leveraged as a practical resource for optimizing free-space quantum communication protocols.
-
-> - [ ] Final words, "Innovation and practical significance."
+Ultimately, the analyzed resilience of quantum correlations over practical temporal windows renders time-bin encoding strategies feasible for free-space quantum networking. 
+However, the practical realization of discrete variable entanglement protocols remains constrained by quantum memory efficiency. 
+This highlights that while atmospheric channels support practical timescales, unlocking their full potential requires addressing storage limitations inherent in current quantum hardware.
 
 **Keywords:**
 Free-space quantum channels,
