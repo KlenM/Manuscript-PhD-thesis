@@ -45,6 +45,7 @@ This can be done by integrating the squared magnitude of the optical field over 
 $$%\label{eq:eta}
 \boxed{\eta = \int_\mathcal{A} d^2\boldsymbol{r} |u(\boldsymbol{r}, z_\mathrm{ap})|^2}.$$
 Specifically, the integration domain $\mathcal{A}$ represents the circular region of the pupil with radius $R_\mathrm{ap}$, and $d^2\boldsymbol{r}=dxdy$.
+
 #### Vacuum propagation.
 For the case $\delta n = 0$ (homogeneous medium), the solution becomes straightforward. The Fresnel diffraction integral^[@goodman2017] describes the field evolution
 $$U(x,y,z)=\frac{e^{ikz}}{i\lambda z}\iint_{-\infty}^{\infty}U(x',y',0)e^{i\frac{k}{2z}[(x-x')^{2}+(y-y')^{2}]}dx'dy'.$$
