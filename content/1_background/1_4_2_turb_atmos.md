@@ -23,7 +23,9 @@ The ratio of these two time scales defines the Reynolds number $\mathcal R_r=T_\
 When $\mathcal R_r \gg 1$ the viscous time is much longer than inertial time, thus the structure of velocity difference deforms into other (smaller) structures before its energy dissipates by viscosity.
 For $\mathcal R_r < 1$ the structure dissipates their energy rapidly due to viscosity.
 
-It is widely used in the literature to associate these structures with turbulent eddies of diameter $r$ and linear velocity difference $v_r$. Then, inertial time corresponds to the time it takes for an eddy to complete one rotation. Although turbulent eddies are not well defined, they can be valuable for illustrating the intuition about turbulence dynamics.
+It is widely used in the literature to associate these structures with turbulent eddies of diameter $r$ and linear velocity difference $v_r$.
+Then, inertial time corresponds to the time it takes for an eddy to complete one rotation.
+Although turbulent eddies are not well defined, they can be valuable for illustrating the intuition about turbulence dynamics.
 
 We can define two characteristic lengths that play important role in turbulent atmosphere theory.
 The outer scale of turbulence $L_0$ can be considered as the typical size of the largest eddies or characteristic size of the system, like the altitude of laser beam propagation ^[@coulman1988], with typical values of $L_0 \approx 20\mathrm{m} - 100\mathrm{m}$^[@martin2000].
@@ -81,7 +83,9 @@ But overall, while the refined models introduced deeper physical insights, they 
 >This question can be one of the further problems to study, after maturity of the current level of study of atmospheric quantum channels.
 
 The ^[fig:psd_scales] summarizes the model of atmospheric turbulence.
-It depicts the energy flow through scales starting from large scales of energy injection, going through inertial range where the turbulent motion is predominant process and to the region of energy dissipation by viscosity.
+It depicts the energy flow across various scales.
+The process begins at large scales of energy injection and moves through the inertial range, where turbulent motion is the predominant mechanism.
+Finally, the energy reaches the region where it is dissipated by viscosity.
 
 ![\label{fig:psd_scales}Power spectral density of atmospheric turbulence models. The blue line represents the Kolmogorov model, while the green line depicts the Modified von Kármán model, highlighting how the latter accounts for the inner and outer scales ($l_0$ and $L_0$).](file:///home/klen/syncthing/desktop/physics/phd/thesis/src/generated/psd_scales.svg)
 

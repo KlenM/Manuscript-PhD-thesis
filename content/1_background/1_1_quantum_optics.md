@@ -10,7 +10,6 @@ Taylor's double-slit experiment with extremely weak light, performed in 1909^[@t
 
 This uncertainty persisted until 1976, when Kimble, Dagenais, and Mandel developed^[@kimble1976] a theory describing the two-time intensity correlations of light emitted by a two-level atom, and then observed photon antibunching effect experimentally in 1977^[@kimble1977].
 This phenomenon cannot be explained by any classical electromagnetic field and confirms the quantum nature of light.
-
 Later on, many other quantum features of light were demonstrated^[@mandel1995].
 The observation of squeezed states, which demonstrates variance below vacuum noise in one quadrature, was reported by Slusher et al. in 1985^[@slusher1985].
 An illustrative counter-intuitive example of multi-photon interference, Hong-Ou-Mandel effect, demonstrated by Hong et al.  in 1987^[@hong1987].
@@ -18,7 +17,6 @@ Furthermore, numerous experimental tests of Bell inequalities using entangled ph
 
 Despite the late growth of experimental studies, the theoretical framework of quantum optics had already been well established much earlier.
 Foundational contributions were made by Glauber^[@glauber1963b], Mandel^[@mandel1965], and other pioneers, who developed the groundwork for understanding the quantum properties of light long before many of the mentioned experiments were conducted.
-
 In the early 1960s, Roy Glauber introduced the idea of representing quantum states of a light mode $\hat\rho$ as a linear expansion over coherent states^[@glauber1963a,sudarshan1963a]
 $$
 %\label{eq:rho2P}

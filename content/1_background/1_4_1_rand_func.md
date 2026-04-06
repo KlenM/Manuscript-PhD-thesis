@@ -3,7 +3,9 @@
 > - One support point for a dedicated section is to add a bit of math vibe to the thesis
 > - Also, in the case of including of random processes paper - here is the place for background
 
-When studying light propagation through random media, it is essential to introduce the minimal framework of random functions. In our problem, randomness enters through spatial variations of the refractive index, which in turn induces randomness in most derived quantities like beam properties at the aperture plane or the transmittance values. By treating these quantities as random functions, we can systematically describe their statistical properties, characterize correlations, study ergodicity property markov property, etc ^[@kampen2011,andrews2005,mandel1995].
+When studying light propagation through random media, it is essential to introduce the minimal framework of random functions.
+In our problem, randomness enters through spatial variations of the refractive index, which in turn induces randomness in most derived quantities like beam properties at the aperture plane or the transmittance values.
+By treating these quantities as random functions, we can systematically describe their statistical properties, characterize correlations, study ergodicity property markov property, etc ^[@kampen2011,andrews2005,mandel1995].
 
 Let us consider a function $\xi$ of two parameters:
 $$
@@ -14,13 +16,12 @@ This form allows us to adopt two complementary perspectives.
 If we fix the outcome $\omega$---i.e., select one specific universe---then we obtain a deterministic function $\xi^{(\omega)}(t)$.
 This is referred to as a sample path or realization of the random function.
 Examples of two sample paths as functions of $t$ are shown in ^[fig:sample_paths].
+If we fix the domain parameter $t$---i.e., look at all possible universes at a single time---then we obtain a random variable $\xi_t$.
+In this view, the random function can be seen as a family of random variables $\{\xi_t\}_{t\in T}$ indexed by $t \in T$.
 
 ![\label{fig:sample_paths}Examples of two sample paths of the random function $\xi(t, \omega)$. In this context, the random function represents atmospheric channel transmittance $\eta$. The pink line corresponds to the realization $\xi^{(\omega_1)}(t)$, while the blue line corresponds to $\xi^{(\omega_2)}(t)$. Each path illustrates the deterministic evolution of the channel transmittance over time $t$ for a fixed outcome $\omega$.](background/eta_process.pdf)
 
 >~~The function $\xi$ is what we call a random function~~.
-
-If we fix the domain parameter $t$---i.e., look at all possible universes at a single time---then we obtain a random variable $\xi_t$.
-In this view, the random function can be seen as a family of random variables $\{\xi_t\}_{t\in T}$ indexed by $t \in T$.
 
 We can define some random function by specifying all distribution functions of the form ^[@yaglom2004]:
 $$
@@ -36,7 +37,6 @@ Other convenient way to specify a random function is using some analytic formula
 We will call random processes time-indexed random functions, and random fields random functions indexed by multidimensional (2D or 3D) spatial variables.
 
 >". In the absence of such a family of probability distributions, it is customary to describe the random field in terms of its lowerorder statistical moments." ([Andrews and Phillips, 2005, p. 45](zotero://select/library/items/IJGQ3J8A)) ([pdf](zotero://open-pdf/library/items/VGHZA9HX?page=69&annotation=537H37EL))
-
 
 #### Stationary random functions.
 The common class of random functions in physics is stationary random functions.
@@ -59,7 +59,6 @@ $$
 %\label{eq:struct_func}
 D(t_1,t_2)=\mathbb E|\xi_{t_1}-\xi_{t_2}|^2=\int_{-\infty}^\infty\int_{-\infty}^\infty |x_1 - x_2|^2 dF_{t_1,t_2}(x_1,x_2).$$
 The structure function is a powerful tool in the theory of random function with stationary increment^[@kolmogorov1941], but in the case of stationary functions it also depends only on the time difference $\tau$ and it simply relates to the correlation function as $D(\tau) = 2 \left(B(0) - \mathrm{Re}\, B(\tau)\right)$.
-
 In turbulent atmosphere science it is also common to characterize random fields with the complimentary to correlation function power spectral density function $\Phi(k)$, defined as Fourier transformation^[@wiener1930,khintchine1934]:
 $$
 %\label{eq:psd_theory}
@@ -73,8 +72,8 @@ In one of the next subsection we will explicitly present several models for refr
 >- img
 
 #### Spectral representation.
-As in the case of regular functions, it can be useful to represent random functions in the form of Fourier transform. It was shown, that any stationary random function can be arbitrarily closely represented on some interval $-T < t < T$ as a linear combination of finite number independent harmonic oscillators of the form $\xi_k e^{i\lambda_k t}$, where $\xi_k$ are some complex random variables with mean zero values and $\lambda_k$ are some real constants.
-
+As in the case of regular functions, it can be useful to represent random functions in the form of Fourier transform.
+It was shown, that any stationary random function can be arbitrarily closely represented on some interval $-T < t < T$ as a linear combination of finite number independent harmonic oscillators of the form $\xi_k e^{i\lambda_k t}$, where $\xi_k$ are some complex random variables with mean zero values and $\lambda_k$ are some real constants.
 In the limit we get the spectral representation theorem (Cramer-Karhunen), which states that any stationary process $\xi(t)$ can be represented in the form of the Fourier-Stieltjes integral:
 $$
 %\label{eq:FSint}

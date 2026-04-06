@@ -1,10 +1,12 @@
 ### Light beam propagation in inhomogeneous media {#sec:light_in_turb}
-
-To obtain the transmittance value of the optical communication channel, we must solve the classical problem of light propagation through stochastic isotropic media. This section defines the fundamental equations governing beam intensity at the aperture plane.
+We must solve the classical problem of light propagation through stochastic isotropic media to obtain the transmittance value of the atmospheric quantum channel.
+This process involves characterizing how random fluctuations alter the beam's power distribution.
+To that end, this section defines the fundamental equations governing beam intensity at the aperture plane.
 
 #### Gaussian beam source.
-In this work, we restrict the analysis to the Gaussian beam mode at the transmittance plane^[@siegman1986]. Gaussian modes provide an accurate approximation of the output of most laser sources used in free space optical communication. Because of this, they are widely adopted in theoretical modeling and experimental studies of atmospheric optical channels.
-
+In this work, we restrict the analysis to the Gaussian beam mode at the transmittance plane^[@siegman1986].
+Gaussian modes provide an accurate approximation of the output of most laser sources used in free space optical communication.
+Because of this, they are widely adopted in theoretical modeling and experimental studies of atmospheric optical channels.
 The boundary condition at the transmitter plane $z=z_0$ takes the form of a Gaussian beam^[@andrews2005]
 $$%\label{eq:gaussbeam}
 \boxed{u(\mathbf{r};0)=\sqrt{\frac{2}{\pi W_0^2}}\exp\left[-\frac{\mathbf{r}^2}{W_0^2}-\frac{ik}{2F_0}\mathbf{r}^2\right]},$$
@@ -22,11 +24,9 @@ where $W_0$ is the beam waist radius and $F_0$ is the radius of curvature of the
 The electromagnetic field propagation in atmosphere is described with the scalar wave equation^[@strohbehn1968,siegman1986]. Separating temporal and spatial variables yields the Helmholtz equation
 $$\nabla^{2}E+k^{2}n^{2}E=0,$$
 where $\nabla^2$ is the Laplacian operator and $k$ is the vacuum wave number.
-
 For Gaussian beams propagating along the z-axis over long distances, the paraxial approximation becomes valid^[@siegman1986].
 We express the complex amplitude as $E(x,y,z)=u(x,y,z) e^{ikz}$.
 Under paraxial approximation the assumption that the $z$ derivative of the amplitude function u is a slowly varying function of z reads as $\left| \frac{\partial ^{2}u}{\partial z^{2}} \right| \ll \left| k \frac{\partial u}{\partial z} \right|$ is valid.
-
 This leads to the paraxial scalar wave equation in a medium with spatially varying refractive index:
 $$
 %\label{eq:parax}
@@ -40,16 +40,15 @@ where $\delta n(\mathbf{r},z) = n(\mathbf{r},z) - 1$ represents the refractive i
 >- the requirenes of statistical description of n
 
 #### Transmittance of channel.
-To quantify the optical power collected by the receiver, we calculate the transmittance at the aperture plane $z=z_\mathrm{ap}$:
+To simulate the PDT, we must first calculate the transmittance value at the aperture plane $z=z_\mathrm{ap}$ for various channel realizations.
+This can be done by integrating the squared magnitude of the optical field over the entire receiving aperture $\mathcal{A}$ as the following
 $$%\label{eq:eta}
-\boxed{\eta = \int_{S_\mathrm{ap}} d^2\boldsymbol{r} |u(\boldsymbol{r}, z_\mathrm{ap})|^2},$$
-where $S_\mathrm{ap}$ defines the circular region of integration over aperture pupil of radius $R_\mathrm{ap}$ and $d^2\boldsymbol{r}=dxdy$.
-
+\boxed{\eta = \int_\mathcal{A} d^2\boldsymbol{r} |u(\boldsymbol{r}, z_\mathrm{ap})|^2}.$$
+Specifically, the integration domain $\mathcal{A}$ represents the circular region of the pupil with radius $R_\mathrm{ap}$, and $d^2\boldsymbol{r}=dxdy$.
 #### Vacuum propagation.
 For the case $\delta n = 0$ (homogeneous medium), the solution becomes straightforward. The Fresnel diffraction integral^[@goodman2017] describes the field evolution
 $$U(x,y,z)=\frac{e^{ikz}}{i\lambda z}\iint_{-\infty}^{\infty}U(x',y',0)e^{i\frac{k}{2z}[(x-x')^{2}+(y-y')^{2}]}dx'dy'.$$
 This integral represents a convolution with the propagation kernel, based on the Huygens-Fresnel principle where each wavefront point acts as a source of secondary spherical wavelets.
-
 In the spatial frequency domain, this convolution becomes multiplication with the transfer function $H(f_{x},f_{y},z)=e^{ikz}e^{-i\pi\lambda z(f_{x}^{2}+f_{y}^{2})}$, known as the angular spectrum method. This formulation enables efficient numerical implementation using Fast Fourier Transform algorithms.
 
 #### Statistical properties of a light beam in turbulence.
