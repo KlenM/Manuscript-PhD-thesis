@@ -49,7 +49,7 @@ This approach provides unbiased parameter estimation and enables the validation 
 
 ## Beta distribution model
 Before performing the validation of analytical models known in literature, we introduce an additional empirical model of the PDT based on the Beta distribution^[@johnson1995].
-The PDT in this model is defined by the Beta probability density function:
+The PDT in this model is defined by the Beta probability density function
 $$
 %\label{Eq:pdt_beta}
 \mathcal{P}\!\left(\eta\,; \left<\eta\right>, \left<\eta^2\right>\right) = \frac{1}{B(a, b)} \eta^{a-1} (1-\eta)^{b-1},

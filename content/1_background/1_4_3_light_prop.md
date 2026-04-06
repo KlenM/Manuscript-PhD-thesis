@@ -27,7 +27,7 @@ where $\nabla^2$ is the Laplacian operator and $k$ is the vacuum wave number.
 For Gaussian beams propagating along the z-axis over long distances, the paraxial approximation becomes valid^[@siegman1986].
 We express the complex amplitude as $E(x,y,z)=u(x,y,z) e^{ikz}$.
 Under paraxial approximation the assumption that the $z$ derivative of the amplitude function u is a slowly varying function of z reads as $\left| \frac{\partial ^{2}u}{\partial z^{2}} \right| \ll \left| k \frac{\partial u}{\partial z} \right|$ is valid.
-This leads to the paraxial scalar wave equation in a medium with spatially varying refractive index:
+This leads to the paraxial scalar wave equation in a medium with spatially varying refractive index
 $$
 %\label{eq:parax}
 \boxed{2ik\frac{\partial u(\mathbf{r};z)}{\partial z}+\Delta_\mathbf{r} u(\mathbf{r};z)+2k^2\delta n(\mathbf{r},z) u(\mathbf{r};z)=0},$$

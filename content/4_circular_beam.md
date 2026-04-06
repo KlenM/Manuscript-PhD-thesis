@@ -52,7 +52,7 @@ This model remains simple and analytically tractable, and is shown to improve pr
 
 
 ## The model
-The PDT of the proposed model is defined as a compound distribution that extends the beam-wandering model by treating the beam size $S$ as a random variable:
+The PDT of the proposed model is defined as a compound distribution that extends the beam-wandering model by treating the beam size $S$ as a random variable
 $$
 %\label{eq:acbpdt}
 \mathcal{P}\!\left(\,\eta\mid\langle x^2_0 \rangle,\langle \eta \rangle,\langle \eta^2 \rangle\right)=\int_0^\infty dS \,\mathcal{P}_\mathrm{BW}\!\left(\,\eta\mid\langle x^2_0 \rangle,S\right) P(S\mid\mu,\sigma).$$

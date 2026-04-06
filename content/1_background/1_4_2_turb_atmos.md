@@ -35,7 +35,7 @@ The interval of scales between $l_0$ and $L_0$ is called as the inertial range.
 #### Structure function of the velocity field.
 In the 1940s Kolmogorov assumed^[@kolmogorov1941] that energy enters the turbulent system at large scales $L_0$, cascades through inertial range scales without energy loss, and finally dissipates at the $l_0$ scale due to the viscosity.
 This mechanism is reffered to as the energy cascade model of turbulence.
-In this case the energy flux from a scale to another by unit mass defined as the kinetic energy divided by deformation time must be a constant:
+In this case the energy flux from a scale to another by unit mass defined as the kinetic energy divided by deformation time must be a constant
 $$\varepsilon \sim \frac{v_r^2}{T_I}=\frac{v_r^3}{r}=\mathrm{const}.$$
 The dimensional analysis implies that the structure function ^[eq:kolmStructFunc] must be proportional to
 $$D_v(r)\sim\left(\varepsilon\, r\right)^{2/3}\equiv C_v^2 r^{2/3}\,,\quad l_0\ll r\ll L_0,$$
@@ -107,7 +107,7 @@ The hypothesis is based on the difference between two atmospheric time scales.
 The first is the advection time, which can be defined as the duration required for the mean wind of speed $v$ to carry turbulent structure of size $r$ across the observation point, given by $T_v = r/v$.
 The second is the mentioned in^[sec:turb_cascade] inertial time $T_I \sim r/v_r$.
 Typical values for mean wind speed is  $v \sim 5-20\,\mathrm{m/s}$ in moderate to strong wind condition and $v_r \sim 0.1-2\,\mathrm{m/s}$ for the root mean squared velocity fluctuation.
-Then in the case when the advection time is much smaller than inertial time $T_v/T_I = v_r/v \ll 1$  we can assume that the index of refraction field is effectively frozen and evolve in time by moving with constant wind speed $\mathbf{v}: |\mathbf{v}|=v$ as a whole:
+Then in the case when the advection time is much smaller than inertial time $T_v/T_I = v_r/v \ll 1$  we can assume that the index of refraction field is effectively frozen and evolve in time by moving with constant wind speed $\mathbf{v}: |\mathbf{v}|=v$ as a whole
 $$
 %\label{eq:taylor_n}
 n(\mathbf{r},\,t)=n(\mathbf{r}-\mathbf{v}\,t,\,0).$$

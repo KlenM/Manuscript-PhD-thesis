@@ -11,7 +11,7 @@ $$
 %\label{eq:PoutPin}
 P_\mathrm{out}(\alpha) = \frac{1}{\eta} P_\mathrm{in}\left(\frac{\alpha}{\sqrt{\eta}}\right).
 $$
-However, in the atmospheric case, the effective transmittance $\eta$ is not a fixed constant. Since the refractive index $n(\boldsymbol{r}, t)$ is a random field, every realization of turbulence corresponds to a different value of $\eta$. Consequently, the atmospheric quantum channel is a statistical mixture of lossy channels, described by averaging over all possible transmittance values:
+However, in the atmospheric case, the effective transmittance $\eta$ is not a fixed constant. Since the refractive index $n(\boldsymbol{r}, t)$ is a random field, every realization of turbulence corresponds to a different value of $\eta$. Consequently, the atmospheric quantum channel is a statistical mixture of lossy channels, described by averaging over all possible transmittance values
 $$%\label{eq:PDTdef}
 P_\mathrm{out}(\alpha) = \int_0^1 d \eta \mathcal{P}(\eta) \frac{1}{\eta} P_\mathrm{in}\left(\frac{\alpha}{\sqrt{\eta}}\right),
 $$

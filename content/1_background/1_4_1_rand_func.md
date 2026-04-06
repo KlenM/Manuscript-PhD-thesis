@@ -7,7 +7,7 @@ When studying light propagation through random media, it is essential to introdu
 In our problem, randomness enters through spatial variations of the refractive index, which in turn induces randomness in most derived quantities like beam properties at the aperture plane or the transmittance values.
 By treating these quantities as random functions, we can systematically describe their statistical properties, characterize correlations, study ergodicity property markov property, etc ^[@kampen2011,andrews2005,mandel1995].
 
-Let us consider a function $\xi$ of two parameters:
+Let us consider a function $\xi$ of two parameters
 $$
 \xi: T \times \Omega \to \xi(t, \omega),
 $$
@@ -23,7 +23,7 @@ In this view, the random function can be seen as a family of random variables $\
 
 >~~The function $\xi$ is what we call a random function~~.
 
-We can define some random function by specifying all distribution functions of the form ^[@yaglom2004]:
+We can define some random function by specifying all distribution functions of the form ^[@yaglom2004]
 $$
 \begin{split}
 %\label{eq:randProcDef}
@@ -48,7 +48,7 @@ This simplifies the process, such as all functions $F_t(x) \ \forall t \in T$ ar
 
 We can characterize random functions with moments.
 The first moment $\mu(t)=\mathbb E\, \xi_t = \int_{-\infty}^\infty x dF_t(x)$ is the mean value.
-For the stationary random function it is constant $\mu=\mu(t)$, which means that it is often useful to redefine our random process with a new random process $\xi_t - \mu$. The second moment is the correlation function, which gives more precise characteristic of the random function:
+For the stationary random function it is constant $\mu=\mu(t)$, which means that it is often useful to redefine our random process with a new random process $\xi_t - \mu$. The second moment is the correlation function, which gives more precise characteristic of the random function
 $$B(t_1, t_2) = \mathbb E\, \xi_{t_1}\overline{\xi_{t_2}} = \int_{-\infty}^\infty\int_{-\infty}^\infty x_1 x_2 dF_{t_1,t_2}(x_1,x_2).$$
 For the stationary random function it only depends on the time difference $\mathbb E\, \xi_{t}\overline{\xi_{t+\tau}} = B(\tau)$.
 
@@ -59,7 +59,7 @@ $$
 %\label{eq:struct_func}
 D(t_1,t_2)=\mathbb E|\xi_{t_1}-\xi_{t_2}|^2=\int_{-\infty}^\infty\int_{-\infty}^\infty |x_1 - x_2|^2 dF_{t_1,t_2}(x_1,x_2).$$
 The structure function is a powerful tool in the theory of random function with stationary increment^[@kolmogorov1941], but in the case of stationary functions it also depends only on the time difference $\tau$ and it simply relates to the correlation function as $D(\tau) = 2 \left(B(0) - \mathrm{Re}\, B(\tau)\right)$.
-In turbulent atmosphere science it is also common to characterize random fields with the complimentary to correlation function power spectral density function $\Phi(k)$, defined as Fourier transformation^[@wiener1930,khintchine1934]:
+In turbulent atmosphere science it is also common to characterize random fields with the complimentary to correlation function power spectral density function $\Phi(k)$, defined as Fourier transformation^[@wiener1930,khintchine1934]
 $$
 %\label{eq:psd_theory}
 \Phi(\lambda) = \frac{1}{2\pi}\int e^{-i\lambda\tau} B(\tau)\, d\tau.$$
@@ -74,12 +74,12 @@ In one of the next subsection we will explicitly present several models for refr
 #### Spectral representation.
 As in the case of regular functions, it can be useful to represent random functions in the form of Fourier transform.
 It was shown, that any stationary random function can be arbitrarily closely represented on some interval $-T < t < T$ as a linear combination of finite number independent harmonic oscillators of the form $\xi_k e^{i\lambda_k t}$, where $\xi_k$ are some complex random variables with mean zero values and $\lambda_k$ are some real constants.
-In the limit we get the spectral representation theorem (Cramer-Karhunen), which states that any stationary process $\xi(t)$ can be represented in the form of the Fourier-Stieltjes integral:
+In the limit we get the spectral representation theorem (Cramer-Karhunen), which states that any stationary process $\xi(t)$ can be represented in the form of the Fourier-Stieltjes integral
 $$
 %\label{eq:FSint}
 \xi(t) = \int_{-\infty}^\infty e^{i\lambda t} dZ(\lambda),
 $$
-where $dZ(\lambda)$ is a random increment, which associates a random variable for each interval $[\lambda, \lambda + d\lambda]$, with the properties:
+where $dZ(\lambda)$ is a random increment, which associates a random variable for each interval $[\lambda, \lambda + d\lambda]$, with the properties
 $$
 \mathbb E\left[dZ(\lambda)\right]=0\,,\quad
 \mathbb E\left[dZ(\lambda_1)\overline{dZ(\lambda_2)}\right]=0\,,\quad
