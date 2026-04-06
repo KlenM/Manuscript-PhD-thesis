@@ -273,10 +273,16 @@ Strong fluctuation regime
 >- Quantum Engineers & Experimentalists
 
 **List of publications:**
-1. M. Klen and A. A. Semenov, "Numerical simulations of atmospheric quantum channels", Phys. Rev. A 108, 033718 (2023).
-2. M. Klen, D. Vasylyev, W. Vogel, and A. A. Semenov, "Time correlations in atmospheric quantum channels", Phys. Rev. A 109, 033712 (2024).
-3. I. Pechonkin, M. Klen, and A. A. Semenov, "Circular-beam approximation for quantum channels in a turbulent atmosphere", Phys. Rev. A 112, 063716 (2025).
-4. A. Semenov, M. Klen, and I. Pechonkin, "Quantum Optics in the Turbulent Atmosphere: Fundamental Issues and Applications", in Quantum Technologies for Defence and Security II, edited by V. Fernandez, G. Sorelli, and S. Schwartz (p. 38). Proceedings of SPIE 13676, 136760H-13 (2025).
+
+```{=latex}
+\begin{enumerate}[label={[\Roman*]}]
+    \item M. Klen and A. A. Semenov, "Numerical simulations of atmospheric quantum channels", Phys. Rev. A 108, 033718 (2023).
+    \item M. Klen, D. Vasylyev, W. Vogel, and A. A. Semenov, "Time correlations in atmospheric quantum channels", Phys. Rev. A 109, 033712 (2024).
+    \item I. Pechonkin, M. Klen, and A. A. Semenov, "Circular-beam approximation for quantum channels in a turbulent atmosphere", Phys. Rev. A 112, 063716 (2025).
+    \item A. Semenov, M. Klen, and I. Pechonkin, "Quantum Optics in the Turbulent Atmosphere: Fundamental Issues and Applications", in Quantum Technologies for Defence and Security II, edited by V. Fernandez, G. Sorelli, and S. Schwartz (p. 38). Proceedings of SPIE 13676, 136760H-13 (2025).
+\end{enumerate}
+```
+
 
 >в яких опубліковані основні наукові результати дисертації;
 які засвідчують апробацію матеріалів дисертації;
