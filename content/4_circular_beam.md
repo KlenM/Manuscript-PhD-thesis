@@ -130,7 +130,8 @@ An explicit example of PDT for $R_\mathrm{ap} = 0.45~\text{cm}$ is shown in ^[fi
 ![\label{fig:acbpdt}Comparison of the PDT for a weak turbulence channel ($F_0 = z_\mathrm{ap}$) at an aperture radius $R_\mathrm{ap} = 0.45$ cm. While the Beta distribution (B) is constrained by the same first two moments as the proposed model, it fails to capture the precise shape of the distribution. In contrast, the beam-based model with the moment-matching technique (C) provides best agreement with the numerical simulations (N). Traditional beam-based models, such as beam wandering (W) and the elliptical-beam model (E), show completely mismatched PDTs due to misspecification bias.](moment_matching/MM_weak_zap_pdt_0_0045.pdf)
 
 We see that the Beta distribution model deviates in shape from the numerically simulated distribution, despite being defined through the same first moments of the transmittance.
-The beam-based model with moment matching shows an almost perfect agreement in this specific case, since the skewness, given by the third moment of the transmittance, as well as the kurtosis are reproduced more accurately.
+The beam-based model with moment matching shows an almost perfect agreement in this specific case. 
+This is because the skewness, given by the third moment of the transmittance, as well as the kurtosis are reproduced more accurately.
 
 For apertures larger compared to the beam size, the agreement of the proposed model is reduced.
 A distinct discrepancy appears near the local minimum of the elliptical-beam model when $R_\mathrm{ap}/W_\mathrm{LT} \approx 1.2$.

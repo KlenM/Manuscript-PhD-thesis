@@ -44,7 +44,8 @@ Fluctuations of one quadrature in the first mode are correlated with the corresp
 The strength of these correlations increases with the squeezing parameter $\xi$.
 In the limit of infinite squeezing, the TMSV approaches the idealized EPR state discussed in the original paradox^[@yun-jie2004,ou1992].
 
-Two mode squeezed vacuum states can be generated using nondegenerate optical parametric oscillators or by interfering two single mode squeezed states on a balanced beam splitter^[@lvovsky2016].
+Two mode squeezed vacuum states can be generated using nondegenerate optical parametric oscillators. 
+Alternatively, they can be produced by interfering two single mode squeezed states on a balanced beam splitter^[@lvovsky2016].
 In the photon-number basis, the TMSV state can be written as
 $$
 \left|\xi\right>=\cosh^{-1}\xi\sum_{n=0}^{\infty}(-\tanh \xi)^n\left|n,n\right>.
@@ -93,11 +94,10 @@ This implies that entanglement preservation is independent of deterministic loss
 The horizontal axis represents the wind-driven shift $s$, which corresponds to the time separation between pulses $\tau = s / v$, where $v$ is the transverse wind speed (see ^[sec:timecorr]).
 The vertical axis shows the squeezing parameter $\xi$ of the initial TMSV state.
 The shaded regions correspond to $\mathcal W<0$, where the Simon criterion certifies that the received state remains entangled.
+The figure alse renders a counterintuitive feature: increasing the squeezing parameter $\xi$ reduces the maximum wind-driven shift for which entanglement is preserved^[@bohmann2016].
+As a result, stronger squeezing does not improve entanglement robustness in atmospheric channels.
 
 ![\label{fig:cvent}Regions of entanglement preservation for a two-mode squeezed vacuum (TMSV) state as a function of the wind-driven shift $s$ and the initial squeezing parameter $\xi$. Threshold boundaries ($\mathcal{W} = 0$) are shown for $\sigma_\mathrm{R}^2=5.5$, $\sigma_\mathrm{R}^2=11$, and $\sigma_\mathrm{R}^2=16.5$ (dashed, solid, and dot-dashed lines, respectively). The shaded areas indicate the regime where the Simon certifier $\mathcal{W}$ is negative, indicating that the state remains entangled after transmission. The aperture radius is $R_\mathrm{ap} = 20~\text{cm}$.](application/entanglement.pdf)
-
-The figure reveals a counterintuitive feature: increasing the squeezing parameter $\xi$ reduces the maximum wind-driven shift for which entanglement is preserved.
-As a result, stronger squeezing does not improve entanglement robustness in atmospheric channels.
 
 For a squeezing parameter of $\xi = 2$ and a turbulence strength of $\sigma_\mathrm{R}^2 = 11$, Gaussian entanglement remains for wind-driven shifts up to $s = 6.4\ \mathrm{cm}$, corresponding to a time separation of $\tau = 6.4\ \mathrm{ms}$ for a transverse wind speed of $v = 10\ \mathrm{m/s}$.
 This demonstrates that entanglement between light pulses is highly robust, persisting beyond millisecond time intervals.
@@ -175,7 +175,8 @@ Determining this dependence is essential for understanding entanglement distribu
 > For theta (...). Derivation for Bell (Sem, Gumb) and PDC
 
 For the numerical simulations, we employ the same atmospheric channel model as defined in Section ^[sec:timecorr].
-The first mode is transmitted through the atmospheric channel at time $t = 0$. The second mode is stored in a quantum memory and is transmitted at a later time $t = \tau$ ^[@yan2018,ma2022].
+The first mode is transmitted through the atmospheric channel at time $t = 0$. 
+The second mode is stored in a quantum memory and is transmitted at a later time $t = \tau$ ^[@yan2018,ma2022].
 
 In contrast to the continuous variable case, the discrete variable description requires an explicit account of all deterministic losses.
 Losses directly affect the detection probabilities and therefore enter the evaluation of the Bell parameters.
@@ -206,7 +207,6 @@ To isolate the impact of time-dependent quantum memory losses from atmospheric e
 From the results, it is apparent that atmospheric turbulence alone allows discrete-variable entanglement to survive over pulse separations of tens of milliseconds.
 Quantum correlations persisting over such long times indicate that using two or more time-separated quantum states makes it possible to increase the effective dimensionality of the Hilbert space for the transmitted states.
 However, the introduction of quantum memory losses strongly reduces the Bell parameter to a few milliseconds.
-
 These findings indicate that the feasibility of the protocol is currently limited by hardware efficiency.
 They emphasize that developing high-performance quantum memories is important for practical implementation.
 
@@ -238,7 +238,8 @@ Nonclassical states exhibit either negativity of the $P$ function or singulariti
 These features indicate the failure of any classical stochastic description.
 
 The negativity of the $P$ function provides a clear qualitative criterion but it is not unique as a quantitative measure.
-Several nonclassicality measures have been proposed that capture different operational aspects of this property ^[@ge2020]. Their relevance depends on the task under consideration.
+Several nonclassicality measures have been proposed that capture different operational aspects of this property ^[@ge2020]. 
+Their relevance depends on the task under consideration.
 
 >Mandel param
 >Q param array
@@ -289,7 +290,6 @@ The corresponding parameter for such measurement is^[@sperling2012a]
 $$Q_{N}=N\frac{\left\langle\Delta c^2\right\rangle}{\left\langle c\right\rangle(N-\left\langle c\right\rangle)}-1,$$
 where $c$ denotes the number of clicks.
 Negative values of $Q_N$ indicate nonclassical light.
-
 The described criteria provide sufficient but not necessary conditions for nonclassicality.
 There exist nonclassical states whose click statistics remain classical.
 
@@ -302,19 +302,18 @@ is violated, the statistics are necessarily nonclassical.
 Here $P(m)$ is the measured click distribution.
 We use the optimal sets of $\lambda(m)$ determined for array detectors with $N=2,3,5$ ^[@kovtoniuk2024], which provide a practical tool, based on convex geometry, for reliably detecting nonclassicality in realistic measurement setups.
 
+>[!note] Mention losses and sim params.
+
 Using the results of the channel simulations obtained in ^[sec:timecorr] for different values of time between classical probe and quantum pulse, we apply an adaptive selection strategy to preserve nonclassicality in atmospheric conditions.
 We study the maximal time interval for a given threshold transmittance $\eta_\mathrm{min}$ during which the click statistics remain nonclassical.
 
->[!note] Mention losses and sim params.
-
 ^[fig:nonclass] shows the wind-driven spatial shift $s$, corresponding to a temporal delay $\tau=s/v$ between the classical probe and the quantum pulse, at which different nonclassicality criteria no longer indicate nonclassicality.
-
-![\label{fig:nonclass} Maximum wind-driven shift $s$ for which nonclassicality remains detectable in an amplitude-squeezed coherent state ($\alpha_0=1.15, \xi=0.59$). The simulation assumes a moderate turbulence regime ($\sigma_\mathrm{R}^2=11$), a receiver aperture $R_\mathrm{ap} = 30$ cm, and total deterministic losses of 6 dB. An adaptive selection strategy is applied with a threshold transmittance $\eta_\mathrm{min} = 0.1$. The plot compares the ideal Mandel parameter $Q$ against sub-binomial parameters $Q_N$ and Bell-like witnesses for detector arrays of size $N=2, 3,$ and $5$. Confidence intervals are derived from $10^6$ selected samples.](application/nonclass.pdf)
-
 The Mandel parameter $Q$ reaches zero at $s = 7.2~\text{cm}$, indicating the limit of sub-Poissonian photon statistics for an ideal photon-number-resolving detector.
 For arrays of on-off detectors, the sub-binomial parameters $Q_N$ reach zero at larger shifts: $Q_5 = 9.7~\text{cm}$, $Q_3 = 11.4~\text{cm}$, and $Q_2 = 14.2~\text{cm}$.
 While $Q_N$ approaches $Q$ as $N$ increases, in the considered case smaller detector arrays detect nonclassicality for longer time intervals.
 However, for other state parameters ($\xi=0.16$ and $\alpha_0=1.4$), the trend reverses, and larger detector arrays maintain nonclassicality over longer times.
+
+![\label{fig:nonclass} Maximum wind-driven shift $s$ for which nonclassicality remains detectable in an amplitude-squeezed coherent state ($\alpha_0=1.15, \xi=0.59$). The simulation assumes a moderate turbulence regime ($\sigma_\mathrm{R}^2=11$), a receiver aperture $R_\mathrm{ap} = 30$ cm, and total deterministic losses of 6 dB. An adaptive selection strategy is applied with a threshold transmittance $\eta_\mathrm{min} = 0.1$. The plot compares the ideal Mandel parameter $Q$ against sub-binomial parameters $Q_N$ and Bell-like witnesses for detector arrays of size $N=2, 3,$ and $5$. Confidence intervals are derived from $10^6$ selected samples.](application/nonclass.pdf)
 
 The figure also shows the difference between the left- and right-hand sides of the Bell-like inequalities ^[eq:vady], which quantifies the distance of the click statistics from the convex hull of coherent state click statistics.
 When this difference reaches zero, the click statistics can no longer be considered nonclassical.

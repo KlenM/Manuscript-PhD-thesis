@@ -55,17 +55,15 @@ The numerical framework is built around the sparse-spectrum approach of the phas
 Standard numerical approaches based on fast Fourier transforms with subharmonic corrections suffer from low frequency undersampling and rigid grid constraints.
 These effects lead to biased channel statistics and distorted transmittance distributions.
 The sparse-spectrum model avoids these limitations through random sampling of spectral components within a logarithmic spectral domain.
-This approach removes grid locking, restores correct low frequency behavior, and provides an accurate representation of turbulence.
+This approach eliminates the limitations of a fixed grid, produces correct low frequency behavior, and provides an accurate representation of turbulence.
 
 One of the objectives of this study is to determine the applicability range of analytical channel models.
 For this purpose, the Kolmogorov-Smirnov statistic is used to quantify the statistical distance between model cumulative distributions and empirical distributions obtained from simulations.
+This comparative analysis allows for an identification of where the analytical models fail to capture the variability induced by atmospheric turbulence.
 
 The temporal dynamics are modeled using Taylor's frozen turbulence hypothesis, which assumes that refractive index fluctuations are transported by transverse wind while remaining structurally unchanged.
 By combining this hypothesis with a sparse-spectrum approach, we can generate arbitrarily long phase screens to simulate the temporal evolution of the channel.
 This enables the consistent simulation of successive optical pulses as they propagate through the turbulent channel.
-
-This framework is suitable for studying time dependent channel effects.
-Temporal correlations are quantified using the Pearson correlation coefficient, which yields characteristic times over which transmittance values remain statistically correlated.
 
 The numerical framework is applied to analyze the survival of quantum correlations and nonclassicality in the turbulent atmosphere.
 For continuous variable states, Gaussian entanglement is certified using the Simon inseparability criterion.
@@ -129,7 +127,6 @@ The co-authors---specifically D. Vasylyev and W. Vogel---provided assistance thr
 
 In the paper 3 my individual contributions to the research included providing the numerical framework utilized for beam shape distribution analysis and performing the extensive model validation.
 Additionally, I proposed the moment matching technique to eliminate the model-misspecification bias found in previous models.
-
 In the paper 4 my individual contribution consisted of conducting numerical modeling, analyzing the obtained data, and preparing representative visualization materials, which constituted the basis of the presented materials.
 
 #### Approbation of Research Results.
