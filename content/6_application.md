@@ -262,10 +262,9 @@ We consider the limiting case of the adaptive selection method discussed in ^[se
 This scenario can be described using the one-time PDT function ^[eq:PDTdef], which allows comparison of the predictions of the analytical models discussed in ^[sec:validation] with the results of numerical simulations.
 >In the second subsection, we extend the analysis to a more general and realistic scenario.
 
-We consider amplitude squeezed coherent states and quantify nonclassicality using the Mandel parameter^[@mandel1995], the Binomial $Q$ parameter^[@sperling2012a], and Bell-like inequality criteria^[@kovtoniuk2024].
-The Binomial $Q$ parameter generalizes the Mandel parameter to account for realistic detectors, such as arrays of on/off detectors, while Bell-like inequality criteria enable testing nonclassicality in situations where standard approaches fail.
+We consider amplitude squeezed coherent states and quantify nonclassicality using the Mandel parameter^[@mandel1995], the Binomial $Q$ parameter^[@sperling2012a], and the convex-geometry approach^[@kovtoniuk2024].
+The Binomial $Q$ parameter generalizes the Mandel parameter to account for realistic detectors, such as arrays of on/off detectors, while convex-geometry approach enables testing nonclassicality in situations where standard approaches fail.
 Nonclassicality certifies are studied as functions of the time interval between the classical probe pulse and the quantum pulse, $\tau$, using the results of ^[sec:timecorr].
-
 ### Amplitude squeezed coherent state with adaptive selection
 In this section we address a more realistic and more general scenario than in the previous section.
 We study an amplitude squeezed coherent state which is defined as a squeezed vacuum displaced by a real amplitude $\alpha_0$ in phase space, $\left|\alpha_0,\xi\right>=\hat D(\alpha_0)\hat S(\xi)\left|0\right>$.
@@ -293,7 +292,7 @@ Negative values of $Q_N$ indicate nonclassical light.
 The described criteria provide sufficient but not necessary conditions for nonclassicality.
 There exist nonclassical states whose click statistics remain classical.
 
-A more general method based on a Bell-like inequalities for detecting nonclassicality introduced in ^[@semenov2021a].
+A more general method based on inequalities for detecting nonclassicality was introduced in ^[@semenov2021a].
 If there exists such a functiono  $\lambda(m)$ that the inequality
 $$
 %\label{eq:vady}
@@ -313,13 +312,13 @@ For arrays of on-off detectors, the sub-binomial parameters $Q_N$ reach zero at 
 While $Q_N$ approaches $Q$ as $N$ increases, in the considered case smaller detector arrays detect nonclassicality for longer time intervals.
 However, for other state parameters ($\xi=0.16$ and $\alpha_0=1.4$), the trend reverses, and larger detector arrays maintain nonclassicality over longer times.
 
-![\label{fig:nonclass} Maximum wind-driven shift $s$ for which nonclassicality remains detectable in an amplitude-squeezed coherent state ($\alpha_0=1.15, \xi=0.59$). The simulation assumes a moderate turbulence regime ($\sigma_\mathrm{R}^2=11$), a receiver aperture $R_\mathrm{ap} = 30$ cm, and total deterministic losses of 6 dB. An adaptive selection strategy is applied with a threshold transmittance $\eta_\mathrm{min} = 0.1$. The plot compares the ideal Mandel parameter $Q$ against sub-binomial parameters $Q_N$ and Bell-like witnesses for detector arrays of size $N=2, 3,$ and $5$. Confidence intervals are derived from $10^6$ selected samples.](application/nonclass.pdf)
+![\label{fig:nonclass} Maximum wind-driven shift $s$ for which nonclassicality remains detectable in an amplitude-squeezed coherent state ($\alpha_0=1.15, \xi=0.59$). The simulation assumes a moderate turbulence regime ($\sigma_\mathrm{R}^2=11$), a receiver aperture $R_\mathrm{ap} = 30$ cm, and total deterministic losses of 6 dB. An adaptive selection strategy is applied with a threshold transmittance $\eta_\mathrm{min} = 0.1$. The plot compares the ideal Mandel parameter $Q$ against sub-binomial parameters $Q_N$ and witnesses for detector arrays of size $N=2, 3,$ and $5$. Confidence intervals are derived from $10^6$ selected samples.](application/nonclass.pdf)
 
-The figure also shows the difference between the left- and right-hand sides of the Bell-like inequalities ^[eq:vady], which quantifies the distance of the click statistics from the convex hull of coherent state click statistics.
+The figure also shows the difference between the left- and right-hand sides of the inequalities ^[eq:vady], which quantifies the distance of the click statistics from the convex hull of coherent state click statistics.
 When this difference reaches zero, the click statistics can no longer be considered nonclassical.
 The inequalities reach zero at $s = 14.2~\text{cm}$ for $N=2$, $s = 19.6~\text{cm}$ for $N=3$, and exceed $s = 28~\text{cm}$ for $N=5$, which is the maximal value covered by the simulations.
-Notably, for $N=2$ the sub-binomial parameter $Q_2$ reaches zero at the same spatial shift as the Bell-like inequality, indicating a deeper connection between these two nonclassicality criteria for small detector arrays.
-Overall, these results show that the Bell-like criteria provide a robust detection of nonclassicality over extended time delays.
+Notably, for $N=2$ the sub-binomial parameter $Q_2$ reaches zero at the same spatial shift as the inequality, indicating a deeper connection between these two nonclassicality criteria for small detector arrays.
+Overall, these results show that the convex-geometry witnessing provide a robust detection of nonclassicality over extended time delays.
 
 ## Conclusion {#sec:conclusion_application}
 
@@ -337,7 +336,7 @@ By monitoring a classical probe pulse, quantum transmission events can be condit
 The Beta-distribution PDT model accurately predicts the nonclassicality of squeezed states under postselection in the limit of instantaneous adaptive selection ($\tau \to 0$).
 For finite $\tau$, two-time analytical PDT models are required, but such models are currently lacking.
 Numerical studies of amplitude-squeezed states show that adaptive selection improves nonclassicality even for pulse separations of tens of milliseconds.
-Bell-like inequalities provides a more sensitive measure of nonclassicality in this context.
+Nonclassicality witnessing based on the convex-geometry method provides a more sensitive measure of nonclassicality in this context.
 
 In conclusion, temporal correlations in atmospheric quantum channels provide a window for effective quantum communication.
 Exploiting these correlations increases the effective Hilbert-space dimensionality and allows adaptive selection strategies to significantly improve nonclassicality preservation.

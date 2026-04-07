@@ -69,7 +69,7 @@ The numerical framework is applied to analyze the survival of quantum correlatio
 For continuous variable states, Gaussian entanglement is certified using the Simon inseparability criterion.
 Discrete variable entanglement is quantified by the Bell parameter in the Clauser-Horne-Shimony-Holt formulation.
 Nonclassical photon statistics are characterized by the Mandel Q-parameter for ideal photodetection.
-For the arrays of click on-off detectors, the Binomial Q parameter is used with the Bell-like inequalities approach in regimes where standard photocounting criteria become inconclusive.
+For the arrays of click on-off detectors, the Binomial Q parameter is used with the convex-geometry approach in regimes where standard photocounting criteria become inconclusive.
 Collectively, these metrics allow for a direct assessment of entanglement and nonclassical features in atmospheric quantum channels.
 
 #### Scientific Novelty of the Results.
