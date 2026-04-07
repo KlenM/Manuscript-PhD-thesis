@@ -19,9 +19,8 @@ where $P(\eta)$ is the probability density of transmittance (PDT).
 The PDT encodes the statistics of turbulence and depends on multiple parameters: the source beam properties (e.g., waist size, wavelength), the atmospheric channel (e.g., turbulence strength, path length, model), and the aperture geometry.
 The probability density of transmittance (PDT) is the primary defining characteristic of atmospheric quantum channels, as it fully captures the stochastic effects of turbulence on the output quantum state.
 
-Direct experimental reconstruction of the PDT is possible either via homodyne detection of quantum states^[@semenov2009] or via classical intensity measurements at the receiver with a photodiode.
-However, experimental studies are  generally complicated.
-They require expensive setups with two synchronized sites separated by large distances.
+Direct experimental reconstruction of the PDT is possible with classical intensity measurements at the receiver side with a photodiode.
+However, experimental studies of PDT properties are generally complicated.
 Measurements must be carried out under uncontrolled atmospheric conditions, which complicates the study, and temporal fluctuations further hinder precise characterization.
 These difficulties highlight the importance of studying atmospheric quantum channels in controlled and well-characterized way.
 
