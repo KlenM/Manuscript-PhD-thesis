@@ -3,21 +3,20 @@
 > - One support point for a dedicated section is to add a bit of math vibe to the thesis
 > - Also, in the case of including of random processes paper - here is the place for background
 
-When studying light propagation through random media, it is essential to introduce the minimal framework of random functions.
-In our problem, randomness enters through spatial variations of the refractive index, which in turn induces randomness in most derived quantities like beam properties at the aperture plane or the transmittance values.
-By treating these quantities as random functions, we can systematically describe their statistical properties, characterize correlations, study ergodicity property markov property, etc ^[@kampen2011,andrews2005,mandel1995].
+When studying light propagation through random media, it is necessary to introduce a minimal framework for random functions.
+In our problem, randomness enters through spatial variations of the refractive index, which in turn induces randomness in most derived quantities such as beam properties at the aperture plane and the transmittance values.
+By treating these quantities as random functions, we can systematically describe their statistical properties, characterize correlations, study ergodicity property, the Markov property, etc ^[@kampen2011,andrews2005,mandel1995].
 
-Let us consider a function $\xi$ of two parameters
+We consider a function $\xi$ of two parameters
 $$
 \xi: T \times \Omega \to \xi(t, \omega),
 $$
-where $t \in T$ is the domain parameter (time, space, etc.) and $\omega \in \Omega$ is an outcome, which can be usefully interpreted as a specific realization of a universe from the set of all possible parallel worlds.
-This form allows us to adopt two complementary perspectives.
-If we fix the outcome $\omega$---i.e., select one specific universe---then we obtain a deterministic function $\xi^{(\omega)}(t)$.
-This is referred to as a sample path or realization of the random function.
+where $t \in T$ is a domain parameter (e.g., time or space) and $\omega \in \Omega$ is an outcome.
+This representation admits two standard viewpoints.
+If we fix the outcome $\omega$, the function $\xi^{(\omega)}(t)$ is a deterministic function, called a sample path (or realization) of the random function.
 Examples of two sample paths as functions of $t$ are shown in ^[fig:sample_paths].
-If we fix the domain parameter $t$---i.e., look at all possible universes at a single time---then we obtain a random variable $\xi_t$.
-In this view, the random function can be seen as a family of random variables $\{\xi_t\}_{t\in T}$ indexed by $t \in T$.
+For the fixed domain parameter $t$, we obtain a random variable $\xi_t$.
+Thus, the random function can equivalently be viewed as a family of random variables $\{\xi_t\}_{t\in T}$ indexed by $t \in T$.
 
 ![\label{fig:sample_paths}Examples of two sample paths of the random function $\xi(t, \omega)$. In this context, the random function represents atmospheric channel transmittance $\eta$. The pink line corresponds to the realization $\xi^{(\omega_1)}(t)$, while the blue line corresponds to $\xi^{(\omega_2)}(t)$. Each path illustrates the deterministic evolution of the channel transmittance over time $t$ for a fixed outcome $\omega$.](background/eta_process.pdf)
 
