@@ -90,7 +90,7 @@ Therefore, the sign of $\mathcal W$ is fully determined by the first factor.
 Importantly, this factor is invariant under a global rescaling of the transmittances $\eta_0$ and $\eta_\tau$.
 This implies that entanglement preservation is independent of deterministic losses, including losses introduced by the quantum memory and the optical system.
 
-^[fig:cvent] shows the regions of entanglement preservation for a TMSV state transmitted through atmospheric channels.
+\Cref{fig:cvent} shows the regions of entanglement preservation for a TMSV state transmitted through atmospheric channels.
 The horizontal axis represents the wind-driven shift $s$, which corresponds to the time separation between pulses $\tau = s / v$, where $v$ is the transverse wind speed (see ^[sec:timecorr]).
 The vertical axis shows the squeezing parameter $\xi$ of the initial TMSV state.
 The shaded regions correspond to $\mathcal W<0$, where the Simon criterion certifies that the received state remains entangled.
@@ -105,7 +105,7 @@ However, losses associated with the quantum memory can significantly reduce the 
 
 In ^[sec:timecorr], we introduced the spatial coherence radius $\rho_0$, which characterizes the correlation of transmittances and depends on the receiver aperture radius $R_\mathrm{ap}$.
 The threshold wind-driven shift $s_\mathrm{th}$, defined as the maximum shift for which entanglement is preserved ($\mathcal W < 0$), also depends on $R_\mathrm{ap}$.
-^[fig:sthbyrho] shows $s_\mathrm{th}$ as a function of the coherence radius $\rho_0$.
+\Cref{fig:sthbyrho} shows $s_\mathrm{th}$ as a function of the coherence radius $\rho_0$.
 The figure shows that $s_\mathrm{th}(\rho_0)$ is a monotonically increasing, nonlinear function.
 Larger coherence allows entanglement to survive larger wind-driven shifts.
 At the same time, the threshold decreases with increasing squeezing.
@@ -306,7 +306,7 @@ We use the optimal sets of $\lambda(m)$ determined for array detectors with $N=2
 Using the results of the channel simulations obtained in ^[sec:timecorr] for different values of time between classical probe and quantum pulse, we apply an adaptive selection strategy to preserve nonclassicality in atmospheric conditions.
 We study the maximal time interval for a given threshold transmittance $\eta_\mathrm{min}$ during which the click statistics remain nonclassical.
 
-^[fig:nonclass] shows the wind-driven spatial shift $s$, corresponding to a temporal delay $\tau=s/v$ between the classical probe and the quantum pulse, at which different nonclassicality criteria no longer indicate nonclassicality.
+\Cref{fig:nonclass} shows the wind-driven spatial shift $s$, corresponding to a temporal delay $\tau=s/v$ between the classical probe and the quantum pulse, at which different nonclassicality criteria no longer indicate nonclassicality.
 The Mandel parameter $Q$ reaches zero at $s = 7.2~\text{cm}$, indicating the limit of sub-Poissonian photon statistics for an ideal photon-number-resolving detector.
 For arrays of on-off detectors, the sub-binomial parameters $Q_N$ reach zero at larger shifts: $Q_5 = 9.7~\text{cm}$, $Q_3 = 11.4~\text{cm}$, and $Q_2 = 14.2~\text{cm}$.
 While $Q_N$ approaches $Q$ as $N$ increases, in the considered case smaller detector arrays detect nonclassicality for longer time intervals.

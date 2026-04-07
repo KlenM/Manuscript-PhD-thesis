@@ -82,7 +82,7 @@ But overall, while the refined models introduced deeper physical insights, they 
 > by Charnotski 10.1364/JOSAA.30.002455
 >This question can be one of the further problems to study, after maturity of the current level of study of atmospheric quantum channels.
 
-^[fig:psd_scales] summarizes the model of atmospheric turbulence.
+\Cref{fig:psd_scales} summarizes the model of atmospheric turbulence.
 It depicts the energy flow across various scales.
 The process begins at large scales of energy injection and moves through the inertial range, where turbulent motion is the predominant mechanism.
 Finally, the energy reaches the region where it is dissipated by viscosity.

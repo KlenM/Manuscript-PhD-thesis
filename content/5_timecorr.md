@@ -114,7 +114,7 @@ It directly reveals how the atmosphere preserves correlations between consecutiv
 >- what specifically??
 >- [ ] fix words about independence on turbulence strength
 
-^[fig:pearson_eta_corr] presents the Pearson correlation between the aperture-averaged transmittances $\eta_0$ and $\eta_\tau$ as a function of the pulse separation time $\tau$ for two receiving apertures.
+\Cref{fig:pearson_eta_corr} presents the Pearson correlation between the aperture-averaged transmittances $\eta_0$ and $\eta_\tau$ as a function of the pulse separation time $\tau$ for two receiving apertures.
 The correlation exhibits a strictly monotonic decrease as $s$ increases. 
 This reflects the decorrelation caused by the transversal motion of refractive-index inhomogeneities.
 
@@ -148,7 +148,7 @@ If the transmittance is less than the threshold, the quantum pulse is discarded.
 By selectively transmitting only those quantum pulses that are likely to encounter high transmittance channel conditions, the protocol can enhance the preservation of nonclassical properties and increases the performance of quantum communication protocols.
 The conditional PDT provides the exact probability distribution of the transmittance of the second pulse under this selection procedure.
 
-^[fig:condpdt] shows the conditional PDT of the second pulse for different spatial shifts $s$ corresponding to various time intervals $\tau$ between pulses for $\eta_\mathrm{min}=0.45$.
+\Cref{fig:condpdt} shows the conditional PDT of the second pulse for different spatial shifts $s$ corresponding to various time intervals $\tau$ between pulses for $\eta_\mathrm{min}=0.45$.
 For small shifts, up to $s \sim 1~\text{cm}$ ($\tau \sim 1~\text{ms}$), the conditional distribution closely resembles the ideal case with $s=0$, indicating that the transmittance of the first pulse reliably predicts the second pulse.
 As $s$ increases to several centimeters (several milliseconds), the probability of transmittance values below the threshold $\eta_\mathrm{min}$ becomes more significant.
 For tens of centimeters of wind-driven shifts $s$ (tens of milliseconds of $\tau$), the conditional PDT approaches the single-time PDT.
