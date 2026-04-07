@@ -156,7 +156,7 @@ However, when the total probability model is not applicable, the Beta distributi
 ### Moderate channel {#sec:valid_moderate}
 
 We next consider a moderate turbulence channel with Rytov parameter $\sigma_\mathrm{R}^2 = 1.5$. 
-This regime corresponds to realistic atmospheric conditions for the horizontal atmospheric channel in Erlangen, Germany.
+This regime corresponds to realistic atmospheric conditions for the horizontal atmospheric channel in Erlangen, Germany^[@peuntinger2014,usenko2012].
 The physical and numerical parameters used in the simulations are summarized in ^[tab:moderate_params].
 
 ```{=latex}
