@@ -11,7 +11,7 @@ Second, we extend this analysis to discrete-variable systems^[@sidhu2021], focus
 Finally, we consider adaptive selection strategies^[@fengtang2013,vallone2015] for single-mode nonclassicality, examining the impact of the temporal separation between a classical probe and the quantum state on squeezed vacuum and squeezed coherent states.
 
 A central theme of this discussion is the role of temporal correlations in the channel.
-We build on time-dependent transmittance simulations described in the previous chapter ^[sec:timecorr].
+We build on time-dependent transmittance simulations described in the previous chapter (see ^[sec:timecorr]).
 Our analysis accounts for realistic conditions, including parametric down-conversion states rather than single-photon Bell states, the interplay between turbulence and quantum memory delay, detector efficiency, and the finite dimensionality of photon-number-resolving detectors.
 The results provide a quantitative framework for assessing the feasibility of free-space quantum tasks under realistic atmospheric conditions.
 
@@ -174,7 +174,7 @@ Determining this dependence is essential for understanding entanglement distribu
 
 > For theta (...). Derivation for Bell (Sem, Gumb) and PDC
 
-For the numerical simulations, we employ the same atmospheric channel model as defined in Section ^[sec:timecorr].
+For the numerical simulations, we employ the same atmospheric channel model as defined in ^[sec:timecorr].
 The first mode is transmitted through the atmospheric channel at time $t = 0$. 
 The second mode is stored in a quantum memory and is transmitted at a later time $t = \tau$ ^[@yan2018,ma2022].
 
@@ -245,10 +245,10 @@ Their relevance depends on the task under consideration.
 >Q param array
 >Bell like ineq
 
-Historically, the first unambiguous experimental signature of nonclassical light was photon antibunching ^[sec:qo].
+Historically, the first unambiguous experimental signature of nonclassical light was photon antibunching (see ^[sec:qo]).
 This effect cannot be explained by classical intensity fluctuations and directly contradicts classical field theories.
 Squeezed states represent another important class of nonclassical states.
-In these states, the noise of one quadrature is reduced below the vacuum level, while the noise of the conjugate quadrature increases to satisfy the uncertainty relation^[eq:heis].
+In these states, the noise of one quadrature is reduced below the vacuum level, while the noise of the conjugate quadrature increases to satisfy the uncertainty relation (see ^[eq:heis]).
 Such noise reduction has no classical analog, since classical stochastic electromagnetic fields cannot suppress quadrature fluctuations below the vacuum limit.
 
 > Where and how to define squeezed states??
@@ -259,7 +259,7 @@ This approach exploits fluctuations of the channel transmittance $\eta_t$ to con
 
 >In the first subsection, we analyze the propagation of a squeezed vacuum state and study the dependence of the output squeezing on the transmittance threshold.
 We consider the limiting case of the adaptive selection method discussed in ^[sec:timecorr], corresponding to a vanishing time interval between the classical probe pulse and the quantum pulse, $\tau \to 0$.
-This scenario can be described using the one-time PDT function ^[eq:PDTdef], which allows comparison of the predictions of the analytical models discussed in ^[sec:validation] with the results of numerical simulations.
+This scenario can be described using the one-time PDT function (see ^[eq:PDTdef]), which allows comparison of the predictions of the analytical models discussed in ^[sec:validation] with the results of numerical simulations.
 >In the second subsection, we extend the analysis to a more general and realistic scenario.
 
 We consider amplitude squeezed coherent states and quantify nonclassicality using the Mandel parameter^[@mandel1995], the Binomial $Q$ parameter^[@sperling2012a], and the convex-geometry approach^[@kovtoniuk2024].
@@ -314,7 +314,7 @@ However, for other state parameters ($\xi=0.16$ and $\alpha_0=1.4$), the trend r
 
 ![\label{fig:nonclass} Maximum wind-driven shift $s$ for which nonclassicality remains detectable in an amplitude-squeezed coherent state ($\alpha_0=1.15, \xi=0.59$). The simulation assumes a moderate turbulence regime ($\sigma_\mathrm{R}^2=11$), a receiver aperture $R_\mathrm{ap} = 30$ cm, and total deterministic losses of 6 dB. An adaptive selection strategy is applied with a threshold transmittance $\eta_\mathrm{min} = 0.1$. The plot compares the ideal Mandel parameter $Q$ against sub-binomial parameters $Q_N$ and witnesses for detector arrays of size $N=2, 3,$ and $5$. Confidence intervals are derived from $10^6$ selected samples.](application/nonclass.pdf)
 
-The figure also shows the difference between the left- and right-hand sides of the inequalities ^[eq:vady], which quantifies the distance of the click statistics from the convex hull of coherent state click statistics.
+The figure also shows the difference between the left- and right-hand sides of the inequalities (see ^[eq:vady]), which quantifies the distance of the click statistics from the convex hull of coherent state click statistics.
 When this difference reaches zero, the click statistics can no longer be considered nonclassical.
 The inequalities reach zero at $s = 14.2~\text{cm}$ for $N=2$, $s = 19.6~\text{cm}$ for $N=3$, and exceed $s = 28~\text{cm}$ for $N=5$, which is the maximal value covered by the simulations.
 Notably, for $N=2$ the sub-binomial parameter $Q_2$ reaches zero at the same spatial shift as the inequality, indicating a deeper connection between these two nonclassicality criteria for small detector arrays.

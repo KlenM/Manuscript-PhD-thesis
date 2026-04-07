@@ -15,7 +15,7 @@ Consequently, it does not allow confident estimation of higher-order moments, su
 To address this, we perform a systematic numerical study across several turbulence strengths.
 
 Given the isotropy of turbulence, the distribution of the beam centroid is radially symmetric.
-Consequently, it is sufficient to consider only a single-dimensional projection along the $x$-axis---the beam-centroid coordinate $x_0$, defined as^[eq:x0].
+Consequently, it is sufficient to consider only a single-dimensional projection along the $x$-axis---the beam-centroid coordinate $x_0$, defined as ^[eq:x0].
 To verify whether the distribution is Gaussian, we generate $5\cdot10^{5}$ realizations of beam propagation, compute the corresponding values of $x_0$ according to ^[eq:x0], and estimate the higher-order moments---the skewness and excess kurtosis^[@joanes1998].
 These higher-order moments provide a quantitative measure of deviations from the Gaussian assumption: skewness captures asymmetry in the distribution, while excess kurtosis reflects the presence of heavy tails or peakedness.
 To systematically evaluate the effect of turbulence strength, we perform this analysis across a range of atmospheric conditions, spanning weak to strong turbulence.
@@ -105,7 +105,7 @@ The kernel-estimated probability density function of the beam-centroid coordinat
 
 The distribution remains approximately Gaussian. 
 However in this regime a noticeable deviation appears near the peak of the distribution.
-This is reflected in the negative excess kurtosis, see ^[tab:x0_strong].
+This is reflected in the negative excess kurtosis (see ^[tab:x0_strong]).
 
 ```{=latex}
 \begin{table}[h]
@@ -144,7 +144,7 @@ To quantify the contribution of beam wandering, we compute the Pearson correlati
 $$%\label{eq:r0eta}
 S(r_0,\eta)=\frac{\left\langle\Delta r_0 \Delta\eta\right\rangle}{\sqrt{\left\langle\Delta r_0^2\right\rangle\left\langle \Delta\eta^2\right\rangle}}.$$
 
-For every atmospheric channel listed in ^[sec:validation] and for each aperture radius, we perform $5\cdot10^5$ independent beam-propagation simulations, compute $r_0 = \sqrt{x_0^2 + y_0^2}$, where $x_0$ is defined as^[eq:x0] and $y_0$ is defined in the same way, evaluate transmittance $\eta$ according to ^[eq:eta] and estimate $S(r_0,\eta)$ ^[eq:r0eta].
+For every atmospheric channel listed in ^[sec:validation] and for each aperture radius, we perform $5\cdot10^5$ independent beam-propagation simulations, compute $r_0 = \sqrt{x_0^2 + y_0^2}$, where $x_0$ is defined as ^[eq:x0] and $y_0$ is defined in the same way, evaluate transmittance $\eta$ according to ^[eq:eta] and estimate $S(r_0,\eta)$ ^[eq:r0eta].
 The dependence of the correlation on the aperture radius is shown in ^[fig:r0eta].
 Across all atmospheric channels, the correlation between centroid displacement and transmittance is negative, reflecting the obvious fact that larger beam wandering reduces received power.
 The magnitude of this correlation strongly depends on the ratio between the aperture radius and the long-term beam radius $R_\mathrm{ap}/W_\mathrm{LT}$.
@@ -164,11 +164,11 @@ A clear trend also appears when comparing channels with initial curvature $F_0 =
 Channels with the geometrically focused beams show larger correlations.
 A plausible interpretation is that focused beams exhibit smaller spreading fluctuations, meaning that transmittance fluctuations come less from beam-size changes and more from centroid displacement.
 With spreading variation suppressed, wandering has a comparatively stronger impact on the received power, which increases the correlation.
-This also explains why the total-probability model performs particularly well for the corresponding weak channel ^[sec:valid_weak] and for the moderate channel in the region $R_\mathrm{ap} \lesssim W_\mathrm{LT}$ ^[sec:valid_moderate].
+This also explains why the total-probability model performs particularly well for the corresponding weak channel (see ^[sec:valid_weak]) and for the moderate channel in the region $R_\mathrm{ap} \lesssim W_\mathrm{LT}$ (see ^[sec:valid_moderate]).
 
 It is commonly accepted that in weak turbulence the beam is mainly affected by wandering, while in stronger turbulence small-scale distortions and speckles dominate the beam structure ^[@andrews2005].
 Based on these observations, it is often assumed in the literature that models based on the beam-wandering effect should perform better in weak turbulence^[@vasylyev2012,vasylyev2016], whereas in strong turbulence the lognormal model is expected to be more appropriate^[@vasylyev2018], as it represents the limiting statistics of multiplicative small-scale distortions.
-Moreover, fitting of such analytical models to experimental data sets for a weak-turbulence channel in Erlangen^[@vasylyev2016,usenko2012] and for a strong-turbulence channel on the Canary Islands^[@capraro2012] has been interpreted as supporting this picture, although this agreement appears to be accidental and results by the particular aperture size used in those experiments^[sec:validation].
+Moreover, fitting of such analytical models to experimental data sets for a weak-turbulence channel in Erlangen^[@vasylyev2016,usenko2012] and for a strong-turbulence channel on the Canary Islands^[@capraro2012] has been interpreted as supporting this picture, although this agreement appears to be accidental and results by the particular aperture size used in those experiments (see ^[sec:validation]).
 
 >"This is justified for weak turbulence, when speckles play no essential role." ([Vasylyev et al., 2016, p. 1](zotero://select/library/items/QEV8ZWED)) ([pdf](zotero://open-pdf/library/items/J49VGVHY?page=1&annotation=HLNYWFKI))
 >"Aperture transmission coefficient.– For weak absorption, beam-wandering losses are dominant." ([Vasylyev et al., 2012, p. 2](zotero://select/library/items/MTFCYJ8H)) ([pdf](zotero://open-pdf/library/items/DHFQCSBE?page=2&annotation=PTZWZMYV))
@@ -255,7 +255,7 @@ Only under strong turbulence a measurable dependence arises, but even then, its 
 ## Distribution of the beam semi-axes {#sec:semiaxes}
 
 In this section we move beyond the analysis of beam wandering and beam spreading and examine the statistical behavior of the semi-axes of the elliptical Gaussian approximation of the beam shape.
-This effect is a central element of the elliptical-beam model ^[sec:pdt], which explicitly includes the influence of random fluctuations of the semi-axes $W_{1,2}$.
+This effect is a central element of the elliptical-beam model (see ^[sec:pdt]), which explicitly includes the influence of random fluctuations of the semi-axes $W_{1,2}$.
 In this model the logarithms of the squared semi-axes are assumed to follow a bivariate Gaussian distribution.
 However, the validity of this assumption is not established.
 

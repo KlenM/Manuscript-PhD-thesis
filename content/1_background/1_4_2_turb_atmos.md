@@ -37,7 +37,7 @@ In the 1940s Kolmogorov assumed^[@kolmogorov1941] that energy enters the turbule
 This mechanism is reffered to as the energy cascade model of turbulence.
 In this case the energy flux from a scale to another by unit mass defined as the kinetic energy divided by deformation time must be a constant
 $$\varepsilon \sim \frac{v_r^2}{T_I}=\frac{v_r^3}{r}=\mathrm{const}.$$
-The dimensional analysis implies that the structure function ^[eq:kolmStructFunc] must be proportional to
+The dimensional analysis implies that the structure function (see ^[eq:kolmStructFunc]) must be proportional to
 $$D_v(r)\sim\left(\varepsilon\, r\right)^{2/3}\equiv C_v^2 r^{2/3}\,,\quad l_0\ll r\ll L_0,$$
 where $C_v^2$ is the velocity structure constant (units of $\mathrm m^{4/3}\mathrm s^{-2}$).
 
@@ -52,7 +52,7 @@ where $C_n^2$ is the refractive-index structure constant, which primarily determ
 
 > - It is also very common to define the Kolmogorov turbulence model with the power spectral density function, which can be obtained using ^[eq:DtoPhi] as
 
-It is also very common to define the Kolmogorov turbulence model with the power spectral density function^[eq:psd_theory] as
+It is also very common to define the Kolmogorov turbulence model with the power spectral density function (see ^[eq:psd_theory]) as
 $$\Phi(\kappa)=0.033 C_n^2 \kappa^{-11/3}\,\quad 2\pi/L_0 \ll \kappa \ll 2\pi/l_0,$$
 where $\kappa = 2\pi/l$ is the spatial frequency and $C_n^2$ is the refractive index structure constant.
 Near ground level, $C_n^2$ ranges from around $10^{-17}$ m$^{-2/3}$ (weak turbulence) to $10^{-13}$ m$^{-2/3}$ (strong turbulence)^[@andrews2005].
@@ -82,7 +82,7 @@ But overall, while the refined models introduced deeper physical insights, they 
 > by Charnotski 10.1364/JOSAA.30.002455
 >This question can be one of the further problems to study, after maturity of the current level of study of atmospheric quantum channels.
 
-The ^[fig:psd_scales] summarizes the model of atmospheric turbulence.
+^[fig:psd_scales] summarizes the model of atmospheric turbulence.
 It depicts the energy flow across various scales.
 The process begins at large scales of energy injection and moves through the inertial range, where turbulent motion is the predominant mechanism.
 Finally, the energy reaches the region where it is dissipated by viscosity.
@@ -105,7 +105,7 @@ The answer to the question how to compare the temporal data with the spatial sta
 
 The hypothesis is based on the difference between two atmospheric time scales.
 The first is the advection time, which can be defined as the duration required for the mean wind of speed $v$ to carry turbulent structure of size $r$ across the observation point, given by $T_v = r/v$.
-The second is the mentioned in^[sec:turb_cascade] inertial time $T_I \sim r/v_r$.
+The second is the mentioned in ^[sec:turb_cascade] inertial time $T_I \sim r/v_r$.
 Typical values for mean wind speed is  $v \sim 5-20\,\mathrm{m/s}$ in moderate to strong wind condition and $v_r \sim 0.1-2\,\mathrm{m/s}$ for the root mean squared velocity fluctuation.
 Then in the case when the advection time is much smaller than inertial time $T_v/T_I = v_r/v \ll 1$  we can assume that the index of refraction field is effectively frozen and evolve in time by moving with constant wind speed $\mathbf{v}: |\mathbf{v}|=v$ as a whole
 $$

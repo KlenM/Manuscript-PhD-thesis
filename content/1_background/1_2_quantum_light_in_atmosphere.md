@@ -32,7 +32,7 @@ However, it has been pointed out that commonly used variations of this method do
 
 An alternative and widely used approach for simulating wave propagation through turbulence is the phase-screen method^[@martin1988,frehlich2000,schmidt2010].
 In this technique, the turbulent medium is modeled as a series of discrete, statistically independent layers that impose random phase distortions on the wavefront, allowing efficient numerical computation of amplitude and phase fluctuations over long propagation distances.
-The theoretical description and implementation details of this method will be discussed in the ^[sec:ps].
+The theoretical description and implementation details of this method will be discussed in ^[sec:ps].
 
 ### Probability density function of the irradiance {#sec:pdf_irradiance}
 Of particular interest is the probability density function of the irradiance.

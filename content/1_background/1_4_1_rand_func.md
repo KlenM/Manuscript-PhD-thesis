@@ -39,7 +39,7 @@ We will call random processes time-indexed random functions, and random fields r
 
 #### Stationary random functions.
 The common class of random functions in physics is stationary random functions.
-A random function is stationary if all of its final-dimensional distribution functions ^[eq:randProcDef] are invariant under the parameter shifts
+A random function is stationary if all of its final-dimensional distribution functions (see ^[eq:randProcDef]) are invariant under the parameter shifts
 $$
 F_{t_1 + \tau, \dots, t_n+\tau}(x_1, \dots, x_n) = F_{t_1, \dots, t_n}(x_1, \dots, x_n)\,, \quad \forall t_i\,, \ i \in [1\dots n]\,, \ \forall n.
 $$
@@ -51,7 +51,7 @@ For the stationary random function it is constant $\mu=\mu(t)$, which means that
 $$B(t_1, t_2) = \mathbb E\, \xi_{t_1}\overline{\xi_{t_2}} = \int_{-\infty}^\infty\int_{-\infty}^\infty x_1 x_2 dF_{t_1,t_2}(x_1,x_2).$$
 For the stationary random function it only depends on the time difference $\mathbb E\, \xi_{t}\overline{\xi_{t+\tau}} = B(\tau)$.
 
->  as we did with the refractive index random field ^[eq:deltan
+>  as we did with the refractive index random field 
 
 While correlation function characterize how similar the values at distance $r$, sometimes it is useful to consider how different the values at distance $r$, which is possible with the structure function
 $$

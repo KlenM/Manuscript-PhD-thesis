@@ -5,7 +5,7 @@ They showed that a light beam distorted by atmospheric turbulence, when passing 
 The channel is characterized by an effective transmittance $\eta \in [0,1]$.
 This quantity represents the fraction of the total beam intensity that passes through the aperture.
 
-While linear-loss channels can be specified in the density-operator formalism, a particularly elegant and tractable representation is obtained when quantum states are described in the Glauber-Sudarshan $P$-function representation^[eq:rho2P] ^[@glauber1963,sudarshan1963a].
+While linear-loss channels can be specified in the density-operator formalism, a particularly elegant and tractable representation is obtained when quantum states are described in the Glauber-Sudarshan $P$-function representation (see ^[eq:rho2P]) ^[@glauber1963,sudarshan1963a].
 Then, the input-output relation for linear-loss channels can be expressed as
 $$
 %\label{eq:PoutPin}
@@ -49,7 +49,7 @@ These models are typically formulated in terms of parameters derived from the fi
 The first group consists of models defined by transmittance moments, like average transmittance and transmittance variance.
 The second group comprises models defined by beam-spot parameters at the aperture plane, like the mean beam-spot radius, the variance of the beam-centroid position, and higher moments.
 
-The truncated lognormal distribution model^[@semenov2009] originates based on the lognormal model of irradiance^[sec:pdf_irradiance].
+The truncated lognormal distribution model^[@semenov2009] originates based on the lognormal model of irradiance (see ^[sec:pdf_irradiance]).
 Since the lognormal distribution has an infinite bound but the PDT model requires values between 0 and 1, an additional truncation condition is introduced at the point  $\eta=1$.  
 Despite being derived under the Rytov approximation in classical optics, this model was reported to yield reasonable agreement under strong turbulence conditions^[@capraro2012,vasylyev2016].
 

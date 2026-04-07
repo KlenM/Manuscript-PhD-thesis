@@ -35,7 +35,7 @@ They include the mean and variance of the beam centroid position and the mean an
 The beam-wandering model $\mathcal{P}_\mathrm{BW}(\eta \mid \langle x_0^2 \rangle, \langle S \rangle)$ is a two parameter model.
 It assumes a circular beam with fixed size $\langle S \rangle$ and neglects beam size fluctuations $\langle S^2 \rangle$.
 The elliptical-beam model extends this description to four parameters.
-Additionally  to the beam position variability $\langle x^2_0 \rangle$ it accounts for fluctuations of the beam semiaxes $W_{1,2}$^[sec:semiaxes] and their correlations.
+Additionally  to the beam position variability $\langle x^2_0 \rangle$ it accounts for fluctuations of the beam semiaxes $W_{1,2}$ (see ^[sec:semiaxes]) and their correlations.
 While the beam-wandering model admits a fully analytical expression for the PDT, the elliptical-beam model requires Monte Carlo sampling to evaluate the PDT.
 
 The complexity of the elliptical-beam model makes a direct reparametrisation in terms of transmittance moments impractical.
@@ -76,7 +76,7 @@ This agreement supports the use of the lognormal approximation for the beam size
 In principle the parameters $\mu$ and $\sigma$ could be inferred from the moments $\langle S\rangle$ and $\langle S^2\rangle$.
 However this choice leads to biased transmittance moments, as discussed above.
 Instead the present model applies transmittance moment matching.
-The parameters $\mu$ and $\sigma$ are therefore defined implicitly by computing the first two transmittance moments of the model^[eq:acbpdt], which yields
+The parameters $\mu$ and $\sigma$ are therefore defined implicitly by computing the first two transmittance moments of the model (see ^[eq:acbpdt]), which yields
 $$
 \begin{dcases}
 \langle \eta \rangle &= \int_0^\infty \mathrm{d}S \, P(S\mid\mu,\sigma) \, \langle \eta \rangle_{\mathrm{BW}} \\

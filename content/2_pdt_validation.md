@@ -7,7 +7,7 @@ The PDT describes an atmospheric quantum channel.
 It defines the input-output relation between quantum states and enables quantitative analysis of protocol performance in free space links.
 Proper characterization of the PDT is essential, since the correctness of any protocol analysis depends directly on the accuracy of the assumed model.
 
-Several analytical models of the PDT have been proposed ^[sec:pdt].
+Several analytical models of the PDT have been proposed (see ^[sec:pdt]).
 The earliest approach adopts statistical models of optical intensity fluctuations from classical optics.
 Since the transmittance is bounded by unity, events exceeding one must be discarded.
 This leads to the truncated lognormal model.
@@ -34,7 +34,7 @@ The goal is to determine which model performs best in a given scenario rather th
 The Kolmogorov-Smirnov statistic therefore provides a simple and sufficient metric.
 It directly quantifies discrepancies between cumulative distributions, which is especially relevant for tasks where tail probabilities such as exceedance $1 - F(\eta)$ determine system performance^[@vasylyev2012].
 
-Existing analytical models are typically parametrized by quantities derived from second and fourth order field correlation functions $\Gamma_2$ and $\Gamma_4$^[sec:light_in_turb] in the aperture plane.
+Existing analytical models are typically parametrized by quantities derived from second and fourth order field correlation functions $\Gamma_2$ and $\Gamma_4$ (see ^[sec:light_in_turb]) in the aperture plane.
 In particular, the first and second moments of the transmittance $\left<\eta\right>$ and $\left<\eta^2\right>$ can be obtained from the field correlation functions and can be easily estimated from experimental data.
 Beam shape parameters such as long-term beam-spot radius, short-term beam-spot radius, beam-wandering variance, and beam size fluctuations require more involved measurements but remain experimentally accessible.
 
@@ -223,7 +223,7 @@ Overall, the agreement between analytical models and numerical results is worse 
 As the propagation distance increases, the difference between the spot sizes of a geometrically focused beam with $F_0 = z_\mathrm{ap}$ and a collimated beam with $F_0 = +\infty$ becomes negligible at the aperture plane.
 Consequently, only the collimated configuration is considered in the strong turbulence regime.
 We analyze a strong turbulence channel characterized by the Rytov parameter $\sigma_\mathrm{R}^2 = 33.3$.
-The corresponding physical and numerical parameters are listed in^[tab:strong_params].
+The corresponding physical and numerical parameters are listed in ^[tab:strong_params].
 
 ```{=latex}
 \begin{table*}[t]
@@ -260,7 +260,7 @@ This finding is illustrated in ^[fig:pdt_strong_inf].
 
 As the ratio $R_\mathrm{ap} / W_\mathrm{LT} \to 0$, the aperture can be treated as point like relative to both the overall beam size and the characteristic scintillation scale of the optical field.
 The transmittance distribution then approaches the probability distribution of irradiance at a point, rather than an aperture averaged quantity.
-Point irradiance statistics in atmospheric turbulence have been studied extensively in classical atmospheric optics and are discussed in^[sec:pdf_irradiance].
+Point irradiance statistics in atmospheric turbulence have been studied extensively in classical atmospheric optics and are discussed in ^[sec:pdf_irradiance].
 In this context, the lognormal distribution is a standard model, which explains the relatively good performance of the truncated lognormal model for very small apertures.
 For strong turbulence, other irradiance models such as the negative exponential, K-distribution, lognormal-Rician, or Gamma-Gamma distributions, as reviewed in ^[sec:pdf_irradiance],  may provide a more accurate description of PDT for the range of very small apertures.
 
@@ -294,5 +294,5 @@ In this regime, the estimated parameters of the Beta model may reflect in the L-
 The total probability model, which combines the positively skewed lognormal and negatively skewed beam-wandering models, performs similarly to the base lognormal model for small apertures.
 However, when the aperture size becomes comparable to the average beam spot width ($R_\mathrm{ap} \lesssim W_\mathrm{LT}$), the model captures the high kurtosis of the numerical PDT, allowing it to outperform other models in some narrow parameter range.
 The physically grounded beam-wandering and elliptical-beam models are strongly affected by bias in the first transmittance moments (mean and variance).
-This is the reason why they perform well when their parameters are fitted using least-squares methods^[sec:pdt], but poorly when the beam shape parameters are estimated directly from numerical simulations.
+This is the reason why they perform well when their parameters are fitted using least-squares methods (see ^[sec:pdt]), but poorly when the beam shape parameters are estimated directly from numerical simulations.
 However, when the peaks of the analytical and numerical PDTs are aligned, these models can outperform all others.

@@ -53,7 +53,7 @@ This integral represents a convolution with the propagation kernel, based on the
 In the spatial frequency domain, this convolution becomes multiplication with the transfer function $H(f_{x},f_{y},z)=e^{ikz}e^{-i\pi\lambda z(f_{x}^{2}+f_{y}^{2})}$, known as the angular spectrum method. This formulation enables efficient numerical implementation using Fast Fourier Transform algorithms.
 
 #### Statistical properties of a light beam in turbulence.
-In the absence of refractive index fluctuations, a Gaussian beam ^[eq:gaussbeam] propagating in free space keeps its deterministic Gaussian profile at the aperture plane, as it represents the exact solution of the paraxial wave equation^[@siegman1986].
+In the absence of refractive index fluctuations, a Gaussian beam (see ^[eq:gaussbeam]) propagating in free space keeps its deterministic Gaussian profile at the aperture plane, as it represents the exact solution of the paraxial wave equation^[@siegman1986].
 When the beam travels through a turbulent atmosphere, random changes in the refractive index make the optical field at the aperture plane a stochastic quantity.
 To efficiently compress the vast amount of information required to describe the optical field distorted by turbulence, it is convenient to characterize the random fluctuations of the complex amplitude in terms of its second- and fourth-order correlation functions^[@andrews2005]
 $$

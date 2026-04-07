@@ -17,12 +17,12 @@ In the ^[sec:application], we will demonstrate how these results guide continuou
 To describe the two-time PDT, we extend the PDT framework (see ^[sec:aqc]) to account for time-dependent fluctuations of the refractive index. In this approach, the refractive index is represented as
 $$n_t(\mathbf{r},z)=1+\delta n_t(\mathbf{r},z),$$
 where $\delta n_t(\mathbf{r},z)$ denotes the small, time-dependent, stochastic perturbation caused by atmospheric turbulence.
-The evolution of the complex field amplitude $u_t(\mathbf{r},z)$ under these conditions is governed by the paraxial wave equation ^[eq:parax], which, for a time-dependent refractive index, takes the form
+The evolution of the complex field amplitude $u_t(\mathbf{r},z)$ under these conditions is governed by the paraxial wave equation (see ^[eq:parax]), which, for a time-dependent refractive index, takes the form
 $$
 2ik\frac{\partial u_t(\mathbf{r},z)}{\partial z}+\Delta_\mathbf{r}
 u_t(\mathbf{r},z)+2k^2\delta n_t(\mathbf{r},z) u_t(\mathbf{r},z)=0.
 $$
-To specify the temporal evolution of the refractive index we adopt the Taylor frozen-turbulence hypothesis ^[eq:taylor_n] described in ^[sec:turb].
+To specify the temporal evolution of the refractive index we adopt the Taylor frozen-turbulence hypothesis (see ^[eq:taylor_n]) described in ^[sec:turb].
 Under this assumption, time-dependent turbulence can be represented as a frozen spatial pattern advected by the wind.
 
 The transmittance through a receiving aperture $\mathcal{A}$ at time $t$ is then given by the aperture-averaged intensity of the propagated field
@@ -30,7 +30,7 @@ $$
 \eta_t=\int_\mathcal{A}d^2\mathbf{r} \left|u_t(\mathbf{r},z_\mathrm{ap})\right|^2.
 $$
 We consider two temporal modes at $t=0$ and $t=\tau$.
-The two mode input output relation for the Glauber P function for channels with fixed linear losses $\eta_0$ and $\eta_\tau$ reads by analogy with single-time relation^[eq:PoutPin]
+The two mode input output relation for the Glauber P function for channels with fixed linear losses $\eta_0$ and $\eta_\tau$ reads by analogy with single-time relation (see ^[eq:PoutPin])
 $$
 P_\mathrm{out}(\alpha_0,\alpha_\tau|\eta_0,\eta_\tau)=
 \frac{1}{\eta_0\eta_\tau}P_\mathrm{in}\left(\frac{\alpha_0}{\sqrt{\eta_0}},\frac{\alpha_\tau}{\sqrt{\eta_\tau}}\right).
@@ -87,9 +87,9 @@ The inner and outer turbulence scales are set to $\ell_0 = 1~\text{mm}$ and $L_0
 The source is a Gaussian beam of wavelength $\lambda = 808~\text{nm}$ with initial beam width $W_0 = 8~\text{cm}$ and curvature radius $F_0 = 50~\text{km}$.
 
 The numerical grid contains $2048$ points in both transverse directions with a grid step of $1~\text{mm}$.
-The sparse-spectrum phase-screen method ^[sec:numsim] is used with $1024$ spectral rings.
+The sparse-spectrum phase-screen method (see ^[sec:numsim]) is used with $1024$ spectral rings.
 The spectral bounds are defined $K_\mathrm{min}=1/15 L_0$ and $K_\mathrm{max}=2/\ell_0$.
-The propagation path is discretized into $15$ phase screens (see^[sec:verification]).
+The propagation path is discretized into $15$ phase screens (see ^[sec:verification]).
 For each of the three channels we generate $5\times10^4$ independent realizations for different values of time interval $\tau$ and aperture radius $R_\mathrm{ap}$.
 
 ## Results
