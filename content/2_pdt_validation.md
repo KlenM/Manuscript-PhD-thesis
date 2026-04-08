@@ -271,6 +271,7 @@ For the moderate-turbulence focused beam and strong turbulence channels, a simil
 This feature indicates an increased spread of transmittance values caused by the more complex spatial structure of the beam.
 
 The first important observation is that the physically motivated models (the beam-wandering model and the elliptical-beam model) being defined in terms of statistics of the beam-shape parameters, exhibit biased transmittance moments.
+This discrepancy arises because idealized circular or elliptical beam shapes fail to account for complex beam deformations.
 In some cases, these models reproduce the overall shape of the numerical PDT quite well (see ^[fig:pdt_weak_zap]), although their peaks are shifted relative to the numerical result.
 The best agreement in terms of the KS-statistic is obtained when the peaks of the analytical and numerical PDTs coincide, as illustrated in ^[fig:ks_moderate_inf].
 Thus, because of the inability to fully account for all orders of the beam shape decomposition, it is more appropriate to parameterize analytical models in terms of transmittance moments rather than beam shape statistics.
