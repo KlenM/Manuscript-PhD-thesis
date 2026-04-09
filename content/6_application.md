@@ -132,9 +132,10 @@ The corresponding Bell state is written as
 $$
 \begin{split}
 \left| \mathcal{B} \right\rangle &= \frac{1}{\sqrt{2}} \Big( \left| \mathrm{h} \right\rangle_0 \left| \mathrm{v} \right\rangle_\tau - \left| \mathrm{v} \right\rangle_0 \left| \mathrm{h} \right\rangle_\tau \Big) \\
-&= \frac{1}{\sqrt{2}} \Big( \left| 1 \right\rangle_{\mathrm{h0}} \left| 0 \right\rangle_{\mathrm{v0}} \left| 0 \right\rangle_{\mathrm{h\tau}} \left| 1 \right\rangle_{\mathrm{v\tau}} - \left| 0 \right\rangle_{\mathrm{h0}} \left| 1 \right\rangle_{\mathrm{v0}} \left| 1 \right\rangle_{\mathrm{h\tau}} \left| 0 \right\rangle_{\mathrm{v\tau}} \Big).
+&= \frac{1}{\sqrt{2}} \Big( \left| 1 \right\rangle_{\mathrm{h0}} \left| 0 \right\rangle_{\mathrm{v0}} \left| 0 \right\rangle_{\mathrm{h\tau}} \left| 1 \right\rangle_{\mathrm{v\tau}} - \left| 0 \right\rangle_{\mathrm{h0}} \left| 1 \right\rangle_{\mathrm{v0}} \left| 1 \right\rangle_{\mathrm{h\tau}} \left| 0 \right\rangle_{\mathrm{v\tau}} \Big),
 \end{split}
 $$
+where the terms $\left|1\right>$ and $\left|0\right>$denote the presence or absence of a single photon within each respective polarization-temporal degrees of freedom .
 
 In optical implementations, entangled photon pairs are often generated through a nonlinear light matter interaction such as spontaneous parametric down conversion (PDC) ^[@lvovsky2016].
 A PDC source produces a superposition of photon-number states.
@@ -226,7 +227,7 @@ $$
 %\label{eq:heis}
 (\Delta X)^2 (\Delta P)^2 \geq \frac{1}{4}
 $$
-and therefore exhibit the smallest allowed quadrature noise.
+with equal variance in both quadratures, representing the minimum symmetric noise allowed by quantum mechanics.
 Despite this property, coherent states remain classical since their fluctuations can be reproduced by classical stochastic models.
 
 A systematic characterization of nonclassicality is provided by the Glauber Sudarshan $P$ function^[@glauber1963a,sudarshan1963a] (see ^[sec:qo]).

@@ -57,7 +57,7 @@ As a result, the transmittance statistics simultaneously account for beam displa
 Since the beam size is strictly positive, its distribution must have positive support.
 Numerical simulations further show that its empirical distribution is well approximated by a lognormal distribution for all considered channels in ^[sec:validation].
 This observation aligns with the treatment of turbulence-induced distortions as multiplicative, which often leads to lognormal statistics.
-Therefore, the beam size distribution is chosen as:
+Therefore, the beam size distribution is chosen as
 $$P(S\mid\mu,\sigma)=\frac{1}{S\sigma\sqrt{2\pi}}\exp\left[{-\frac{\left(\ln{S}-\mu\right)^2}{2\sigma^2}}\right].
 $$
 
