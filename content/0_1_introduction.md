@@ -146,10 +146,10 @@ The total volume of the work is 152 pages, including 90 equations, 9 tables and 
 
 The dissertation was completed at the Bogolyubov Institute for Theoretical Physics of the National Academy of Sciences of Ukraine.
 It is related to the following academic programs, topics, and grants:
-1. Відомча тема відділення фізики та астрономії НАН України “Індуковані шумом динаміка та кореляції в нерівноважних системах”, Р/К 0120U101347.
-2. Відомча тема відділення фізики та астрономії НАН України “Стохастичні процеси в конденсованих середовищах, біологічних системах та полях випромінювання”, Р/К  0125U000031.
-3. Project of National Research Foundation of Ukraine No. 2020.02/0111, “Nonclassical and hybrid correlations of quantum systems under realistic conditions”.
-4. Project of National Research Foundation of Ukraine No. 2023.03/0165 “Quantum correlations of electromagnetic radiation”.
+1. Відомча тема відділення фізики та астрономії НАН України "Індуковані шумом динаміка та кореляції в нерівноважних системах", Р/К 0120U101347.
+2. Відомча тема відділення фізики та астрономії НАН України "Стохастичні процеси в конденсованих середовищах, біологічних системах та полях випромінювання", Р/К  0125U000031.
+3. Project of National Research Foundation of Ukraine No. 2020.02/0111, "Nonclassical and hybrid correlations of quantum systems under realistic conditions".
+4. Project of National Research Foundation of Ukraine No. 2023.03/0165 "Quantum correlations of electromagnetic radiation".
 5. Project Simons Foundation International SFI-PD-Ukraine-00014573, PI LB.
 
 

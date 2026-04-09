@@ -46,11 +46,11 @@
 \usepackage[capitalize,nameinlink]{cleveref}
 
 \usepackage[compact,explicit]{titlesec}
-\titlespacing*{\section}{0pt}{2\baselineskip}{*0}
+\titlespacing*{\section}{12.5mm}{2\baselineskip}{*0}
 \titlespacing*{\subsection}{0pt}{2\baselineskip}{\baselineskip}
 \titlespacing*{\subsubsection}{0pt}{\baselineskip}{*0}
 \titlespacing*{\paragraph}{12.5mm}{\baselineskip}{5mm}
-\titleformat{\section}{}{}{12.5mm}{\textbf\thesection\quad\textbf{#1}}
+\titleformat{\section}{\bfseries}{\thesection\quad}{0pt}{#1}
 \titleformat{\subsection}{}{}{12.5mm}{\textbf\thesubsection\quad\textbf{#1}}
 \titleformat{\subsubsection}{\normalsize}{}{12.5mm}{\textit\thesubsubsection\quad\textit{#1}}
 % \titleformat{\paragraph}{\normalsize}{}{12.5mm}{\quad\textbf{#1}}

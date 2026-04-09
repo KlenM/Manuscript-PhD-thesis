@@ -189,7 +189,7 @@ We assess the predictive accuracy of existing analytical models against this dat
 >### Skewness
 
 Numerical simulations spanning weak-to-strong turbulence regimes demonstrated that atmospheric turbulence strength primarily governs the variance of the PDT without significantly altering its fundamental shape. 
-Conversely, the skewness---representing the distribution’s asymmetry---exhibits high variability and sign reversals contingent upon the receiving aperture size. 
+Conversely, the skewness---representing the distribution's asymmetry---exhibits high variability and sign reversals contingent upon the receiving aperture size. 
 Specifically, when the aperture is much smaller than the beam width, the distribution tail extends toward higher transmittance values (positive skewness); in contrast, larger apertures shift the tail toward lower transmittance values (negative skewness). 
 However, most analytical models are constrained by rigid skewness behaviour and fail to capture this aperture-driven transition.
 
