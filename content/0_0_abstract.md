@@ -238,24 +238,18 @@ This highlights that while atmospheric channels support practical timescales, un
 
 **Keywords:**
 Free-space quantum channels,
-Quantum communication,
-Atmospheric turbulence,
-Quantum optics,
-Phase-screens method,
-Split-step with sparse-spectrum method,
-pyatmosphere (Python library),
 Probability distribution of transmittance (PDT),
-Transmittance matching method,
-Circular beam model,
-Two-time Probability Distribution of Transmittance (Two-time PDT),
 Temporal correlations in free-space channels,
 Time-bin encoding,
+Two-time PDT,
 Spatial coherence radius,
+Transmittance-moment matching,
+Atmospheric turbulence,
+Sparse-spectrum phase-screen method
+Strong fluctuation regime
 Quantum entanglement,
 Adaptive selection protocols,
-Nonclassicality preservation,
-Quantum memory in atmosphere,
-Strong fluctuation regime
+Nonclassicality preservation
 
 > від 5 до 15.
 
