@@ -1,5 +1,4 @@
 # Application {#sec:application}
-## Introduction {#sec:intro_application}
 This chapter investigates applications of the theory developed in previous sections to a description of quantum-light propagation through turbulent atmospheric channels.
 Understanding the limits of quantum state preservation under realistic conditions is essential for designing robust quantum communication protocols.
 We quantify the effects of channel properties, including temporal correlations, aperture size, and finite detector resolution, on different aspects of quantumness.
@@ -265,6 +264,7 @@ This scenario can be described using the one-time PDT function (see ^[eq:PDTdef]
 We consider amplitude squeezed coherent states and quantify nonclassicality using the Mandel parameter^[@mandel1995], the Binomial $Q$ parameter^[@sperling2012a], and the convex-geometry approach^[@kovtoniuk2024].
 The Binomial $Q$ parameter generalizes the Mandel parameter to account for realistic detectors, such as arrays of on/off detectors, while convex-geometry approach enables testing nonclassicality in situations where standard approaches fail.
 Nonclassicality certifies are studied as functions of the time interval between the classical probe pulse and the quantum pulse, $\tau$, using the results of ^[sec:timecorr].
+
 ### Amplitude squeezed coherent state with adaptive selection
 In this section we address a more realistic and more general scenario than in the previous section.
 We study an amplitude squeezed coherent state which is defined as a squeezed vacuum displaced by a real amplitude $\alpha_0$ in phase space, $\left|\alpha_0,\xi\right>=\hat D(\alpha_0)\hat S(\xi)\left|0\right>$.
