@@ -173,7 +173,7 @@ The conditional PDT captures a complementary property relevant for adaptive sele
 By selecting quantum pulses based on the measured transmittance of a preceding classical probe, one can enhance the likelihood of transmitting through high-transmittance channel realizations.
 The conditional PDT provides a precise description of the second pulse PDT under such selection protocols, directly influencing the preservation of nonclassical properties and the performance of other quantum communication protocols.
 
-Overall, the results show that two-time PDT and derived quantities like $\rho_0$ and conditional PDT are complementary tools.
+Overall, the results show that two-time PDT and derived quantities such us $\rho_0$ and conditional PDT are complementary tools.
 The spatial coherence radius quantifies the timescale over which successive pulses remain statistically correlated and is essential for entanglement-based protocols, while conditional PDT captures the potential for adaptive selection protocols, for example to enhance the preservation of nonclassicality.
 These findings provide a practical framework for designing and evaluating quantum communication systems.
 In ^[sec:application], these results will be applied to study the preservation of continuous-variable and discrete-variable entanglement as a function of pulse separation, as well as the enhancement of nonclassicality through adaptive selection.

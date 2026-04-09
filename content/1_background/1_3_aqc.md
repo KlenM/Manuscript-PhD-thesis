@@ -46,8 +46,8 @@ We will discuss the precise mechanism of these perturbations in the next subsect
 ### Analytical models of PDT {#sec:pdt}
 Several analytical models of the PDT were developed between 2009 and 2018 to describe the statistical properties of atmospheric quantum channels.
 These models are typically formulated in terms of parameters derived from the field correlation function.
-The first group consists of models defined by transmittance moments, like average transmittance and transmittance variance.
-The second group comprises models defined by beam-spot parameters at the aperture plane, like the mean beam-spot radius, the variance of the beam-centroid position, and higher moments.
+The first group consists of models defined by transmittance moments, such us average transmittance and transmittance variance.
+The second group comprises models defined by beam-spot parameters at the aperture plane, such us the mean beam-spot radius, the variance of the beam-centroid position, and higher moments.
 
 The truncated lognormal distribution model^[@semenov2009] originates based on the lognormal model of irradiance (see ^[sec:pdf_irradiance]).
 Since the lognormal distribution has an infinite bound but the PDT model requires values between 0 and 1, an additional truncation condition is introduced at the point  $\eta=1$.  

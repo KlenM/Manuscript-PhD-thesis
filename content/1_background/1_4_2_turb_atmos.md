@@ -4,7 +4,7 @@ The complexity are rooted in the Navier-Stokes equations, which results in  the 
 Thus the atmospheric study mostly relies on statistical descriptions^[@kolmogorov1941] and the main object for description is the velocity random field.
 
 #### Energy cascade model of turbulence. {#sec:turb_cascade}
-There are various sources that creates turbulence like wind shear, thermal convection, buoyancy effects, obstacles, but the statistical properties of the resulting flow tend to show similar universal behavior.
+There are various sources that creates turbulence such us wind shear, thermal convection, buoyancy effects, obstacles, but the statistical properties of the resulting flow tend to show similar universal behavior.
 We assume that turbulent atmosphere is stationary, homogeneous, and isotropic.
 Stationarity implies that the statistical properties of the flow do not change over time.
 Homogeneity means that no particular location in the space is special. Isotropy requires that no direction is privileged.
@@ -28,7 +28,7 @@ Then, inertial time corresponds to the time it takes for an eddy to complete one
 Although turbulent eddies are not well defined, they can be valuable for illustrating the intuition about turbulence dynamics.
 
 We can define two characteristic lengths that play important role in turbulent atmosphere theory.
-The outer scale of turbulence $L_0$ can be considered as the typical size of the largest eddies or characteristic size of the system, like the altitude of laser beam propagation ^[@coulman1988], with typical values of $L_0 \approx 20\mathrm{m} - 100\mathrm{m}$^[@martin2000].
+The outer scale of turbulence $L_0$ can be considered as the typical size of the largest eddies or characteristic size of the system, such us the altitude of laser beam propagation ^[@coulman1988], with typical values of $L_0 \approx 20\mathrm{m} - 100\mathrm{m}$^[@martin2000].
 The inner scale or turbulence $l_0$ can be considered as the scale at which $\mathcal R_{l_0} \approx 1$, with typical value of $l_0 \approx 1\mathrm{mm} - 1\mathrm{cm}$.
 The interval of scales between $l_0$ and $L_0$ is called as the inertial range.
 
@@ -96,10 +96,10 @@ Finally, the energy reaches the region where it is dissipated by viscosity.
 >- [ ] we need some words about what is gaussian turbulence - why we use complex normal distr for phase-screen generation
 
 #### Frozen turbulence hypothesis.
-The Kolmogorov model, along with its modifications like the von Kármán spectrum, provides a strong theoretical basis for understanding the ensemble averaged statistics of turbulence.
+The Kolmogorov model, along with its modifications such us the von Kármán spectrum, provides a strong theoretical basis for understanding the ensemble averaged statistics of turbulence.
 However, these models do not directly address the temporal statistics of the turbulent field.
 This lack of a temporal description is critical for several reasons.
-It is required for studying the temporal properties of the impact of the turbulent atmosphere on phenomena like light propagation.
+It is required for studying the temporal properties of the impact of the turbulent atmosphere on phenomena such us light propagation.
 For experimental atmosphere study, most atmospheric experiments rely on small number of fixed in space sensors to record fluctuations over time because this setup is significantly easier to realize in practice than true spatial sampling.
 The answer to the question how to compare the temporal data with the spatial statistics provided by G. I. Taylor in 1937 with the Frozen Turbulence Hypothesis^[@taylor1938].
 
