@@ -7,6 +7,7 @@ This analysis provides a practical framework for assessing the feasibility of fr
 We analyze three distinct manifestations of quantumness under these conditions.
 First, we investigate the preservation of Gaussian entanglement^[@hosseinidehaj2019] between continuous-variable pulses separated by a finite time delay.
 Second, we extend this analysis to discrete-variable systems^[@sidhu2021], focusing on polarization-entangled states.
+In both entanglement scenarios, the first mode is sent through the atmospheric channel at time $t=0$, while the second mode is stored in a quantum memory and released at a later time $t=\tau$.
 Finally, we consider adaptive selection strategies^[@fengtang2013,vallone2015] for single-mode nonclassicality, examining the impact of the temporal separation between a classical probe and the quantum state on squeezed vacuum and squeezed coherent states.
 
 A central theme of this discussion is the role of temporal correlations in the channel.
@@ -23,7 +24,7 @@ If the value of one observable of the first system can be predicted with certain
 If this holds simultaneously for two non-commuting observables, then the quantum mechanical description appears incomplete.
 The EPR paradox was originally presented as a critique of quantum mechanics, but it later became a cornerstone for understanding nonclassical correlations.
 
-In modern quantum information theory, entanglement is no longer viewed as a sign of incompleteness, but as a well defined physical resource.
+In modern quantum information theory, entanglement is no longer viewed as a sign of incompleteness, but as a well-defined physical resource.
 It is a central resource in quantum information science, where it enables tasks that are impossible or inefficient using classical correlations alone.
 In this section, the focus is on continuous variable entanglement realized in optical systems.
 
@@ -124,8 +125,8 @@ This description is natural for Gaussian states and homodyne measurements.
 However, many experimentally relevant sources and protocols operate in a finite-dimensional Hilbert space, where entanglement can be encoded in discrete degrees of freedom.
 This motivates a separate treatment of discrete variable entanglement.
 
-We consider a maximally entangled two qubit system corresponding to a Bell state.
-Each qubit is encoded in the polarization degree of freedom of a single photon occupying a well defined temporal mode.
+We consider a maximally entangled two-qubit system corresponding to a Bell state.
+Each qubit is encoded in the polarization degree of freedom of a single photon occupying a well-defined temporal mode.
 The horizontal polarization $\mathrm{h}$ defines the logical zero state, while the vertical polarization $\mathrm{v}$ defines the logical one.
 Using two temporal modes $t = 0$ and $t = \tau$, the system spans four optical modes, namely $\mathrm{h}0$, $\mathrm{v}0$, $\mathrm{h}\tau$, and $\mathrm{v}\tau$.
 The corresponding Bell state is written as
@@ -135,17 +136,17 @@ $$
 &= \frac{1}{\sqrt{2}} \Big( \left| 1 \right\rangle_{\mathrm{h0}} \left| 0 \right\rangle_{\mathrm{v0}} \left| 0 \right\rangle_{\mathrm{h\tau}} \left| 1 \right\rangle_{\mathrm{v\tau}} - \left| 0 \right\rangle_{\mathrm{h0}} \left| 1 \right\rangle_{\mathrm{v0}} \left| 1 \right\rangle_{\mathrm{h\tau}} \left| 0 \right\rangle_{\mathrm{v\tau}} \Big),
 \end{split}
 $$
-where the terms $\left|1\right>$ and $\left|0\right>$denote the presence or absence of a single photon within each respective polarization-temporal degrees of freedom .
+where the terms $\left|1\right>$ and $\left|0\right>$ denote the presence or absence of a single photon within each respective polarization-temporal mode and $\left| \mathrm h \right>$ and $\left| \mathrm v \right>$ are the single-photon states in the horizontally and vertically polarized modes.
 
-In optical implementations, entangled photon pairs are often generated through a nonlinear light matter interaction such as spontaneous parametric down conversion (PDC) ^[@lvovsky2016].
+In optical implementations, entangled photon pairs are often generated through a nonlinear light-matter interaction such as spontaneous parametric down-conversion (PDC) ^[@lvovsky2016].
 A PDC source produces a superposition of photon-number states.
 In the relevant polarization and temporal modes, this superposition can be written as
 $$\left| \mathrm{PDC} \right\rangle = (\cosh\xi)^{-2} \sum\limits_{n=0}^{+\infty} \sqrt{n+1} \tanh^n \xi \left| \Phi_n \right\rangle$$
 with
 $$
-\left| \Phi_n \right\rangle = \frac{1}{\sqrt{n+1}} \sum\limits_{m=0}^{n} (-1)^m \left| n-m \right\rangle_{\mathrm{h0}} \left| m \right\rangle_{\mathrm{v0}} \left| m \right\rangle_{\mathrm{h\tau}} \left| n-m \right\rangle_{\mathrm{v\tau}}.
+\left| \Phi_n \right\rangle = \frac{1}{\sqrt{n+1}} \sum\limits_{m=0}^{n} (-1)^m \left| n-m \right\rangle_{\mathrm{h0}} \left| m \right\rangle_{\mathrm{v0}} \left| m \right\rangle_{\mathrm{h\tau}} \left| n-m \right\rangle_{\mathrm{v\tau}},
 $$
-The parameter $\xi$ is determined by the pump power and the nonlinear coupling strength.
+where the terms $\left|n\right>$ denote the presence of $n$ photons within the respective polarization-temporal modes, and the parameter $\xi$ is determined by the pump power and the nonlinear coupling strength.
 The term with $n = 1$ corresponds to the polarization Bell state occupying the two temporal modes, while higher order terms describe the simultaneous emission of multiple photon pairs.
 In this section, we analyze the entanglement between optical pulses separated by a time interval $\tau$ for both the ideal Bell state and the PDC state^[@beaudry2008,moroder2010].
 
@@ -219,7 +220,6 @@ They emphasize that developing high-performance quantum memories is important fo
 Nonclassicality is a broader concept than entanglement.
 Entanglement refers to quantum correlations between subsystems, while nonclassicality can arise even in a single mode optical field.
 It characterizes states that cannot be described within a classical theory of electromagnetic radiation.
-
 Classical optical states admit a description in terms of solutions of Maxwell equations with stochastic amplitudes and phases.
 Coherent states form a prominent subset of this class^[@mandel1995].
 They minimize the Heisenberg uncertainty relation
@@ -236,7 +236,6 @@ If the $P$ function is positive and regular, the state is considered classical.
 The absence of such a representation is a necessary and sufficient criterion for nonclassicality.
 Nonclassical states exhibit either negativity of the $P$ function or singularities that are stronger than those of a classical probability distribution.
 These features indicate the failure of any classical stochastic description.
-
 The negativity of the $P$ function provides a clear qualitative criterion but it is not unique as a quantitative measure.
 Several nonclassicality measures have been proposed that capture different operational aspects of this property ^[@ge2020]. 
 Their relevance depends on the task under consideration.
@@ -245,7 +244,7 @@ Their relevance depends on the task under consideration.
 >Q param array
 >Bell like ineq
 
-Historically, the first unambiguous experimental signature of nonclassical light was photon antibunching (see ^[sec:qo]).
+Historically, the first unambiguous experimental signature of nonclassical light was photon antibunching^[kimble1977] (see ^[sec:qo]).
 This effect cannot be explained by classical intensity fluctuations and directly contradicts classical field theories.
 Squeezed states represent another important class of nonclassical states.
 In these states, the noise of one quadrature is reduced below the vacuum level, while the noise of the conjugate quadrature increases to satisfy the uncertainty relation (see ^[eq:heis]).
@@ -254,7 +253,7 @@ Such noise reduction has no classical analog, since classical stochastic electro
 > Where and how to define squeezed states??
 
 In this section, we study the propagation of squeezed states through an atmospheric channel.
-We consider the threshold selection of the transmittance as a method to improve the preservation of nonclassical properties in atmospheric channels.
+We consider the threshold selection of the transmittance as a method to improve the preservation of nonclassical properties in atmospheric channels^[@fengtang2013,vallone2015].
 This approach exploits fluctuations of the channel transmittance $\eta_t$ to conditionally enhance nonclassical features of the transmitted light.
 
 >In the first subsection, we analyze the propagation of a squeezed vacuum state and study the dependence of the output squeezing on the transmittance threshold.
@@ -279,8 +278,9 @@ $$Q=\frac{\left\langle \Delta \hat n^2\right\rangle}{\left\langle \hat n\right\r
 Negative values of $Q$ correspond to sub-Poissonian photon-number statistics and therefore to nonclassical light.
 This criterion relies on ideal photon-number-resolving detection and is therefore of limited applicability in realistic measurement scenarios.
 
-A more realistic detection model is based on an array of $N$ on-off detectors.
-Each detector can only discriminate between the absence and presence of photons.
+A more realistic detection model is based on an array of $N$ "on-off" detectors^[@paul1996,castelletto2007].
+In such a setup, the incoming beam is split into $N$ separate modes using a balanced interferometer, where each mode is then incident on an independent detector.
+These detectors are "on-off" type, meaning they can only discriminate between the absence and the presence of photons, rather than resolving the exact photon number.
 For a classical coherent state with complex amplitude $\alpha$, the resulting click statistics are binomial.
 The corresponding response function for registering $m$ clicks, described by a positive operator valued measure (POVM) ^[@sperling2012], is given by
 $$\Pi(m|\alpha)=\binom{N}{m}\left(1-e^{-|\alpha|^2/N}\right)^m e^{-(N-m)|\alpha|^2/N}.$$
