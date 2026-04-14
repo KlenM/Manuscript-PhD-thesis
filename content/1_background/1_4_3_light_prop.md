@@ -3,15 +3,6 @@ We must solve the classical problem of light propagation through stochastic isot
 This process involves characterizing how random fluctuations alter the beam's power distribution.
 To that end, this section defines the fundamental equations governing beam intensity at the aperture plane.
 
-#### Gaussian beam source.
-In this work, we restrict the analysis to the Gaussian beam mode at the transmittance plane^[@siegman1986].
-Gaussian modes provide an accurate approximation of the output of most laser sources used in free space optical communication.
-Because of this, they are widely adopted in theoretical modeling and experimental studies of atmospheric optical channels.
-The boundary condition at the transmitter plane $z=z_0$ takes the form of a Gaussian beam^[@andrews2005]
-$$%\label{eq:gaussbeam}
-\boxed{u(\mathbf{r};0)=\sqrt{\frac{2}{\pi W_0^2}}\exp\left[-\frac{\mathbf{r}^2}{W_0^2}-\frac{ik}{2F_0}\mathbf{r}^2\right]},$$
-where $W_0$ is the beam waist radius and $F_0$ is the radius of curvature of the wavefront. For collimated beams, $F_0 \to \infty$, while for focused beams, $F_0$ takes finite values.
-
 #### Paraxial wave equation in stochastic media.
 > To describe the propagation of gaussian beams through turbulent atmosphere we begin from the general wave equation derived from Maxwell's equations.
 
@@ -39,18 +30,29 @@ where $\delta n(\mathbf{r},z) = n(\mathbf{r},z) - 1$ represents the refractive i
 >- [ ] some words about analytical approaches to atmos propagation
 >- the requirenes of statistical description of n
 
+#### Gaussian beam source.
+In this work, we restrict the analysis to the Gaussian beam mode at the transmittance plane^[@siegman1986].
+Gaussian modes provide an accurate approximation of the output of most laser sources used in free space optical communication.
+Because of this, they are widely adopted in theoretical modeling and experimental studies of atmospheric optical channels.
+The boundary condition at the transmitter plane $z=z_0$ takes the form of a Gaussian beam^[@andrews2005]
+$$%\label{eq:gaussbeam}
+\boxed{u(\mathbf{r};0)=\sqrt{\frac{2}{\pi W_0^2}}\exp\left[-\frac{\mathbf{r}^2}{W_0^2}-\frac{ik}{2F_0}\mathbf{r}^2\right]},$$
+where $W_0$ is the beam waist radius and $F_0$ is the radius of curvature of the wavefront. For collimated beams, $F_0 \to \infty$, while for focused beams, $F_0$ takes finite values.
+
+#### Vacuum propagation.
+For the case $\delta n = 0$ (homogeneous medium), the solution becomes straightforward. 
+The Fresnel diffraction integral^[@goodman2017] describes the field evolution
+$$u(x,y,z)=\frac{e^{ikz}}{i\lambda z}\iint_{-\infty}^{\infty}u(x',y',0)e^{i\frac{k}{2z}[(x-x')^{2}+(y-y')^{2}]}dx'dy'.$$
+This integral represents a convolution with the propagation kernel, based on the Huygens-Fresnel principle where each wavefront point acts as a source of secondary spherical wavelets.
+In the spatial frequency domain, this convolution becomes multiplication with the transfer function $H(f_{x},f_{y},z)=e^{ikz}e^{-i\pi\lambda z(f_{x}^{2}+f_{y}^{2})}$, known as the angular spectrum method^[@goodman2017]. 
+This formulation enables efficient numerical implementation using Fast Fourier Transform algorithms.
+
 #### Transmittance of channel.
 To simulate the PDT, we must first calculate the transmittance value at the aperture plane $z=z_\mathrm{ap}$ for various channel realizations.
 This can be done by integrating the squared magnitude of the optical field over the entire receiving aperture $\mathcal{A}$ as the following
 $$%\label{eq:eta}
 \boxed{\eta = \int_\mathcal{A} d^2\boldsymbol{r} |u(\boldsymbol{r}, z_\mathrm{ap})|^2}.$$
 Specifically, the integration domain $\mathcal{A}$ represents the circular region of the pupil with radius $R_\mathrm{ap}$, and $d^2\boldsymbol{r}=dxdy$.
-
-#### Vacuum propagation.
-For the case $\delta n = 0$ (homogeneous medium), the solution becomes straightforward. The Fresnel diffraction integral^[@goodman2017] describes the field evolution
-$$U(x,y,z)=\frac{e^{ikz}}{i\lambda z}\iint_{-\infty}^{\infty}U(x',y',0)e^{i\frac{k}{2z}[(x-x')^{2}+(y-y')^{2}]}dx'dy'.$$
-This integral represents a convolution with the propagation kernel, based on the Huygens-Fresnel principle where each wavefront point acts as a source of secondary spherical wavelets.
-In the spatial frequency domain, this convolution becomes multiplication with the transfer function $H(f_{x},f_{y},z)=e^{ikz}e^{-i\pi\lambda z(f_{x}^{2}+f_{y}^{2})}$, known as the angular spectrum method. This formulation enables efficient numerical implementation using Fast Fourier Transform algorithms.
 
 #### Statistical properties of a light beam in turbulence.
 In the absence of refractive index fluctuations, a Gaussian beam (see ^[eq:gaussbeam]) propagating in free space keeps its deterministic Gaussian profile at the aperture plane, as it represents the exact solution of the paraxial wave equation^[@siegman1986].
