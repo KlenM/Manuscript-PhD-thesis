@@ -47,31 +47,6 @@ This approach provides unbiased parameter estimation and enables the validation 
 
 > - table of models (there are a lot, means that the reader need visual aid)
 
-## Beta distribution model
-Before performing the validation of analytical models known in literature, we introduce an additional empirical model of the PDT based on the Beta distribution^[@johnson1995].
-The PDT in this model is defined by the Beta probability density function
-$$
-%\label{Eq:pdt_beta}
-\mathcal{P}\!\left(\eta\,; \left<\eta\right>, \left<\eta^2\right>\right) = \frac{1}{B(a, b)} \eta^{a-1} (1-\eta)^{b-1},
-$$
-where $B(a,b)$ is the Beta function.
-The internal parameters $a$ and $b$ are expressed through the first two moments of the transmittance, $\left<\eta\right>$ and $\left<\eta^2\right>$, as
-$$
-\begin{split}
-a = a\left(\langle\eta\rangle,\langle\eta^2\rangle\right)&= \frac{\langle\eta\rangle - \langle\eta^2\rangle}{ \langle\eta^2\rangle- \langle\eta\rangle^2}\langle \eta \rangle, \\
-b =b\left(\langle\eta\rangle,\langle\eta^2\rangle\right)&=  \frac{\langle\eta\rangle - \langle\eta^2\rangle}{ \langle\eta^2\rangle- \langle\eta\rangle^2} \left( 1 - \langle\eta\rangle \right).
-\end{split}
-$$
-
-This model is particularly convenient for several reasons.
-First, it has a natural support on the physically meaningful interval $[0,1]$, which corresponds directly to the possible range of transmittance values.
-Second, it provides a simple analytical expression, whose parameters can be determined directly from the first two statistical moments of transmittance.
-This makes the model straightforward to implement and interpret.
-Finally, the shape of the Beta distribution PDT generally resembles the numerically obtained transmittance distributions across a wide range of turbulence conditions.
-Therefore, we expect it to exhibit good agreement with numerical simulations, as will be shown in the following sections.
-
-> rewrite params?
-
 ## Results and discussion
 ### Weak channel {#sec:valid_weak}
 

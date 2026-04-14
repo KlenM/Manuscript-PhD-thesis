@@ -46,13 +46,25 @@ We will discuss the precise mechanism of these perturbations in the next subsect
 ### Analytical models of PDT {#sec:pdt}
 Several analytical models of the PDT were developed between 2009 and 2018 to describe the statistical properties of atmospheric quantum channels.
 These models are typically formulated in terms of parameters derived from the field correlation function.
-The first group consists of models defined by transmittance moments, such us average transmittance and transmittance variance.
-The second group comprises models defined by beam-spot parameters at the aperture plane, such us the mean beam-spot radius, the variance of the beam-centroid position, and higher moments.
+The first group consists of models defined by transmittance moments, such as average transmittance and transmittance variance.
 
 The truncated lognormal distribution model^[@semenov2009] originates based on the lognormal model of irradiance (see ^[sec:pdf_irradiance]).
-Since the lognormal distribution has an infinite bound but the PDT model requires values between 0 and 1, an additional truncation condition is introduced at the point  $\eta=1$.  
+Since the lognormal distribution has an infinite bound but the PDT requires values between 0 and 1, an additional truncation condition is introduced at $\eta=1$.
 Despite being derived under the Rytov approximation in classical optics, this model was reported to yield reasonable agreement under strong turbulence conditions^[@capraro2012,vasylyev2016].
 
+Alternatively, an empirical approach based on the Beta distribution^[@johnson1995] was introduced in \ref{mypaper1}.
+In this model, the PDT is defined using the first two transmittance moments as
+$$
+\mathcal{P}\!\left(\eta\,; \left<\eta\right>, \left<\eta^2\right>\right) = \frac{1}{B(a, b)} \eta^{a-1} (1-\eta)^{b-1},
+$$
+where $B(a,b)$ is the Beta function and the parameters $a$ and $b$ are expressed through the first two moments as
+$$
+a = \frac{\langle\eta\rangle - \langle\eta^2\rangle}{ \langle\eta^2\rangle- \langle\eta\rangle^2}\langle \eta \rangle \quad \text{and} \quad
+b =  \frac{\langle\eta\rangle - \langle\eta^2\rangle}{ \langle\eta^2\rangle- \langle\eta\rangle^2} \left( 1 - \langle\eta\rangle \right).
+$$
+This model is particularly convenient because it has a natural support on the interval $[0,1]$ and provides a simple analytical expression that closely resembles numerically obtained distributions across a wide range of turbulence conditions.
+
+The second group comprises models defined by beam-spot parameters at the aperture plane, such as the mean beam-spot radius, the variance of the beam-centroid position, and higher moments.
 The beam-wandering model^[@vasylyev2012] accounts for random deflection of the beam centroid from the propagation axis while neglecting beam-shape deformation.
 It assumes a normally distributed beam-centroid position in the aperture plane, resulting in a log-negative Weibull distribution for the PDT.
 The model depends only on the beam-shape parameters, and it is supposed to be applicable under weak turbulence conditions.
@@ -69,6 +81,7 @@ As a conclusion, various models exist based on both phenomenological approaches 
 However, the further development of purely analytical, physically justified models is limited by the difficulty of expressing their parameters in closed analytical form.
 In addition, all analytical models are formulated in terms of field correlation functions, which themselves involve significant approximations.
 It also remains an open question under which conditions each model should be applied.
+
 
 > #### Truncated lognormal distribution model.
 > $\mathcal{P}(\eta; \left<\eta\right>, \left<\eta^2\right>)$

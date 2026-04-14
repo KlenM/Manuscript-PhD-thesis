@@ -1,1 +1,1 @@
-## Numerical Simulation via the pyatmosphere framework {#sec:numsim}
+## Numerical simulation framework {#sec:numsim}
