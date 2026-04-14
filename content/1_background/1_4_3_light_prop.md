@@ -1,7 +1,7 @@
 ### Light beam propagation in inhomogeneous media {#sec:light_in_turb}
-We must solve the classical problem of light propagation through stochastic isotropic media to obtain the transmittance value of the atmospheric quantum channel.
-This process involves characterizing how random fluctuations alter the beam's power distribution.
-To that end, this section defines the fundamental equations governing beam intensity at the aperture plane.
+To obtain the transmittance of the atmospheric quantum channel, we must solve the classical problem of light propagation through stochastic isotropic media.
+This process involves characterizing how random fluctuations in the medium alter the beam's power distribution.
+To that end, this section defines the fundamental equations governing the evolution of the complex field amplitude and the resulting intensity at the aperture plane.
 
 #### Paraxial wave equation in stochastic media.
 > To describe the propagation of gaussian beams through turbulent atmosphere we begin from the general wave equation derived from Maxwell's equations.
@@ -12,29 +12,25 @@ To that end, this section defines the fundamental equations governing beam inten
 >- "J. W. Strohbehn, ed., Laser Beam Propagation in the Atmosphere (Springer, New York, 1978)" ([Andrews and Phillips, 2005, p. 177](zotero://select/library/items/IJGQ3J8A)) ([pdf](zotero://open-pdf/library/items/VGHZA9HX?page=201&annotation=WV4N9T75))
 >- [ ] n is real
 
-The electromagnetic field propagation in atmosphere is described with the scalar wave equation^[@strohbehn1968,siegman1986]. Separating temporal and spatial variables yields the Helmholtz equation
-$$\nabla^{2}E+k^{2}n^{2}E=0,$$
-where $\nabla^2$ is the Laplacian operator and $k$ is the vacuum wave number.
+The propagation of electromagnetic fields in the atmosphere is described by the scalar wave equation^[@strohbehn1968,siegman1986].
+Separating temporal and spatial variables yields the Helmholtz equation
+$$\nabla^{2}E+k^{2}n^{2}(\mathbf{r},z)E=0,$$
+where $\nabla^2$ is the Laplacian operator, $k$ is the vacuum wave number and $E$ is the complex spatial amplitude.
 For Gaussian beams propagating along the z-axis over long distances, the paraxial approximation becomes valid^[@siegman1986].
-We express the complex amplitude as $E(x,y,z)=u(x,y,z) e^{ikz}$.
-Under paraxial approximation the assumption that the $z$ derivative of the amplitude function u is a slowly varying function of z reads as $\left| \frac{\partial ^{2}u}{\partial z^{2}} \right| \ll \left| k \frac{\partial u}{\partial z} \right|$ is valid.
-This leads to the paraxial scalar wave equation in a medium with spatially varying refractive index
+We express the complex amplitude in terms of a slowly varying complex envelope as $E(\mathbf r;z)=u(\mathbf r; z) e^{ikz}$.
+Under paraxial approximation the envelope $u(\mathbf r; z)$ is a slowly varying function of $z$, satisfying the condition $\left| \frac{\partial ^{2}u}{\partial z^{2}} \right| \ll \left| k \frac{\partial u}{\partial z} \right|$.
+We also assume that $\delta n(\mathbf r, z)^2 \approx 0$, where $\delta n(\mathbf{r},z) = n(\mathbf{r},z) - 1$ represents the refractive index perturbation.
+By neglecting second-order terms in the refractive index perturbation $\delta n^2 \approx 0$, where $\delta n(\mathbf{r},z) = n(\mathbf{r},z) - 1$, the equation reduces to the paraxial scalar wave equation in a medium with spatially varying refractive index
 $$
 %\label{eq:parax}
 \boxed{2ik\frac{\partial u(\mathbf{r};z)}{\partial z}+\Delta_\mathbf{r} u(\mathbf{r};z)+2k^2\delta n(\mathbf{r},z) u(\mathbf{r};z)=0},$$
-where $\delta n(\mathbf{r},z) = n(\mathbf{r},z) - 1$ represents the refractive index perturbation.
-
->- [ ] The paraxial equation uses $\Delta r\Delta_\mathbf{r} \delta r$​ notation but should clarify this represents the transverse Laplacian
->- Discussion on the single realization of δn(r) leading to a single channel realization.
-
->- [ ] some words about analytical approaches to atmos propagation
->- the requirenes of statistical description of n
+where $\Delta_\mathbf{r}$ represents the transverse Laplacian operator.
 
 #### Gaussian beam source.
-In this work, we restrict the analysis to the Gaussian beam mode at the transmittance plane^[@siegman1986].
+In this work, we restrict the analysis to the Gaussian beam mode at the transmitter plane^[@siegman1986].
 Gaussian modes provide an accurate approximation of the output of most laser sources used in free space optical communication.
 Because of this, they are widely adopted in theoretical modeling and experimental studies of atmospheric optical channels.
-The boundary condition at the transmitter plane $z=z_0$ takes the form of a Gaussian beam^[@andrews2005]
+The boundary condition at the transmitter plane $z=0$ is given by the Gaussian beam^[@andrews2005]
 $$%\label{eq:gaussbeam}
 \boxed{u(\mathbf{r};0)=\sqrt{\frac{2}{\pi W_0^2}}\exp\left[-\frac{\mathbf{r}^2}{W_0^2}-\frac{ik}{2F_0}\mathbf{r}^2\right]},$$
 where $W_0$ is the beam waist radius and $F_0$ is the radius of curvature of the wavefront. For collimated beams, $F_0 \to \infty$, while for focused beams, $F_0$ takes finite values.
@@ -49,10 +45,10 @@ This formulation enables efficient numerical implementation using Fast Fourier T
 
 #### Transmittance of channel.
 To simulate the PDT, we must first calculate the transmittance value at the aperture plane $z=z_\mathrm{ap}$ for various channel realizations.
-This can be done by integrating the squared magnitude of the optical field over the entire receiving aperture $\mathcal{A}$ as the following
+This is achieved by integrating the squared magnitude of the optical field over the entire receiving aperture $\mathcal{A}$ as the following
 $$%\label{eq:eta}
-\boxed{\eta = \int_\mathcal{A} d^2\boldsymbol{r} |u(\boldsymbol{r}, z_\mathrm{ap})|^2}.$$
-Specifically, the integration domain $\mathcal{A}$ represents the circular region of the pupil with radius $R_\mathrm{ap}$, and $d^2\boldsymbol{r}=dxdy$.
+\boxed{\eta = \int_\mathcal{A} d^2\mathbf{r} |u(\mathbf{r}; z_\mathrm{ap})|^2}.$$
+Specifically, the integration domain $\mathcal{A}$ represents the circular region of the pupil with radius $R_\mathrm{ap}$, and $d^2\mathbf{r}=dxdy$.
 
 #### Statistical properties of a light beam in turbulence.
 In the absence of refractive index fluctuations, a Gaussian beam (see ^[eq:gaussbeam]) propagating in free space keeps its deterministic Gaussian profile at the aperture plane, as it represents the exact solution of the paraxial wave equation^[@siegman1986].
