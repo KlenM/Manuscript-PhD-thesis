@@ -19,6 +19,10 @@ where $P(\eta)$ is the probability density of transmittance (PDT).
 The PDT encodes the statistics of turbulence and depends on multiple parameters: the source beam properties (e.g., waist size, wavelength), the atmospheric channel (e.g., turbulence strength, path length, model), and the aperture geometry.
 The probability density of transmittance (PDT) is the primary defining characteristic of atmospheric quantum channels, as it fully captures the stochastic effects of turbulence on the output quantum state.
 
+The input-output relation ^[eq:PDTdef}] holds for both classical and quantum fields since the PDT $\mathcal{P}(\eta)$ is identical in both regimes. 
+This correspondence is evident when considering an input coherent state $|\beta\rangle$, characterized by the $P$-function $\delta^{(2)}(\alpha - \beta)$, which results in an output state represented as a statistical mixture of attenuated coherent states. 
+Consequently, the task of determining the PDT for an atmospheric quantum channel is equivalent to solving the corresponding classical stochastic propagation problem.
+
 Direct experimental reconstruction of the PDT is possible with classical intensity measurements at the receiver side with a photodiode.
 However, experimental studies of PDT properties are generally complicated.
 Measurements must be carried out under uncontrolled atmospheric conditions, which complicates the study, and temporal fluctuations further hinder precise characterization.
