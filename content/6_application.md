@@ -244,7 +244,7 @@ Their relevance depends on the task under consideration.
 >Q param array
 >Bell like ineq
 
-Historically, the first unambiguous experimental signature of nonclassical light was photon antibunching^[kimble1977] (see ^[sec:qo]).
+Historically, the first unambiguous experimental signature of nonclassical light was photon antibunching^[@kimble1977] (see ^[sec:qo]).
 This effect cannot be explained by classical intensity fluctuations and directly contradicts classical field theories.
 Squeezed states represent another important class of nonclassical states.
 In these states, the noise of one quadrature is reduced below the vacuum level, while the noise of the conjugate quadrature increases to satisfy the uncertainty relation (see ^[eq:heis]).
