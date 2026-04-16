@@ -1,7 +1,7 @@
 ## Quantum light in atmosphere
 The study of quantum light propagation through the atmosphere was initially motivated by the task of secure quantum communication, particularly Quantum Key Distribution (QKD).
 Unlike classical encryption, QKD security does not rely on computational hardness but on fundamental quantum laws forbidding perfect cloning of quantum states^[@wootters1982].
-Photons are natural candidates for quantum communication because they interact weakly with the environment, can be transmitted over long distances, and support multiple encoding degrees of freedom---polarization, phase, time-bin, or orbital angular momentum^[@gisin2007].
+Photons are natural candidates for quantum communication^[@gisin2007] because they interact weakly with the environment, can be transmitted over long distances, and support multiple encoding degrees of freedom---polarization, phase, time-bin^[@xavier2025], or orbital angular momentum^[@allen1992].
 However, the description of light propagation through the atmosphere becomes complicated due to random fluctuations of the refractive index, which cause turbulence-induced effects such as beam wandering, wavefront distortion, and intensity scintillation^[@tatarski1961,fante1975,andrews2005].
 
 ### Experimental contributions
