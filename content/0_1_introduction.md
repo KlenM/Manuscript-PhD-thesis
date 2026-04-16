@@ -87,9 +87,6 @@ Collectively, these metrics allow for a direct assessment of entanglement and no
   The parameters of the beam-shape models are expressed through transmittance moments rather than beam-shape parameters.
   This method preserves physical interpretability while ensuring consistency with the key statistical characteristics of the quantum channel.
   The resulting analytical model outperforms all previous beam-shape based approaches.
-- *Empirical Beta distribution PDT model* provides a flexible alternative to existing heuristic models with the natural support on [0,1].
-  Parameterized by the first two transmittance moments, allowing it to capture a highly variable range of distribution shapes, it captures the transition from positive to negative skewness with changing aperture size.
-  It generally outperforms existing analytical models across turbulence regimes and aperture sizes.
 - *Two-Time PDT framework* generalizes the channel description from static ensemble averages by introducing the joint transmittance distribution at two times. This captures temporal correlations between pulses in high-repetition-rate systems and enables analysis of time-bin encoded protocols.
 - *Introduction of aperture-averaged spatial coherence radius* $\rho_0$ defines the wind-driven displacement at which transmittance correlations decay to $e^{-1}$.
   It scales approximately linearly with aperture radius, quantifying temporal coherence and guiding optimal pulse separation or repetition rates for quantum protocols.
@@ -105,9 +102,9 @@ Here, we resolve this ambiguity by establishing a correspondence between the rat
 For instance, small apertures lead to truncated lognormal statistics, while larger apertures produce negatively skewed distributions consistent with beam shape based models.
 This criterion allows for the systematic selection of models and replaces previous flawed selection heuristics.
 
-To support practical applications, we introduce an empirical analytical model based on the Beta distribution.
-The model is simple and flexible, yet remains fully analytical, and it reproduces the main classes of observed transmittance statistics.
-Its parameters can be efficiently estimated from numerical or experimental data, making the model suitable for real time evaluation of quantum protocols under realistic atmospheric conditions.
+The empirical analytical model based on the Beta distribution provides a flexible, closed-form approach to PDT modeling. 
+By utilizing only two moments of transmittance for parameterization, it reproduces the main classes of observed transmittance statistics and demonstrates robust validity across the majority of parameter regimes.
+Its parameters can be efficiently estimated from numerical or experimental data, making the model suitable for real-time evaluation of quantum protocols under realistic atmospheric conditions.
 
 Existing descriptions of atmospheric quantum channels treat quantum pulses as statistically independent ensembles.
 This assumption breaks down in modern systems operating at high repetition rates, where successive pulses propagate through strongly correlated turbulence.
