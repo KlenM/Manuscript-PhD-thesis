@@ -14,7 +14,7 @@ These include the mean and variance of the beam centroid position and the mean a
 ```{=latex}
 \begin{table}[h!]
 \centering
-\caption{Summary of beam shape statistics used for physically based models parameterization.}
+\caption{Summary of beam shape statistics used for physically based model parameterisation.}
 \label{tab:beamshapestats}
 \begin{tabular}{l c c}
 \hline
@@ -30,7 +30,7 @@ These include the mean and variance of the beam centroid position and the mean a
 The beam-wandering model $\mathcal{P}_\mathrm{BW}(\eta \mid \langle x_0^2 \rangle, \langle S \rangle)$ is a two-parameter model.
 It assumes a circular beam with fixed size $\langle S \rangle$ and neglects beam size fluctuations $\langle S^2 \rangle$.
 The elliptical-beam model extends this description to four parameters.
-In addition  to the beam position variability $\langle x^2_0 \rangle$, it accounts for fluctuations of the beam semiaxes $W_{1,2}$ (see ^[sec:semiaxes]) and their correlations.
+In addition to the beam position variability $\langle x^2_0 \rangle$, it accounts for fluctuations of the beam semiaxes $W_{1,2}$ (see ^[sec:semiaxes]) and their correlations.
 While the beam-wandering model admits a fully analytical expression for the PDT, the elliptical-beam model requires Monte Carlo sampling to evaluate the PDT.
 
 The complexity of the elliptical-beam model makes a direct reparametrisation in terms of transmittance moments impractical.
@@ -51,7 +51,7 @@ $$
 %\label{eq:acbpdt}
 \mathcal{P}\!\left(\,\eta\mid\langle x^2_0 \rangle,\langle \eta \rangle,\langle \eta^2 \rangle\right)=\int_0^\infty dS \,\mathcal{P}_\mathrm{BW}\!\left(\,\eta\mid\langle x^2_0 \rangle,S\right) P(S\mid\mu,\sigma).$$
 The fluctuations of the beam size $S$ are incorporated through the distribution ${P(S\mid\mu,\sigma)}$.
-Its parameters  $\mu=\mu(\langle \eta \rangle,\langle \eta^2 \rangle)$ and $\sigma=\sigma(\langle \eta \rangle,\langle \eta^2 \rangle)$ are fixed by enforcing the prescribed moments $\langle\eta\rangle$ and $\langle\eta^2\rangle$.
+Its parameters $\mu=\mu(\langle \eta \rangle,\langle \eta^2 \rangle)$ and $\sigma=\sigma(\langle \eta \rangle,\langle \eta^2 \rangle)$ are fixed by enforcing the prescribed moments $\langle\eta\rangle$ and $\langle\eta^2\rangle$.
 As a result, the transmittance statistics simultaneously account for beam displacement and beam deformation, and are specified by the second moment of beam displacement $\langle x_0^2\rangle$ and the first two moments of the transmittance.
 
 Since the beam size is strictly positive, its distribution must have positive support.
@@ -133,7 +133,7 @@ This is because the skewness, given by the third moment of the transmittance, an
 For apertures larger than the beam size, the agreement of the proposed model is reduced.
 A distinct discrepancy appears near the local minimum of the elliptical-beam model when $R_\mathrm{ap}/W_\mathrm{LT} \approx 1.2$.
 At this point, the elliptical-beam model outperforms the proposed model because the statistical mode of its PDT coincides with the mode of the numerically obtained distribution.
-Mode matching, instead of moments matching, could in principle improve the agreement of the proposed model.
+Mode matching, instead of moment matching, could in principle improve the agreement of the proposed model.
 However, such an approach is not practical because the transmittance mode cannot be reliably estimated in experiments and no closed-form analytical expression for the transmittance mode is available.
 
 The right panel of ^[fig:acbks] shows the results for the strong turbulence channel, which exhibits the largest overall deviations.

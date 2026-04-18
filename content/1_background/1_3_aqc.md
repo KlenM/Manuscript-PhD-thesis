@@ -15,18 +15,18 @@ However, in the atmospheric case, the effective transmittance $\eta$ is not a fi
 $$%\label{eq:PDTdef}
 P_\mathrm{out}(\alpha) = \int_0^1 d \eta \mathcal{P}(\eta) \frac{1}{\eta} P_\mathrm{in}\left(\frac{\alpha}{\sqrt{\eta}}\right),
 $$
-where $P(\eta)$ is the probability density of transmittance (PDT).
+where $\mathcal{P}(\eta)$ is the probability density of transmittance (PDT).
 The PDT encodes the statistics of turbulence and depends on multiple parameters: the source beam properties (e.g., waist size, wavelength), the atmospheric channel (e.g., turbulence strength, path length, model), and the aperture geometry.
 The probability density of transmittance (PDT) is the primary defining characteristic of atmospheric quantum channels, as it fully captures the stochastic effects of turbulence on the output quantum state.
 
-The input-output relation ^[eq:PDTdef}] holds for both classical and quantum fields since the PDT $\mathcal{P}(\eta)$ is identical in both regimes. 
+The input-output relation ^[eq:PDTdef] holds for both classical and quantum fields since the PDT $\mathcal{P}(\eta)$ is identical in both regimes. 
 This correspondence is evident when considering an input coherent state $|\beta\rangle$, characterized by the $P$-function $\delta^{(2)}(\alpha - \beta)$, which results in an output state represented as a statistical mixture of attenuated coherent states. 
 Consequently, the task of determining the PDT for an atmospheric quantum channel is equivalent to solving the corresponding classical stochastic propagation problem.
 
 Direct experimental reconstruction of the PDT is possible with classical intensity measurements at the receiver side with a photodiode.
 However, experimental studies of PDT properties are generally complicated.
 Measurements must be carried out under uncontrolled atmospheric conditions, which complicates the study, and temporal fluctuations further hinder precise characterization.
-These difficulties highlight the importance of studying atmospheric quantum channels in controlled and well-characterized way.
+These difficulties highlight the importance of studying atmospheric quantum channels in a controlled and well-characterized way.
 
 >- pdt is eta over ensamble of turb realisations
 >- many authors (sources) studying qunatum protocols in AQC use only average transmitance, which can be too rough approximation.
@@ -69,9 +69,9 @@ $$
 This model is particularly convenient because it has a natural support on the interval $[0,1]$ and provides a simple analytical expression that closely resembles numerically obtained distributions across a wide range of turbulence conditions.
 
 The second group comprises models defined by beam-spot parameters at the aperture plane, such as the mean beam-spot radius, the variance of the beam-centroid position, and higher moments.
-The beam-wandering model^[@vasylyev2012] accounts for random deflection of the beam centroid from the propagation axis while neglecting beam-shape deformation.
+The beam-wandering model^[@vasylyev2012] accounts for the random deflection of the beam centroid from the propagation axis while neglecting beam-shape deformation.
 It assumes a normally distributed beam-centroid position in the aperture plane, resulting in a log-negative Weibull distribution for the PDT.
-The model depends only on the beam-shape parameters, and it is supposed to be applicable under weak turbulence conditions.
+The model depends only on the beam-shape parameters, and it is assumed to be applicable under weak turbulence conditions.
 
 The elliptical-beam model^[@vasylyev2016] extends the beam-wandering approach by incorporating elliptical shape distortions, thereby capturing additional contributions to the cumulative beam decomposition of the intensity at the aperture plane.
 This added complexity requires numerical evaluation of the model parameters.
@@ -81,7 +81,7 @@ Finally, the total probability law model^[@vasylyev2018] separates the effects o
 It assumes that the shape distortion can be described by a truncated lognormal distribution.
 The advantage of this model is that it provides accurate values of the mean transmittance; however, the model parameters must be determined numerically.
 
-As a conclusion, various models exist based on both phenomenological approaches and physically grounded formulations.
+In conclusion, various models exist based on both phenomenological approaches and physically grounded formulations.
 However, the further development of purely analytical, physically justified models is limited by the difficulty of expressing their parameters in closed analytical form.
 In addition, all analytical models are formulated in terms of field correlation functions, which themselves involve significant approximations.
 It also remains an open question under which conditions each model should be applied.

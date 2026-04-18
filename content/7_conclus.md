@@ -3,9 +3,9 @@
 ># intro
 
 This thesis addressed the statistical modeling of atmospheric channel transmittance and its temporal correlations.
-We established a numerical framework based on the sparse-spectrum phase-screen method to simulate beam propagation through turbulent atmosphere.
+We established a numerical framework based on the sparse-spectrum phase-screen method to simulate beam propagation through a turbulent atmosphere.
 This approach mitigates low-frequency undersampling inherent in standard techniques, thereby enabling comprehensive analysis of stochastic wave propagation dynamics.
-This framework allowed us to investigate transmittance statistics across weak, moderate, and strong turbulence regimes, including model validation and assessment of quantum entanglement preservation limits in turbulent atmosphere.
+This framework allowed us to investigate transmittance statistics across weak, moderate, and strong turbulence regimes, including model validation and assessment of quantum entanglement preservation limits in a turbulent atmosphere.
 Its code is publicly available and has attracted interest from the community.
 
 ># validation
@@ -18,7 +18,7 @@ This finding clarifies an important aspect of PDT statistical behavior and estab
 ># assumptions
 
 Numerical results indicate that while the beam centroid follows a two-dimensional Gaussian distribution in weak and moderate turbulence, it exhibits slightly platykurtic characteristics under strong conditions.
-Furthermore, the assumption of statistical independence between the beam centroid and shape fluctuations is violated especially in strong turbulence regimes.
+Furthermore, the assumption of statistical independence between the beam centroid and shape fluctuations is violated, especially in strong turbulence regimes.
 Logarithms of the beam semi-axes also deviate from bivariate Gaussian distributions, showing suppression along the diagonal where axes are equal.
 These deviations indicate that analytical models relying on these simplified assumptions introduce systematic errors in transmittance prediction.
 This necessitates explicit correction in subsequent analytical frameworks.
@@ -35,8 +35,8 @@ Consequently, this correction represents a significant advancement in physically
 ># 2-time pdt
 
 The existing framework of PDT is insufficient for describing high-repetition-rate systems where temporal correlations persist between consecutive pulses.
-Therefore, we introduced a Two-Time PDT framework $\mathcal{P}(\eta_0,\eta_\tau)$ to capture joint statistics of transmittance values at different times.
-A key parameter defined within this framework is the aperture-averaged spatial coherence radius $\rho_0$, marking the wind-shift displacement where Pearson correlation decays to $e^{-1}$.
+Therefore, we introduced a Two-Time PDT framework $\mathcal{P}(\eta_0,\eta_\tau)$ to capture the joint statistics of transmittance values at different times.
+A key parameter defined within this framework is the aperture-averaged spatial coherence radius $\rho_0$, marking the wind-shift displacement where the Pearson correlation decays to $e^{-1}$.
 This spatial coherence radius scales linearly with aperture size, serving as a practical criterion for determining optimal pulse repetition rates.
 
 ># qunatum properties in atmosphere
@@ -44,13 +44,13 @@ This spatial coherence radius scales linearly with aperture size, serving as a p
 Applications to continuous-variable quantum protocols demonstrated that Gaussian entanglement persists over millisecond timescales.
 Discrete-variable entanglement survives atmospheric turbulence for tens of milliseconds, though practical limits reduce this to a few milliseconds due to quantum memory readout losses.
 Adaptive selection using classical probe pulses improves the preservation of nonclassicality over pulse separations of tens of milliseconds.
-These results quantify temporal resources available for time-bin encoding and correlation-aware communication strategies.
+These results quantify the temporal resources available for time-bin encoding and correlation-aware communication strategies.
 
 ># limitations
 
 Atmospheric quantum channels depend on numerous physical parameters, making a fully comprehensive description impractical.
-Consequently, we restricted attention to a minimal set sufficient to isolate core effects, prioritizing physical understanding over system-specific details.
-For example, the transmitter optical field is modeled as a Gaussian beam without explicitly considering higher-order spatial modes, and the receiver aperture is assumed circular rather than specific optical configurations (e.g., Cassegrain).
+Consequently, we restricted our attention to a minimal set sufficient to isolate core effects, prioritizing physical understanding over system-specific details.
+For example, the transmitter optical field is modeled as a Gaussian beam without explicitly considering higher-order spatial modes, and the receiver aperture is assumed to be circular, rather than accounting for specific optical configurations (e.g., Cassegrain).
 Turbulence parameters are treated as constant along horizontal propagation paths.
 While these simplifications enable systematic analysis, they can be readily incorporated into the simulation framework developed in this thesis if required.
 
@@ -61,6 +61,6 @@ These features impose fundamental constraints on modeling accuracy that apply un
 ># the end
 
 Ultimately, this thesis establishes a rigorous framework for evaluating long-distance atmospheric communication under controlled conditions.
-While restricted to minimal physical parameters, this approach isolates core stochastic effects critical for system design.
+While restricted to a minimal set of physical parameters, this approach isolates core stochastic effects critical for system design.
 This capability is essential for engineering robust quantum protocols where fiber transmission is prohibitive.
 Consequently, the work provides a theoretical foundation for designing robust atmospheric quantum channels under varying turbulence conditions.

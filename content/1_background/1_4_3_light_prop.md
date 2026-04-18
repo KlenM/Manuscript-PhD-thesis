@@ -18,7 +18,7 @@ $$\nabla^{2}E+k^{2}n^{2}(\mathbf{r},z)E=0,$$
 where $\nabla^2$ is the Laplacian operator, $k$ is the vacuum wave number and $E$ is the complex spatial amplitude.
 For Gaussian beams propagating along the z-axis over long distances, the paraxial approximation becomes valid^[@siegman1986].
 We express the complex amplitude in terms of a slowly varying complex envelope as $E(\mathbf r;z)=u(\mathbf r; z) e^{ikz}$.
-Under paraxial approximation the envelope $u(\mathbf r; z)$ is a slowly varying function of $z$, satisfying the condition $\left| \frac{\partial ^{2}u}{\partial z^{2}} \right| \ll \left| k \frac{\partial u}{\partial z} \right|$.
+Under the paraxial approximation the envelope $u(\mathbf r; z)$ is a slowly varying function of $z$, satisfying the condition $\left| \frac{\partial ^{2}u}{\partial z^{2}} \right| \ll \left| k \frac{\partial u}{\partial z} \right|$.
 We also assume that $\delta n(\mathbf r, z)^2 \approx 0$, where $\delta n(\mathbf{r},z) = n(\mathbf{r},z) - 1$ represents the refractive index perturbation.
 By neglecting second-order terms in the refractive index perturbation $\delta n^2 \approx 0$, where $\delta n(\mathbf{r},z) = n(\mathbf{r},z) - 1$, the equation reduces to the paraxial scalar wave equation in a medium with spatially varying refractive index
 $$
@@ -45,7 +45,7 @@ This formulation enables efficient numerical implementation using Fast Fourier T
 
 #### Transmittance of channel.
 To simulate the PDT, we must first calculate the transmittance value at the aperture plane $z=z_\mathrm{ap}$ for various channel realizations.
-This is achieved by integrating the squared magnitude of the optical field over the entire receiving aperture $\mathcal{A}$ as the following
+This is achieved by integrating the squared magnitude of the optical field over the entire receiving aperture $\mathcal{A}$ as follows
 $$%\label{eq:eta}
 \boxed{\eta = \int_\mathcal{A} d^2\mathbf{r} |u(\mathbf{r}; z_\mathrm{ap})|^2}.$$
 Specifically, the integration domain $\mathcal{A}$ represents the circular region of the pupil with radius $R_\mathrm{ap}$, and $d^2\mathbf{r}=dxdy$.
@@ -63,43 +63,44 @@ $$
 where $\langle \cdot \rangle$ denotes ensemble averaging over turbulence realizations.
 
 These correlation functions enable the calculation of several statistical quantities that are essential for parametrizing analytical models of atmospheric channels.
-Average transmittance of the atmospheric channel according to ^[eq:eta] equals to
+The average transmittance of the atmospheric channel, according to ^[eq:eta], is given by
 $$\langle\eta\rangle  =
 \left<\int_{S_\mathrm{ap}} d^2\boldsymbol{r} |u(\boldsymbol{r}, z_\mathrm{ap})|^2\right>=
 \int_{S_\mathrm{ap}} d^2\boldsymbol{r} \, \Gamma_2(\boldsymbol{r}, z_{\mathrm{ap}})$$
 and can be seen as the primary characteristic of channel effectiveness.
-Second moment of the transmittance
+The second moment of the transmittance
 $$\begin{split}
 \langle\eta^2\rangle =
 \left<\int_{S_\mathrm{ap}} d^2\boldsymbol{r}_1 |u(\boldsymbol{r}_1, z_\mathrm{ap})|^2\int_{S_\mathrm{ap}} d^2\boldsymbol{r}_2 |u(\boldsymbol{r}_2, z_\mathrm{ap})|^2\right> = \\ =
 \int_{S_\mathrm{ap}}\int_{S_\mathrm{ap}}  d^2\boldsymbol{r}_1  d^2\boldsymbol{r}_2 \, \Gamma_4(\boldsymbol{r}_1, \boldsymbol{r}_2, z_\mathrm{ap})
 \end{split}$$
-requires the fourth order correlation function and characterizes the variability of the atmospheric channel transmittance.
+requires the fourth-order correlation function and characterizes the variability of the atmospheric channel transmittance.
 
-Let us consider statistical properties of the beam-spot at the aperture plane^[@andrews2005].
-The simplest property is the beam centroid, which defined for a single realization of turbulent atmosphere as
+Let us consider the statistical properties of the beam-spot at the aperture plane^[@andrews2005].
+The simplest property is the beam centroid, which is defined for a single realization of turbulent atmosphere as
 $$
 %\label{eq:x0}
 x_0 = \int_{\mathbb{R}^2} d^2\boldsymbol{r} \, x\, |u(\boldsymbol{r}, z_\mathrm{ap})|^2.$$
-While it is obvious that under the assumption of isotropic turbulence (see ^[sec:turb_cascade]) average value of the beam centroid $\left<x_0\right>=0$, it remains an open question whether its distribution is Gaussian.
+While it is obvious that under the assumption of isotropic turbulence (see ^[sec:turb_cascade]) the average value of the beam centroid $\left<x_0\right>=0$, it remains an open question whether its distribution is Gaussian.
 In particular, for strong turbulence the distribution can deviate, for example by exhibiting heavy tails.
 The second moment is referred to as the long-term beam-spot radius. It is defined as
 $$
 %\label{eq:WLT2}
 W_\mathrm{LT}^2 = 4\int_{\mathbb{R}^2} d^2\boldsymbol{r} \, x^2\, \Gamma_2(\boldsymbol{r}, z_{\mathrm{ap}})$$
-and represents the effective spatial extent of the beam after propagation through turbulence, incorporating both diffraction and spreading due to the turbulence effects.
+and represents the effective spatial extent of the beam after propagation through turbulence, incorporating both diffraction and spreading due to turbulence effects.
 The variance of the beam-centroid coordinate, often referred to as beam wandering, characterizes the random displacement of the beam centroid
 $$
 %\label{eq:SBW2}
 \sigma_\mathrm{BW}^2=\left<x_0^2\right>=
 \int_{\mathbb{R}^4} d^2\boldsymbol{r}_1  d^2\boldsymbol{r}_2 \, x_1 x_2 \,\Gamma_4(\boldsymbol{r}_1, \boldsymbol{r}_2, z_\mathrm{ap}).
 $$
-And complementary to these two quantities the squared beam-spot radius, which is also referred to as the short-term beam-spot radius, is defined as
+Complementary to these two quantities is the squared beam-spot radius, which is also referred to as the short-term beam-spot radius, defined as
 $$
 %\label{eq:Sshort_term}
 S=
 4\int_{\mathbb{R}^2} d^2\boldsymbol{r} \, (x - x_0)^2\, \Gamma_2(\boldsymbol{r}, z_{\mathrm{ap}})=
-W_\mathrm{LT}^2 - 4 \sigma_\mathrm{BW}^2,$$
+W_\mathrm{LT}^2 - 4 \sigma_\mathrm{BW}^2,
+$$
 which characterizes the average instantaneous width of the beam, excluding the contribution from beam wandering.
 
 > conclusion

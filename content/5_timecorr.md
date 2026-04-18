@@ -11,7 +11,7 @@ In this section we analyze the case of two consecutive pulses separated by a tim
 With the numerical model, we compute the joint statistics of two consecutive transmittances.
 In particular, we study how the temporal correlation of the transmittance depends on the time separation $\tau$.
 We also describe the PDT in scenarios relevant for adaptive selection techniques^[@vallone2015], where the first signal is a strong classical pulse used to estimate the channel transmittance, and the second is a quantum signal whose transmittance is conditioned on the measured transmittance of the first.
-In the ^[sec:application], we will demonstrate how these results guide continuous-variable and discrete-variable entanglement propagation protocols, and how they can be employed to enhance the preservation of nonclassicality through adaptive selection techniques.
+In ^[sec:application], we will demonstrate how these results guide continuous-variable and discrete-variable entanglement propagation protocols, and how they can be employed to enhance the preservation of nonclassicality through adaptive selection techniques.
 
 ## Two-time PDT
 To describe the two-time PDT, we extend the PDT framework (see ^[sec:aqc]) to account for time-dependent fluctuations of the refractive index. In this approach, the refractive index is represented as
@@ -30,36 +30,36 @@ $$
 \eta_t=\int_\mathcal{A}d^2\mathbf{r} \left|u_t(\mathbf{r},z_\mathrm{ap})\right|^2.
 $$
 We consider two temporal modes at $t=0$ and $t=\tau$.
-The two mode input output relation for the Glauber P function for channels with fixed linear losses $\eta_0$ and $\eta_\tau$ reads by analogy with single-time relation (see ^[eq:PoutPin])
+The two-mode input–output relation for the Glauber P function for channels with fixed linear losses $\eta_0$ and $\eta_\tau$ reads by analogy with the single-time relation (see ^[eq:PoutPin])
 $$
 P_\mathrm{out}(\alpha_0,\alpha_\tau|\eta_0,\eta_\tau)=
 \frac{1}{\eta_0\eta_\tau}P_\mathrm{in}\left(\frac{\alpha_0}{\sqrt{\eta_0}},\frac{\alpha_\tau}{\sqrt{\eta_\tau}}\right).
 $$
-Averaging over the atmospheric realizations leads to the input output relation for the two-time channel
+Averaging over the atmospheric realizations leads to the input-output relation for the two-time channel
 $$P_\mathrm{out}(\alpha_0,\alpha_\tau)=
 \int_\Xi d\eta_0d\eta_\tau \left[\frac{1}{\eta_0\eta_\tau}P_\mathrm{in}\left(\frac{\alpha_0}{\sqrt{\eta_0}},\frac{\alpha_\tau}{\sqrt{\eta_\tau}}\right)\right]\, \mathcal{P}(\eta_0,\eta_\tau),$$
-where $\Xi=[0,1]\times[0,1]$ and where the joint distribution $\mathcal{P}(\eta_0,\eta_\tau)$ is the two-time PDT.
+where $\Xi=[0,1]\times[0,1]$, and where the joint distribution $\mathcal{P}(\eta_0,\eta_\tau)$ is the two-time PDT.
 
 The two-time PDT provides a complete description of such atmospheric quantum channels.
 The single-time PDT is obtained as its marginal
 $$\mathcal{P}(\eta_0) = \int d\eta_\tau \mathcal{P}(\eta_0,\eta_\tau).$$
 Adaptive selection protocols rely on conditional statistics.
-If the protocol keeps only those events for which the first classical probe pulse has transmittance $\eta_0 \ge \eta_\mathrm{min}$ then the conditional PDT describing the second quantum pulse at time $t=\tau$ is
+If the protocol keeps only those events for which the first classical probe pulse has transmittance $\eta_0 \ge \eta_\mathrm{min}$, then the conditional PDT describing the second quantum pulse at time $t=\tau$ is
 $$\mathcal{P}(\eta_\tau|\eta_0 \geq  \eta_\mathrm{min}) = \frac{1}{\overline{\mathcal{F}}(\eta_\mathrm{min})} \int_{\eta_\mathrm{min}}^{1} \mathrm{d}\eta_0 \mathcal{P}(\eta_\tau,\eta_0),$$
 where
 $$\overline{\mathcal{F}}(\eta_\mathrm{min}) = \int_{\eta_\mathrm{min}}^{1} \mathrm{d}\eta_0 \mathcal{P}(\eta_0)$$
 is the exceedance.
 This conditional PDT directly determines the statistics of accepted pulses and therefore the performance of adaptive schemes.
-It also makes it possible to compute the moments that are required for the analysis of entanglement decay in continuous variable and discrete variable protocols.
+It also makes it possible to compute the moments that are required for the analysis of entanglement decay in continuous-variable and discrete-variable protocols.
 This formulation makes it possible to track how these quantities depend on the pulse separation time, which is crucial for quantifying the influence of temporal correlations in quantum communication protocols.
 
 #### Numerical approach.
 
 For the numerical simulations we use the phase-screen method introduced in ^[sec:numsim].
-We extend this model to the time dependent case by incorporating the Taylor frozen flow hypothesis.
-First we note that the wind driven advection has a component in the longitudinal direction and a component in the transverse plane.
+We extend this model to the time-dependent case by incorporating the Taylor frozen-flow hypothesis.
+First, we note that the wind-driven advection has a component in the longitudinal direction and a component in the transverse plane.
 The longitudinal component produces pattern shifts that are much smaller than the channel length for the timescales that are relevant for our analysis.
-Therefore this component does not influence the temporal behavior in a measurable way and can be neglected in the simulations.
+Therefore, this component does not influence the temporal behavior in a measurable way and can be neglected in the simulations.
 
 > to clearly identify the model / explanatory power / tractability / isolating the effect / causality / epistemic effect
 
@@ -69,13 +69,13 @@ In principle, such inhomogeneity could be accounted for by assigning different v
 However, this approach would lead to an over-parameterized system with limited explanatory power.
 By contrast, using a single velocity parameter $v$ for all phase screens ensures that the model remains tractable and allows us to isolate the specific effect of the wind-driven advection on the channel transmittance.
 
-The coordinate system is rotated such that the new $x$ axis is aligned with the transverse wind direction.
-Under this choice of coordinates, consider two optical pulses propagating through the channel, one at time $t=0$ and the another at $t=\tau$.
-The turbulence along the propagation path is represented by multiple phase screens, and for each screen, the realization at these two times are related by
+The coordinate system is rotated such that the new $x$-axis is aligned with the transverse wind direction.
+Under this choice of coordinates, consider two optical pulses propagating through the channel, one at time $t=0$ and another at $t=\tau$.
+The turbulence along the propagation path is represented by multiple phase screens, and for each screen, the realizations at these two times are related by
 $$\varphi_{\tau}(x,y,z) = \varphi_0(x + v \tau, y, z),$$
 where $s=v\tau$ represents the wind-driven shift of the turbulent pattern over the time interval $\tau$.
 
-For the given wind velocity, the displacement $s$ and the time interval  are interchangeable.
+For the given wind velocity, the displacement $s$ and the time interval $\tau$ are interchangeable.
 Accordingly, we will present the results mostly in terms of $s$.
 For interpretation, we assume a typical wind speed of $v=10\text{m/s}$ unless stated otherwise, which implies that a spatial shift of $1\text{ cm}$ corresponds to $1\text{ ms}$ of the time interval $\tau$.
 For any other desired wind speed $v$, the corresponding time interval can be obtained directly from the relation $\tau=s/v$.
@@ -88,24 +88,24 @@ The source is a Gaussian beam of wavelength $\lambda = 808~\text{nm}$ with initi
 
 The numerical grid contains $2048$ points in both transverse directions with a grid step of $1~\text{mm}$.
 The sparse-spectrum phase-screen method (see ^[sec:numsim]) is used with $1024$ spectral rings.
-The spectral bounds are defined $K_\mathrm{min}=1/15 L_0$ and $K_\mathrm{max}=2/\ell_0$.
+The spectral bounds are defined as $K_\mathrm{min}=1/15 L_0$ and $K_\mathrm{max}=2/\ell_0$.
 The propagation path is discretized into $15$ phase screens (see ^[sec:verification]).
-For each of the three channels we generate $5\times10^4$ independent realizations for different values of time interval $\tau$ and aperture radius $R_\mathrm{ap}$.
+For each of the three channels, we generate $5\times10^4$ independent realizations for different values of the time interval $\tau$ and aperture radius $R_\mathrm{ap}$.
 
 ## Results
 ### Two-time PDT
 The joint distribution of the transmittance at two different times offers a direct view of the statistical dependence between consecutive pulses separated by the time interval $\tau=s/v$.
-In ^[fig:2timepdt] the two dimensional kernel density estimates of the joint PDT are shown for short and long pulse separation times for $R_\mathrm{ap}=20~\text{cm}$.
-For the smaller time interval $s=3~\text{cm}$ ($\tau=3~\text{ms}$) the distribution is sharply concentrated along the diagonal.
+In ^[fig:2timepdt], the two-dimensional kernel density estimates of the joint PDT are shown for short and long pulse separation times for $R_\mathrm{ap}=20~\text{cm}$.
+For the smaller time interval $s=3~\text{cm}$ ($\tau=3~\text{ms}$), the distribution is sharply concentrated along the diagonal.
 Because the refractive index pattern changes only slightly over such a short interval, the transmittance undergoes only minor variations.
-As a result the two pulses show a high level of temporal correlation, implying a strong potential for entanglement preservation and effective use of adaptive protocols.
+As a result, the two pulses show a high level of temporal correlation, implying a strong potential for entanglement preservation and effective use of adaptive protocols.
 
 ![\label{fig:2timepdt}Two-time PDT $\mathcal{P}(\eta_0, \eta_\tau)$ for the channel with $\sigma_{\mathrm{R}}^2 = 5.5$ and $R_\mathrm{ap} = 20~\text{cm}$. The left panel shows a short pulse separation, where the distribution is concentrated along the diagonal, indicating high temporal correlation. The right panel shows a longer separation, where the distribution spreads and approaches a product of marginals $\mathcal{P}(\eta_0)\mathcal{P}(\eta_\tau)$, signifying nearly independent transmittance events. Color intensity indicates density, transitioning from blue for zero values to yellow for peak values.](time_corr/twotimepdt.pdf)
 
 For the larger time interval $s=17~\text{cm}$ ($\tau=17~\text{ms}$), the distribution spreads significantly.
-This behavior indicates that the turbulent pattern has moved a much greater transverse distance, hence the two pulses experience nearly independent transmittance values.
+This behavior indicates that the turbulent pattern has moved a much greater transverse distance, hence, the two pulses experience nearly independent transmittance values.
 The joint PDT approaches the product of the two single-time distributions $\mathcal{P}(\eta)$, indicating that the channel can be effectively described using only the single-time PDT.
-In this regime adaptive selection becomes less effective because the value of $\eta_0$ carries little information about $\eta_\tau$.
+In this regime, adaptive selection becomes less effective because the value of $\eta_0$ carries little information about $\eta_\tau$.
 The comparison of these two situations demonstrates that the two-time PDT is the central object for such channels.
 It directly reveals how the atmosphere preserves correlations between consecutive pulses.
 
@@ -116,39 +116,39 @@ It directly reveals how the atmosphere preserves correlations between consecutiv
 
 \Cref{fig:pearson_eta_corr} presents the Pearson correlation between the aperture-averaged transmittances $\eta_0$ and $\eta_\tau$ as a function of the pulse separation time $\tau$ for two receiving apertures.
 The correlation exhibits a strictly monotonic decrease as $s$ increases. 
-This reflects the decorrelation caused by the transversal motion of refractive-index inhomogeneities.
+This reflects the decorrelation caused by the transverse motion of refractive-index inhomogeneities.
 
 ![\label{fig:pearson_eta_corr}Pearson correlation coefficient between transmittances $\eta_0$ and $\eta_\tau$ as a function of the wind-driven shift $s$ for two different aperture radii $R_\mathrm{ap}$. The horizontal dotted line indicates the $e^{-1}$ threshold used to define the spatial coherence radius $\rho_0$. Results are shown for the turbulence channel with $\sigma_{\mathrm{R}}^2 = 5.5$.](time_corr/corr.pdf)
 
 To quantify this behaviour by a single physically interpretable measure, we introduce the aperture-averaged spatial coherence radius $\rho_0$, defined as the value of the wind-driven shift $s$ for which the Pearson correlation falls to $e^{-1}$^[@andrews2005].
 This coherence radius captures the time interval $\tau$ (transverse wind-driven shift $s$) over which statistical correlations persist.
-In practical free-space quantum communication this parameter quantifies the minimal pulse rate $v/\rho_0$ above which successive quantum states experience non-negligible correlations.
+In practical free-space quantum communication, this parameter quantifies the minimal pulse rate $v/\rho_0$ above which successive quantum states experience non-negligible correlations.
 
-For channel with $C_n^2 = 1 \times 10^{-16},\text{m}^{-2/3}$ and small receiving aperture $R_\mathrm{ap}=2\text{ cm}$, the observed spatial coherence radius is $\rho_0=6\text{ cm}$ which corresponds to $\tau=6~\text{ms}$.
-For the same channel but large aperture $R_\mathrm{ap}=20\text{ cm}$ the coherence radius increases to $\rho_0=13\text{ cm}$.
+For a channel with $C_n^2 = 1 \times 10^{-16}~\text{m}^{-2/3}$ and small receiving aperture $R_\mathrm{ap}=2\text{ cm}$, the observed spatial coherence radius is $\rho_0=6\text{ cm}$, which corresponds to $\tau=6~\text{ms}$.
+For the same channel but large aperture $R_\mathrm{ap}=20\text{ cm}$, the coherence radius increases to $\rho_0=13\text{ cm}$.
 This can be explained by noting that a larger aperture captures a broader region of the wavefront, which means that the turbulence-induced intensity pattern must be shifted much farther by the wind before the transmittance changes noticeably.
 
 A more systematic view is provided in ^[fig:scr_ap], which shows $\rho_0$ as a function of aperture radius across all simulated turbulence regimes.
-The figure indicates that the spatial coherence radius $\rho_0$ grows monotonically when the aperture radius $R_\mathrm{ap}$ becomes larger.
+The figure indicates that the spatial coherence radius $\rho_0$ grows monotonically as the aperture radius $R_\mathrm{ap}$ becomes larger.
 This implies that a wider aperture allows the optical field to maintain its nonclassical features for a longer time.
-For a fixed aperture radius the dependence on the Rytov variance $\sigma_\mathrm{R}^2$ is weak within the analyzed interval from five to sixteen.
+For a fixed aperture radius, the dependence on the Rytov variance $\sigma_\mathrm{R}^2$ is weak within the analyzed interval from five to sixteen.
 This observation suggests that the aperture plays the primary role in setting the coherence properties of such channels.
 
 ![\label{fig:scr_ap}Aperture-averaged spatial coherence radius $\rho_0$ as a function of the aperture radius $R_\mathrm{ap}$ for three turbulence regimes.](time_corr/corr_length.pdf)
 
 In conclusion, the spatial coherence radius $\rho_0$ determines the temporal interval over which successive pulses remain statistically correlated, directly influencing the decay of quantum correlations in turbulent atmospheric channels.
 The impact of turbulence strength on $\rho_0$ remains limited across the examined range, while the change produced by the receiver aperture size is noticeably larger.
-As a result, $\rho_0(R_\mathrm{ap})$ serves as a practical parameter for studying entanglement propagation in turbulent atmosphere and provides guidance for selecting pulse repetition rates for which temporal correlations can be exploited (or can be safely neglected) in realistic atmospheric quantum channels.
+As a result, $\rho_0(R_\mathrm{ap})$ serves as a practical parameter for studying entanglement propagation in the turbulent atmosphere and provides guidance for selecting pulse repetition rates for which temporal correlations can be exploited (or can be safely neglected) in realistic atmospheric quantum channels.
 
 ### Conditional PDT
 
 Adaptive selection works by first sending a strong classical pulse through the channel at $t=0$.
 If the measured transmittance of this pulse exceeds a threshold $\eta_\mathrm{min}$, the subsequent quantum pulse is transmitted at $t=\tau$.
 If the transmittance is less than the threshold, the quantum pulse is discarded.
-By selectively transmitting only those quantum pulses that are likely to encounter high transmittance channel conditions, the protocol can enhance the preservation of nonclassical properties and increases the performance of quantum communication protocols.
+By selectively transmitting only those quantum pulses that are likely to encounter high transmittance channel conditions, the protocol can enhance the preservation of nonclassical properties and increase the performance of quantum communication protocols.
 The conditional PDT provides the exact probability distribution of the transmittance of the second pulse under this selection procedure.
 
-\Cref{fig:condpdt} shows the conditional PDT of the second pulse for different spatial shifts $s$ corresponding to various time intervals $\tau$ between pulses for $\eta_\mathrm{min}=0.45$.
+\Cref{fig:condpdt} shows the conditional PDT of the second pulse for different spatial shifts $s$, corresponding to various time intervals $\tau$ between pulses, for $\eta_\mathrm{min}=0.45$.
 For small shifts, up to $s \sim 1~\text{cm}$ ($\tau \sim 1~\text{ms}$), the conditional distribution closely resembles the ideal case with $s=0$, indicating that the transmittance of the first pulse reliably predicts the second pulse.
 As $s$ increases to several centimeters (several milliseconds), the probability of transmittance values below the threshold $\eta_\mathrm{min}$ becomes more significant.
 For tens of centimeters of wind-driven shifts $s$ (tens of milliseconds of $\tau$), the conditional PDT approaches the single-time PDT.
@@ -173,8 +173,8 @@ The conditional PDT captures a complementary property relevant for adaptive sele
 By selecting quantum pulses based on the measured transmittance of a preceding classical probe, one can enhance the likelihood of transmitting through high-transmittance channel realizations.
 The conditional PDT provides a precise description of the second pulse PDT under such selection protocols, directly influencing the preservation of nonclassical properties and the performance of other quantum communication protocols.
 
-Overall, the results show that two-time PDT and derived quantities such us $\rho_0$ and conditional PDT are complementary tools.
-The spatial coherence radius quantifies the timescale over which successive pulses remain statistically correlated and is essential for entanglement-based protocols, while conditional PDT captures the potential for adaptive selection protocols, for example to enhance the preservation of nonclassicality.
+Overall, the results show that the two-time PDT and derived quantities such as $\rho_0$ and the conditional PDT are complementary tools.
+The spatial coherence radius quantifies the timescale over which successive pulses remain statistically correlated and is essential for entanglement-based protocols, while the conditional PDT captures the potential for adaptive selection protocols, for example to enhance the preservation of nonclassicality.
 These findings provide a practical framework for designing and evaluating quantum communication systems.
 In ^[sec:application], these results will be applied to study the preservation of continuous-variable and discrete-variable entanglement as a function of pulse separation, as well as the enhancement of nonclassicality through adaptive selection.
 

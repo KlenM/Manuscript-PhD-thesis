@@ -74,12 +74,12 @@ Collectively, these metrics allow for a direct assessment of entanglement and no
 
 #### Scientific Novelty of the Results.
 
-- *Systematic validation of analytical PDT models* was performed by benchmarking  against the results of numerical simulations.
+- *Systematic validation of analytical PDT models* was performed by benchmarking them against the results of numerical simulations.
   Results show that common assumptions, such as the validity of the lognormal model in strong turbulence and the validity of the beam-wandering model in weak turbulence, are incomplete
-- *Receiver aperture as the dominant parameter shaping transmittance* was demonstrated by analyzing the ratio between aperture radius and beam size.
+- *Receiver aperture as the dominant parameter shaping transmittance* was demonstrated by analyzing the ratio between the aperture radius and the beam size.
   Small apertures yield PDTs skewed positively near zero, while larger apertures produce negative skewness.
   These findings highlight the importance of accurately predicting the third moment of transmittance and explain why models with positive skew, such as the truncated lognormal, perform better for small apertures, whereas beam-shape based models capture the negative skew for large apertures.
-- *Misspecification bias in physically motivated models* arises when models are parametrized using beam-shape moments rather than transmittance moments. In this case, the resulting PDT exhibits a pronounced shift relative to numerical data, which can compromise quantum protocols that depend on precise mean and variance of transmittance.
+- *Misspecification bias in physically motivated models* arises when models are parametrized using beam-shape moments rather than transmittance moments. In this case, the resulting PDT exhibits a pronounced shift relative to numerical data, which can compromise quantum protocols that depend on the precise mean and variance of transmittance.
 - *Validation of statistical assumptions in beam-shape models* shows that while beam-centroid displacement is accurately Gaussian, it is not independent of beam deformations, particularly under strong turbulence.
   Logarithms of beam semi-axes are not jointly Gaussian as assumed in the elliptic-beam model, exhibiting strong suppression along the diagonal.
   These results indicate that more advanced statistical descriptions are required for precise transmittance distribution modelling.
@@ -89,7 +89,7 @@ Collectively, these metrics allow for a direct assessment of entanglement and no
   The resulting analytical model outperforms all previous beam-shape based approaches.
 - *Two-Time PDT framework* generalizes the channel description from static ensemble averages by introducing the joint transmittance distribution at two times. This captures temporal correlations between pulses in high-repetition-rate systems and enables analysis of time-bin encoded protocols.
 - *Introduction of aperture-averaged spatial coherence radius* $\rho_0$ defines the wind-driven displacement at which transmittance correlations decay to $e^{-1}$.
-  It scales approximately linearly with aperture radius, quantifying temporal coherence and guiding optimal pulse separation or repetition rates for quantum protocols.
+  It scales approximately linearly with the aperture radius, quantifying temporal coherence and guiding optimal pulse separation or repetition rates for quantum protocols.
 - *Quantification of temporal resources in atmospheric channels for quantum protocols* demonstrates that entanglement can be preserved over millisecond timescales.
   The main limiting factor for discrete-variable entanglement is quantum memory; under ideal memory conditions, preservation extends to tens of milliseconds.
   Adaptive selection using bright classical pulses is analyzed under realistic constraints, providing quantitative bounds for exploiting temporal correlations to maintain nonclassicality.
@@ -107,12 +107,12 @@ By utilizing only two moments of transmittance for parameterization, it reproduc
 Its parameters can be efficiently estimated from numerical or experimental data, making the model suitable for real-time evaluation of quantum protocols under realistic atmospheric conditions.
 
 Existing descriptions of atmospheric quantum channels treat quantum pulses as statistically independent ensembles.
-This assumption breaks down in modern systems operating at high repetition rates, where successive pulses propagate through strongly correlated turbulence.
-This thesis introduces the two-time PDT to explicitly describe joint statistics of two consecutive pulses.
+This assumption breaks down in modern systems operating at high-repetition rate, where successive pulses propagate through strongly correlated turbulence.
+This thesis introduces the two-time PDT to explicitly describe the joint statistics of two consecutive pulses.
 We also introduce the aperture-averaged spatial coherence radius which provides a practical criterion for choosing pulse repetition rates that either exploit or suppress correlation effects, depending on the protocol objective.
 This extension represents a necessary step from idealized single pulse models toward realistic high rate quantum communication.
 
-Numerical simulations show that atmospheric turbulence allows preservation of entanglement over time scales of several milliseconds.
+Numerical simulations show that atmospheric turbulence allows the preservation of entanglement over time scales of several milliseconds.
 With further development of quantum memories, storage times of tens of milliseconds are expected for discrete variable entanglement.
 Taken together, these results demonstrate the feasibility of correlation aware strategies, including adaptive selection techniques, for preserving nonclassicality in realistic atmospheric channels.
 
@@ -131,13 +131,13 @@ In the paper [IV] my individual contribution consisted of conducting numerical m
 The results of the dissertation were presented at seminars of the Bogolyubov Institute for Theoretical Physics of the National Academy of Sciences of Ukraine, as well as at Ukrainian and international conferences, in particular:
 1. M. Klen and A. A. Semenov, "Free-space quantum channels: Numerical simulations", US-Ukraine Quantum Forum 2023, August 28-31, 2023
 2. M. Klen, "Quantum light in atmospheric turbulence", 25th Symposium on photonics and optics SPO 2024, Kyiv, (Ukraine), November 8, 2024
-3. M. Klen, "Numerical simulations in free-space quantum channels", poster session at Quantum 2025: From Foundations of Quantum Mechanics to Quantum Information and Quantum Metrology & Sensing, Turin, (Italy), May 18-24, 2025
+3. M. Klen, "Numerical simulations in free-space quantum channels", Poster session at Quantum 2025: From Foundations of Quantum Mechanics to Quantum Information and Quantum Metrology & Sensing, Turin, (Italy), May 18-24, 2025
 4. A. Semenov, M. Klen, I. Pechonkin, "Quantum optics in the turbulent atmosphere: fundamental issues and applications": invited talk at the SPIE Sensors+Imaging Meeting. Quantum Technologies for Defense and Security II. Madrid, Spain. September 15–18, 2025.
 
 #### Structure and Volume of the Thesis.
 
 The dissertation consists of an introduction, seven chapters, conclusions, and a list of references (128 references).
-The total volume of the work is 142 pages, including 87 equations, 9 tables and 31 figures.
+The total volume of the work is 141 pages, including 87 equations, 9 tables and 31 figures.
 
 #### Relationship of the Work to Scientific Programs and Grants.
 

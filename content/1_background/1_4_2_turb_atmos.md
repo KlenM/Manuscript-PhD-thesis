@@ -1,41 +1,41 @@
 ### Theory of turbulent atmosphere {#sec:turb}
 Turbulence is widely recognized as one of the most complex and challenging phenomena in nature.
-The complexity are rooted in the Navier-Stokes equations, which results in  the non-linear, multi-scale, and intrinsically chaotic behavior of the system, making precise prediction impossible over extended periods^[@lorenz1963,frisch1995].
-Thus the atmospheric study mostly relies on statistical descriptions^[@kolmogorov1941] and the main object for description is the velocity random field.
+The complexity is rooted in the Navier-Stokes equations, which results in the non-linear, multi-scale, and intrinsically chaotic behavior of the system, making precise prediction impossible over extended periods^[@lorenz1963,frisch1995].
+Thus, atmospheric studies mostly rely on statistical descriptions^[@kolmogorov1941] and the main object for description is the velocity random field.
 
 #### Energy cascade model of turbulence. {#sec:turb_cascade}
-There are various sources that creates turbulence such us wind shear, thermal convection, buoyancy effects, obstacles, but the statistical properties of the resulting flow tend to show similar universal behavior.
-We assume that turbulent atmosphere is stationary, homogeneous, and isotropic.
+There are various sources that create turbulence, such as wind shear, thermal convection, buoyancy effects, and obstacles, but the statistical properties of the resulting flow tend to show similar universal behavior.
+We assume that the turbulent atmosphere is stationary, homogeneous, and isotropic.
 Stationarity implies that the statistical properties of the flow do not change over time.
-Homogeneity means that no particular location in the space is special. Isotropy requires that no direction is privileged.
+Homogeneity means that no particular location in space is special. Isotropy requires that no direction is privileged.
 This assumption forms a workable starting point for studying the statistical properties of turbulence.
 
 >"By making one further assumption of incompressible turbulence, that is, g. v = 0 (Batchelor [2.4]), we can write D, in terms of Dr,," (["Laser Beam Propagation in the Atmosphere", 1978, p. 23](zotero://select/library/items/6VHCHVKG)) ([pdf](zotero://open-pdf/library/items/4WBAA526?page=23&annotation=VDDGJIX8))
 >"Clifford [-2.52] also showed that the depolarization effects of the atmosphere are negligible even when the wavelength 2 is greater than the inner scale Io" (["Laser Beam Propagation in the Atmosphere", 1978, p. 39](zotero://select/library/items/6VHCHVKG)) ([pdf](zotero://open-pdf/library/items/4WBAA526?page=39&annotation=BFRJZMRA))
 
-Let us consider the structure function of the velocity field---ensemble average over turbulent atmosphere realizations of the square of longitudinal velocity difference at two points in space.
+Let us consider the structure function of the velocity field---the ensemble average over turbulent atmospheric realizations of the square of longitudinal velocity difference at two points in space.
 $$%\label{eq:kolmStructFunc}
 D_v(r) = \left<|v(x) - v(x+r)|^2\right> \equiv  v_r^2.$$
 Since we assume homogeneous and isotropic turbulence, the statistics of fluctuations do not depend on the direction.
 We can define two time scales: the "inertial" time $T_I \sim r/v_r$ at which the structure of velocity difference deforms, and the "viscous" time $T_\nu \sim r^2/\nu$ at which the structure of velocity difference is smoothed by viscosity ^[@jimenez2004].
 Here $\nu$ is the kinematic viscosity (momentum diffusivity).
 The ratio of these two time scales defines the Reynolds number $\mathcal R_r=T_\nu/T_I = v_r r/\nu$.
-When $\mathcal R_r \gg 1$ the viscous time is much longer than inertial time, thus the structure of velocity difference deforms into other (smaller) structures before its energy dissipates by viscosity.
-For $\mathcal R_r < 1$ the structure dissipates their energy rapidly due to viscosity.
+When $\mathcal R_r \gg 1$, the viscous time is much longer than the inertial time, thus the structure of velocity difference deforms into other (smaller) structures before its energy dissipates by viscosity.
+For $\mathcal R_r < 1$ the structures dissipate their energy rapidly due to viscosity.
 
 It is widely used in the literature to associate these structures with turbulent eddies of diameter $r$ and linear velocity difference $v_r$.
 Then, inertial time corresponds to the time it takes for an eddy to complete one rotation.
 Although turbulent eddies are not well defined, they can be valuable for illustrating the intuition about turbulence dynamics.
 
-We can define two characteristic lengths that play important role in turbulent atmosphere theory.
-The outer scale of turbulence $L_0$ can be considered as the typical size of the largest eddies or characteristic size of the system, such us the altitude of laser beam propagation ^[@coulman1988], with typical values of $L_0 \approx 20\mathrm{m} - 100\mathrm{m}$^[@martin2000].
-The inner scale or turbulence $l_0$ can be considered as the scale at which $\mathcal R_{l_0} \approx 1$, with typical value of $l_0 \approx 1\mathrm{mm} - 1\mathrm{cm}$.
-The interval of scales between $l_0$ and $L_0$ is called as the inertial range.
+We can define two characteristic lengths that play an important role in turbulent atmosphere theory.
+The outer scale of turbulence $L_0$ can be considered as the typical size of the largest eddies or characteristic size of the system, such as the altitude of laser beam propagation ^[@coulman1988], with typical values of $L_0 \approx 20\mathrm{m} - 100\mathrm{m}$^[@martin2000].
+The inner scale of turbulence $l_0$ can be considered as the scale at which $\mathcal R_{l_0} \approx 1$, with typical values of $l_0 \approx 1\mathrm{mm} - 1\mathrm{cm}$.
+The interval of scales between $l_0$ and $L_0$ is referred to as the inertial range.
 
 #### Structure function of the velocity field.
-In the 1940s Kolmogorov assumed^[@kolmogorov1941] that energy enters the turbulent system at large scales $L_0$, cascades through inertial range scales without energy loss, and finally dissipates at the $l_0$ scale due to the viscosity.
-This mechanism is reffered to as the energy cascade model of turbulence.
-In this case the energy flux from a scale to another by unit mass defined as the kinetic energy divided by deformation time must be a constant
+In the 1940s Kolmogorov assumed^[@kolmogorov1941] that energy enters the turbulent system at large scales $L_0$, cascades through inertial range scales without energy loss, and finally dissipates at the $l_0$ scale due to viscosity.
+This mechanism is referred to as the energy cascade model of turbulence.
+In this case, the energy flux from one scale to another per unit mass, defined as the kinetic energy divided by the deformation time, must be a constant
 $$\varepsilon \sim \frac{v_r^2}{T_I}=\frac{v_r^3}{r}=\mathrm{const}.$$
 The dimensional analysis implies that the structure function (see ^[eq:kolmStructFunc]) must be proportional to
 $$D_v(r)\sim\left(\varepsilon\, r\right)^{2/3}\equiv C_v^2 r^{2/3}\,,\quad l_0\ll r\ll L_0,$$
@@ -58,11 +58,11 @@ where $\kappa = 2\pi/l$ is the spatial frequency and $C_n^2$ is the refractive i
 Near ground level, $C_n^2$ ranges from around $10^{-17}$ m$^{-2/3}$ (weak turbulence) to $10^{-13}$ m$^{-2/3}$ (strong turbulence)^[@andrews2005].
 
 The Kolmogorov power-law spectrum model, because of its simple expression, is mostly used in analytical calculations.
-However the $-11/3$ power introduce some challenges when used under integrals over $\kappa$.
-Other problem with this model arises when we take look at the low spectrum region.
-We can see that this model yields infinite value of power density as $L_0 \to \infty$ which is sometimes used to simplify calculation.
-Such unphysical condition can be fixed by  introducing models that behaves the same in the internal region but smoothly fall-off in the energy and viscosity ranges.
-One of such models is modified von Kármán model which introduce decay of power spectral density at the $l_0$ and $L_0$ values
+However, the $-11/3$ power introduces some challenges when used under integrals over $\kappa$.
+Another problem with this model arises when we take a look at the low-wavenumber region.
+We can see that this model yields an infinite value of power density as $L_0 \to \infty$, which is sometimes used to simplify calculations.
+Such unphysical conditions can be fixed by introducing models that behave identically in the inertial region but smoothly fall off in the energy and viscous ranges.
+One such model is the modified von Kármán model, which introduces a decay of the power spectral density at the $l_0$ and $L_0$ scales
 $$
 %\label{eq:mvk}
 \boxed{\Phi_n(\kappa) = 0.033 C_n^2 \frac{\exp(-\kappa^2/\kappa_\mathrm{m}^2)}{(\kappa^2 + \kappa_0^2)^{11/6}}},$$
@@ -96,18 +96,18 @@ Finally, the energy reaches the region where it is dissipated by viscosity.
 >- [ ] we need some words about what is gaussian turbulence - why we use complex normal distr for phase-screen generation
 
 #### Frozen turbulence hypothesis.
-The Kolmogorov model, along with its modifications such us the von Kármán spectrum, provides a strong theoretical basis for understanding the ensemble averaged statistics of turbulence.
+The Kolmogorov model, along with its modifications such as the von Kármán spectrum, provides a strong theoretical basis for understanding the ensemble-averaged statistics of turbulence.
 However, these models do not directly address the temporal statistics of the turbulent field.
 This lack of a temporal description is critical for several reasons.
-It is required for studying the temporal properties of the impact of the turbulent atmosphere on phenomena such us light propagation.
-For experimental atmosphere study, most atmospheric experiments rely on small number of fixed in space sensors to record fluctuations over time because this setup is significantly easier to realize in practice than true spatial sampling.
-The answer to the question how to compare the temporal data with the spatial statistics provided by G. I. Taylor in 1937 with the Frozen Turbulence Hypothesis^[@taylor1938].
+It is required for studying the temporal properties of the impact of the turbulent atmosphere on phenomena such as light propagation.
+For experimental atmospheric studies, most atmospheric experiments rely on a small number of fixed in space sensors to record fluctuations over time because this setup is significantly easier to realize in practice than true spatial sampling.
+The answer to the question of how to compare temporal data with spatial statistics was provided by G. I. Taylor in 1937 through the Frozen Turbulence Hypothesis^[@taylor1938].
 
 The hypothesis is based on the difference between two atmospheric time scales.
-The first is the advection time, which can be defined as the duration required for the mean wind of speed $v$ to carry turbulent structure of size $r$ across the observation point, given by $T_v = r/v$.
+The first is the advection time, which can be defined as the duration required for the mean wind of speed $v$ to carry a turbulent structure of size $r$ across the observation point, given by $T_v = r/v$.
 The second is the mentioned in ^[sec:turb_cascade] inertial time $T_I \sim r/v_r$.
-Typical values for mean wind speed is  $v \sim 5-20\,\mathrm{m/s}$ in moderate to strong wind condition and $v_r \sim 0.1-2\,\mathrm{m/s}$ for the root mean squared velocity fluctuation.
-Then in the case when the advection time is much smaller than inertial time $T_v/T_I = v_r/v \ll 1$  we can assume that the index of refraction field is effectively frozen and evolve in time by moving with constant wind speed $\mathbf{v}: |\mathbf{v}|=v$ as a whole
+The typical value for mean wind speed is  $v \sim 5\text{--}20\,\mathrm{m/s}$ under moderate to strong wind conditions, while $v_r \sim 0.1\text{--}2\,\mathrm{m/s}$ represents the root-mean-square velocity fluctuation.
+Then, in cases where the advection time is much smaller than the inertial time $T_v/T_I = v_r/v \ll 1$, we can assume that the refractive index field is effectively frozen and evolves in time by moving with a constant wind speed $\mathbf{v}: |\mathbf{v}|=v$ as a whole
 $$
 %\label{eq:taylor_n}
 n(\mathbf{r},\,t)=n(\mathbf{r}-\mathbf{v}\,t,\,0).$$

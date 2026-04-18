@@ -1,6 +1,6 @@
 # Анотація {#sec:annotation_ua .unnumbered}
-**Клен М.Д.** Статистичні моделі та часова когерентність квантового світла в турбулентній атмосфері.*---Квалiфiкацiйна наукова праця на правах рукопису.*
-*Дисертацiя на здобуття наукового степеня доктора фiлософiї за спецiальнiстю 01.04.02 "Теоретична фiзика" (104--Фiзика та астрономiя).---Iнститут теоретичної фiзики iм. М.М. Боголюбова Нацiональної академiї наук України, Київ, 2026.*
+**Клен М.Д.** Статистичні моделі та часова когерентність квантового світла в турбулентній атмосфері.*---Кваліфікаційна наукова праця на правах рукопису.*
+*Дисертація на здобуття наукового ступеня доктора філософії за спеціальністю 01.04.02 "Теоретична фізика" (104--Фізика та астрономія).---Інститут теоретичної фізики ім. М.М. Боголюбова Національної академії наук України, Київ, 2026.*
 
 Основою локальних мереж квантового зв'язку є волоконно-оптичні канали, проте вони обмежені експоненційним затуханням сигналу та стаціонарністю інфраструктури.
 Оптичні канали у вільному просторі пропонують гнучку альтернативу, дозволяючи створювати бездротові з'єднання між наземними станціями, а також з авіаційними платформами, що є недоступним для стаціонарних волоконних мереж.
@@ -24,7 +24,7 @@
 Щоб уникнути статистичних похибок, властивих традиційним методам генерації фазових екранів, ми використовуємо метод розрідженого спектру, який гарантує, що згенеровані фазові екрани суворо відповідають теоретичним виразам.
 Додатково цей підхід дозволяє генерувати довгі фазові екрани, що дає змогу застосувати гіпотезу "замороженої" турбулентності Тейлора.
 Цей метод пов'язує часову еволюцію турбулентності з просторовим зміщенням, спричиненим вітром.
-Ми оцінюємо точність прогнозів існуючих аналітичних моделей за допомогою статистики Колмогорова-Смирнова, щоб виміряти, наскільки близько передбачення аналітичних моделей відповідають чисельно змодельованим даним.
+Ми оцінюємо точність прогнозів існуючих аналітичних моделей за допомогою статистики Колмогорова-Смирнова, щоб виміряти, наскільки точно передбачення аналітичних моделей узгоджуються з чисельно змодельованими даними.
 
 В результаті, чисельне моделювання, що охоплює режими від слабкої до сильної турбулентності, продемонструвало, що інтенсивність атмосферної турбулентності передусім визначає лише дисперсію РІЕП, не змінюючи суттєво форми розподілу.
 Натомість асиметрія розподілу виявляє високу варіативність та зміну знака залежно від розміру приймальної апертури.
@@ -64,14 +64,14 @@
 Водночас практична реалізація протоколів з використанням квантової заплутаності в дискретних змінних залишається обмеженою ефективністю квантової пам'яті.
 Це підкреслює, що хоча атмосферні канали забезпечують значні часові вікна для реалізації протоколів, повне розкриття їхнього потенціалу потребує подолання технологічних бар'єрів у зберіганні квантової інформації.
 
-**Ключовi слова:**
+**Ключові слова:**
 Квантові канали у вільному просторі,
 розподіл імовірностей ефективності проходження (РІЕП),
 часові кореляції в каналах у вільному просторі,
 часове кодування,
 двочасовий РІЕП,
 просторовий радіус когерентності,
-метод узгодження ефективності проходження,
+метод узгодження моментів ефективності проходження,
 атмосферна турбулентність,
 метод фазових екранів,
 квантова заплутаність,
@@ -126,7 +126,7 @@ Thus, the probability distribution of transmittance (PDT) is central to the char
 Despite its fundamental role, significant theoretical gaps persist regarding how this variable is modeled and utilized.
 First, there remains no clear understanding regarding model selection among the various analytical models of the PDT.
 Second, current literature relies on static ensemble descriptions that neglect time correlations.
-This approach fails to provide the dynamic characterization required by many practical quantum protocols in turbulent atmosphere.
+This approach fails to provide the dynamic characterization required by many practical quantum protocols in the turbulent atmosphere.
 
 >## Purpose
 
@@ -162,12 +162,12 @@ Consequently, such models introduce systematic errors and exhibit inferior Kolmo
 >### Models
 
 To eliminate the model misspecification bias, we introduce the transmittance-moments-matching technique, which reparametrizes beam-shape based models in terms of first transmittance moments.
-The circular beam model using this technique shows better values of the Kolmogorov-Smirnov statistics compared to other physics-based models.
+The circular beam model using this technique shows better Kolmogorov-Smirnov statistic values compared to other physics-based models.
 Our other empirical Beta-distribution model shows superior performance across the majority of tested regimes because it better accounts for aperture-driven skewness variations.
 
 >### Two-time PDT
 
-To describe time correlations is atmospheric quantum channels, we develop a two-time PDT framework that moves beyond static ensemble descriptions to characterize joint transmittance distributions as a function of the time separation between two pulses. 
+To describe time correlations in atmospheric quantum channels, we develop a two-time PDT framework that moves beyond static ensemble descriptions to characterize joint transmittance distributions as a function of the time separation between two pulses. 
 Building on this, we introduce an aperture-averaged spatial coherence radius which quantifies the wind-driven displacement at which transmittance correlations decay to exp(-1). 
 Specifically, the defined coherence radius exhibits a linear scaling behavior relative to the receiving aperture size.
 This formalization provides a statistical foundation for quantifying temporal correlations in atmospheric quantum channels and analysing the resilience of quantum properties.
