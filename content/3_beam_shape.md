@@ -143,7 +143,6 @@ When the correlation between wandering and transmittance is high, such technique
 To quantify the contribution of beam wandering, we compute the Pearson correlation coefficient between the centroid displacement $r_0$ and the transmittance $\eta$, defined as
 $$%\label{eq:r0eta}
 S(r_0,\eta)=\frac{\left\langle\Delta r_0 \Delta\eta\right\rangle}{\sqrt{\left\langle\Delta r_0^2\right\rangle\left\langle \Delta\eta^2\right\rangle}}.$$
-
 For every atmospheric channel listed in ^[sec:validation] and for each aperture radius, we perform $5\cdot10^5$ independent beam-propagation simulations, compute $r_0 = \sqrt{x_0^2 + y_0^2}$, where $x_0$ is defined as ^[eq:x0] and $y_0$ is defined in the same way, evaluate transmittance $\eta$ according to ^[eq:eta], and estimate $S(r_0,\eta)$ ^[eq:r0eta].
 The dependence of the correlation on the aperture radius is shown in ^[fig:r0eta].
 Across all atmospheric channels, the correlation between centroid displacement and transmittance is negative, reflecting the obvious fact that larger beam wandering reduces received power.

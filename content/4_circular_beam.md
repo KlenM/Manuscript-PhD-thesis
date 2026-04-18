@@ -60,7 +60,6 @@ This observation aligns with the treatment of turbulence-induced distortions as 
 Therefore, the beam size distribution is chosen as
 $$P(S\mid\mu,\sigma)=\frac{1}{S\sigma\sqrt{2\pi}}\exp\left[{-\frac{\left(\ln{S}-\mu\right)^2}{2\sigma^2}}\right].
 $$
-
 \Cref{fig:lognormvalid} illustrates this agreement for a channel of moderate turbulence with $F_0 = z_\mathrm{ap}$, which represents the worst-case scenario among all channels.
 The strong-turbulence channel exhibits slightly better but similar agreement, while weak-turbulence channels show much better correspondence.
 This agreement supports the use of the lognormal approximation for the beam size distribution across different turbulence regimes.
