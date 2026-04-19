@@ -105,7 +105,7 @@
 # Abstract {#sec:annotation_en .unnumbered}
 **Klen M.D.** Statistical models and temporal coherence of quantum light in the turbulent atmosphere.---*Manuscript. Thesis for the degree of Doctor of Philosophy in the specialty 01.04.02
 "Theoretical Physics" (104--Physics and Astronomy).---Bogolyubov Institute for
-Theoretical Physics of National Academy of Sciences of Ukraine, Kyiv, 2026.*
+Theoretical Physics of the National Academy of Sciences of Ukraine, Kyiv, 2026.*
 
 >## Background
 >### Context
