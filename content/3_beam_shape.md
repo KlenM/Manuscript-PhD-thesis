@@ -42,7 +42,7 @@ The numerical values of skewness and excess kurtosis, listed in ^[tab:x0_weak], 
 \centering
 \caption{Results for skewness and excess kurtosis for weak channels.}
 \label{tab:x0_weak}
-\begin{tabular}{l c c}
+\begin{tabular}{|l|c|c|}
 \hline
 Weak channel & Skewness & Excess kurtosis \\
 \hline
@@ -80,9 +80,9 @@ Thus, even at moderate turbulence strength, the beam-centroid position continues
 \centering
 \caption{Results for skewness and excess kurtosis for moderate channels.}
 \label{tab:x0_moderate}
-\begin{tabular}{l c c}
+\begin{tabular}{|l|c|c|}
 \hline
-Weak channel & Skewness & Excess kurtosis \\
+Moderate channel & Skewness & Excess kurtosis \\
 \hline
 Collimated $F=\infty$ & 0.0172 & $-0.0046$ \\
 Focused $F=z_{\text{ap}}$ & $-0.003$ & $-0.0279$ \\
@@ -91,7 +91,7 @@ Focused $F=z_{\text{ap}}$ & $-0.003$ & $-0.0279$ \\
 \end{table}
 ```
 
-> | Weak channel            | Skewness | Excess kurtosis |
+> | Moderate channel            | Skewness | Excess kurtosis |
 > | :---------------------- | :------: | :-------------: |
 > | Collimated $F=\infty$   |  0.0172  |     −0.0046     |
 > | Focused $F=z_\mathrm{ap}$ |  −0.003  |     −0.0279     |
@@ -112,9 +112,9 @@ This is reflected in the negative excess kurtosis (see ^[tab:x0_strong]).
 \centering
 \caption{Results for skewness and excess kurtosis for strong channel.}
 \label{tab:x0_strong}
-\begin{tabular}{l c c}
+\begin{tabular}{|l|c|c|}
 \hline
-Weak channel & Skewness & Excess kurtosis \\
+Strong channel & Skewness & Excess kurtosis \\
 \hline
 Collimated $F=\infty$ & 0.0008 & $-0.1064$ \\
 \hline
@@ -122,7 +122,7 @@ Collimated $F=\infty$ & 0.0008 & $-0.1064$ \\
 \end{table}
 ```
 
-> | Weak channel          | Skewness | Excess kurtosis |
+> | Strong channel          | Skewness | Excess kurtosis |
 > | :-------------------- | :------: | :-------------: |
 > | Collimated $F=\infty$ |  0.0008  |     −0.1064     |
 
@@ -227,7 +227,7 @@ The resulting correlation values for all atmospheric channels are summarized in 
 \centering
 \caption{Pearson correlation coefficient $S(r_0, W_r)$ between beam centroid displacement and beam width in the rotated frame.}
 \label{tab:r0Wr}
-\begin{tabular}{l c c}
+\begin{tabular}{|l|c|c|}
 \hline
 Channel & $F_0=+\infty$ & $F_0=z_{\text{ap}}$ \\
 \hline
@@ -307,7 +307,7 @@ These statistics quantify the degree of non-Gaussianity, with the results summar
 \begin{tabular}{|l|l|c|c|c|c|}
 \hline
 Channel & $F_0$ & \multicolumn{2}{c|}{Skewness} & \multicolumn{2}{c|}{Excess kurtosis} \\ \cline{3-6}
-        &                              & $\Theta_\mathrm{(s)}$ & $\Theta_\mathrm{(a)}$ & $\Theta_\mathrm{(s)}$ & $\Theta_\mathrm{(a)}$ \\ \hline\hline
+        &                              & $\Theta_\mathrm{(s)}$ & $\Theta_\mathrm{(a)}$ & $\Theta_\mathrm{(s)}$ & $\Theta_\mathrm{(a)}$ \\ \hline
 Weak     & $z_\mathrm{ap}$               & $-0.6\times10^{-3}$ & $0.25$  & $-0.85$ & $0.23$ \\
          & $\infty$                     & $-10\times10^{-3}$  & $-0.1$  & $-1$    & $-0.006$ \\ \hline
 Moderate & $z_\mathrm{ap}$               & $9.8\times10^{-3}$  & $0.25$  & $-0.81$ & $0.12$ \\

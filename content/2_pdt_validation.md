@@ -57,24 +57,25 @@ The first case uses $F_0 = +\infty$ and corresponds to a collimated beam.
 The second case uses $F_0 = z_\mathrm{ap}$ and corresponds to a geometrically focused beam that minimizes the beam radius at the aperture plane in the absence of turbulence ^[@andrews2005].
 
 ```{=latex}
-\begin{table*}[t]
+\renewcommand{\arraystretch}{1.2}
+\begin{table}[h]
 \centering
 \caption{Weak turbulence channel parameters ($\sigma_{\mathrm{R}}^2 = 0.2$).}
 \label{tab:weak_params}
 \small
-\begin{tabularx}{\textwidth}{l l l | l l}
-\toprule
+\begin{tabular}{|l l l | l l|}
+\hline
 \textbf{Physical Parameter} & \textbf{Symbol} & \textbf{Value} & \textbf{Numerical Setting} & \textbf{Value} \\
-\midrule
+\hline
 Channel length & $z_{\mathrm{ap}}$ & $1$~km & Phase screens & $10$ \\
 Structure constant & $C_n^2$ & $5 \times 10^{-15}$ & Grid size & $512 \times 512$ \\
 Inner scale & $\ell_0$ & $1$~mm & Spatial step & $0.3$~mm \\
 Outer scale & $L_0$ & $80$~m & Spectral rings & $1024$ \\
 Wavelength & $\lambda$ & $809$~nm & Interscreen Rytov parameter & $3 \times 10^{-3}$ \\
 Beam radius & $W_0$ & $2$~cm & Sample size & $10^5$ \\
-\bottomrule
-\end{tabularx}
-\end{table*}
+\hline
+\end{tabular}
+\end{table}
 ```
 
 #### Collimated beam.
@@ -135,24 +136,25 @@ This regime corresponds to realistic atmospheric conditions for the horizontal a
 The physical and numerical parameters used in the simulations are summarized in ^[tab:moderate_params].
 
 ```{=latex}
-\begin{table*}[t]
+\renewcommand{\arraystretch}{1.2}
+\begin{table}[h]
 \centering
 \caption{Moderate turbulence channel parameters ($\sigma_{\mathrm{R}}^2 = 1.5$).}
 \label{tab:moderate_params}
 \small
-\begin{tabularx}{\textwidth}{l l l | l l}
-\toprule
+\begin{tabular}{|l l l | l l|}
+\hline
 \textbf{Physical Parameter} & \textbf{Symbol} & \textbf{Value} & \textbf{Numerical Setting} & \textbf{Value} \\
-\midrule
+\hline
 Channel length & $z_{\mathrm{ap}}$ & $1.6$~km & Phase screens & $10$ \\
 Structure constant & $C_n^2$ & $1.5 \times 10^{-14}$ & Grid size & $512 \times 512$ \\
 Inner scale & $\ell_0$ & $1$~mm & Spatial step & $0.4$~mm \\
 Outer scale & $L_0$ & $80$~m & Spectral rings & $1024$ \\
 Wavelength & $\lambda$ & $809$~nm & Interscreen Rytov parameter & $2.2 \times 10^{-2}$ \\
 Beam radius & $W_0$ & $2$~cm & Sample size & $10^5$ \\
-\bottomrule
-\end{tabularx}
-\end{table*}
+\hline
+\end{tabular}
+\end{table}
 ```
 
 #### Collimated Beam.
@@ -201,24 +203,25 @@ We analyze a strong turbulence channel characterized by the Rytov parameter $\si
 The corresponding physical and numerical parameters are listed in ^[tab:strong_params].
 
 ```{=latex}
-\begin{table*}[t]
+\renewcommand{\arraystretch}{1.2}
+\begin{table}[h]
 \centering
 \caption{Strong turbulence channel parameters ($\sigma_{\mathrm{R}}^2 = 33.3$).}
 \label{tab:strong_params}
 \small
-\begin{tabularx}{\textwidth}{l l l | l l}
-\toprule
+\begin{tabular}{|l l l | l l|}
+\hline
 \textbf{Physical Parameter} & \textbf{Symbol} & \textbf{Value} & \textbf{Numerical Setting} & \textbf{Value} \\
-\midrule
+\hline
 Channel length & $z_{\mathrm{ap}}$ & $50$~km & Phase screens & $30$ \\
 Structure constant & $C_n^2$ & $6 \times 10^{-16}$ & Grid size & $4096 \times 4096$ \\
 Inner scale & $\ell_0$ & $1$~mm & Spatial step & $1$~mm \\
 Outer scale & $L_0$ & $80$~m & Spectral rings & $1024$ \\
 Wavelength & $\lambda$ & $808$~nm & Interscreen Rytov parameter & $6.5 \times 10^{-2}$ \\
 Beam radius & $W_0$ & $6$~cm & Sample size & $10^5$ \\
-\bottomrule
-\end{tabularx}
-\end{table*}
+\hline
+\end{tabular}
+\end{table}
 ```
 
 The Kolmogorov-Smirnov statistics comparing analytical models to numerical transmittance distributions are shown in ^[fig:ks_strong_inf].
