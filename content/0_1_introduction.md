@@ -118,13 +118,13 @@ Taken together, these results demonstrate the feasibility of correlation aware s
 
 #### Statement of Authorship.
 
-The research presented in the papers [I] and [II] was primarily conducted by the candidate.
+The research presented in the papers \ref{mypaper1} and \ref{mypaper2} was primarily conducted by the candidate.
 The scientific advisor, A. A. Semenov, provided the core conceptual ideas, research direction, and supervisory control throughout the project.
 The co-authors---specifically D. Vasylyev and W. Vogel---provided assistance through enlightening discussions that helped refine the theoretical results and the interpretation of simulated data.
 
-In the paper [III] my individual contributions to the research included providing the numerical framework utilized for beam shape distribution analysis and performing the extensive model validation.
+In the paper \ref{mypaper3} my individual contributions to the research included providing the numerical framework utilized for beam shape distribution analysis and performing the extensive model validation.
 Additionally, I proposed the moment matching technique to eliminate the model-misspecification bias found in previous models.
-In the paper [IV] my individual contribution consisted of conducting numerical modeling, analyzing the obtained data, and preparing representative visualization materials, which constituted the basis of the presented materials.
+In the paper \ref{mypaper4} my individual contribution consisted of conducting numerical modeling, analyzing the obtained data, and preparing representative visualization materials, which constituted the basis of the presented materials.
 
 #### Approbation of Research Results.
 

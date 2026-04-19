@@ -87,10 +87,10 @@
 **Cписок публiкацiй:**
 ```{=latex}
 \begin{enumerate}[label={[\Roman*]}]
-    \item M. Klen and A. A. Semenov, "Numerical simulations of atmospheric quantum channels", Phys. Rev. A 108, 033718 (2023). \textbf{(Q1)}
-    \item M. Klen, D. Vasylyev, W. Vogel, and A. A. Semenov, "Time correlations in atmospheric quantum channels", Phys. Rev. A 109, 033712 (2024). \textbf{(Q1)}
-    \item I. Pechonkin, M. Klen, and A. A. Semenov, "Circular-beam approximation for quantum channels in a turbulent atmosphere", Phys. Rev. A 112, 063716 (2025). \textbf{(Q1)}
-    \item A. Semenov, M. Klen, and I. Pechonkin, "Quantum Optics in the Turbulent Atmosphere: Fundamental Issues and Applications", in Quantum Technologies for Defence and Security II, edited by V. Fernandez, G. Sorelli, and S. Schwartz (p. 38). Proceedings of SPIE 13676, 136760H-13 (2025).
+    \item M. Klen and A. A. Semenov, "Numerical simulations of atmospheric quantum channels", \href{https://doi.org/10.1103/PhysRevA.108.033718}{Phys. Rev. A 108, 033718 (2023)}. \textbf{(Q1)}
+    \item M. Klen, D. Vasylyev, W. Vogel, and A. A. Semenov, "Time correlations in atmospheric quantum channels", \href{https://doi.org/10.1103/PhysRevA.109.033712}{Phys. Rev. A 109, 033712 (2024)}. \textbf{(Q1)}
+    \item I. Pechonkin, M. Klen, and A. A. Semenov, "Circular-beam approximation for quantum channels in a turbulent atmosphere", \href{https://doi.org/10.1103/pv7j-4zpf}{Phys. Rev. A 112, 063716 (2025)}. \textbf{(Q1)}
+    \item A. Semenov, M. Klen, and I. Pechonkin, "Quantum Optics in the Turbulent Atmosphere: Fundamental Issues and Applications", in Quantum Technologies for Defence and Security II, edited by V. Fernandez, G. Sorelli, and S. Schwartz (p. 38). \href{https://doi.org/10.1117/12.3069599}{Proceedings of SPIE 13676, 136760H-13 (2025)}.
 \end{enumerate}
 ```
 
@@ -228,10 +228,10 @@ nonclassicality preservation.
 
 ```{=latex}
 \begin{enumerate}[label={[\Roman*]}]
-    \item\label{mypaper1} M. Klen and A. A. Semenov, "Numerical simulations of atmospheric quantum channels", Phys. Rev. A 108, 033718 (2023). \textbf{(Q1)}
-    \item\label{mypaper2} M. Klen, D. Vasylyev, W. Vogel, and A. A. Semenov, "Time correlations in atmospheric quantum channels", Phys. Rev. A 109, 033712 (2024). \textbf{(Q1)}
-    \item\label{mypaper3} I. Pechonkin, M. Klen, and A. A. Semenov, "Circular-beam approximation for quantum channels in a turbulent atmosphere", Phys. Rev. A 112, 063716 (2025). \textbf{(Q1)}
-    \item\label{mypaper4} A. Semenov, M. Klen, and I. Pechonkin, "Quantum Optics in the Turbulent Atmosphere: Fundamental Issues and Applications", in Quantum Technologies for Defence and Security II, edited by V. Fernandez, G. Sorelli, and S. Schwartz (p. 38). Proceedings of SPIE 13676, 136760H-13 (2025).
+    \item\label{mypaper1} M. Klen and A. A. Semenov, "Numerical simulations of atmospheric quantum channels", \href{https://doi.org/10.1103/PhysRevA.108.033718}{Phys. Rev. A 108, 033718 (2023)}. \textbf{(Q1)}
+    \item\label{mypaper2} M. Klen, D. Vasylyev, W. Vogel, and A. A. Semenov, "Time correlations in atmospheric quantum channels", \href{https://doi.org/10.1103/PhysRevA.109.033712}{Phys. Rev. A 109, 033712 (2024)}. \textbf{(Q1)}
+    \item\label{mypaper3} I. Pechonkin, M. Klen, and A. A. Semenov, "Circular-beam approximation for quantum channels in a turbulent atmosphere", \href{https://doi.org/10.1103/pv7j-4zpf}{Phys. Rev. A 112, 063716 (2025)}. \textbf{(Q1)}
+    \item\label{mypaper4} A. Semenov, M. Klen, and I. Pechonkin, "Quantum Optics in the Turbulent Atmosphere: Fundamental Issues and Applications", in Quantum Technologies for Defence and Security II, edited by V. Fernandez, G. Sorelli, and S. Schwartz (p. 38). \href{https://doi.org/10.1117/12.3069599}{Proceedings of SPIE 13676, 136760H-13 (2025)}.
 \end{enumerate}
 ```
 
