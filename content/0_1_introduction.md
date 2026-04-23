@@ -75,7 +75,7 @@ Collectively, these metrics allow for a direct assessment of entanglement and no
 #### Scientific Novelty of the Results.
 
 - *Systematic validation of analytical PDT models* was performed by benchmarking them against the results of numerical simulations.
-  Results show that common assumptions, such as the validity of the lognormal model in strong turbulence and the validity of the beam-wandering model in weak turbulence, are incomplete
+  Results show that common assumptions, such as the validity of the lognormal model in strong turbulence and the validity of the beam-wandering model in weak turbulence, are incomplete.
 - *Receiver aperture as the dominant parameter shaping transmittance* was demonstrated by analyzing the ratio between the aperture radius and the beam size.
   Small apertures yield PDTs skewed positively near zero, while larger apertures produce negative skewness.
   These findings highlight the importance of accurately predicting the third moment of transmittance and explain why models with positive skew, such as the truncated lognormal, perform better for small apertures, whereas beam-shape based models capture the negative skew for large apertures.
@@ -116,35 +116,35 @@ Numerical simulations show that atmospheric turbulence allows the preservation o
 With further development of quantum memories, storage times of tens of milliseconds are expected for discrete variable entanglement.
 Taken together, these results demonstrate the feasibility of correlation aware strategies, including adaptive selection techniques, for preserving nonclassicality in realistic atmospheric channels.
 
-#### Statement of Authorship.
+#### Statement of Authorship.^[Throughout this thesis, author publications are cited using Roman numerals (see the list on page 6), while all other references are cited using Arabic numerals and listed in the bibliography at the end of the thesis.]
 
 The research presented in the papers \ref{mypaper1} and \ref{mypaper2} was primarily conducted by the candidate.
-The scientific advisor, A. A. Semenov, provided the core conceptual ideas, research direction, and supervisory control throughout the project.
-The co-authors---specifically D. Vasylyev and W. Vogel---provided assistance through enlightening discussions that helped refine the theoretical results and the interpretation of simulated data.
+The scientific advisor, A.\mbox{~}A.\mbox{~}Semenov, provided the core conceptual ideas, research direction, and supervisory control throughout the project.
+The co-authors---specifically D.\mbox{~}Vasylyev and W.\mbox{~}Vogel---provided assistance through enlightening discussions that helped refine the theoretical results and the interpretation of simulated data.
 
-In the paper \ref{mypaper3} my individual contributions to the research included providing the numerical framework utilized for beam shape distribution analysis and performing the extensive model validation.
+In the paper \ref{mypaper3} the author's individual contributions to the research included providing the numerical framework utilized for beam shape distribution analysis and performing the extensive model validation.
 Additionally, I proposed the moment matching technique to eliminate the model-misspecification bias found in previous models.
-In the paper \ref{mypaper4} my individual contribution consisted of conducting numerical modeling, analyzing the obtained data, and preparing representative visualization materials, which constituted the basis of the presented materials.
+In the paper \ref{mypaper4} the author's individual contribution consisted of conducting numerical modeling, analyzing the obtained data, and preparing representative visualization materials, which constituted the basis of the presented materials.
 
 #### Approbation of Research Results.
 
 The results of the dissertation were presented at seminars of the Bogolyubov Institute for Theoretical Physics of the National Academy of Sciences of Ukraine, as well as at Ukrainian and international conferences, in particular:
-1. M. Klen and A. A. Semenov, "Free-space quantum channels: Numerical simulations", US-Ukraine Quantum Forum 2023, August 28-31, 2023
-2. M. Klen, "Quantum light in atmospheric turbulence", 25th Symposium on photonics and optics SPO 2024, Kyiv, (Ukraine), November 8, 2024
-3. M. Klen, "Numerical simulations in free-space quantum channels", Poster session at Quantum 2025: From Foundations of Quantum Mechanics to Quantum Information and Quantum Metrology & Sensing, Turin, (Italy), May 18-24, 2025
-4. A. Semenov, M. Klen, I. Pechonkin, "Quantum optics in the turbulent atmosphere: fundamental issues and applications": invited talk at the SPIE Sensors+Imaging Meeting. Quantum Technologies for Defense and Security II. Madrid, Spain. September 15–18, 2025.
+1. M.\mbox{~}Klen and A.\mbox{~}A.\mbox{~}Semenov, "Free-space quantum channels: Numerical simulations", US-Ukraine Quantum Forum 2023, August 28-31, 2023
+2. M.\mbox{~}Klen, "Quantum light in atmospheric turbulence", 25th Symposium on photonics and optics SPO 2024, Kyiv, (Ukraine), November 8, 2024
+3. M.\mbox{~}Klen, "Numerical simulations in free-space quantum channels", Poster session at Quantum 2025: From Foundations of Quantum Mechanics to Quantum Information and Quantum Metrology & Sensing, Turin, (Italy), May 18-24, 2025
+4. A.\mbox{~}Semenov, M.\mbox{~}Klen, I.\mbox{~}Pechonkin, "Quantum optics in the turbulent atmosphere: fundamental issues and applications": invited talk at the SPIE Sensors+Imaging Meeting. Quantum Technologies for Defense and Security II. Madrid, Spain. September 15–18, 2025.
 
 #### Structure and Volume of the Thesis.
 
-The dissertation consists of an introduction, seven chapters, conclusions, and a list of references (128 references).
-The total volume of the work is 141 pages, including 87 equations, 9 tables and 31 figures.
+The dissertation consists of an introduction, seven chapters, conclusions, and a list of references (130 references).
+The total volume of the work is 141 pages, including 88 equations, 9 tables and 31 figures.
 
 #### Relationship of the Work to Scientific Programs and Grants.
 
 The dissertation was completed at the Bogolyubov Institute for Theoretical Physics of the National Academy of Sciences of Ukraine.
 It is related to the following academic programs, topics, and grants:
-1. Відомча тема відділення фізики та астрономії НАН України "Індуковані шумом динаміка та кореляції в нерівноважних системах", Р/К 0120U101347.
-2. Відомча тема відділення фізики та астрономії НАН України "Стохастичні процеси в конденсованих середовищах, біологічних системах та полях випромінювання", Р/К  0125U000031.
+1. Research project of the Department of Physics and Astronomy of the National Academy of Sciences of Ukraine "Noise-inducing dynamics and correlations in nonequilibrium systems",  Project No. 0120U101347.
+2. Research project of the Department of Physics and Astronomy of the National Academy of Sciences of Ukraine "Stochastic processes in condensed media, biological systems and radiation fields", Project No. 0125U000031.
 3. Project of National Research Foundation of Ukraine No. 2020.02/0111, "Nonclassical and hybrid correlations of quantum systems under realistic conditions".
 4. Project of National Research Foundation of Ukraine No. 2023.03/0165 "Quantum correlations of electromagnetic radiation".
 5. Project Simons Foundation International SFI-PD-Ukraine-00014573, PI LB.

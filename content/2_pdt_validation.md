@@ -1,11 +1,8 @@
 # Validation of analytical models {#sec:validation}
-
-> - [ ] Add notes about extending the master thesis!!!
-> - [ ] move Beta to intro?
-
-The PDT describes an atmospheric quantum channel.
-It defines the input-output relation between quantum states and enables quantitative analysis of protocol performance in free space links.
-Proper characterization of the PDT is essential, since the correctness of any protocol analysis depends directly on the accuracy of the assumed model.
+The reliability of any free-space quantum protocol analysis depends on the accuracy of the PDT.
+Because the PDT defines the mathematical input-output relation for quantum states, any discrepancy between the model and the actual stochastic behavior of the atmospheric channel renders the resulting performance metrics invalid.
+Rigorous validation is therefore a necessary step to ensure that theoretical predictions remain quantitatively accurate.
+To address these modeling risks, this section validates the analytical PDT against numerical simulations, presenting the results originally published in our work \ref{mypaper1}.
 
 Several analytical models of the PDT have been proposed (see ^[sec:pdt]).
 The earliest approach adopts statistical models of optical intensity fluctuations from classical optics.
@@ -29,7 +26,9 @@ In this section, numerical simulations of atmospheric channels are performed for
 The results are used to validate existing analytical models and to identify their ranges of applicability.
 Model comparison is carried out using the Kolmogorov-Smirnov (KS) statistic^[@conover1999], defined as
 $$D_M = \sup_{\eta} \left| F_M(\eta) - F(\eta) \right|,$$
-where $F_M(\eta)=M^{-1}\sum_{i=1}^M\theta(\eta-\eta_i)$ denotes the empirical distribution function obtained from simulation, $M$ is the sample size, $\theta(\eta)$ is the Heaviside step function, and $F(\eta)$ is the cumulative distribution function of the analytical model.
+where $F(\eta)$ is the cumulative distribution function of the analytical model and $F_M(\eta)$ denotes the empirical distribution function obtained from simulation
+$$F_M(\eta)=M^{-1}\sum_{i=1}^M\theta(\eta-\eta_i),$$
+where $M$ is the sample size, $\theta(\eta)$ is the Heaviside step function.
 The goal is to determine which model performs best in a given scenario rather than to perform formal hypothesis testing.
 The Kolmogorov-Smirnov statistic therefore provides a simple and sufficient metric.
 It directly quantifies discrepancies between cumulative distributions, which is especially relevant for tasks where tail probabilities such as exceedance $1 - F(\eta)$ determine system performance^[@vasylyev2012].
@@ -242,7 +241,7 @@ Point irradiance statistics in atmospheric turbulence have been studied extensiv
 In this context, the lognormal distribution is a standard model, which explains the relatively good performance of the truncated lognormal model for very small apertures.
 For strong turbulence, other irradiance models such as the negative exponential, K-distribution, lognormal-Rician, or Gamma-Gamma distributions, as reviewed in ^[sec:pdf_irradiance], may provide a more accurate description of PDT for the range of very small apertures.
 
-### Conclusion {#sec:conclusion_validation}
+### Summary {#sec:conclusion_validation}
 
 For both weak turbulence channels and the moderate-turbulence collimated beam channel, the numerically obtained PDTs exhibit bell-like, unimodal, and relatively narrow distributions with noticeable asymmetry near the boundaries of the support, $\eta \in [0,1]$.
 For the moderate-turbulence focused beam and strong turbulence channels, a similar overall tendency is observed, though the distributions become broader and tend toward a flattened shape.

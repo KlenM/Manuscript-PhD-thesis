@@ -65,14 +65,14 @@ where $\langle \cdot \rangle$ denotes ensemble averaging over turbulence realiza
 These correlation functions enable the calculation of several statistical quantities that are essential for parametrizing analytical models of atmospheric channels.
 The average transmittance of the atmospheric channel, according to ^[eq:eta], is given by
 $$\langle\eta\rangle  =
-\left<\int_{S_\mathrm{ap}} d^2\boldsymbol{r} |u(\boldsymbol{r}, z_\mathrm{ap})|^2\right>=
-\int_{S_\mathrm{ap}} d^2\boldsymbol{r} \, \Gamma_2(\boldsymbol{r}, z_{\mathrm{ap}})$$
+\left<\int_{\mathcal{A}} d^2\boldsymbol{r} |u(\boldsymbol{r}, z_\mathrm{ap})|^2\right>=
+\int_{\mathcal{A}} d^2\boldsymbol{r} \, \Gamma_2(\boldsymbol{r}, z_{\mathrm{ap}})$$
 and can be seen as the primary characteristic of channel effectiveness.
 The second moment of the transmittance
 $$\begin{split}
 \langle\eta^2\rangle =
-\left<\int_{S_\mathrm{ap}} d^2\boldsymbol{r}_1 |u(\boldsymbol{r}_1, z_\mathrm{ap})|^2\int_{S_\mathrm{ap}} d^2\boldsymbol{r}_2 |u(\boldsymbol{r}_2, z_\mathrm{ap})|^2\right> = \\ =
-\int_{S_\mathrm{ap}}\int_{S_\mathrm{ap}}  d^2\boldsymbol{r}_1  d^2\boldsymbol{r}_2 \, \Gamma_4(\boldsymbol{r}_1, \boldsymbol{r}_2, z_\mathrm{ap})
+\left<\int_{\mathcal{A}} d^2\boldsymbol{r}_1 |u(\boldsymbol{r}_1, z_\mathrm{ap})|^2\int_{\mathcal{A}} d^2\boldsymbol{r}_2 |u(\boldsymbol{r}_2, z_\mathrm{ap})|^2\right> = \\ =
+\int_{\mathcal{A}}\int_{\mathcal{A}}  d^2\boldsymbol{r}_1  d^2\boldsymbol{r}_2 \, \Gamma_4(\boldsymbol{r}_1, \boldsymbol{r}_2, z_\mathrm{ap})
 \end{split}$$
 requires the fourth-order correlation function and characterizes the variability of the atmospheric channel transmittance.
 

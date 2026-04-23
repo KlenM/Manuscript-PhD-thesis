@@ -2,7 +2,7 @@
 
 ># intro
 
-This thesis addressed the statistical modeling of atmospheric channel transmittance and its temporal correlations.
+This thesis addressed the statistical modeling of quantum optical channels in the turbulent atmosphere, including a study of corresponding temporal correlations.
 We established a numerical framework based on the sparse-spectrum phase-screen method to simulate beam propagation through a turbulent atmosphere.
 This approach mitigates low-frequency undersampling inherent in standard techniques, thereby enabling comprehensive analysis of stochastic wave propagation dynamics.
 This framework allowed us to investigate transmittance statistics across weak, moderate, and strong turbulence regimes, including model validation and assessment of quantum entanglement preservation limits in a turbulent atmosphere.
@@ -11,7 +11,7 @@ Its code is publicly available and has attracted interest from the community.
 ># validation
 
 Systematic validation revealed that receiver aperture size relative to the average beam radius dictates model accuracy more strongly than turbulence strength alone.
-Small apertures induce positive skewness favoring Truncated Lognormal models, whereas large apertures produce negative skewness described by beam-wandering or elliptical-beam approximations.
+Small apertures induce positive skewness favoring the truncated lognormal model, whereas large apertures produce negative skewness described by beam-wandering or elliptical-beam approximations.
 The empirical Beta distribution generally outperformed analytical alternatives due to its bounded support on $[0,1]$ and flexibility in capturing skewness transitions.
 This finding clarifies an important aspect of PDT statistical behavior and establishes the aperture-to-beam ratio as the primary design criterion for optical links.
 
@@ -34,7 +34,7 @@ Consequently, this correction represents a significant advancement in physically
 
 ># 2-time pdt
 
-The existing framework of PDT is insufficient for describing high-repetition-rate systems where temporal correlations persist between consecutive pulses.
+The existing framework of the PDT is insufficient for describing high-repetition-rate systems where temporal correlations persist between consecutive pulses.
 Therefore, we introduced a Two-Time PDT framework $\mathcal{P}(\eta_0,\eta_\tau)$ to capture the joint statistics of transmittance values at different times.
 A key parameter defined within this framework is the aperture-averaged spatial coherence radius $\rho_0$, marking the wind-shift displacement where the Pearson correlation decays to $e^{-1}$.
 This spatial coherence radius scales linearly with aperture size, serving as a practical criterion for determining optimal pulse repetition rates.

@@ -6,7 +6,7 @@ This bias affects the first two moments of the transmittance distribution, $\lan
 As a consequence, these models show poor agreement with numerical simulations.
 Since many quantum protocols in turbulent atmospheres, including those that will be analysed in ^[sec:application], rely directly on the transmittance moments, this bias leads to degraded protocol performance.
 
-In this section, we address this problem by introducing a moment matching procedure for such models.
+In this section, we address this problem by introducing a moment matching procedure for such models, which was introduced in our publication \ref{mypaper3}.
 The goal is to enforce agreement with the transmittance moments while maintaining a physically interpretable model description.
 Physically based models are specified in terms of low-order statistics of the beam shape, which are summarised in ^[tab:beamshapestats].
 These include the mean and variance of the beam centroid position and the mean and variance of an effective beam size parameter $S$.
@@ -16,7 +16,7 @@ These include the mean and variance of the beam centroid position and the mean a
 \centering
 \caption{Summary of beam shape statistics used for physically based model parameterisation.}
 \label{tab:beamshapestats}
-\begin{tabular}{l c c}
+\begin{tabular}{|l|cc|}
 \hline
                    & {on average}      & {variability}   \\
 \hline
@@ -28,7 +28,7 @@ These include the mean and variance of the beam centroid position and the mean a
 ```
 
 The beam-wandering model $\mathcal{P}_\mathrm{BW}(\eta \mid \langle x_0^2 \rangle, \langle S \rangle)$ is a two-parameter model.
-It assumes a circular beam with fixed size $\langle S \rangle$ and neglects beam size fluctuations $\langle S^2 \rangle$.
+It assumes a circular beam with fixed size $\langle S \rangle$ and neglects higher-order beam size fluctuations.
 The elliptical-beam model extends this description to four parameters.
 In addition to the beam position variability $\langle x^2_0 \rangle$, it accounts for fluctuations of the beam semiaxes $W_{1,2}$ (see ^[sec:semiaxes]) and their correlations.
 While the beam-wandering model admits a fully analytical expression for the PDT, the elliptical-beam model requires Monte Carlo sampling to evaluate the PDT.
@@ -46,10 +46,12 @@ They absorb contributions from higher-order beam deformations and scintillation 
 This approach remains simple and analytically tractable, and it is shown to improve protocol performance.
 
 ## The model
+
 The PDT of the Circular-beam model is defined as a compound distribution that extends the beam-wandering model by treating the beam size $S$ as a random variable
 $$
 %\label{eq:acbpdt}
-\mathcal{P}\!\left(\,\eta\mid\langle x^2_0 \rangle,\langle \eta \rangle,\langle \eta^2 \rangle\right)=\int_0^\infty dS \,\mathcal{P}_\mathrm{BW}\!\left(\,\eta\mid\langle x^2_0 \rangle,S\right) P(S\mid\mu,\sigma).$$
+\mathcal{P}\!\left(\,\eta\mid\langle x^2_0 \rangle,\langle \eta \rangle,\langle \eta^2 \rangle\right)=\int_0^\infty dS \,\mathcal{P}_\mathrm{BW}\!\left(\,\eta\mid\langle x^2_0 \rangle,S\right) P(S\mid\mu,\sigma),$$
+where $\mathcal{P}_\text{BW}\!\left(\,\eta\mid\langle x^2_0 \rangle,S\right)$ is the beam-wandering PDT^[@vasylyev2012], which describes transmittance fluctuations caused solely by the random displacement of a Gaussian beam with fixed width $S$, where the displacement variance is characterized by $\langle x_0^2 \rangle$.
 The fluctuations of the beam size $S$ are incorporated through the distribution ${P(S\mid\mu,\sigma)}$.
 Its parameters $\mu=\mu(\langle \eta \rangle,\langle \eta^2 \rangle)$ and $\sigma=\sigma(\langle \eta \rangle,\langle \eta^2 \rangle)$ are fixed by enforcing the prescribed moments $\langle\eta\rangle$ and $\langle\eta^2\rangle$.
 As a result, the transmittance statistics simultaneously account for beam displacement and beam deformation, and are specified by the second moment of beam displacement $\langle x_0^2\rangle$ and the first two moments of the transmittance.
@@ -141,7 +143,7 @@ However, the Circular-beam model with moment matching still outperforms the othe
 Channels with weak turbulence and $F_0 = \infty$ and with moderate turbulence and $F_0 = \infty$ show similar behavior with slightly better performance.
 The channel with moderate turbulence and $F_0 = z_\mathrm{ap}$ yields intermediate results.
 
-## Conclusion {#sec:conclusion_mm}
+## Summary {#sec:conclusion_mm}
 
 We introduced a physically motivated PDT model complemented by transmittance moment matching.
 While the Circular-beam model provides an intermediate approximation of the beam shape between the beam-wandering and elliptical-beam approaches, our moment matching procedure ensures that its first two transmittance moments are imposed by design.

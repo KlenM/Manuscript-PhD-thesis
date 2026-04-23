@@ -1,6 +1,5 @@
 ## Quantum channels in turbulent atmosphere {#sec:aqc}
 In the work of Semenov and Vogel (2009)^[@semenov2009], a more general problem of quantum state of light transformation after propagation through a turbulent atmosphere was considered.
-Taking into account the size of the collecting telescope and the fact that the total intensity after propagation cannot exceed the total intensity of the initial state, they derived the input-output relation of a quantum channel in a turbulent atmosphere.
 They showed that a light beam distorted by atmospheric turbulence, when passing through a finite aperture, can be modeled as a linear-loss quantum channel.
 The channel is characterized by an effective transmittance $\eta \in [0,1]$.
 This quantity represents the fraction of the total beam intensity that passes through the aperture.
@@ -20,7 +19,7 @@ The PDT encodes the statistics of turbulence and depends on multiple parameters:
 The probability density of transmittance (PDT) is the primary defining characteristic of atmospheric quantum channels, as it fully captures the stochastic effects of turbulence on the output quantum state.
 
 The input-output relation ^[eq:PDTdef] holds for both classical and quantum fields since the PDT $\mathcal{P}(\eta)$ is identical in both regimes. 
-This correspondence is evident when considering an input coherent state $|\beta\rangle$, characterized by the $P$-function $\delta^{(2)}(\alpha - \beta)$, which results in an output state represented as a statistical mixture of attenuated coherent states. 
+This correspondence is evident when considering an input coherent state $|\alpha_0\rangle$, characterized by the $P$-function $\delta^{(2)}(\alpha - \alpha_0)$, which results in an output state represented as a statistical mixture of attenuated coherent states. 
 Consequently, the task of determining the PDT for an atmospheric quantum channel is equivalent to solving the corresponding classical stochastic propagation problem.
 
 Direct experimental reconstruction of the PDT is possible with classical intensity measurements at the receiver side with a photodiode.

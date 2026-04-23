@@ -8,7 +8,7 @@
 Цей процес спричиняє стохастичні флуктуації показника заломлення та відповідні спотворення променя світла, що проявляється у вигляді блукання променя навколо осі поширення та сцинтиляції (флуктуацій інтенсивності).
 Відтак, зазначені ефекти суттєво ускладнюють опис таких каналів для квантової комунікації.
 
-Вплив турбулентності на квантовий стан світла у квазімонохроматичній моді моделюється однією випадковою величиною --- ефективністю проходження, що визначається відношенням інтенсивності, яка потрапила у приймальну апертуру, до загальної інтенсивності променя світла.
+Вплив турбулентності на квантовий стан світла у квазімонохроматичній моді моделюється однією випадковою величиною --- ефективністю проходження, що визначається відношенням інтенсивності, яка потрапила у апертуру приймача, до загальної інтенсивності променя світла.
 Таким чином, розподіл імовірності ефективності проходження (РІЕП) є ключовим для характеристики атмосферних квантових каналів у вільному просторі.
 Попри його фундаментальне значення, при моделюванні РІЕП зберігаються суттєві теоретичні прогалини.
 По-перше, не визначено чітких критеріїв застосовності наявних у літературі аналітичних моделей РІЕП.
@@ -27,7 +27,7 @@
 Ми оцінюємо точність прогнозів існуючих аналітичних моделей за допомогою статистики Колмогорова-Смирнова, щоб виміряти, наскільки точно передбачення аналітичних моделей узгоджуються з чисельно змодельованими даними.
 
 В результаті, чисельне моделювання, що охоплює режими від слабкої до сильної турбулентності, продемонструвало, що інтенсивність атмосферної турбулентності передусім визначає лише дисперсію РІЕП, не змінюючи суттєво форми розподілу.
-Натомість асиметрія розподілу виявляє високу варіативність та зміну знака залежно від розміру приймальної апертури.
+Натомість асиметрія розподілу виявляє високу варіативність та зміну знака залежно від розміру апертури приймача.
 Зокрема, коли розмір апертури є значно меншим за характерну ширину променя, хвіст розподілу подовжується у напрямку до вищих значень ефективності проходження (позитивна асиметрія); навпаки, збільшення апертури зміщує хвіст у бік нижчих значень ефективності проходження (негативна асиметрія).
 Проте більшість аналітичних моделей обмежені жорсткою поведінкою асиметрії та не здатні відтворити цей перехід, зумовлений розміром апертури.
 
@@ -35,15 +35,15 @@
 Було встановлено, що відхилення центру променя не можна вважати незалежним від деформації його форми, а гіпотеза гауссового спільного розподілу для логарифмів піввісей променя є хибною.
 Іншою проблемою є те, що, хоча аналітичні моделі, параметризовані характеристиками променя, досить точно наближають загальну форму РІЕП, чисельне моделювання виявляє систематичне зміщення їхніх передбачень щодо моди розподілу та середнього значення.
 Ця розбіжність зумовлена неправильною специфікацією моделі, оскільки припущення про ідеалізовану кругову або еліптичну форму променя не дозволяє адекватно описати його реальні складні деформації.
-Як наслідок, такі моделі вносять систематичні помилки та демонструють гірші показники статистики Колмогорова-Смирнова порівняно з іншими підходами.
+Як наслідок, такі моделі вносять систематичні похибки та демонструють гірші показники статистики Колмогорова-Смирнова порівняно з іншими підходами.
 
 Для усунення зміщення через неправильну специфікацію моделі ми впроваджуємо метод узгодження моментів ефективності проходження, який перепараметризує моделі на основі форми променя через перші моменти ефективності проходження.
 Застосування цієї методики до моделі кругового променя демонструє кращі значення статистики Колмогорова-Смирнова порівняно з іншими фізично обґрунтованими моделями.
-Наша інша емпірична модель на основі Бета-розподілу демонструє вищу узгодженість із даними у більшості протестованих режимів, оскільки вона краще враховує варіації асиметрії, зумовлені розміром апертури.
+Наша інша емпірична модель на основі бета-розподілу демонструє вищу узгодженість із даними у більшості протестованих режимів, оскільки вона краще враховує варіації асиметрії, зумовлені розміром апертури.
 
 Для опису часових кореляцій в атмосферних квантових каналах ми розробили концепцію двочасового РІЕП, яка дозволяє вийти за межі статичних описів ансамблів і характеризувати спільні розподіли ефективності проходження як функцію часового інтервалу між двома імпульсами.
 На цій основі ми вводимо усереднений за апертурою радіус просторової когерентності, який кількісно визначає зміщення вітру, при якому кореляції ефективності проходження спадають до exp(−1).
-Зокрема, визначений радіус просторової когерентності можна апроксимувати лінійною залежністю від розміру приймальної апертури.
+Зокрема, визначений радіус просторової когерентності можна апроксимувати лінійною залежністю від розміру апертури приймача.
 Така формалізація забезпечує статистичний фундамент для кількісної оцінки часових кореляцій в атмосферних квантових каналах та аналізу стійкості квантових властивостей.
 
 Спираючись на концепцію двочасового РІЕП, ми кількісно оцінюємо стійкість квантової заплутаності та некласичності в атмосферних каналах.
@@ -53,14 +53,14 @@
 Підсумовуючи, у цій дисертації усунуто неоднозначності щодо розуміння та опису атмосферних квантових каналів.
 Зокрема, встановлено, що існуючі аналітичні моделі часто не здатні коректно врахувати асиметрію розподілу, залежну від розміру апертури.
 Це зумовлює необхідність відмови від інтенсивності турбулентності як єдиного критерію вибору моделі.
-Натомість у цій роботі встановлено, що розмір приймальної апертури є визначальним параметром для вибору відповідної моделі.
+Натомість у цій роботі встановлено, що розмір апертури приймача є визначальним параметром для вибору відповідної моделі.
 
 Хоча модель кругового променя з використанням розробленого методу узгодження моментів ефективності проходження демонструє найкращі результати серед фізично обґрунтованих моделей, необхідність чисельного інтегрування обмежує її широке практичне застосування.
-Відтак, емпірична модель на основі Бета-розподілу є оптимальною для практичного застосування завдяки наявності аналітичного виразу в замкнутій формі та параметризації лише двома моментами ефективності проходження.
+Відтак, емпірична модель на основі бета-розподілу є оптимальною для практичного застосування завдяки наявності аналітичного виразу в замкнутій формі та параметризації лише двома моментами ефективності проходження.
 Ця модель є особливо корисною для аналізу квантових протоколів, у яких сучасні методи часто не враховують флуктуації ефективності проходження, що призводить до систематичного ігнорування випадкової природи каналу та суттєвих помилок в оцінюванні характеристик.
-Застосування моделі Бета-розподілу дозволяє подолати ці обмеження, забезпечуючи коректність аналізу захищеності в тих випадках, де ігнорування стохастичності каналу призводить до хибних результатів.
+Застосування моделі бета-розподілу дозволяє подолати ці обмеження, забезпечуючи коректність аналізу захищеності в тих випадках, де ігнорування стохастичності каналу призводить до хибних результатів.
 
-Зрештою, підтверджена стійкість квантових кореляцій у реальних часових діапазонах обґрунтовує доцільність застосування методів часового кодування в мережах квантового зв'язку у вільному просторі.
+Підтверджена стійкість квантових кореляцій у реальних часових діапазонах обґрунтовує доцільність застосування методів часового кодування в мережах квантового зв'язку у вільному просторі.
 Водночас практична реалізація протоколів з використанням квантової заплутаності в дискретних змінних залишається обмеженою ефективністю квантової пам'яті.
 Це підкреслює, що хоча атмосферні канали забезпечують значні часові вікна для реалізації протоколів, повне розкриття їхнього потенціалу потребує подолання технологічних бар'єрів у зберіганні квантової інформації.
 
@@ -76,7 +76,7 @@
 метод фазових екранів,
 квантова заплутаність,
 протоколи адаптивної селекції,
-збереження некласичності.
+некласичність.
 
 >Квантовий зв'язок,
 >Квантова оптика,
@@ -87,10 +87,10 @@
 **Cписок публiкацiй:**
 ```{=latex}
 \begin{enumerate}[label={[\Roman*]}]
-    \item M. Klen and A. A. Semenov, "Numerical simulations of atmospheric quantum channels", \href{https://doi.org/10.1103/PhysRevA.108.033718}{Phys. Rev. A 108, 033718 (2023)}. \textbf{(Q1)}
-    \item M. Klen, D. Vasylyev, W. Vogel, and A. A. Semenov, "Time correlations in atmospheric quantum channels", \href{https://doi.org/10.1103/PhysRevA.109.033712}{Phys. Rev. A 109, 033712 (2024)}. \textbf{(Q1)}
-    \item I. Pechonkin, M. Klen, and A. A. Semenov, "Circular-beam approximation for quantum channels in a turbulent atmosphere", \href{https://doi.org/10.1103/pv7j-4zpf}{Phys. Rev. A 112, 063716 (2025)}. \textbf{(Q1)}
-    \item A. Semenov, M. Klen, and I. Pechonkin, "Quantum Optics in the Turbulent Atmosphere: Fundamental Issues and Applications", in Quantum Technologies for Defence and Security II, edited by V. Fernandez, G. Sorelli, and S. Schwartz (p. 38). \href{https://doi.org/10.1117/12.3069599}{Proceedings of SPIE 13676, 136760H-13 (2025)}.
+    \item M.\mbox{~}Klen and A.\mbox{~}A.\mbox{~}Semenov, "Numerical simulations of atmospheric quantum channels", \href{https://doi.org/10.1103/PhysRevA.108.033718}{Phys. Rev. A 108, 033718 (2023)}. \textbf{(Q1)}
+    \item M.\mbox{~}Klen, D. Vasylyev, W. Vogel, and A.\mbox{~}A.\mbox{~}Semenov, "Time correlations in atmospheric quantum channels", \href{https://doi.org/10.1103/PhysRevA.109.033712}{Phys. Rev. A 109, 033712 (2024)}. \textbf{(Q1)}
+    \item I.\mbox{~}Pechonkin, M.\mbox{~}Klen, and A.\mbox{~}A.\mbox{~}Semenov, "Circular-beam approximation for quantum channels in a turbulent atmosphere", \href{https://doi.org/10.1103/pv7j-4zpf}{Phys. Rev. A 112, 063716 (2025)}. \textbf{(Q1)}
+    \item A.\mbox{~}Semenov, M.\mbox{~}Klen, and I.\mbox{~}Pechonkin, "Quantum Optics in the Turbulent Atmosphere: Fundamental Issues and Applications", in Quantum Technologies for Defence and Security II, edited by V. Fernandez, G. Sorelli, and S. Schwartz (p. 38). \href{https://doi.org/10.1117/12.3069599}{Proceedings of SPIE 13676, 136760H-13 (2025)}.
 \end{enumerate}
 ```
 
@@ -190,7 +190,7 @@ Consequently, the empirical Beta-distribution model emerges as the superior choi
 This capability is particularly vital for quantum protocol analysis, where current methods often rely on constant-transmittance approximations that systematically ignore the random nature of atmospheric channels and introduce significant estimation errors.
 Utilizing the Beta-distribution model directly addresses this limitation, effectively eliminating potential loopholes in performance analysis by  demonstrating robust validity across the majority of parameter regimes.
 
-Ultimately, the analyzed resilience of quantum correlations over practical temporal windows renders time-bin encoding strategies feasible for free-space quantum networking. 
+The analyzed resilience of quantum correlations over practical temporal windows renders time-bin encoding strategies feasible for free-space quantum networking. 
 However, the practical realization of discrete variable entanglement protocols remains constrained by quantum memory efficiency. 
 This highlights that while atmospheric channels support practical timescales, unlocking their full potential requires addressing storage limitations inherent in current quantum hardware.
 
@@ -203,11 +203,11 @@ two-time PDT,
 spatial coherence radius,
 transmittance-moment matching,
 atmospheric turbulence,
-sparse-spectrum phase-screen method
-strong fluctuation regime
+phase-screen method,
+strong fluctuation regime,
 quantum entanglement,
 adaptive selection protocols,
-nonclassicality preservation.
+nonclassicality.
 
 > від 5 до 15.
 
@@ -228,10 +228,10 @@ nonclassicality preservation.
 
 ```{=latex}
 \begin{enumerate}[label={[\Roman*]}]
-    \item\label{mypaper1} M. Klen and A. A. Semenov, "Numerical simulations of atmospheric quantum channels", \href{https://doi.org/10.1103/PhysRevA.108.033718}{Phys. Rev. A 108, 033718 (2023)}. \textbf{(Q1)}
-    \item\label{mypaper2} M. Klen, D. Vasylyev, W. Vogel, and A. A. Semenov, "Time correlations in atmospheric quantum channels", \href{https://doi.org/10.1103/PhysRevA.109.033712}{Phys. Rev. A 109, 033712 (2024)}. \textbf{(Q1)}
-    \item\label{mypaper3} I. Pechonkin, M. Klen, and A. A. Semenov, "Circular-beam approximation for quantum channels in a turbulent atmosphere", \href{https://doi.org/10.1103/pv7j-4zpf}{Phys. Rev. A 112, 063716 (2025)}. \textbf{(Q1)}
-    \item\label{mypaper4} A. Semenov, M. Klen, and I. Pechonkin, "Quantum Optics in the Turbulent Atmosphere: Fundamental Issues and Applications", in Quantum Technologies for Defence and Security II, edited by V. Fernandez, G. Sorelli, and S. Schwartz (p. 38). \href{https://doi.org/10.1117/12.3069599}{Proceedings of SPIE 13676, 136760H-13 (2025)}.
+    \item\label{mypaper1} M.\mbox{~}Klen and A.\mbox{~}A.\mbox{~}Semenov, "Numerical simulations of atmospheric quantum channels", \href{https://doi.org/10.1103/PhysRevA.108.033718}{Phys. Rev. A 108, 033718 (2023)}. \textbf{(Q1)}
+    \item\label{mypaper2} M.\mbox{~}Klen, D. Vasylyev, W. Vogel, and A.\mbox{~}A.\mbox{~}Semenov, "Time correlations in atmospheric quantum channels", \href{https://doi.org/10.1103/PhysRevA.109.033712}{Phys. Rev. A 109, 033712 (2024)}. \textbf{(Q1)}
+    \item\label{mypaper3} I.\mbox{~}Pechonkin, M.\mbox{~}Klen, and A.\mbox{~}A.\mbox{~}Semenov, "Circular-beam approximation for quantum channels in a turbulent atmosphere", \href{https://doi.org/10.1103/pv7j-4zpf}{Phys. Rev. A 112, 063716 (2025)}. \textbf{(Q1)}
+    \item\label{mypaper4} A.\mbox{~}Semenov, M.\mbox{~}Klen, and I.\mbox{~}Pechonkin, "Quantum Optics in the Turbulent Atmosphere: Fundamental Issues and Applications", in Quantum Technologies for Defence and Security II, edited by V. Fernandez, G. Sorelli, and S. Schwartz (p. 38). \href{https://doi.org/10.1117/12.3069599}{Proceedings of SPIE 13676, 136760H-13 (2025)}.
 \end{enumerate}
 ```
 

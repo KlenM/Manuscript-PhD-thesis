@@ -1,11 +1,12 @@
-# Application {#sec:application}
+# Applications {#sec:application}
 This chapter investigates applications of the theory developed in previous sections to a description of quantum-light propagation through turbulent atmospheric channels.
-Understanding the limits of quantum state preservation under realistic conditions is essential for designing robust quantum communication protocols.
+These results was presented in publication \ref{mypaper2}.
+Understanding the limits of quantumness or nonclassical properties preservation under realistic conditions is essential for designing robust quantum communication protocols.
 We quantify the effects of channel properties, including temporal correlations, aperture size, and finite detector resolution, on different aspects of quantumness.
 This analysis provides a practical framework for assessing the feasibility of free-space quantum tasks.
 
 We analyze three distinct manifestations of quantumness under these conditions.
-First, we investigate the preservation of Gaussian entanglement^[@hosseinidehaj2019] between continuous-variable pulses separated by a finite time delay.
+First, we investigate the preservation of Gaussian entanglement^[@bohmann2016,hosseinidehaj2019] between continuous-variable pulses separated by a finite time delay.
 Second, we extend this analysis to discrete-variable systems^[@sidhu2021], focusing on polarization-entangled states.
 In both entanglement scenarios, the first mode is sent through the atmospheric channel at time $t=0$, while the second mode is stored in a quantum memory and released at a later time $t=\tau$.
 Finally, we consider adaptive selection strategies^[@fengtang2013,vallone2015] for single-mode nonclassicality, examining the impact of the temporal separation between a classical probe and the quantum state on squeezed vacuum and squeezed coherent states.
@@ -138,7 +139,7 @@ $$
 $$
 where the terms $\left|1\right>$ and $\left|0\right>$ denote the presence or absence of a single photon within each respective polarization-temporal mode, and $\left| \mathrm h \right>$ and $\left| \mathrm v \right>$ are the single-photon states in the horizontally and vertically polarized modes.
 
-In optical implementations, entangled photon pairs are often generated through a nonlinear light-matter interaction such as spontaneous parametric down-conversion (PDC) ^[@lvovsky2016].
+In optical implementations, entangled photon pairs are often generated through a nonlinear light-matter interaction such as spontaneous parametric down-conversion (PDC) ^[@ma2007,lvovsky2016].
 A PDC source produces a superposition of photon-number states.
 In the relevant polarization and temporal modes, this superposition can be written as
 $$\left| \mathrm{PDC} \right\rangle = (\cosh\xi)^{-2} \sum\limits_{n=0}^{+\infty} \sqrt{n+1} \tanh^n \xi \left| \Phi_n \right\rangle$$
@@ -217,11 +218,9 @@ They emphasize that developing high-performance quantum memories is important fo
 
 ## Threshold-based selection for nonclassical states
 
-Nonclassicality is a broader concept than entanglement.
-Entanglement refers to quantum correlations between subsystems, while nonclassicality can arise even in a single-mode optical field.
-It characterizes states that cannot be described within a classical theory of electromagnetic radiation.
-Classical optical states admit a description in terms of solutions of Maxwell equations with stochastic amplitudes and phases.
-Coherent states form a prominent subset of this class^[@mandel1995].
+While entanglement fundamentally involves multipartite correlations, optical nonclassicality is an intrinsic property that can arise within a single-mode optical field. 
+It characterizes quantum states whose statistical properties cannot be reproduced by any classical stochastic model of electromagnetic radiation. 
+Coherent states form a prominent subset of the classical class ^[@mandel1995].
 They minimize the Heisenberg uncertainty relation
 $$
 %\label{eq:heis}
@@ -233,8 +232,7 @@ Despite this property, coherent states remain classical since their fluctuations
 A systematic characterization of nonclassicality is provided by the Glauber Sudarshan $P$ function^[@glauber1963a,sudarshan1963a] (see ^[sec:qo]).
 This function represents a quantum state as a statistical mixture of coherent states.
 If the $P$ function is positive and regular, the state is considered classical.
-The absence of such a representation is a necessary and sufficient criterion for nonclassicality.
-Nonclassical states exhibit either negativity of the $P$ function or singularities that are stronger than those of a classical probability distribution.
+Otherwise, it is nonclassical, meaning the state exhibits negativity of the $P$ function.
 These features indicate the failure of any classical stochastic description.
 The negativity of the $P$ function provides a clear qualitative criterion, but it is not unique as a quantitative measure.
 Several nonclassicality measures have been proposed that capture different operational aspects of this property ^[@ge2020]. 
@@ -266,9 +264,8 @@ The Binomial $Q$ parameter generalizes the Mandel parameter to account for reali
 Nonclassicality certifiers are studied as functions of the time interval between the classical probe pulse and the quantum pulse, $\tau$, using the results of ^[sec:timecorr].
 
 ### Amplitude-squeezed coherent state with adaptive selection
-In this section, we address a more realistic and more general scenario than in the previous section.
-We study an amplitude-squeezed coherent state, which is defined as a squeezed vacuum displaced by a real amplitude $\alpha_0$ in phase space, $\left|\alpha_0,\xi\right>=\hat D(\alpha_0)\hat S(\xi)\left|0\right>$.
-Amplitude-squeezed states exhibit reduced photon-number fluctuations compared to a classical coherent state with the same mean intensity.
+In this section, we study amplitude-squeezed coherent states, which is defined as a squeezed vacuum displaced by a real amplitude $\alpha_0$ in phase space, $\left|\alpha_0,\xi\right>=\hat D(\alpha_0)\hat S(\xi)\left|0\right>$.
+Amplitude-squeezed coherent states exhibit reduced photon-number fluctuations compared to a classical coherent state with the same mean intensity.
 While a coherent state shows a Poissonian photon-number distribution, amplitude squeezing leads to a narrower distribution.
 This reduction of photon-number fluctuations is a direct signature of nonclassicality.
 This means that nonclassicality can be assessed using photon-number statistics, avoiding balanced homodyne detection with its requirement of phase-stable reference fields and complex measurement setups.
@@ -282,7 +279,8 @@ A more realistic detection model is based on an array of $N$ "on-off" detectors^
 In such a setup, the incoming beam is split into $N$ separate modes using a balanced interferometer, where each mode is then incident on an independent detector.
 These detectors are "on-off" type, meaning they can only discriminate between the absence and the presence of photons, rather than resolving the exact photon number.
 For a classical coherent state with complex amplitude $\alpha$, the resulting click statistics are binomial.
-The corresponding response function for registering $m$ clicks, described by a positive operator valued measure (POVM) ^[@sperling2012], is given by
+
+The corresponding probability distribution for click number $m$, is given by
 $$\Pi(m|\alpha)=\binom{N}{m}\left(1-e^{-|\alpha|^2/N}\right)^m e^{-(N-m)|\alpha|^2/N}.$$
 This measurement captures the finite resolution of practical photon counting devices and reduces to ideal photon-number-resolving detection in the limit $N\to\infty$.
 In this setting, nonclassicality can be detected via sub-binomial click statistics.
@@ -321,7 +319,7 @@ The inequalities reach zero at $s = 14.2~\text{cm}$ for $N=2$, $s = 19.6~\text{c
 Notably, for $N=2$, the sub-binomial parameter $Q_2$ reaches zero at the same spatial shift as the inequality, indicating a deeper connection between these two nonclassicality criteria for small detector arrays.
 Overall, these results show that the convex-geometry witnessing provides a robust detection of nonclassicality over extended time delays.
 
-## Conclusion {#sec:conclusion_application}
+## Summary {#sec:conclusion_application}
 
 The analysis presented in this section characterizes the robustness of quantum correlations and nonclassicality in atmospheric channels.
 We demonstrated that Gaussian entanglement between light pulses persists over millisecond timescales.

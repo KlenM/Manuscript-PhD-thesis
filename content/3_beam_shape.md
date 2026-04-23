@@ -1,5 +1,7 @@
 # Statistical properties of the beam shape parameters {#sec:beamshape}
-The statistical behavior of optical beam-shape parameters after propagation through a turbulent atmosphere forms the core set of assumptions underlying physically motivated analytical models such as the beam-wandering model, the elliptical-beam model, and the total-probability framework.
+
+This analysis is based on results originally established in \ref{mypaper1}, specifically focusing on the statistical behavior of optical beam-shape parameters after propagation through a turbulent atmosphere.
+They form the core set of assumptions underlying physically motivated analytical models such as the beam-wandering model, the elliptical-beam model, and the total-probability framework.
 These assumptions include: the distribution of the beam-centroid position, the statistical independence between the beam-centroid position and the beam-spot shape, and the Gaussian statistics of the beam semiaxes.
 However, these assumptions are accepted without strong empirical support.
 This introduces a potential source of systematic inaccuracy.
