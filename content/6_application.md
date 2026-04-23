@@ -1,7 +1,7 @@
 # Applications {#sec:application}
 This chapter investigates applications of the theory developed in previous sections to a description of quantum-light propagation through turbulent atmospheric channels.
 These results was presented in publication \ref{mypaper2}.
-Understanding the limits of quantumness or nonclassical properties preservation under realistic conditions is essential for designing robust quantum communication protocols.
+Understanding the limits of preservation of nonclassical properties under realistic conditions is essential for designing robust quantum communication protocols.
 We quantify the effects of channel properties, including temporal correlations, aperture size, and finite detector resolution, on different aspects of quantumness.
 This analysis provides a practical framework for assessing the feasibility of free-space quantum tasks.
 
@@ -230,11 +230,10 @@ with equal variance in both quadratures, representing the minimum symmetric nois
 Despite this property, coherent states remain classical since their fluctuations can be reproduced by classical stochastic models.
 
 A systematic characterization of nonclassicality is provided by the Glauber Sudarshan $P$ function^[@glauber1963a,sudarshan1963a] (see ^[sec:qo]).
-This function represents a quantum state as a statistical mixture of coherent states.
-If the $P$ function is positive and regular, the state is considered classical.
+If the $P$ function is positive semidefinite, the state is considered classical.
 Otherwise, it is nonclassical, meaning the state exhibits negativity of the $P$ function.
-These features indicate the failure of any classical stochastic description.
-The negativity of the $P$ function provides a clear qualitative criterion, but it is not unique as a quantitative measure.
+These features indicate the failure of description in terms of classical electrodynamics.
+The absence of positive semidefiniteness of the $P$ function provides a clear qualitative criterion, but it is not unique as a quantitative measure.
 Several nonclassicality measures have been proposed that capture different operational aspects of this property ^[@ge2020]. 
 Their relevance depends on the task under consideration.
 
@@ -280,7 +279,7 @@ In such a setup, the incoming beam is split into $N$ separate modes using a bala
 These detectors are "on-off" type, meaning they can only discriminate between the absence and the presence of photons, rather than resolving the exact photon number.
 For a classical coherent state with complex amplitude $\alpha$, the resulting click statistics are binomial.
 
-The corresponding probability distribution for click number $m$, is given by
+The corresponding probability distribution for click number $m$, given coherent state $\alpha$, reads (see ^[@sperling2012])
 $$\Pi(m|\alpha)=\binom{N}{m}\left(1-e^{-|\alpha|^2/N}\right)^m e^{-(N-m)|\alpha|^2/N}.$$
 This measurement captures the finite resolution of practical photon counting devices and reduces to ideal photon-number-resolving detection in the limit $N\to\infty$.
 In this setting, nonclassicality can be detected via sub-binomial click statistics.

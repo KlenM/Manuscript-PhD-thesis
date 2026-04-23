@@ -136,15 +136,15 @@ The results of the dissertation were presented at seminars of the Bogolyubov Ins
 
 #### Structure and Volume of the Thesis.
 
-The dissertation consists of an introduction, seven chapters, conclusions, and a list of references (130 references).
+The dissertation consists of an introduction, seven chapters, conclusions, and a list of references (131 references).
 The total volume of the work is 141 pages, including 88 equations, 9 tables and 31 figures.
 
-#### Relationship of the Work to Scientific Programs and Grants.
+#### Connection with research programs and grants.
 
 The dissertation was completed at the Bogolyubov Institute for Theoretical Physics of the National Academy of Sciences of Ukraine.
 It is related to the following academic programs, topics, and grants:
-1. Research project of the Department of Physics and Astronomy of the National Academy of Sciences of Ukraine "Noise-inducing dynamics and correlations in nonequilibrium systems",  Project No. 0120U101347.
-2. Research project of the Department of Physics and Astronomy of the National Academy of Sciences of Ukraine "Stochastic processes in condensed media, biological systems and radiation fields", Project No. 0125U000031.
+1. Research program of the Division of Physics and Astronomy of the National Academy of Sciences of Ukraine  "Noise-inducing dynamics and correlations in nonequilibrium systems",  Project No. 0120U101347.
+2. Research program of the Division of Physics and Astronomy of the National Academy of Sciences of Ukraine "Stochastic processes in condensed media, biological systems and radiation fields", Project No. 0125U000031.
 3. Project of National Research Foundation of Ukraine No. 2020.02/0111, "Nonclassical and hybrid correlations of quantum systems under realistic conditions".
 4. Project of National Research Foundation of Ukraine No. 2023.03/0165 "Quantum correlations of electromagnetic radiation".
 5. Project Simons Foundation International SFI-PD-Ukraine-00014573, PI LB.

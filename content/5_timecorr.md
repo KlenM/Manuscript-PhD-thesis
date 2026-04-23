@@ -12,7 +12,7 @@ With the numerical model, we compute the joint statistics of two consecutive tra
 In particular, we study how the temporal correlation of the transmittance depends on the time separation $\tau$.
 We also describe the PDT in scenarios relevant for adaptive selection techniques^[@vallone2015], where the first signal is a strong classical pulse used to estimate the channel transmittance, and the second is a quantum signal whose transmittance is conditioned on the measured transmittance of the first.
 In ^[sec:application], we will demonstrate how these results guide continuous-variable and discrete-variable entanglement propagation protocols, and how they can be employed to enhance the preservation of nonclassicality through adaptive selection techniques.
-This chapter is based on results rendered in our publication \ref{mypaper2}.
+This chapter is based on results presented in our work \ref{mypaper2}.
 
 ## Two-time PDT
 To describe the two-time PDT, we extend the PDT framework (see ^[sec:aqc]) to account for time-dependent fluctuations of the refractive index. In this approach, the refractive index is represented as

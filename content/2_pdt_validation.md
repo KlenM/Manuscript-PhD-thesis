@@ -1,8 +1,8 @@
 # Validation of analytical models {#sec:validation}
 The reliability of any free-space quantum protocol analysis depends on the accuracy of the PDT.
-Because the PDT defines the mathematical input-output relation for quantum states, any discrepancy between the model and the actual stochastic behavior of the atmospheric channel renders the resulting performance metrics invalid.
-Rigorous validation is therefore a necessary step to ensure that theoretical predictions remain quantitatively accurate.
-To address these modeling risks, this section validates the analytical PDT against numerical simulations, presenting the results originally published in our work \ref{mypaper1}.
+Any inaccuracies in the PDT modelling inevitably lead to inaccurate estimations of the quantum states at the receiver.
+Consequently, rigorous validation of these models is essential to ensure that predictions of models provide accurate results.
+This section addresses these challenges by providing a comparative analysis of the analytical PDT against numerical simulations, presenting the results published in our work \ref{mypaper1}.
 
 Several analytical models of the PDT have been proposed (see ^[sec:pdt]).
 The earliest approach adopts statistical models of optical intensity fluctuations from classical optics.
@@ -27,7 +27,7 @@ The results are used to validate existing analytical models and to identify thei
 Model comparison is carried out using the Kolmogorov-Smirnov (KS) statistic^[@conover1999], defined as
 $$D_M = \sup_{\eta} \left| F_M(\eta) - F(\eta) \right|,$$
 where $F(\eta)$ is the cumulative distribution function of the analytical model and $F_M(\eta)$ denotes the empirical distribution function obtained from simulation
-$$F_M(\eta)=M^{-1}\sum_{i=1}^M\theta(\eta-\eta_i),$$
+$$F_M(\eta)=\frac{1}{M}\sum_{i=1}^M\theta(\eta-\eta_i),$$
 where $M$ is the sample size, $\theta(\eta)$ is the Heaviside step function.
 The goal is to determine which model performs best in a given scenario rather than to perform formal hypothesis testing.
 The Kolmogorov-Smirnov statistic therefore provides a simple and sufficient metric.
