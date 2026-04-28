@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.16.5"
+__generated_with = "0.19.4"
 app = marimo.App(width="medium")
 
 
@@ -20,7 +20,7 @@ def _():
     from scipy.interpolate import interp1d
 
 
-    plt.style.use("../klen.mplstyle")
+    plt.style.use("klen.mplstyle")
 
     _wd = '/mnt/hdd/documents/to_clean/oldphys/article2/sup_arxiv/'
     if _wd not in sys.path:
@@ -122,17 +122,17 @@ def _(FIGSIZE_DOUBLE, gaussian_kde, np, plt, utils):
 
     def _(axin, channel_name, aperture_size, time):
         df = utils.load_data(channel_name, aperture_size)
-    
+
         kde = gaussian_kde(np.vstack([df[0], df[time]]))
         # xmin, xmax = df[0].min(), df[0].max()
         # ymin, ymax = df[time].min(), df[time].max()
         xmin = ymin = 0
         xmax = ymax = 1
-    
+
         grid_x = np.linspace(xmin, xmax, 100)
         grid_y = np.linspace(ymin, ymax, 100)
         XX, YY = np.meshgrid(grid_x, grid_y)
-    
+
         ZZ = kde(np.vstack([XX.ravel(), YY.ravel()])).reshape(XX.shape)
 
         # H, xedges, yedges = np.histogram2d(df[0], df[time], bins=100)
@@ -143,7 +143,8 @@ def _(FIGSIZE_DOUBLE, gaussian_kde, np, plt, utils):
                           # linewidths=1,
                           cmap=cm.plasma
                           ) # 'plasma' or 'hot' are good for density
-    
+        axin.set_xticks([0,0.25,0.5,0.75,1])
+        axin.set_yticks([0,0.25,0.5,0.75,1])
         # plt.colorbar(CS, ax=axin)
         axin.set_xlabel(r'Transmittance $\eta_0$')
         axin.set_aspect('equal')
@@ -352,7 +353,6 @@ def _(FIGSIZE_SOLO, np, plt, utils):
             self.fig.tight_layout()
             kwargs = {**utils.SAVE_KWARGS, **kwargs}
             self.fig.savefig(file_path, **kwargs)
-
     return (ConditionalPDTPlot,)
 
 

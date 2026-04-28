@@ -12,7 +12,7 @@ Beam wandering is the most prominent effect experienced by a light beam propagat
 It arises primarily from large-scale turbulent eddies, which cause the entire beam spot to shift away from the propagation axis.
 This phenomenon is explicitly included in all three analytical models discussed above, where the beam-centroid displacement is assumed to follow a two-dimensional Gaussian distribution.
 
-Empirical evidence supporting this Gaussian assumption is limited, as the number of realizations is generally small (e.g., ^[@luo2025]).
+Empirical evidence supporting this Gaussian assumption is limited, as the number of realizations is generally small; see, e.g. Ref.  ^[@luo2025].
 Consequently, it does not allow confident estimation of higher-order moments, such as skewness or kurtosis, and it does not cover a wide range of turbulence strengths.
 To address this, we perform a systematic numerical study across several turbulence strengths.
 

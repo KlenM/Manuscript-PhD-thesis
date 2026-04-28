@@ -1,5 +1,5 @@
 # Introduction
-#### Relevance and Motivation.
+#### Relevance and motivation.
 
 Free-space quantum channels are a core element of long distance quantum communication.
 Optical fibers form the backbone of local and regional networks.
@@ -34,7 +34,7 @@ Addressing this limitation is essential for realistic modeling of high rate atmo
 > - [ ] horizontal links with constant Cn2
 > - [ ] circular aperture
 
-#### Research Purpose and Objectives.
+#### Research purpose and objectives.
 
 The purpose of this work is to establish a comprehensive framework for the accurate characterization of atmospheric quantum channels by advancing the modeling of transmittance statistics and temporal correlations in order to determine the quantum properties of light propagating through a turbulent atmosphere.
 To achieve this purpose, the following objectives are formulated:
@@ -45,7 +45,7 @@ To achieve this purpose, the following objectives are formulated:
 - Analyze and quantify temporal correlations of transmittance fluctuations.
 - Evaluate quantum properties in turbulent media under realistic conditions, including continuous-variable and discrete-variable entanglement between temporally separated pulses, as well as the efficiency of adaptive real time selection techniques for preserving optical nonclassicality.
 
-#### Research Methods.
+#### Research methods.
 
 An analytical description of atmospheric quantum channels is complicated by the complexity of the underlying theoretical framework.
 Closed form treatments rely on strong assumptions and do not capture the full statistical variability induced by turbulence.
@@ -72,7 +72,7 @@ Nonclassical photon statistics are characterized by the Mandel Q-parameter for i
 For the arrays of click on-off detectors, the Binomial Q parameter is used with the convex-geometry approach in regimes where standard photocounting criteria become inconclusive.
 Collectively, these metrics allow for a direct assessment of entanglement and nonclassical features in atmospheric quantum channels.
 
-#### Scientific Novelty of the Results.
+#### Scientific novelty of the results.
 
 - *Systematic validation of analytical PDT models* was performed by benchmarking them against the results of numerical simulations.
   Results show that common assumptions, such as the validity of the lognormal model in strong turbulence and the validity of the beam-wandering model in weak turbulence, are incomplete.
@@ -95,7 +95,7 @@ Collectively, these metrics allow for a direct assessment of entanglement and no
   Adaptive selection using bright classical pulses is analyzed under realistic constraints, providing quantitative bounds for exploiting temporal correlations to maintain nonclassicality.
   These results indicate substantial potential to enlarge the effective Hilbert-space dimensionality.
 
-#### Practical Significance.
+#### Practical significance.
 
 A central difficulty in current practice is the absence of clear criteria for selecting analytical models of the PDT in a given scenario.
 Here, we resolve this ambiguity by establishing a correspondence between the ratio of the receiver aperture radius to the averaged beam radius and the analytical models that perform accurately in the corresponding regime.
@@ -116,7 +116,7 @@ Numerical simulations show that atmospheric turbulence allows the preservation o
 With further development of quantum memories, storage times of tens of milliseconds are expected for discrete variable entanglement.
 Taken together, these results demonstrate the feasibility of correlation aware strategies, including adaptive selection techniques, for preserving nonclassicality in realistic atmospheric channels.
 
-#### Statement of Authorship.^[Throughout this thesis, author publications are cited using Roman numerals (see the list on page 6), while all other references are cited using Arabic numerals and listed in the bibliography at the end of the thesis.]
+#### Statement of authorship.^[Throughout this thesis, author’s own publications are cited using Roman numerals (see the list on page \pageref{sec:appendixA}), while all other references are cited using Arabic numerals and listed in the bibliography list (page \pageref{sec:bibliography}).]
 
 The research presented in the papers \ref{mypaper1} and \ref{mypaper2} was primarily conducted by the candidate.
 The scientific advisor, A.\mbox{~}A.\mbox{~}Semenov, provided the core conceptual ideas, research direction, and supervisory control throughout the project.
@@ -126,22 +126,34 @@ In the paper \ref{mypaper3} the author's individual contributions to the researc
 Additionally, I proposed the moment matching technique to eliminate the model-misspecification bias found in previous models.
 In the paper \ref{mypaper4} the author's individual contribution consisted of conducting numerical modeling, analyzing the obtained data, and preparing representative visualization materials, which constituted the basis of the presented materials.
 
-#### Approbation of Research Results.
+\vspace{1.5cm}
 
-The results of the dissertation were presented at seminars of the Bogolyubov Institute for Theoretical Physics of the National Academy of Sciences of Ukraine, as well as at Ukrainian and international conferences, in particular:
+#### List of publications.
+
+```{=latex}
+\begin{enumerate}[label={[\Roman*]}]
+    \item M.\mbox{~}Klen and A.\mbox{~}A.\mbox{~}Semenov, "Numerical simulations of atmospheric quantum channels", \href{https://doi.org/10.1103/PhysRevA.108.033718}{Phys. Rev. A 108, 033718 (2023)}. \textbf{(Q1)}
+    \item M.\mbox{~}Klen, D. Vasylyev, W. Vogel, and A.\mbox{~}A.\mbox{~}Semenov, "Time correlations in atmospheric quantum channels", \href{https://doi.org/10.1103/PhysRevA.109.033712}{Phys. Rev. A 109, 033712 (2024)}. \textbf{(Q1)}
+    \item I.\mbox{~}Pechonkin, M.\mbox{~}Klen, and A.\mbox{~}A.\mbox{~}Semenov, "Circular-beam approximation for quantum channels in a turbulent atmosphere", \href{https://doi.org/10.1103/pv7j-4zpf}{Phys. Rev. A 112, 063716 (2025)}. \textbf{(Q1)}
+    \item A.\mbox{~}Semenov, M.\mbox{~}Klen, and I.\mbox{~}Pechonkin, "Quantum Optics in the Turbulent Atmosphere: Fundamental Issues and Applications", in Quantum Technologies for Defence and Security II, edited by V. Fernandez, G. Sorelli, and S. Schwartz (p. 38). \href{https://doi.org/10.1117/12.3069599}{Proc. SPIE 13676, 136760H-13 (2025)}.
+\end{enumerate}
+```
+
+#### Conferences and scientific meetings.
+
+The thesis results were presented at seminars of the Bogolyubov Institute for Theoretical Physics of the National Academy of Sciences of Ukraine, as well as at Ukrainian and international conferences, in particular:
 1. M.\mbox{~}Klen and A.\mbox{~}A.\mbox{~}Semenov, "Free-space quantum channels: Numerical simulations", US-Ukraine Quantum Forum 2023, August 28-31, 2023
 2. M.\mbox{~}Klen, "Quantum light in atmospheric turbulence", 25th Symposium on photonics and optics SPO 2024, Kyiv, (Ukraine), November 8, 2024
 3. M.\mbox{~}Klen, "Numerical simulations in free-space quantum channels", Poster session at Quantum 2025: From Foundations of Quantum Mechanics to Quantum Information and Quantum Metrology & Sensing, Turin, (Italy), May 18-24, 2025
 4. A.\mbox{~}Semenov, M.\mbox{~}Klen, I.\mbox{~}Pechonkin, "Quantum optics in the turbulent atmosphere: fundamental issues and applications": invited talk at the SPIE Sensors+Imaging Meeting. Quantum Technologies for Defense and Security II. Madrid, Spain. September 15–18, 2025.
 
-#### Structure and Volume of the Thesis.
+#### Structure and scope of the thesis.
 
-The dissertation consists of an introduction, seven chapters, conclusions, and a list of references (131 references).
-The total volume of the work is 141 pages, including 88 equations, 9 tables and 31 figures.
+The thesis consists of an introduction, seven chapters, conclusions, and a list of references (136 references).
+The total volume of the work is 142 pages, including 88 equations, 9 tables and 31 figures.
 
 #### Connection with research programs and grants.
-
-The dissertation was completed at the Bogolyubov Institute for Theoretical Physics of the National Academy of Sciences of Ukraine.
+The thesis was completed at the Bogolyubov Institute for Theoretical Physics of the National Academy of Sciences of Ukraine.
 It is related to the following academic programs, topics, and grants:
 1. Research program of the Division of Physics and Astronomy of the National Academy of Sciences of Ukraine  "Noise-inducing dynamics and correlations in nonequilibrium systems",  Project No. 0120U101347.
 2. Research program of the Division of Physics and Astronomy of the National Academy of Sciences of Ukraine "Stochastic processes in condensed media, biological systems and radiation fields", Project No. 0125U000031.

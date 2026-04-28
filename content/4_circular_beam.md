@@ -6,7 +6,7 @@ This bias affects the first two moments of the transmittance distribution, $\lan
 As a consequence, these models show poor agreement with numerical simulations.
 Since many quantum protocols in turbulent atmospheres, including those that will be analysed in ^[sec:application], rely directly on the transmittance moments, this bias leads to degraded protocol performance.
 
-In this section, we address this problem by introducing a moment matching procedure for such models, which was introduced in our publication \ref{mypaper3}.
+In this section, we address this problem by introducing a moment matching procedure for such models, which was introduced in our work \ref{mypaper3}.
 The goal is to enforce agreement with the transmittance moments while maintaining a physically interpretable model description.
 Physically based models are specified in terms of low-order statistics of the beam shape, which are summarised in ^[tab:beamshapestats].
 These include the mean and variance of the beam centroid position and the mean and variance of an effective beam size parameter $S$.
@@ -35,7 +35,7 @@ While the beam-wandering model admits a fully analytical expression for the PDT,
 
 The complexity of the elliptical-beam model makes a direct reparametrisation in terms of transmittance moments impractical.
 In addition, the number of model parameters would require more than two transmittance moments for a physically meaningful reparametrisation.
-For this reason, we consider an intermediate case with three effective parameters, referred to as the Circular-beam model \ref{mypaper3}.
+For this reason, we consider an intermediate case with three effective parameters, referred to as the Circular-beam model, introduced in Ref. \ref{mypaper3}.
 This model bridges the beam-wandering and elliptical-beam descriptions.
 It remains analytically tractable while incorporating beam size variability.
 We further introduce a moment matching procedure that enforces agreement with selected transmittance moments.
@@ -82,7 +82,7 @@ $$
 $$
 Here $\langle\eta\rangle_{\mathrm{BW}}$ and $\langle\eta^2\rangle_{\mathrm{BW}}$ denote the moments of the beam-wandering model evaluated at fixed $S$.
 
-As derived in ^[@esposito1967], these moments for the beam-wandering model take the form
+As derived in Ref. ^[@esposito1967], these moments for the beam-wandering model take the form
 
 $$
 \begin{split}

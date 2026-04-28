@@ -1,6 +1,6 @@
 # Applications {#sec:application}
 This chapter investigates applications of the theory developed in previous sections to a description of quantum-light propagation through turbulent atmospheric channels.
-These results was presented in publication \ref{mypaper2}.
+These results was presented in our work \ref{mypaper2}.
 Understanding the limits of preservation of nonclassical properties under realistic conditions is essential for designing robust quantum communication protocols.
 We quantify the effects of channel properties, including temporal correlations, aperture size, and finite detector resolution, on different aspects of quantumness.
 This analysis provides a practical framework for assessing the feasibility of free-space quantum tasks.
@@ -18,14 +18,14 @@ The results provide a quantitative framework for assessing the feasibility of fr
 
 ## Gaussian entanglement between pulses
 #### Quantum entanglement
-describes correlations between distinct subsystems that cannot be explained by classical physics and that arise from the nonseparability of the joint quantum state^[@werner1989].
+describes correlations between distinct subsystems that cannot be explained by classical physics and that arise from the nonseparability of the joint quantum state^[@werner1989,horodecki2009].
 The conceptual origin of entanglement can be traced to the Einstein-Podolsky-Rosen (EPR) paradox.
 In its original formulation, the EPR argument^[@einstein1935] considers two spatially separated systems prepared in a correlated state.
 If the value of one observable of the first system can be predicted with certainty by measuring the second system, then this observable is considered an element of reality.
-If this holds simultaneously for two non-commuting observables, then the quantum mechanical description appears incomplete.
+If this holds simultaneously for non-commuting observables, then the quantum mechanical description appears incomplete.
 The EPR paradox was originally presented as a critique of quantum mechanics, but it later became a cornerstone for understanding nonclassical correlations.
 
-In modern quantum information theory, entanglement is no longer viewed as a sign of incompleteness, but as a well-defined physical resource.
+In modern quantum information theory, entanglement is no longer viewed as a sign of incompleteness, but as a well-defined physical resource^[@plenio2007,horodecki2009,chitambar2019].
 It is a central resource in quantum information science, where it enables tasks that are impossible or inefficient using classical correlations alone.
 In this section, the focus is on continuous-variable entanglement realized in optical systems.
 
@@ -34,12 +34,12 @@ are quantum systems whose observables have continuous spectra.
 In quantum optics, such systems arise naturally from bosonic modes of the electromagnetic field.
 Each optical mode can be modeled as a quantum harmonic oscillator, and its physical observables are given by field quadratures.
 
-Continuous-variable entanglement appears as nonclassical correlations between the quadratures of different optical modes.
-These correlations can be measured using well-studied homodyne detection^[@yuen1983,lvovsky2009].
+Continuous-variable entanglement appears as nonclassical correlations between the states and observables (e.g., field quadratures) of different optical modes.
+These correlations can be estimated using well-studied homodyne detection^[@yuen1983,lvovsky2009].
 As a result, such systems are widely used in optical implementations of quantum communication, quantum key distribution, and quantum-enhanced metrology ^[@braunstein2005,weedbrook2012].
 
 #### The two-mode squeezed vacuum (TMSV) state $\left|\xi\right>$
-is the canonical example of a continuous-variable entangled state.
+is an emblematic example of continuous-variable entangled states.
 In this state, the quantum noise of two optical modes is strongly correlated.
 Fluctuations of one quadrature in the first mode are correlated with the corresponding quadrature of the second mode, while the conjugate quadratures are anticorrelated.
 The strength of these correlations increases with the squeezing parameter $\xi$.
@@ -51,6 +51,7 @@ In the photon-number basis, the TMSV state can be written as
 $$
 \left|\xi\right>=\cosh^{-1}\xi\sum_{n=0}^{\infty}(-\tanh \xi)^n\left|n,n\right>.
 $$
+where $\left|n,n\right>$ is the Fock state with $n$ photons at each mode.
 
 #### Simon certifier.
 Detecting entanglement in continuous-variable systems requires criteria that can distinguish separable states from entangled states.
@@ -61,7 +62,7 @@ However, Simon showed that for two-mode Gaussian states such as the TMSV state t
 This makes the Simon criterion a useful and complete tool for Gaussian entanglement detection for TMSV states.
 
 The effect of atmospheric turbulence on continuous-variable entanglement depends on temporal correlations of the channel transmittance.
-The limiting cases of fully correlated transmittances, corresponding to time separation $\tau\to 0$, and fully anticorrelated transmittances, corresponding to large time separation $\tau\to\infty$, have been analyzed previously in ^[@bohmann2016].
+The limiting cases of fully correlated transmittances, corresponding to time separation $\tau\to 0$, and fully anticorrelated transmittances, corresponding to large time separation $\tau\to\infty$, have been analyzed previously in Ref. ^[@bohmann2016].
 We focus on the intermediate regime, where the time interval between subsequent pulses $\tau$ is finite.
 
 We consider a two-mode squeezed vacuum state as the entangled source.
@@ -71,7 +72,7 @@ As a result, the two modes experience different but temporally correlated realiz
 
 For the simulations, we use the same atmospheric channels as defined in ^[sec:timecorr].
 Deterministic losses of $0.1\ \mathrm{dB/km}$ are additionally included in the effective transmittances $\eta_0$ and $\eta_\tau$ ^[@ippolito2017], together with losses of the optical system.
-When measurements are performed using homodyne detection, the local oscillator is transmitted in the same spatial mode as the signal with orthogonal polarization, ensuring a stable phase reference while experiencing the same atmospheric fluctuations^[@semenov2012].
+When measurements are performed using homodyne detection, the local oscillator is transmitted in the same spatial mode as the signal with orthogonal polarization, ensuring a stable phase reference while experiencing the same atmospheric fluctuations^[@elser2009,heim2010,semenov2012].
 
 To analyze entanglement preservation in this scenario, we apply the Simon criterion to the two-mode squeezed vacuum state after transmission through the atmospheric channels.
 For the considered model, the Simon certifier $\mathcal W$ takes the form
@@ -156,15 +157,15 @@ It is constructed from correlations between measurements on two parts in differe
 A value of $\mathcal{B} > 2$ signals a violation of local realism and confirms the presence of entanglement.
 
 Several studies have investigated the distribution of discrete-variable entanglement through turbulent free-space channels.
-A theoretical framework describing the propagation of polarization entanglement through atmospheric turbulence was developed in ^[@semenov2010] for both Bell states and PDC states.
+A theoretical framework describing the propagation of polarization entanglement through atmospheric turbulence was developed in Ref. ^[@semenov2010] for both Bell states and PDC states.
 In that work, the entanglement degradation was described in terms of statistical moments of the transmittance.
 
-The role of temporal correlations in the atmospheric channel was further analyzed in ^[@gumberidze2016], where two limiting propagation scenarios were considered.
+The role of temporal correlations in the atmospheric channel was further analyzed in Ref. ^[@gumberidze2016], where two limiting propagation scenarios were considered.
 The case of copropagation corresponds to perfectly correlated transmittance fluctuations and is observed in the limit $\tau \to 0$.
 The opposite limit of counterpropagation corresponds to statistically independent fluctuations and is obtained for $\tau \to \infty$.
 These two regimes provide useful benchmarks but do not describe intermediate situations where correlations are only partial.
 
-Experimental feasibility of distributing polarization entanglement through strong turbulence channels was demonstrated in ^[@fedrizzi2009].
+Experimental feasibility of distributing polarization entanglement through strong turbulence channels was demonstrated in Ref. ^[@fedrizzi2009].
 That experiment confirmed that polarization entanglement can survive high-loss free-space propagation.
 However, the temporal separation between consecutive pulses was on the order of $50\mathrm{ns}$, which is much shorter than the atmospheric correlation time.
 As a result, the corresponding transmittance fluctuations were almost perfectly correlated between the two pulses.
@@ -188,7 +189,7 @@ The total deterministic loss amounts to $9.42\,\mathrm{dB}$ and consists of:
 - atmospheric attenuation of $0.1\,\mathrm{dB}/\mathrm{km}$ over a propagation distance of $50\,\mathrm{km}$, resulting in a loss of $5\,\mathrm{dB}$
 - a $50{:}50$ beam splitter, introducing a loss of $10 \log_{10}(1/2) = 3\,\mathrm{dB}$
 - detector efficiency of $0.85$, corresponding to a loss of $10 \log_{10}(0.85) = 0.71\,\mathrm{dB}$
-- quantum memory writing efficiency of $0.85$, corresponding to a loss of $10 \log_{10}(0.85) = 0.71\,\mathrm{dB}$
+- quantum memory writing efficiency of $0.85$, corresponding to a loss of $0.71\,\mathrm{dB}$
 
 In addition to these static contributions, the quantum memory readout exhibits a time-dependent loss.
 It is modeled as an effective attenuation of $3\,\mathrm{dB}/\mathrm{ms}$ of storage time, which directly depends on the pulse separation time $\tau$.
@@ -219,7 +220,7 @@ They emphasize that developing high-performance quantum memories is important fo
 ## Threshold-based selection for nonclassical states
 
 While entanglement fundamentally involves multipartite correlations, optical nonclassicality is an intrinsic property that can arise within a single-mode optical field. 
-It characterizes quantum states whose statistical properties cannot be reproduced by any classical stochastic model of electromagnetic radiation. 
+It characterizes quantum states whose statistical properties cannot be reproduced by classical electrodynamics. 
 Coherent states form a prominent subset of the classical class ^[@mandel1995].
 They minimize the Heisenberg uncertainty relation
 $$
@@ -245,7 +246,6 @@ Historically, the first unambiguous experimental signature of nonclassical light
 This effect cannot be explained by classical intensity fluctuations and directly contradicts classical field theories.
 Squeezed states represent another important class of nonclassical states.
 In these states, the noise of one quadrature is reduced below the vacuum level, while the noise of the conjugate quadrature increases to satisfy the uncertainty relation (see ^[eq:heis]).
-Such noise reduction has no classical analog, since classical stochastic electromagnetic fields cannot suppress quadrature fluctuations below the vacuum limit.
 
 > Where and how to define squeezed states??
 
@@ -279,7 +279,7 @@ In such a setup, the incoming beam is split into $N$ separate modes using a bala
 These detectors are "on-off" type, meaning they can only discriminate between the absence and the presence of photons, rather than resolving the exact photon number.
 For a classical coherent state with complex amplitude $\alpha$, the resulting click statistics are binomial.
 
-The corresponding probability distribution for click number $m$, given coherent state $\alpha$, reads (see ^[@sperling2012])
+The corresponding probability distribution for click number $m$, given coherent state $\alpha$, reads (see Ref. ^[@sperling2012])
 $$\Pi(m|\alpha)=\binom{N}{m}\left(1-e^{-|\alpha|^2/N}\right)^m e^{-(N-m)|\alpha|^2/N}.$$
 This measurement captures the finite resolution of practical photon counting devices and reduces to ideal photon-number-resolving detection in the limit $N\to\infty$.
 In this setting, nonclassicality can be detected via sub-binomial click statistics.
@@ -290,7 +290,7 @@ Negative values of $Q_N$ indicate nonclassical light.
 The described criteria provide sufficient but not necessary conditions for nonclassicality.
 There exist nonclassical states whose click statistics remain classical.
 
-A more general method based on inequalities for detecting nonclassicality was introduced in ^[@semenov2021a].
+A more general method based on inequalities for detecting nonclassicality was introduced in Ref. ^[@semenov2021a].
 If there exists such a function $\lambda(m)$ that the inequality
 $$
 %\label{eq:vady}
@@ -318,7 +318,7 @@ The inequalities reach zero at $s = 14.2~\text{cm}$ for $N=2$, $s = 19.6~\text{c
 Notably, for $N=2$, the sub-binomial parameter $Q_2$ reaches zero at the same spatial shift as the inequality, indicating a deeper connection between these two nonclassicality criteria for small detector arrays.
 Overall, these results show that the convex-geometry witnessing provides a robust detection of nonclassicality over extended time delays.
 
-## Summary {#sec:conclusion_application}
+## Summary
 
 The analysis presented in this section characterizes the robustness of quantum correlations and nonclassicality in atmospheric channels.
 We demonstrated that Gaussian entanglement between light pulses persists over millisecond timescales.
@@ -336,7 +336,7 @@ For finite $\tau$, two-time analytical PDT models are required, but such models 
 Numerical studies of amplitude-squeezed states show that adaptive selection improves nonclassicality even for pulse separations of tens of milliseconds.
 Nonclassicality witnessing based on the convex-geometry method provides a more sensitive measure of nonclassicality in this context.
 
-In conclusion, temporal correlations in atmospheric quantum channels provide a window for effective quantum communication.
+In summary, temporal correlations in atmospheric quantum channels provide a window for effective quantum communication.
 Exploiting these correlations increases the effective Hilbert-space dimensionality and allows adaptive selection strategies to significantly improve nonclassicality preservation.
 
 > Future work can include experimental validation of the reported findings in time-dependent atmospheric channels.

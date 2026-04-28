@@ -51,11 +51,11 @@ Several analytical models of the PDT were developed between 2009 and 2018 to des
 These models are typically formulated in terms of parameters derived from the field correlation function.
 The first group consists of models defined by transmittance moments, such as average transmittance and transmittance variance.
 
-The truncated lognormal distribution model^[@semenov2009] originates based on the lognormal model of irradiance (see ^[sec:pdf_irradiance]).
+The truncated lognormal distribution model^[@semenov2009] is based on the lognormal model of irradiance (see ^[sec:pdf_irradiance]).
 Since the lognormal distribution has an infinite bound but the PDT requires values between 0 and 1, an additional truncation condition is introduced at $\eta=1$.
 Despite being derived under the Rytov approximation in classical optics, this model was reported to yield reasonable agreement under strong turbulence conditions^[@capraro2012,vasylyev2016].
 
-Alternatively, an empirical approach based on the Beta distribution^[@johnson1995] was introduced in \ref{mypaper1}.
+Alternatively, an empirical approach based on the Beta distribution^[@johnson1995] was introduced in our work \ref{mypaper1}.
 In this model, the PDT is defined using the first two transmittance moments as
 $$
 \mathcal{P}\!\left(\eta\,; \left<\eta\right>, \left<\eta^2\right>\right) = \frac{1}{B(a, b)} \eta^{a-1} (1-\eta)^{b-1},

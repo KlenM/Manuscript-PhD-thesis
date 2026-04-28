@@ -24,4 +24,4 @@ $$
 $$
 where $|\alpha\rangle$ are coherent states---eigenvectors of the annihilation operator---which form an overcomplete basis of the Hilbert space^[@klauder1985], $\mathrm{d}^2\alpha = \mathrm{d}\mathrm{Re}\alpha \mathrm{d}\mathrm{Im}\alpha$ and $P(\alpha)$ is the Glauber-Sudarshan P-function, a quasiprobability distribution over phase space.
 If $P(\alpha)$ is a non-negative function, the quantum state can be interpreted as a classical mixture of coherent fields; otherwise, the state exhibits nonclassical features^[@mandel1986,sperling2020].
-Later, this idea was formalized and extended into the broader phase-space formalism of quantum mechanics^[@cohen1966], which has become the mainstream framework used today to describe quantum states of light.
+This idea is a part of the broader phase-space formalism of quantum mechanics^[@cohen1966], which has become the mainstream framework used today to describe quantum states of light.

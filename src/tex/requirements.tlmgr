@@ -16,3 +16,9 @@ biber
 hyphenat
 setspace
 mathtools
+biblatex-phys
+ulem
+todonotes
+truncate
+microtype
+changes

@@ -13,7 +13,7 @@ This assumption forms a workable starting point for studying the statistical pro
 >"By making one further assumption of incompressible turbulence, that is, g. v = 0 (Batchelor [2.4]), we can write D, in terms of Dr,," (["Laser Beam Propagation in the Atmosphere", 1978, p. 23](zotero://select/library/items/6VHCHVKG)) ([pdf](zotero://open-pdf/library/items/4WBAA526?page=23&annotation=VDDGJIX8))
 >"Clifford [-2.52] also showed that the depolarization effects of the atmosphere are negligible even when the wavelength 2 is greater than the inner scale Io" (["Laser Beam Propagation in the Atmosphere", 1978, p. 39](zotero://select/library/items/6VHCHVKG)) ([pdf](zotero://open-pdf/library/items/4WBAA526?page=39&annotation=BFRJZMRA))
 
-Let us consider the structure function of the velocity field---the ensemble average over turbulent atmospheric realizations of the square of longitudinal velocity difference at two points in space.
+Let us consider the structure function of the velocity field---the ensemble average over turbulent atmospheric realizations of the square of longitudinal velocity difference at two points in space,
 $$%\label{eq:kolmStructFunc}
 D_v(r) = \left<|v(x) - v(x+r)|^2\right> \equiv  v_r^2.$$
 Since we assume homogeneous and isotropic turbulence, the statistics of fluctuations do not depend on the direction.

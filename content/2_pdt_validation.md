@@ -18,7 +18,7 @@ These effects are combined to construct the total probability PDT model.
 There remains significant uncertainty regarding the physical regimes in which these models are applicable.
 The lognormal distribution of the optical field is derived within the weak turbulence Rytov approximation.
 Nevertheless, the truncated lognormal models has been reported to fit experimental data obtained under strong turbulence conditions^[@capraro2012].
-Beam wandering is a pronounced feature of light propagation through weak turbulenceo and the beam-wandering model is therefore commonly associated with this regime.
+Beam wandering is a pronounced feature of light propagation through weak turbulence and the beam-wandering model is therefore commonly associated with this regime.
 The elliptical-beam model is reported to reproduce experimental data under weak to moderate turbulence.
 This turbulence-based classification is incomplete, which motivates a more systematic analysis of model applicability.
 

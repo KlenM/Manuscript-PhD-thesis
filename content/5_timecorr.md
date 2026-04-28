@@ -12,7 +12,7 @@ With the numerical model, we compute the joint statistics of two consecutive tra
 In particular, we study how the temporal correlation of the transmittance depends on the time separation $\tau$.
 We also describe the PDT in scenarios relevant for adaptive selection techniques^[@vallone2015], where the first signal is a strong classical pulse used to estimate the channel transmittance, and the second is a quantum signal whose transmittance is conditioned on the measured transmittance of the first.
 In ^[sec:application], we will demonstrate how these results guide continuous-variable and discrete-variable entanglement propagation protocols, and how they can be employed to enhance the preservation of nonclassicality through adaptive selection techniques.
-This chapter is based on results presented in our work \ref{mypaper2}.
+This chapter is based on results presented in our works \ref{mypaper2} and \ref{mypaper4}.
 
 ## Two-time PDT
 To describe the two-time PDT, we extend the PDT framework (see ^[sec:aqc]) to account for time-dependent fluctuations of the refractive index. In this approach, the refractive index is represented as
@@ -137,9 +137,9 @@ This observation suggests that the aperture plays the primary role in setting th
 
 ![\label{fig:scr_ap}Aperture-averaged spatial coherence radius $\rho_0$ as a function of the aperture radius $R_\mathrm{ap}$ for three turbulence regimes.](time_corr/corr_length.pdf)
 
-In conclusion, the spatial coherence radius $\rho_0$ determines the temporal interval over which successive pulses remain statistically correlated, directly influencing the decay of quantum correlations in turbulent atmospheric channels.
+Summarizing this consideration, we note that the spatial coherence radius $\rho_0$ determines the temporal interval over which successive pulses remain statistically correlated, directly influencing the decay of quantum correlations in turbulent atmospheric channels.
 The impact of turbulence strength on $\rho_0$ remains limited across the examined range, while the change produced by the receiver aperture size is noticeably larger.
-As a result, $\rho_0(R_\mathrm{ap})$ serves as a practical parameter for studying entanglement propagation in the turbulent atmosphere and provides guidance for selecting pulse repetition rates for which temporal correlations can be exploited (or can be safely neglected) in realistic atmospheric quantum channels.
+As a result, $\rho_0(R_\mathrm{ap})$ provides guidance for selecting pulse repetition rates for which temporal correlations can be exploited (or can be safely neglected) in realistic atmospheric quantum channels.
 
 ### Conditional PDT
 
