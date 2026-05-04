@@ -1,6 +1,6 @@
 # Анотація {#sec:annotation_ua .unnumbered}
 **Клен М.Д.** Статистичні моделі та часова когерентність квантового світла в турбулентній атмосфері.*---Кваліфікаційна наукова праця на правах рукопису.*
-*Дисертація на здобуття наукового ступеня доктора філософії за спеціальністю 01.04.02 "Теоретична фізика" (104--Фізика та астрономія).---Інститут теоретичної фізики ім. М.М. Боголюбова Національної академії наук України, Київ, 2026.*
+*Дисертація на здобуття наукового ступеня доктора філософії за спеціальністю 104--Фізика та астрономія---Інститут теоретичної фізики ім. М.М. Боголюбова Національної академії наук України, Київ, 2026.*
 
 Основою локальних мереж квантового зв'язку є волоконно-оптичні канали, проте вони обмежені експоненційним затуханням сигналу та стаціонарністю інфраструктури.
 Оптичні канали у вільному просторі пропонують гнучку альтернативу, дозволяючи створювати бездротові з'єднання між наземними станціями, а також з авіаційними платформами, що є недоступним для стаціонарних волоконних мереж.
@@ -103,8 +103,7 @@
 > 5-7 pages
 
 # Abstract {#sec:annotation_en .unnumbered}
-**Klen M.D.** Statistical models and temporal coherence of quantum light in the turbulent atmosphere.---*Manuscript. Thesis for the degree of Doctor of Philosophy in the specialty 01.04.02
-"Theoretical Physics" (104--Physics and Astronomy).---Bogolyubov Institute for
+**Klen M.D.** Statistical models and temporal coherence of quantum light in the turbulent atmosphere---*Qualifying research work as a manuscript. Thesis submitted for the degree of Doctor of Philosophy in specialty 104--Physics and Astronomy---Bogolyubov Institute for
 Theoretical Physics of the National Academy of Sciences of Ukraine, Kyiv, 2026.*
 
 >## Background

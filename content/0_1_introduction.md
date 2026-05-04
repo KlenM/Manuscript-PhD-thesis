@@ -1,4 +1,5 @@
-# Introduction
+\phantomsection
+# Introduction{#sec:introduction .unnumbered}
 #### Relevance and motivation.
 
 Free-space quantum channels are a core element of long distance quantum communication.
@@ -149,7 +150,7 @@ The thesis results were presented at seminars of the Bogolyubov Institute for Th
 
 #### Structure and scope of the thesis.
 
-The thesis consists of an introduction, seven chapters, conclusions, and a list of references (136 references).
+The thesis consists of an introduction, six chapters, conclusions, and a list of references (136 references).
 The total volume of the work is 142 pages, including 88 equations, 9 tables and 31 figures.
 
 #### Connection with research programs and grants.
