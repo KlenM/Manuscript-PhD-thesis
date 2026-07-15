@@ -861,5 +861,175 @@ def _(
     return
 
 
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ## Presentatiion
+    """)
+    return
+
+
+@app.cell
+def _():
+    aperture_pres = 0.012
+    aperture_pres_2 = 0.035
+    return aperture_pres, aperture_pres_2
+
+
+@app.cell(hide_code=True)
+def _(
+    BetaPlotParams,
+    EllipticalBeamPlotParams,
+    LognormalPlotParams,
+    NumericalPlotParams,
+    aperture_pres,
+    aperture_pres_2,
+    mo,
+    plot_pdt,
+    plt,
+):
+    def _():
+        models = [
+            NumericalPlotParams(smooth=1.8, label_dy=0.01, label_dx=-0.001, label_pos=25),
+            # BeamWanderingPlotParams(label_pos=22),
+            LognormalPlotParams(ks_smooth=1, label_dy=0.04, label_pos=33),
+            BetaPlotParams(ks_smooth=1, label_dy=0.005, label_dx=0.001, label_pos=36),
+            EllipticalBeamPlotParams(smooth=2.5, label_dy=0.025, label_pos=40),
+            # TotalProbabilityPlotParams(label_pos=6),
+            # BetaTotalProbabilityPlotParams(),
+        ]
+        models_2 = [
+            NumericalPlotParams(smooth=1.8, label_dy=0.02, label_dx=0.001, label_pos=171),
+            # BeamWanderingPlotParams(label_pos=182),
+            LognormalPlotParams(ks_smooth=1, label_dy=0.01, label_pos=141),
+            BetaPlotParams(ks_smooth=1, label_dy=0.01, label_dx=0.001, label_pos=168),
+            EllipticalBeamPlotParams(smooth=2.5, label_dy=0.02, label_pos=144),
+            # TotalProbabilityPlotParams(label_pos=185),
+            # BetaTotalProbabilityPlotParams(),
+        ]
+
+        _f, _ax = plt.subplots(1, 2, figsize=(130/25.4, 60/25.4), constrained_layout=True)
+        _name = plot_pdt(_ax[0], 'moderate_inf', aperture_radius=aperture_pres, models=models)
+        _ax[0].set_xlim(0, 0.6)
+        _ax[0].set_ylim(0, 11)
+        _name = plot_pdt(_ax[1], 'moderate_inf', aperture_radius=aperture_pres_2, models=models_2)
+        _ax[1].set_xlim(0.2, 1)
+        _ax[1].set_ylim(0, 4)
+        _ax[1].set_ylabel(None)
+        # _f.tight_layout()
+        _f.savefig(f'tmp/pres.pdf', bbox_inches='tight', pad_inches=1/50)
+        return _f
+
+    mo.hstack([_(), ""], widths=[2,1])
+    return
+
+
+@app.cell
+def _():
+    from dataclasses import asdict
+    return (asdict,)
+
+
+@app.cell(hide_code=True)
+def _(
+    BeamWanderingPlotParams,
+    BetaPlotParams,
+    EllipticalBeamPlotParams,
+    LognormalPlotParams,
+    NumericalPlotParams,
+    TotalProbabilityPlotParams,
+    asdict,
+    plt,
+):
+    def create_enhanced_legend(models, spacing=0.4, filename="legend_enhanced.png"):
+        """
+        Generates a legend with controllable vertical spacing.
+        """
+        CIRCLE_LABEL_SIZE = 120  
+        TEXT_SIZE = 9
+    
+        fig, ax = plt.subplots(figsize=(3.5, len(models) * spacing), facecolor='white')
+        ax.set_axis_off()
+
+        for i, model in enumerate(models):
+            y_pos = (len(models) - i) * spacing
+            x_marker = 0.15
+            x_text_start = 0.35
+        
+            color = model['color']
+            letter = model['label'] 
+            # full_name is taken from the dictionary key passed in models_list
+            full_name = model.get('name', f"Model {letter}")
+            linestyle = model.get('linestyle', '-')
+        
+            # 1. Draw the Circle (Marker)
+            ax.scatter([x_marker], [y_pos], 
+                       s=CIRCLE_LABEL_SIZE,
+                       marker="o", 
+                       edgecolor=color, 
+                       facecolor="white", 
+                       linewidth=1.2, 
+                       zorder=10)
+        
+            # 2. Draw the Letter inside
+            ax.text(x_marker + model.get('label_dx', 0),
+                    y_pos + model.get('label_dy', 0), 
+                    letter,
+                    zorder=20, 
+                    color=color, 
+                    ha="center", 
+                    va="center",
+                    size=TEXT_SIZE - 1, 
+                    weight='bold',
+                    fontfamily='sans-serif')
+
+            # 3. Draw the Line (Now using linestyle from dataclass)
+            line_y = y_pos
+            ax.plot([x_marker - 0.1, x_marker + 0.1], [line_y, line_y], 
+                    color=color, linestyle=linestyle, linewidth=1.5, solid_capstyle='round')
+        
+            # 4. Draw the Text Label
+            ax.text(x_text_start, y_pos, full_name,
+                    color='black',
+                    ha="left", 
+                    va="center",
+                    size=TEXT_SIZE + 2,
+                    fontfamily='sans-serif')
+
+        ax.set_xlim(0, 1)
+        ax.set_ylim(0, (len(models) + 1) * spacing)
+    
+        return fig
+
+    # --- Execution ---
+
+    # Your dictionary config
+    params_to_show = {
+        "Numerical simulation": NumericalPlotParams(label_dy=-0.01),
+        "Truncated lognormal model": LognormalPlotParams(label_dy=-0.01),
+        "Beam wandering model": BeamWanderingPlotParams(label_dy=-0.015),
+        "Elliptical beam model": EllipticalBeamPlotParams(label_dy=-0.015),
+        "Total probability model": TotalProbabilityPlotParams(label_dx=-0.001, label_dy=-0.01),
+        "Beta-distribution model": BetaPlotParams(label_dy=-0.01)
+    }
+
+    # Convert dictionary to the list of dicts expected by the function
+    # We inject the dictionary key as the 'name' property
+    models_list = []
+    for display_name, params in params_to_show.items():
+        d = asdict(params)
+        d['name'] = display_name  # Set the label to your dictionary key
+        models_list.append(d)
+
+    fig = create_enhanced_legend(models_list, spacing=0.4)
+    plt.show()
+    return
+
+
+@app.cell
+def _():
+    return
+
+
 if __name__ == "__main__":
     app.run()
